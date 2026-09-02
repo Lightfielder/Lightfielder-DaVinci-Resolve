@@ -1,4 +1,4 @@
-# Lightfielder v26.08 for DaVinci Resolve
+# Lightfielder v26.09 for DaVinci Resolve
 
 ## Overview
 
