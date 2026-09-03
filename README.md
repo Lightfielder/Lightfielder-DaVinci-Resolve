@@ -2,9 +2,9 @@
 
 ## Overview
 
-Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside of tools like BMD DaVinci Resolve Studio.
+Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside of tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content.
 
-The toolset is designed to help video editors and colorists be more productive as they work with planar grid array filmed multi-view content. The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This toolset was designed to help creative tasks run smoothly when processing stacks of footage from large camera arrays.
+The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.
 
 Lightfielder is cross-platform compatible and works across Linux, macOS, and Windows.
 
