@@ -1,0 +1,578 @@
+{
+  "version": "2026",
+  "shoot_name": "2026",
+  "shoot_date": "2026.json",
+  "shoot_config_label": "camera configuration 1",
+  "shoot_config_file_name": "activeTechnisyncConfig.json",
+  "shoot_config_base_path": "~",
+  "log_cam_status" : true,
+  "log_cam_status_file" : "~/technisync/log/camStatus.log",
+  "shot_log" : true,
+  "shot_log_file" : "~/technisync/log/shot.log",
+  "dump_path_" : "/Volumes/technisync/dump",
+  "dump_path" : "~/dump",
+  "use_alias" : true,
+  "use_remote_dump": true,
+  "remote_dump_path": "/mnt/technisyncdump",
+  "remote_lftp_command": "/usr/bin/lftp",
+  "maxDlPerBox": 99,
+  "useRemoteHost":true,
+  "redisRemoteHost":"10.0.10.0",
+
+  "devices" : {
+    "PDU":   "10.0.10.3",
+    "NAS": "10.0.0.2",
+    "Switches": ["10.0.10.2","10.0.10.20","10.0.10.21","10.0.10.22","10.0.10.23","10.0.10.24"],
+    "SwitchNames": ["console1G","box1","box2","core10G","box3","box4"],
+    "SmartScopeDuo": ["10.0.2.11","10.0.2.12","10.0.2.13"],
+    "MultiViewTier1" : "10.0.10.30",
+    "HyperDeck" :  "10.0.0.6",
+    "TS-Srv1" : "10.0.10.10",
+    "DXD-16" : ["10.0.0.7","10.0.1.8","10.0.1.9","10.0.1.10"],
+    "DXD-8_1" : "10.0.0.8",
+    "DXD-8_4" : "10.0.0.9",
+    "MultiViewTier2" : ["10.0.10.31","10.0.10.32","10.0.10.33","10.0.10.34"]
+  },
+
+  "controlBoxes": [
+    {
+      "name" : "Controller 1",
+      "sdiChannel" : 1,
+      "ports"          : [   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16],
+      "cameras"        : ["A1","A2","A3","A4","A5","B1","B2","B3","B4","B5","C1","C2","C3","C4","C5","--"],
+      "cameraAlias"    : ["AA","AB","AC","AD","AE","BA","BB","BC","BD","BE","CA","CB","CC","CD","CE","--"],
+      "cameraPosition" : [ 110, 270, 340, 410, 470, 110, 270, 340, 410, 470, 110, 470, 340, 410, 570,   0]
+    },
+    {
+      "name" : "Controller 2",
+      "sdiChannel" : 2,
+      "ports"          : [   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16],
+      "cameras"        : ["D1","D2","D3","D4","D5","E1","E2","E3","E4","E5","F1","F2","F3","F4","F5","--"],
+      "cameraAlias"    : ["DA","DB","DC","DD","DE","EA","EB","EC","ED","EE","FA","FB","FC","FD","FE","--"],
+      "cameraPosition" : [ 310, 470, 340, 410, 570, 310, 470, 340, 410, 570, 310, 470, 340, 410, 570,   0]
+    },
+    {
+      "name" : "Controller 3",
+      "sdiChannel" : 3,
+      "ports"          : [   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16],
+      "cameras"        : ["G1","G2","G3","G4","G5","H1","H2","H3","H4","H5","I1","I2","I3","I4","I5","--"],
+      "cameraAlias"    : ["GA","GB","GC","GD","GE","HA","HB","HC","HD","HE","IA","IB","IC","ID","IE","--"],
+      "cameraPosition" : [ 310, 470, 340, 410, 570, 310, 470, 340, 410, 570, 310, 470, 340, 410, 570,   0]
+    },
+    {
+      "name" : "Controller 4",
+      "sdiChannel" : 4,
+      "ports"          : [   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16],
+      "cameras"        : ["J1","J2","J3","J4","J5","Z1","Z2","Z3","Z4","Z5","--","--","--","--","--","--"],
+      "cameraAlias"    : ["JA","JB","JC","JD","JE","ZA","ZB","ZC","ZC","ZD","--","--","--","--","--","--"],
+      "cameraPosition" : [ 310, 470, 340, 410, 570, 459, 399, 349, 419, 579,   0,   0,   0,   0,   0,   0]
+    }
+  ],
+
+  "cameras" : [
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "A1",
+      "ip_enet": "10.0.11.1",
+      "ip_wifi": "10.0.12.1",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "A2",
+      "ip_enet": "10.0.11.2",
+      "ip_wifi": "10.0.12.2",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "A3",
+      "ip_enet": "10.0.11.3",
+      "ip_wifi": "10.0.12.3",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "A4",
+      "ip_enet": "10.0.11.4",
+      "ip_wifi": "10.0.12.4",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "A5",
+      "ip_enet": "10.0.11.5",
+      "ip_wifi": "10.0.12.5",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "B1",
+      "ip_enet": "10.0.11.11",
+      "ip_wifi": "10.0.12.11",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "B2",
+      "ip_enet": "10.0.11.12",
+      "ip_wifi": "10.0.12.12",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "B3",
+      "ip_enet": "10.0.11.13",
+      "ip_wifi": "10.0.12.13",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "B4",
+      "ip_enet": "10.0.11.14",
+      "ip_wifi": "10.0.12.14",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "B5",
+      "ip_enet": "10.0.11.15",
+      "ip_wifi": "10.0.12.15",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "C1",
+      "ip_enet": "10.0.11.21",
+      "ip_wifi": "10.0.12.21",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "C2",
+      "ip_enet": "10.0.11.22",
+      "ip_wifi": "10.0.12.22",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "C3",
+      "ip_enet": "10.0.11.23",
+      "ip_wifi": "10.0.12.23",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "C4",
+      "ip_enet": "10.0.11.24",
+      "ip_wifi": "10.0.12.24",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "C5",
+      "ip_enet": "10.0.11.25",
+      "ip_wifi": "10.0.12.25",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "D1",
+      "ip_enet": "10.0.11.31",
+      "ip_wifi": "10.0.12.31",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "D2",
+      "ip_enet": "10.0.11.32",
+      "ip_wifi": "10.0.12.32",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "D3",
+      "ip_enet": "10.0.11.33",
+      "ip_wifi": "10.0.12.33",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "D4",
+      "ip_enet": "10.0.11.34",
+      "ip_wifi": "10.0.12.34",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "D5",
+      "ip_enet": "10.0.11.35",
+      "ip_wifi": "10.0.12.35",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "E1",
+      "ip_enet": "10.0.11.41",
+      "ip_wifi": "10.0.12.41",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "E2",
+      "ip_enet": "10.0.11.42",
+      "ip_wifi": "10.0.12.42",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "E3",
+      "ip_enet": "10.0.11.43",
+      "ip_wifi": "10.0.12.43",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "E4",
+      "ip_enet": "10.0.11.44",
+      "ip_wifi": "10.0.12.44",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "E5",
+      "ip_enet": "10.0.11.45",
+      "ip_wifi": "10.0.12.45",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "F1",
+      "ip_enet": "10.0.11.51",
+      "ip_wifi": "10.0.12.51",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "F2",
+      "ip_enet": "10.0.11.52",
+      "ip_wifi": "10.0.12.52",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "F3",
+      "ip_enet": "10.0.11.53",
+      "ip_wifi": "10.0.12.53",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "F4",
+      "ip_enet": "10.0.11.54",
+      "ip_wifi": "10.0.12.54",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "F5",
+      "ip_enet": "10.0.11.55",
+      "ip_wifi": "10.0.12.55",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "G1",
+      "ip_enet": "10.0.11.61",
+      "ip_wifi": "10.0.12.61",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "G2",
+      "ip_enet": "10.0.11.62",
+      "ip_wifi": "10.0.12.62",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "G3",
+      "ip_enet": "10.0.11.63",
+      "ip_wifi": "10.0.12.63",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "G4",
+      "ip_enet": "10.0.11.64",
+      "ip_wifi": "10.0.12.64",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "G5",
+      "ip_enet": "10.0.11.65",
+      "ip_wifi": "10.0.12.65",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "H1",
+      "ip_enet": "10.0.11.71",
+      "ip_wifi": "10.0.12.71",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "H2",
+      "ip_enet": "10.0.11.72",
+      "ip_wifi": "10.0.12.72",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "H3",
+      "ip_enet": "10.0.11.73",
+      "ip_wifi": "10.0.12.73",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "H4",
+      "ip_enet": "10.0.11.74",
+      "ip_wifi": "10.0.12.74",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "H5",
+      "ip_enet": "10.0.11.75",
+      "ip_wifi": "10.0.12.75",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "I1",
+      "ip_enet": "10.0.11.81",
+      "ip_wifi": "10.0.12.81",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "I2",
+      "ip_enet": "10.0.11.82",
+      "ip_wifi": "10.0.12.82",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "I3",
+      "ip_enet": "10.0.11.83",
+      "ip_wifi": "10.0.12.83",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "I4",
+      "ip_enet": "10.0.11.84",
+      "ip_wifi": "10.0.12.84",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "I5",
+      "ip_enet": "10.0.11.85",
+      "ip_wifi": "10.0.12.85",
+      "enabled": true
+    },    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "J1",
+      "ip_enet": "10.0.11.91",
+      "ip_wifi": "10.0.12.91",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "J2",
+      "ip_enet": "10.0.11.92",
+      "ip_wifi": "10.0.12.92",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "J3",
+      "ip_enet": "10.0.11.93",
+      "ip_wifi": "10.0.12.93",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "J4",
+      "ip_enet": "10.0.11.94",
+      "ip_wifi": "10.0.12.94",
+      "enabled": true
+    },
+        {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "J5",
+      "ip_enet": "10.0.11.95",
+      "ip_wifi": "10.0.12.95",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "Z1",
+      "ip_enet": "10.0.11.201",
+      "ip_wifi": "10.0.12.201",
+      "enabled": true
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "Z2",
+      "ip_enet": "10.0.11.202",
+      "ip_wifi": "10.0.12.202",
+      "enabled": false
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "Z3",
+      "ip_enet": "10.0.11.203",
+      "ip_wifi": "10.0.12.203",
+      "enabled": false
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "Z4",
+      "ip_enet": "10.0.11.204",
+      "ip_wifi": "10.0.12.204",
+      "enabled": false
+    },
+    {
+      "brand": "RED",
+      "type": "KOMODO",
+      "driver": "tsKomodoDriver",
+      "name": "Z5",
+      "ip_enet": "10.0.11.205",
+      "ip_wifi": "10.0.12.205",
+      "enabled": false
+    }
+  ],
+
+  "required_configuration": {
+    "CAMERA_FIRMWARE_VERSION": {"str":"1.8.6"},
+    "SENSOR_FRAME_RATE": {"str": "60 FPS"},
+    "PROJECT_FRAME_RATE": {"str": "60 FPS"},
+    "MEDIA_STATUS": {"str": "Ready"}
+  },
+
+  "warning_configuration": {
+    "SYNC_STATE":{"str":"Locked"},
+    "GENLOCK_STATE":{"str":"Locked"},
+    "TIMECODE_STATE":{"str":"Jammed"},
+    "CALIBRATION_STATUS_TEMPERATURE":{"status":"GOOD"},
+    "CALIBRATION_STATUS_INTEGRATION_TIME":{"status":"GOOD"}
+  }
+}

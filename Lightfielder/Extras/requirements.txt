@@ -1,0 +1,5 @@
+OpenImageIO
+OpenTimelineIO
+PySide6
+jupyter
+ipykernel

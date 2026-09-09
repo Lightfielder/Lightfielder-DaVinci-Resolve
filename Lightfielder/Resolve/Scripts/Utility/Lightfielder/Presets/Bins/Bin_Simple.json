@@ -1,0 +1,21 @@
+{
+	"version": 1.0,
+	"bins":[
+		"01-delivery/calibrate",
+		"01-delivery/render_checks",
+		"01-delivery/reviews",
+		"02-timelines/old",
+		"02-timelines/still_frames",
+		"03-footage/calibration",
+		"03-footage/reference",
+		"03-footage/renders",
+		"03-footage/source",
+		"03-footage/still_frames",
+		"04-graphics/cmpd_grfx",
+		"05-audio",
+		"06-compounds",
+		"07-projects_xml",
+		"08-documents",
+		"09-project_bu"
+	]
+}

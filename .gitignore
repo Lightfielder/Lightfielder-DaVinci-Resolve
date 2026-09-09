@@ -1,6 +1,8 @@
 .DS_Store
 ._.DS_Store
 Thumbs.db
+-checkpoint.ipynb
 __pycache__
+.ipynb_checkpoints/
 Lightfielder/Logs/
 Lightfielder/Temp/

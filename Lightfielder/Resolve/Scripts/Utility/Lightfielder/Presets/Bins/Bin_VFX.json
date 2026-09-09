@@ -1,0 +1,11 @@
+{
+	"version": 1.0,
+	"bins":[
+		"01-delivery",
+		"02-timelines",
+		"03-footage/renders",
+		"03-footage/source",
+		"03-footage/still_frames",
+		"04-comp"
+	]
+}

@@ -1,0 +1,117 @@
+/*
+    ____                                 ______                           __     
+   / __ )_________ _      ______        / ____/___  ____  _________ _____/ /_  __
+  / __  / ___/ __ \ | /| / / __ \______/ /   / __ \/ __ \/ ___/ __ `/ __  / / / /
+ / /_/ / /  / /_/ / |/ |/ / / / /_____/ /___/ /_/ / / / / /  / /_/ / /_/ / /_/ / 
+/_____/_/   \____/|__/|__/_/ /_/      \____/\____/_/ /_/_/   \__,_/\__,_/\__, /  
+                                                                        /____/   
+
+KartaVR Brown-Conrady Lens Distortion - v6 2026-09-09
+Ported by Andrew Hazelden (andrew@andrewhazelden.com)
+
+Overview
+---------
+The KartaVR provided "kvrBrownConrady" DCTL allows you to distort your imagery using the Brown-Conrady lens distortion model that is popular with computer vision tools like OpenCV, and photogrammetry/NeRF tools.
+
+Installation
+-------------
+Copy the "kvrBrownConrady.dctl" file into the DaVinci Resolve "LUT" folder. (You can optionally create and use the "Kartaverse" sub-folder if you wish.)
+
+Linux:
+/home/resolve/LUT/Kartaverse/
+or
+/opt/resolve/LUT/Kartaverse/
+
+Windows:
+C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\LUT\Kartaverse\
+
+macOS:
+/Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/Kartaverse/
+
+iPadOS:
+The "LUT" folder is located inside of the DaVinci Resolve App
+
+DCTL Node Usage
+----------------
+Color Page Usage:
+In the Resolve Color page add a "Resolve FX Color" based DCTL node to the node graph.
+
+In the "DCTL List" menu select the "kvrBrownConrady" item. You can now adjust the k1, k2, k3, k4, p1, and p2 controls interactively.
+
+Edit Page Usage:
+In the Resolve Edit page, display the Effects Library. Expand the "OpenFX > Filters > Resolve FX" section and drag a "DCTL" item onto a clip in the timeline.
+
+In the Inspector window switch to the "Effects" tab, and click on the "Open FX" heading. This will provide access to the DCTL effect. In the "DCTL List" menu select the "kvrBrownConrady" item. You can now adjust the k1, k2, k3, k4, p1, and p2 controls interactively.
+
+Open Source License
+-------------------
+	- GPL v3
+
+DCTL Fuse Support Requirements
+------------------------------
+	- An OpenCL, CUDA, or Metal based GPU
+	- Fusion Studio 16-21.1+ or Resolve 16-21.1+
+
+Based Upon Code By
+-------------------
+	- aleklesovoi CRT TV Shader Shadertoy Example (https://www.shadertoy.com/view/DldXWS)
+	- Blender Tracking Brown-Conrady Distortion Model (https://archive.blender.org/developer/D9037)
+	- David Kohen (Learn Now FX) kvrReframe360Ultra DCTL Fuse (https://learnnowfx.com/)
+	- baldavenger "DCTLs" GitHub repository (https://github.com/baldavenger/DCTLs)
+	- 3D ASCII Art "Slant" Font: (http://www.patorjk.com/software/taag/#p=display&f=Slant&t=Brown-Conrady)
+*/
+
+DEFINE_UI_PARAMS(k1, k1, DCTLUI_SLIDER_FLOAT, 0, -0.5, 1, 0.05)
+DEFINE_UI_PARAMS(k2, k2, DCTLUI_SLIDER_FLOAT, 0, -0.5, 1, 0.05)
+DEFINE_UI_PARAMS(k3, k3, DCTLUI_SLIDER_FLOAT, 0, -0.5, 1, 0.05)
+DEFINE_UI_PARAMS(k4, k4, DCTLUI_SLIDER_FLOAT, 0, -0.5, 1, 0.05)
+DEFINE_UI_PARAMS(autoscale, autoscale, DCTLUI_CHECK_BOX, 1)
+
+DEFINE_UI_PARAMS(p1, p1, DCTLUI_SLIDER_FLOAT, 0, -0.5, 3, 0.05)
+DEFINE_UI_PARAMS(p2, p2, DCTLUI_SLIDER_FLOAT, 0, -0.5, 3, 0.05)
+
+__DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, __TEXTURE__ p_TexR, __TEXTURE__ p_TexG, __TEXTURE__ p_TexB)
+{
+    float2 uv = make_float2((float)p_X / (float)p_Width, (float)p_Y / (float)p_Height);
+
+    // Brown Conrady uses UV coordinates with a [-1:1] range
+    float2 iuv = (uv * 2.0f) - 1.0f;
+
+    // Compute the distortion
+    float x2 = iuv.x * iuv.x;
+    float y2 = iuv.y * iuv.y;
+
+    float xy2 = iuv.x * iuv.y;
+    float r2 = x2 + y2;
+
+    float r_coeff = 1.0f + (((k4 * r2 + k3) * r2 + k2) * r2 + k1) * r2;
+    float tx = p1 * (r2 + (2.0f * x2)) + (p2 * xy2);
+    float ty = p2 * (r2 + (2.0f * y2)) + (p1 * xy2);
+
+    iuv.x *= r_coeff + tx;
+    iuv.y *= r_coeff + ty;
+
+    // Transform the UV coordinates back to a [0:1] range
+    iuv = (iuv * 0.5f) + 0.5f;
+
+    // Use the distortion parameter as a scaling factor to keep the image resized as close as possible to the actual viewport dimensions
+    float scale;
+    if(autoscale){
+        scale = _fabs(k1) < 1.001f ? 1.0f - _fabs(k1) : 1.0f / (k1 + 1.0f);
+    }else{
+        scale = 1.0f / (k1 + 1.0f);
+    }
+
+    // Scale the image from center
+    iuv = (iuv * scale) - (scale * 0.5f) + 0.5f;
+
+    int uvX = (float)iuv.x * (float)p_Width;
+    int uvY = (float)iuv.y * (float)p_Height;
+
+    // Output an RGBA version of the view
+    float r = _tex2D(p_TexR, uvX, uvY);
+    float g = _tex2D(p_TexG, uvX, uvY);
+    float b = _tex2D(p_TexB, uvX, uvY);
+
+    return make_float3(r, g, b);
+}

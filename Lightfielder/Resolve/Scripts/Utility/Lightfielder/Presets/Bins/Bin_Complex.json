@@ -1,0 +1,33 @@
+{
+	"version": 1.0,
+	"bins":[
+		"01-delivery/calibrate",
+		"01-delivery/render_checks",
+		"01-delivery/reviews",
+		"02-timelines/flythroughs",
+		"02-timelines/old",
+		"02-timelines/still_frames",
+		"03-footage/calibration",
+		"03-footage/flythrough source",
+		"03-footage/reference",
+		"03-footage/renders",
+		"03-footage/scene",
+		"03-footage/source",
+		"03-footage/still_frames",
+		"04-graphics/cmpd_grfx",
+		"04-graphics/motion_grfx/final",
+		"04-graphics/motion_grfx/temp",
+		"05-audio/location",
+		"05-audio/mixes/stems",
+		"05-audio/music/final",
+		"05-audio/music/temp",
+		"05-audio/sfx/final",
+		"05-audio/sfx/temp",
+		"05-audio/vo/final",
+		"05-audio/vo/temp",
+		"06-compounds",
+		"07-projects_xml",
+		"08-documents",
+		"09-project_bu"
+	]
+}

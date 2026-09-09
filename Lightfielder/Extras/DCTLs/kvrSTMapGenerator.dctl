@@ -1,0 +1,74 @@
+/*
+kvrSTMapGenerator - v6 2026-09-09
+Ported by Andrew Hazelden (andrew@andrewhazelden.com)
+
+Overview
+---------
+The KartaVP provided "kvrSTMapGenerator" DCTL allows you to generate an initial STMap template.
+
+Installation
+-------------
+Copy the "kvrSTMapGenerator.dctl" file into the DaVinci Resolve "LUT" folder. (You can optionally create and use the "Kartaverse" sub-folder if you wish.)
+
+Linux:
+/home/resolve/LUT/Kartaverse/
+or
+/opt/resolve/LUT/Kartaverse/
+
+Windows:
+C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\LUT\Kartaverse\
+
+macOS:
+/Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/Kartaverse/
+
+iPadOS:
+The "LUT" folder is located inside of the DaVinci Resolve App
+
+DCTL Node Usage
+----------------
+Color Page Usage:
+In the Resolve Color page add a "Resolve FX Color" based DCTL node to the node graph.
+
+In the "DCTL List" menu select the "kvrSTMapGenerator" item.
+
+Edit Page Usage:
+In the Resolve Edit page, display the Effects Library. Expand the "OpenFX > Filters > Resolve FX" section and drag a "DCTL" item onto a clip in the timeline.
+
+In the Inspector window switch to the "Effects" tab, and click on the "Open FX" heading. This will provide access to the DCTL effect. In the "DCTL List" menu select the "kvrSTMapGenerator" item.
+
+Open Source License
+-------------------
+	- GPL v3
+
+DCTL Fuse Support Requirements
+------------------------------
+	- An OpenCL, CUDA, or Metal based GPU
+	- Fusion Studio 16-21.1+ or Resolve 16-21.1+
+*/
+
+DEFINE_UI_PARAMS(FlipVertical, Flip Vertical, DCTLUI_CHECK_BOX, 0)
+DEFINE_UI_PARAMS(FlipHorizontal, Flip Horizontal, DCTLUI_CHECK_BOX, 0)
+
+__DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, __TEXTURE__ p_TexR, __TEXTURE__ p_TexG, __TEXTURE__ p_TexB)
+{
+    float2 uv = make_float2((float)p_X / (float)p_Width, (float)p_Y / (float)p_Height);
+
+    float r;
+    float g;
+    float b = 0.0f;
+
+    // Output an ST map template
+    if(FlipHorizontal){
+        r = 1.0f - uv.x;
+    }else{
+        r = uv.x;
+    }
+
+    if(FlipVertical){
+        g = 1.0f - uv.y;
+    }else{
+        g = uv.y;
+    }
+
+    return make_float3(r, g, b);
+}

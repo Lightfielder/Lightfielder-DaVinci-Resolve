@@ -1,0 +1,467 @@
+Composition {
+	CurrentTime = 50,
+	RenderRange = { 1, 50 },
+	GlobalRange = { 1, 50 },
+	CurrentID = 149,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	StereoMode = false,
+	Version = "Fusion Studio 21.0 build 31",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		vFileSystemMapPath1 = Fuse.vFileSystemMapPath {
+			NameSet = true,
+			Inputs = {
+				Text = Input {
+					SourceOp = "SourceR3D",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 770, 49.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		Note1 = Note {
+			Inputs = {
+				Comments = Input { Value = "This Fusion comp is used to generate a unit test for debugging 50 camera array geometry A1-E5 format R3D filenames. A sample R3D file named \"Source.R3D\" is placed in the same folder as the .comp file. The comp then uses the Vonk data nodes to generate a sample filename sequence based upon the naming template in the file \"R3D File Sequence.ifl\":\n\nA001_A050_0309BX_001.R3D\n...\nJ001_E050_0309BX_001.R3D\n", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 330, -82.5 },
+				Flags = {
+					Expanded = true
+				},
+				Size = { 635.333, 96.5152 }
+			},
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		IFL = Fuse.vTextCreateBrowse {
+			NameSet = true,
+			Inputs = {
+				Text = Input { Value = "Comp:/R3D File Sequence.ifl", }
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 82.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vNumberCompReqTime1 = Fuse.vNumberCompReqTime {
+			ViewInfo = OperatorInfo { Pos = { 550, 115.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vFileSystemFileCopy1 = Fuse.vFileSystemFileCopy {
+			CtrlWZoom = false,
+			Inputs = {
+				Source = Input {
+					SourceOp = "vFileSystemMapPath1",
+					Source = "Output",
+				},
+				Destination = Input {
+					SourceOp = "vFileSystemMapPath2",
+					Source = "Output",
+				},
+				ShowInput = Input { Value = 1, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 880, 49.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		SourceR3D = Fuse.vTextCreateBrowse {
+			NameSet = true,
+			Inputs = {
+				Text = Input { Value = "Comp:/Source.R3D", }
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 49.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		Underlay1 = Underlay {
+			ViewInfo = UnderlayInfo {
+				Pos = { 605, -115.5 },
+				Size = { 715.875, 278.636 }
+			},
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vTextLineCount1 = Fuse.vTextLineCount {
+			CtrlWZoom = false,
+			Inputs = {
+				Text = Input {
+					SourceOp = "vTextFromFile1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 115.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vFileSystemMapPath2 = Fuse.vFileSystemMapPath {
+			NameSet = true,
+			Inputs = {
+				Text = Input {
+					SourceOp = "vTextSubFormat1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 770, 82.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vTextReadLine1 = Fuse.vTextReadLine {
+			Inputs = {
+				Index = Input {
+					SourceOp = "vNumberCompReqTime1",
+					Source = "Output",
+				},
+				Input = Input {
+					SourceOp = "vTextFromFile1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vTextSubFormat1 = Fuse.vTextSubFormat {
+			Inputs = {
+				Which = Input { Value = 1, },
+				Text1 = Input {
+					SourceOp = "vTextReadLine1",
+					Source = "Output",
+				},
+				Format = Input { Value = "Comp:/Output/{1}", }
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 82.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		vTextFromFile1 = Fuse.vTextFromFile {
+			Inputs = {
+				Input = Input {
+					SourceOp = "IFL",
+					Source = "Output",
+				},
+				ShowInput = Input { Value = 1, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 82.5 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			PresetName = "Default",
+			Left = 0,
+			Top = 27,
+			Width = 1994,
+			Height = 734,
+			ZoneInfo = {
+				["!Right"] = {
+				},
+				["!Left"] = {
+				},
+				AuxLeft = { Expanded = true },
+				Right = { Expanded = true, },
+				Left = { Expanded = false, },
+				AuxRight = { Expanded = true }
+			},
+			ViewInfo = {
+				Viewer1 = { Show = true, RatioY = 0.01, RatioX = 1.79840319361277, },
+				InnerLeft = {
+				},
+				MainSplit = {
+					RatioX = 100,
+					RatioY = 2.36547433903577,
+				},
+				CenterSplit = {
+					RatioX = 0.630396479642164,
+					RatioY = 100,
+				},
+				Viewer2 = { Show = true, RatioY = 0.01, RatioX = 0.201596806387225, },
+				Comments = { Show = false },
+				Time = { Show = true, RatioX = 100, },
+				InnerColumns = {
+					RatioX = 100,
+					RatioY = 0.63452566096423,
+				},
+				Keyframes = { Show = false, },
+				LayoutStrip = { Show = true, RatioX = 100, },
+				Inspector = { Show = true, RatioY = 1, RatioX = 100, },
+				InnerRight = {
+				},
+				ActionStrip = { Show = true, RatioX = 100, },
+				OuterColumns = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Effects = { Show = false, },
+				Clips = { Show = false, },
+				Metadata = { Show = false, },
+				OuterLeft = {
+				},
+				ViewerSplit = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Nodes = { Show = true, RatioY = 100, RatioX = 1, },
+				OuterRight = {
+					RatioY = 100,
+					PixelX = 988,
+				},
+				MediaPool = { Show = false, },
+				Spline = { Show = false, }
+			},
+			Views = ordered() {
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							AutoHideNavigator = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 0.658002,
+						RootOffset = { -107.439, 162.702 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 320 },
+							ScaleX = 0.105068226120858,
+							OffsetX = -1.47095516569201,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = false,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "frame"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.2,
+						ScaleY = 0.00338983050847458,
+						OffsetX = 16,
+						OffsetY = 0,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = false,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = false,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView"
+			},
+			Layout = {
+				{ ID = "LayoutStrip", FixedY = 36, Resolve = false, Flat = true },
+				{
+					{
+						{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+						{ ID = "Effects", RatioX = 1 },
+						Zone = "Left",
+						Rows = 2,
+						PaneID = "OuterLeft",
+						PixelX = 420
+					},
+					{
+						{
+							{
+								{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+								{ ID = "Effects", RatioX = 1 },
+								PaneID = "InnerLeft",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Left"
+							},
+							{
+								{
+									{ ID = "Viewer1", RatioY = 0.01, RatioX = 1 },
+									{ ID = "Viewer2", RatioX = 1 },
+									RatioY = 1,
+									Columns = 2,
+									PaneID = "ViewerSplit"
+								},
+								{ ID = "Time", FixedY = 83, Photo = false, Flat = true },
+								RatioX = 1,
+								Rows = 2
+							},
+							{
+								{ ID = "Inspector", RatioY = 1 },
+								{ ID = "Metadata", RatioY = 1, Fusion = false },
+								PaneID = "InnerRight",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Right"
+							},
+							RatioY = 2,
+							Columns = 3,
+							PaneID = "InnerColumns"
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{
+							{ ID = "Nodes", RatioX = 1 },
+							{ ID = "Spline", Photo = false, RatioX = 1 },
+							{ ID = "Keyframes", Photo = false, RatioX = 1 },
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "MainSplit"
+						},
+						{ Fusion = false, ID = "Clips", LARGE_FixedY = 160, MEDIUM_FixedY = 138, SMALL_FixedY = 110 },
+						RatioX = 1,
+						Rows = 4,
+						PaneID = "CenterSplit"
+					},
+					{
+						{ ID = "Inspector", RatioY = 1 },
+						{ ID = "Metadata", RatioY = 1, Fusion = false },
+						Zone = "Right",
+						Rows = 2,
+						PaneID = "OuterRight",
+						PixelX = 420
+					},
+					RatioY = 1,
+					Columns = 3,
+					PaneID = "OuterColumns"
+				},
+				RatioX = 1,
+				Rows = 2,
+				RatioY = 1
+			},
+			TopBar = {
+				Left = { "Left", "MediaPool", "Effects", "Clips", "Nodes", "Console" },
+				Right = { "Spline", "Keyframes", "Metadata", "Inspector", "Right" }
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Views = {
+				RightView = {
+				},
+				LeftView = {
+					Viewer = {
+						ScaleMode = 1,
+						Layer = ":Default"
+					},
+				},
+				View1 = {
+				},
+			},
+			Paths = {
+				Map = {
+				},
+				EnableReverseMapping = true
+			},
+			FrameFormat = {
+				GuideRatio = 1.77777777777778,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalStart = 1,
+				GlobalEnd = 50,
+				RenderSettings = {
+					Configs = {
+						Final = {
+							StepRender = false,
+							PriorityClasses = "all",
+							ShowRenderNodes = false,
+							CustomAspect = true,
+							SizeType = 1,
+							CustomHeight = 160,
+							MotionBlur = true,
+							CustomWidth = 200,
+							StepSize = 5,
+							UpdateMode = "Some",
+							UseNetwork = false,
+							Quality = true
+						},
+						Preview = {
+							StepRender = false,
+							PriorityClasses = "all",
+							ShowRenderNodes = false,
+							CustomAspect = true,
+							SizeType = 1,
+							CustomHeight = 160,
+							MotionBlur = true,
+							CustomWidth = 200,
+							StepSize = 5,
+							UpdateMode = "Some",
+							UseNetwork = false,
+							Quality = true
+						}
+					},
+					PreviewConfig = "Preview",
+					CurrentConfig = "Final"
+				}
+			},
+			SpellCheck = {
+				Language = "auto"
+			},
+			QuickTime = {
+			},
+		}
+	},
+}
+

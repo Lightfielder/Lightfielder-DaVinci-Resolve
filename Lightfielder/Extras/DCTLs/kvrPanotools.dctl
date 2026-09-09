@@ -1,0 +1,106 @@
+/*
+    ____                    __              __    
+   / __ \____ _____  ____  / /_____  ____  / /____
+  / /_/ / __ `/ __ \/ __ \/ __/ __ \/ __ \/ / ___/
+ / ____/ /_/ / / / / /_/ / /_/ /_/ / /_/ / (__  ) 
+/_/    \__,_/_/ /_/\____/\__/\____/\____/_/____/ 
+
+KartaVR Panotools Lens Distortion - v6 2026-09-09
+Ported by Andrew Hazelden (andrew@andrewhazelden.com)
+
+Overview
+---------
+The KartaVR provided "kvrPanotools" DCTL allows you to distort your imagery using the Panotools lens distortion model that is popular with 360VR panoramic stitching software like PTGui (v11) and Hugin/Nona.
+
+Installation
+-------------
+Copy the "kvrPanotools.dctl" file into the DaVinci Resolve "LUT" folder. (You can optionally create and use the "Kartaverse" sub-folder if you wish.)
+
+Linux:
+/home/resolve/LUT/Kartaverse/
+or
+/opt/resolve/LUT/Kartaverse/
+
+Windows:
+C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\LUT\Kartaverse\
+
+macOS:
+/Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/Kartaverse/
+
+iPadOS:
+The "LUT" folder is located inside of the DaVinci Resolve App
+
+DCTL Node Usage
+----------------
+Color Page Usage:
+In the Resolve Color page add a "Resolve FX Color" based DCTL node to the node graph.
+
+In the "DCTL List" menu select the "kvrPanotools" item. You can now adjust the A, B, C, and Center X/Center Y controls interactively.
+
+Edit Page Usage:
+In the Resolve Edit page, display the Effects Library. Expand the "OpenFX > Filters > Resolve FX" section and drag a "DCTL" item onto a clip in the timeline.
+
+In the Inspector window switch to the "Effects" tab, and click on the "Open FX" heading. This will provide access to the DCTL effect. In the "DCTL List" menu select the "kvrPanotools" item. You can now adjust the A, B, C, and Center X/Center Y controls interactively.
+
+Open Source License
+-------------------
+	- GPL v3
+
+DCTL Fuse Support Requirements
+------------------------------
+	- An OpenCL, CUDA, or Metal based GPU
+	- Fusion Studio 16-21.1+ or Resolve 16-21.1+
+
+Based Upon Code By
+-------------------
+	- aleklesovoi CRT TV Shader Shadertoy Example (https://www.shadertoy.com/view/DldXWS)
+	- Blender Tracking Brown-Conrady Distortion Model (https://archive.blender.org/developer/D9037)
+	- Natron OpenFX-Misc (/openfx-misc/Distortion/DistortionModel.cpp)
+	- David Kohen (Learn Now FX) kvrReframe360Ultra DCTL Fuse (https://learnnowfx.com/)
+	- baldavenger "DCTLs" GitHub repository (https://github.com/baldavenger/DCTLs)
+	- 3D ASCII Art "Slant" Font: (http://www.patorjk.com/software/taag/#p=display&f=Slant&t=Panotools)
+
+*/
+
+DEFINE_UI_PARAMS(a, A, DCTLUI_SLIDER_FLOAT, 0, -1, 1, 0.01)
+DEFINE_UI_PARAMS(b, B, DCTLUI_SLIDER_FLOAT, 0, -1, 1, 0.01)
+DEFINE_UI_PARAMS(c, C, DCTLUI_SLIDER_FLOAT, 0, -1, 1, 0.01)
+DEFINE_UI_PARAMS(cx, Center X, DCTLUI_SLIDER_FLOAT, 0, -8192, 8192, 0.01)
+DEFINE_UI_PARAMS(cy, Center Y, DCTLUI_SLIDER_FLOAT, 0, -8192, 8192, 0.01)
+
+__DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, __TEXTURE__ p_TexR, __TEXTURE__ p_TexG, __TEXTURE__ p_TexB)
+{
+    //int length = min(p_Width, p_Height);
+    //float2 uv = make_float2((float)p_X / (float)length, (float)p_Y / (float)length);
+    float2 uv = make_float2(((float)p_X + (float)cx) / (float)p_Width, ((float)p_Y + (float)cy) / (float)p_Height);
+
+    // Panotools uses UV coordinates with a [-1:1] range
+    float2 iuv = (uv * 2.0f) - 1.0f;
+
+    // Compute the distortion
+    float x2 = iuv.x * iuv.x;
+    float y2 = iuv.y * iuv.y;
+
+    float r2 = x2 + y2;
+    float d = 1.0f - (a + b + c);
+    float r = _sqrtf(r2);
+    float scale = (a * r2 + c) * r + b * r2 + d;
+
+    iuv.x *= scale;
+    iuv.y *= scale;
+
+    // Transform the UV coordinates back to a [0:1] range
+    iuv = (iuv * 0.5f) + 0.5f;
+
+    //int uvX = (float)iuv.x * (float)length;
+    //int uvY = (float)iuv.y * (float)length;
+    int uvX = (float)iuv.x * (float)p_Width;
+    int uvY = (float)iuv.y * (float)p_Height;
+
+    // Output an RGBA version of the view
+    float rColor = _tex2D(p_TexR, uvX, uvY);
+    float gColor = _tex2D(p_TexG, uvX, uvY);
+    float bColor = _tex2D(p_TexB, uvX, uvY);
+
+    return make_float3(rColor, gColor, bColor);
+}

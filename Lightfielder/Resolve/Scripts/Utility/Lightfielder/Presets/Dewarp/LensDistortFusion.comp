@@ -1,0 +1,36 @@
+{
+	Tools = ordered() {
+		MediaOut1 = MediaOut {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "LensDistort1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 605, 82.5 } },
+		},
+		LensDistort1 = LensDistort {
+			Inputs = {
+				LensDistortionModel = Input { Value = 1, },
+				Model = Input { Value = FuID { "DE4RadialStandardDegree4" }, },
+				CameraSettings = Input { Value = 1, },
+				SamplingOptions = Input { Value = 1, },
+				Input = Input {
+					SourceOp = "MediaIn1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 495, 82.5 } },
+		},
+		MediaIn1 = MediaIn {
+			ExtentSet = true,
+			CtrlWZoom = false,
+			Inputs = {
+				AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+				Layer = Input { Value = "0", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 385, 82.5 } },
+		},
+	}
+}

@@ -1,0 +1,91 @@
+--[[--
+Lightfielder ScriptLib 2026-09-02 07.10 PM (UTC -3)
+By Andrew Hazelden <andrew@andrewhazelden.com>
+
+A scriptlib module is a Lua script that is automatically run when DaVinci Resolve launches.
+It is also run when a new Fusion page composite is created, too. 
+
+Code added to this scriptlib document is able to set initial values for new editing sessions.
+
+The Lightfielder "01 Preferences" window has an "Autoload Toolbar On Launch" checkbox control. When this option is enabled the Lightfielder Toolbar window will automatically load when DaVinci Resolve Studio is started.
+
+--]]--
+
+function GetTimestamp()
+	-- Date and Time docs: https://www.lua.org/pil/22.1.html
+	-- Time Format Example: 2026-08-23 2:14 PM
+	return tostring(os.date("%Y-%m-%d %I:%M:%S %p"))
+end
+
+function AutostartToolbar()
+	local project = GetProject()
+	-- Show the Toolbar window when DaVinci Resolve starts up
+	local autostartStatus = app:GetData("Lightfielder.AutoloadToolbarOnLaunch")
+	if autostartStatus and autostartStatus == true then
+		print("[Lightfielder][ScriptLib][Autostart Status] " .. tostring(autostartStatus) .. "\t[Launch Time] " .. tostring(GetTimestamp()) )
+
+		local scriptPath = app:MapPath("Scripts:/Utility/Lightfielder/00 Toolbar.py")
+		-- Check if the toolbar script exists on disk
+		if bmd.fileexists(scriptPath) == false then
+			-- The Toolbar script is missing
+			print("[Lightfielder][ScriptLib][Toolbar] The script is missing from the location: " .. tostring(scriptPath))
+		else
+			while GetProject() == nil do
+				print("[Lightfielder][ScriptLib][Project] Not Found (Nil)\t[Holdoff Cycle] ", GetTimestamp())
+				bmd.wait(1.0)
+			end
+			
+			local projectName = ""
+			while GetProject() and GetProject():GetName() == "Untitled Project" do
+				-- Check every 5 seconds if a project was opened
+				bmd.wait(5.0)
+				-- Grab the latest project name
+				if GetProject() and GetProject():GetName() then
+					projectName = GetProject():GetName()
+				end
+				print("[Lightfielder][ScriptLib][Resolve Project Name] \"" .. tostring(projectName) .. "\"\t[Holdoff Cycle] ", GetTimestamp())
+			end
+
+			if GetProject() then
+				-- Grab the latest project name
+				if GetProject() and GetProject():GetName() then
+					projectName = GetProject():GetName()
+				end
+				print("[Lightfielder][ScriptLib][Resolve Project Name] \"" .. tostring(projectName) .. "\"\t[Autostart Task] " .. tostring(GetTimestamp()) )
+
+				-- Display the Toolbar window
+				app:RunScript(scriptPath)
+			end
+		end
+	end
+end
+
+function GetProject()
+	-- Get the current Resolve session in a way that works with Resolve Free and Resolve Studio
+	local res = app:GetResolve()
+	if res then
+		-- Is the project manager accessible
+		local pm = res:GetProjectManager()
+		if pm then
+			-- Is the project accessible
+			local project = pm:GetCurrentProject()
+			if project then
+				-- Is the media pool accessible
+				local mp = project:GetMediaPool()
+				if mp then
+					-- Is there a folder in the media pool
+					local folder = mp:GetCurrentFolder()
+					if folder then
+						return project
+					end
+				end
+			end
+		end
+	end
+
+	-- print("\n[Lightfielder ScriptLib][Error] No Resolve app session is open at this time.")
+	return nil
+end
+
+-- Show the Toolbar window when DaVinci Resolve starts up
+AutostartToolbar()

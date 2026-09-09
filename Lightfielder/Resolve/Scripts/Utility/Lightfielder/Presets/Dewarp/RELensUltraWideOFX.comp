@@ -1,0 +1,74 @@
+{
+	Tools = ordered() {
+		RELensUltraWide1 = ofx.com.revisionfx.RELensUltraWide {
+			CtrlWZoom = false,
+			Inputs = {
+				TargetSize = Input {
+					SourceOp = "MediaIn1",
+					Source = "Output",
+				},
+				RVLicenseInfoButton = Input { Value = 0, },
+				useGPU = Input { Value = 0, },
+				method = Input { Value = 1, },
+				viewMode = Input { Value = 0, },
+				warpAmount = Input { Value = 100, },
+				autoScale = Input { Value = 1, },
+				scale = Input {
+					Value = 1,
+					Disabled = true,
+				},
+				cropRadius = Input {
+					Value = 0.5,
+					Disabled = true,
+				},
+				sourceCenterX = Input { Value = 0.5, },
+				sourceCenterY = Input { Value = 0.5, },
+				FOV = Input {
+					Value = 180,
+					Disabled = true,
+				},
+				additionalTransformControls = Input { Value = 0, },
+				warpAmountScaleX = Input { Value = 1, },
+				warpAmountScaleY = Input { Value = 1, },
+				perspective = Input { Value = { 0, 0 }, },
+				panx = Input { Value = 0, },
+				tilty = Input { Value = 0, },
+				rollz = Input { Value = 0, },
+				adaptiveSharpening = Input { Value = 0, },
+				sharpenThreshold = Input { Value = 100, },
+				mipMapFiltering = Input { Value = 0, },
+				frameEdgeAntiAliasing = Input {
+					Value = 0,
+					Disabled = true,
+				},
+				premult = Input { Value = 1, },
+				CustomData_DoNotEdit = Input { Value = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", },
+				AllowResize = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 82.5 } },
+		},
+		MediaIn1 = MediaIn {
+			ExtentSet = true,
+			CtrlWZoom = false,
+				Layer = Input { Value = "0", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 220.694, 82.5 } },
+		},
+		Left = AudioDisplay {
+			CtrlWZoom = false,
+		},
+		Right = AudioDisplay {
+			CtrlWZoom = false,
+		},
+		MediaOut1 = MediaOut {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "RELensUltraWide1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 82.5 } },
+		}
+	}
+}
