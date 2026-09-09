@@ -10,6 +10,8 @@ The Python scripted tools help automate common tasks that can be tedious and tim
 
 ![Toolbar](images/about_toolbar.png)
 
+Note: Lightfielder also comes as a separate standalone app, and as a thin client. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
+
 ## GitHub Downloads
 
 Go to the GitHub [Releases page](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases) to access the latest build of Lightfielder.
