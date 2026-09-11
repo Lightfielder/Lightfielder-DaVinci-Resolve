@@ -1,16 +1,15 @@
 # Lightfielder Live Grade Video Flowchart
 
-Prepared by: Andrew Hazelden <andrew@andrewhazelden.com>  
-Date Created: 2026-04-02  
+**Prepared by:** Andrew Hazelden <andrew@andrewhazelden.com>  
+**Date Created:** 2026-04-02
 
 ## System Overview
 
-This document describes the video flow for a 50 camera array system that uses SDI output at 6K video resolution from RED Digital Cinema camera bodies, ultimately producing 3DGS (Gaussian Splat) trained 3D model assets.
+This document describes the video flow for a 50-camera array system that uses SDI output at 6K video resolution from RED Digital Cinema camera bodies, ultimately producing 3DGS (Gaussian Splat) trained 3D model assets.
 
 ## Flowchart
 
 *Figure 1: Complete video flow from camera array to 3D model output*
-
 
 ```mermaid
 flowchart TB
@@ -85,55 +84,51 @@ flowchart TB
     class E4 output
 ```
 
----
-
 ## Detailed Video Flow Summary
 
 ### A. Camera Array & Source
 
-- **50x RED Digital Cinema cameras**, each set to output high resolution video
-- Each camera utilizes a dedicated **SDI output connection** to transmit its video signal
+- **50x RED Digital Cinema cameras**, each set to output high-resolution video.
+- Each camera utilizes a dedicated **SDI output connection** to transmit its video signal.
 
 ### B. Signal Routing and Switching
 
-- All **50x SDI video feeds** are physically connected to the inputs of a **Blackmagic Smart Videohub 72x72** router
-- **40x SDI outputs** are patched from the Videohub to the **40 SDI inputs of a Blackmagic ATEM switcher** (e.g., ATEM Constellation 8K)
+- All **50x SDI video feeds** are physically connected to the inputs of a **Blackmagic Smart Videohub 72x72** router.
+- **40x SDI outputs** are patched from the Videohub to the **40 SDI inputs of a Blackmagic ATEM switcher**, such as an ATEM Constellation 8K.
 
 ### C. Capture and Host System
 
-- A **single SDI video output** (Program output) is routed from the ATEM switcher
-- This signal is captured by a **Blackmagic SDI video capture card (8K resolution capable)** installed within a **Lenovo Workstation host computer**
+- A **single SDI video output**, the program output, is routed from the ATEM switcher.
+- This signal is captured by a **Blackmagic SDI video capture card**, capable of 8K resolution, installed within a **Lenovo Workstation host computer**.
 
 ### D. Color Grading and Multi-View Application
 
-- The workstation runs a **DaVinci Resolve Studio "Live Grade" session** which monitors the incoming signal
-- The Live Grade process creates a **DRX/LUT file**
-- This DRX/LUT is applied to enable **multi-view color grading** on the entire array's footage. This is possible using either the DRX file with the DaVinci Resolve Open FX Renderer plugin in any OpenFX compatible host, or a standard LUT based color grade.
+- The workstation runs a **DaVinci Resolve Studio “Live Grade” session** that monitors the incoming signal.
+- The Live Grade process creates a **DRX/LUT file**.
+- This DRX/LUT is applied to enable **multi-view color grading** on the entire array’s footage.
+- This is possible using either the DRX file with the DaVinci Resolve Open FX Renderer plugin in any OpenFX-compatible host, or a standard LUT-based color grade.
 
 ### E. 3D Model Asset Generation
 
-- The **multi-view media** is pulled as a set of timecode synced stills at a predefined interval from the camera array. This footage is graded, and then routed for processing into a **Docker container**. This container can be run on an existing Rocky Linux 10 based grading suite (with a NVIDIA GPU), or pushed as a background task to a cloud hosted GPU compute instance on a platform like Amazon AWS, Google GCP cloud, etc.
+- The **multi-view media** is pulled as a set of timecode-synchronized stills at a predefined interval from the camera array.
+- This footage is graded and then routed for processing into a **Docker container**.
+- The container can be run on an existing Rocky Linux 10-based grading suite with an NVIDIA GPU, or pushed as a background task to a cloud-hosted GPU compute instance on a platform such as Amazon AWS or Google GCP Cloud.
 - Inside the container:
-  - A task scheduler/render queue program
-  - **COLMAP**: Runs Structure-from-Motion (SfM) to solve for camera positions and point clouds
-  - **NVIDIA 3DGRUT Library**: Executes 3D Gaussian Raytracing for training the final model
-- The workflow concludes with the generation of a **3DGS (Gaussian Splat) trained 3D model asset**
-
----
+  - **COLMAP** runs Structure-from-Motion (SfM) to solve for camera positions and point clouds.
+  - The **NVIDIA 3DGRUT library** executes 3D Gaussian Raytracing for training the final model.
+- The workflow concludes with the generation of a **3DGS (Gaussian Splat) trained 3D model asset**.
 
 ## System Specifications
 
 | Component | Specification |
-|-----------|---------------|
+|---|---|
 | Camera | RED Digital Cinemas |
 | Camera Count | 50 cameras |
 | Native Video Resolution | 6K |
 | Router | Blackmagic Smart Videohub 72x72 |
-| Switcher | Blackmagic ATEM (40 SDI inputs) |
-| Capture Card | Blackmagic SDI (8K capable) |
+| Switcher | Blackmagic ATEM, with 40 SDI inputs |
+| Capture Card | Blackmagic SDI, 8K capable |
 | Workstation | Lenovo Workstation |
-| Software | DaVinci Resolve Studio (Live Grade) |
+| Software | DaVinci Resolve Studio, Live Grade |
 | 3D Processing | Docker + COLMAP + NVIDIA 3DGRUT |
 | Output | 3DGS (Gaussian Splat) 3D Model |
-
----
