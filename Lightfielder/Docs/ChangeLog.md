@@ -1,8 +1,12 @@
 # Lightfielder | ChangeLog
 
+## 2026-09-11
+
+- Updated the bundled workflow guides to solve a markdown formatting issue with an inline Mermaid flowchart.
+
 ## 2026-09-09
 
-- When the camera array geometry preference is set to the "A1-E" modes the traditional Camera Contact Sheet "Rect" (rectangular) window is shown that fully works as expected. When the camera array geometry is set to the  "Polar mode the (WIP) Camera Contact Sheet Polar window is shown.
+- When the camera array geometry preference is set to the "A1-E" modes the traditional Camera Contact Sheet "Rect" (rectangular) window is shown that fully works as expected. When the camera array geometry is set to the  "Polar” mode the (WIP) Camera Contact Sheet Polar window is shown.
 	- The CCS Polar window has had its operational code commented out, early this morning, so displaying the window does not toggle off the active timeline video tracks.
 - Updated the "Jupyter Link" script's initial window height to solve a button visibility issue at the bottom row of the windows.
 
