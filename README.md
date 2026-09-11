@@ -1,6 +1,6 @@
 # Lightfielder v26.09.09 B1 for DaVinci Resolve
 
-Created by: [Andrew Hazelden](mailto:andrew@ndtewhazelden.com)
+Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
 ## Public Beta 1 Release
 
