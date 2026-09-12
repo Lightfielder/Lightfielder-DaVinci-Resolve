@@ -3,6 +3,7 @@
 ## 2026-09-11
 
 - Updated the bundled workflow guides to solve a markdown formatting issue with an inline Mermaid flowchart.
+- Added a Reactor Standalone compatible atom list preset file for quickly adding the Vonk Ultra data node dependencies for the Unit Tests. The list file is located at "`Lightfielder:/Extras/Atomz/Vonk Ultra Atom Packages.lst`"
 
 ## 2026-09-09
 
