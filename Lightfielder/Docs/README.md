@@ -4,7 +4,7 @@ Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
 ## Public Beta 1 Release
 
-In a 3D graphics and immersive media sector, Lightfielder is an LGPL licensed open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. It is designed to unify volumetric video content creation and XR post-production.
+Speaking to a professional audience, that is already working in the 3D graphics and immersive media sector: Lightfielder is an LGPL licensed open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. It is designed to unify volumetric video content creation and XR post-production.
 
 ## Overview
 
