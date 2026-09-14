@@ -1,10 +1,10 @@
 """
-Lightfielder 22 About Lightfielder.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 22 About Lightfielder.py 2026-09-14 09.52 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Shows an about dialog with details about the toolset:
 
-Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside of tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content. 
+Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content. 
 
 The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.
 
@@ -108,7 +108,7 @@ def CreateAboutWindow():
 			}),
 			ui.TextEdit({
 				"ID": "ExportTxt",
-				"Text": """Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside of tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content. 
+				"Text": """Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content. 
 
 The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.""",
 				"ReadOnly": True,
