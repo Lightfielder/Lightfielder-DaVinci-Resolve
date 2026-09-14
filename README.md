@@ -4,9 +4,9 @@ Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
 ## Public Beta 1 Release
 
-## Overview
-
 In the 3D graphics and immersive media sector, Lightfielder is an open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. It is designed to unify volumetric video content creation and XR post-production.
+
+## Overview
 
 Lightfielder for Resolve is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside of tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colourists be more productive as they work with planar and polar grid array filmed multi-view content.
 
