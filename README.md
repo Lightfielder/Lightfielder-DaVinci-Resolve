@@ -14,6 +14,16 @@ The Python scripted tools help automate common tasks that can be tedious and tim
 
 Note: Lightfielder also comes as a separate standalone app, and as a thin client. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
 
+## Am I Lightfielder?
+
+You might be. Are you tech-artist, photographer, or filmmaker working with multi-view content in the plenoptic imaging domain? Do you frequently capture or process lightfield data? If YES, then you can easily use the colloquial term "Lightfielder" to describe your craft.
+
+## What is a LightField Capture of a Scene?
+
+Lightfield recordings of a real-world or virtual scene provide a unique experience compared to traditional legacy VR/XR media types (like 360VR, 180VR, Fulldome, 3DTV, or Spatial Media).
+
+When digitized, a lightfield based 3D scene-graph stores the captured content using a data structure that holds the individual samples of light rays. Each ray has a unique light intensity property and a light ray direction property that indicates the angle that the light beam is travelling along. This allows the observer of a lightfield scene asset to experience free-view motion (aka 6DoF navigation) when viewing the digital environment. The observer is able to interactively re-adjust the synthetic camera properties such as aperture, exposure, colour temperature, and shutter angle to sculpt the final cinematic result. A Lightfield photography/filmmaking approach can be used to display a still representation of scene (freezing the scene a one moment in time), or a full motion version of the scene which supports narrative storytelling goals. 
+
 ## GitHub Downloads
 
 Go to the GitHub [Releases page](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases) to access the latest build of Lightfielder.
