@@ -2,8 +2,8 @@
 
 ## 2026-09-14
 
-- Added information to the [README.md](README.md) file to better explain the goals of lightfield capture and media playback. And also added a note on where the background concepts for the "Lightfielder" title comes from.
-- Added information about "Actions, Events, Hooks and Registering Custom Callbacks" to the [Extensions](Scripts_16_Extensions.md) help topic. This includes an image of SMS/Pushover notification sending at the end of a job task.
+- Added information to the [README.md](README.md#what-is-a-lightfield-capture-of-a-scene) file to better explain the goals of lightfield capture and media playback. And also added a note on where the background concepts for the "Lightfielder" title comes from.
+- Added information about "Actions, Events, Hooks and Registering Custom Callbacks" to the [Extensions](Scripts_16_Extensions.md#actions-events-hooks-and-registering-custom-callbacks) help topic. This includes an image of SMS/Pushover notification sending at the end of a job task.
 
 ## 2026-09-11
 
