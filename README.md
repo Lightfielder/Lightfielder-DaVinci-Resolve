@@ -1,4 +1,4 @@
-# Lightfielder v26.09.09 B1 for DaVinci Resolve
+# Lightfielder v26.09.15 B2 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
