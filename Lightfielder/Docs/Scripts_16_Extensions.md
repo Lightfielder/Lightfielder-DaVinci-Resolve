@@ -37,3 +37,10 @@ A goal with the extension system is to add support for a wider range of camera r
 - [OpenUSD (USD, USDA, USDC, USDZ)](https://openusd.org/release/api/class_usd_geom_camera.html)
 - [Open Photogrammetry Format (OPF)](https://pix4d.github.io/opf-spec/)
 - [Reality Capture/RealityScan (XMP)](https://rshelp.capturingreality.com/en-US/tools/xmpalign.htm)
+
+
+### Actions, Events, Hooks and Registering Custom Callbacks
+
+It is possible to use Lightfielder to register custom hooks/callbacks in the editing/colouring session. This allows you to receive notifications via SMS or mobile friendly notification services like "[url=https://pushover.net/]Pushover[/url]" when a task is completed, or a Deliver render job queue item is finished.
+
+![Pushover](images/pushover-notifications-received.png)
