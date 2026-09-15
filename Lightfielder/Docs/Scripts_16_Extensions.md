@@ -41,6 +41,6 @@ A goal with the extension system is to add support for a wider range of camera r
 
 ### Actions, Events, Hooks and Registering Custom Callbacks
 
-It is possible to use Lightfielder to register custom hooks/callbacks in the active DCC host application's active editing/colouring session. This allows you to receive notifications via SMS or mobile friendly notification services like "[Pushover](https://pushover.net/)" when a task is completed, or a Deliver render job queue item is finished.
+It is possible to use Lightfielder to register custom hooks/callbacks in the active DCC host application's active editing/colouring session. This allows you to receive notifications via Apple Messages, SMS, or mobile friendly notification services like "[Pushover](https://pushover.net/)" when a task is completed, or a Deliver render job queue item is finished.
 
 ![Pushover](images/pushover-notifications-received.png)
