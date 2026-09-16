@@ -38,9 +38,9 @@ def CreateAboutWindow():
 		"WindowFlags": {"Window": True, "WindowStaysOnTopHint": windowFloat},
 		"ID": "AboutWin",
 		"TargetID" : "AboutWin",
-		"Geometry": [500, 50, 600, 410],
-		"MinimumSize": [600, 410],
-		"FixedSize": [600, 410],
+		"Geometry": [500, 50, 600, 500],
+		"MinimumSize": [600, 500],
+		"FixedSize": [600, 500],
 		# "Spacing": 0,
 		# "Margin": 5,
 	},[
@@ -108,9 +108,11 @@ def CreateAboutWindow():
 			}),
 			ui.TextEdit({
 				"ID": "ExportTxt",
-				"Text": """Lightfielder is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colorists be more productive as they work with planar and polar grid array filmed multi-view content. 
+				"Text": """Lightfielder is an LGPL-licensed open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. Designed to unify volumetric video content creation and XR post-production.
 
-The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.""",
+Lightfielder for Resolve is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colourists be more productive as they work with planar and polar grid array-filmed multi-view content.
+
+The Python-scripted tools help automate common tasks that can be tedious and time-consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.""",
 				"ReadOnly": True,
 				"StyleSheet": "QTextEdit { border: 0px; }",
 				"Weight": 2.0,

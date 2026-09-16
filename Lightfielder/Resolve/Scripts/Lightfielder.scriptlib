@@ -1,13 +1,15 @@
 --[[--
-Lightfielder ScriptLib 2026-09-02 07.10 PM (UTC -3)
+Lightfielder ScriptLib 2026-09-16 (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A scriptlib module is a Lua script that is automatically run when DaVinci Resolve launches.
-It is also run when a new Fusion page composite is created, too. 
+It is also run when a new Fusion page composite is created. 
 
-Code added to this scriptlib document is able to set initial values for new editing sessions.
+Code added to this scriptlib document can set initial values for new editing sessions.
 
-The Lightfielder "01 Preferences" window has an "Autoload Toolbar On Launch" checkbox control. When this option is enabled the Lightfielder Toolbar window will automatically load when DaVinci Resolve Studio is started.
+The Lightfielder "01 Preferences" window has an "Autoload Toolbar On Launch" checkbox control. When this option is enabled, the Lightfielder Toolbar window will automatically load when DaVinci Resolve Studio is started.
+
+Todo: Add a Fusion Studio loading guard so this scriptlib only launches in Resolve Studio sessions.
 
 --]]--
 

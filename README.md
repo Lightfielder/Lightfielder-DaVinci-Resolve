@@ -2,17 +2,19 @@
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 1 Release
+## Public Beta 2 Release
 
-Speaking to a professional audience, that is already working in the 3D graphics and immersive media sector: Lightfielder is an LGPL licensed open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. It is designed to unify volumetric video content creation and XR post-production.
+This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
 ## Overview
 
+Lightfielder is an LGPL-licensed open-source hybrid computer-vision IDE and digital content creation (DCC) toolset developed by Andrew Hazelden. Designed to unify volumetric video content creation and XR post-production.
+
 Lightfielder for Resolve is a multi-view workflow automation toolset that streamlines the creation of volumetric experiences inside tools like BMD DaVinci Resolve Studio. It is designed to help video editors and colourists be more productive as they work with planar and polar grid array filmed multi-view content.
 
-The Python scripted tools help automate common tasks that can be tedious and time consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.
+The Python-scripted tools help automate common tasks that can be tedious and time-consuming to carry out manually. This makes creative tasks run smoothly when processing stacks of footage from large camera arrays.
 
-![Toolbar](Lightfielder/Docs/images/about_toolbar.png)
+![Toolbar](Lightfielder/Docs/images/toolbar_about.png)
 
 Note: Lightfielder also comes as a separate standalone app, and as a thin client. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
 
