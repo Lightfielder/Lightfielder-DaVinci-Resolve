@@ -1,4 +1,4 @@
-# Lightfielder v26.09.15 B2 for DaVinci Resolve
+# Lightfielder v26.09.16 B2 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
@@ -20,7 +20,7 @@ Note: Lightfielder also comes as a separate standalone app, and as a thin client
 
 ## Am I Lightfielder?
 
-You might be. Are you tech-artist, photographer, or filmmaker working with multi-view content in the [plenoptic imaging](https://en.wikipedia.org/wiki/Light_field_camera) domain? Do you frequently capture or process lightfield data? If YES, then you can easily use the colloquial term "Lightfielder" to describe your craft.
+You might be. Are you a tech artist, photographer, or filmmaker working with multi-view content in the [plenoptic imaging](https://en.wikipedia.org/wiki/Light_field_camera) domain? Do you frequently capture or process lightfield data? If YES, then you can easily use the colloquial term "Lightfielder" to describe your craft.
 
 ## What is a Lightfield Capture of a Scene?
 
