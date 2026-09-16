@@ -16,7 +16,7 @@ The Python-scripted tools help automate common tasks that can be tedious and tim
 
 ![Toolbar](Lightfielder/Docs/images/toolbar_about.png)
 
-Note: Lightfielder also comes as a separate standalone app, and as a thin client. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
+Note: Lightfielder is also available as a separate standalone app. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
 
 ## Am I Lightfielder?
 
