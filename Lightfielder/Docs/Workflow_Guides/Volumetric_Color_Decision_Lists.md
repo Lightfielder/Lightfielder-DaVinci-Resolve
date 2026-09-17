@@ -156,3 +156,11 @@ Lighting control for light sources integrated into physical assets like vehicles
 For unified lighting when assembling large‑scale environments (3D scans, volumetric video, CGI assets, gen AI). Addresses lighting mismatches not solvable “in camera”. 
 
 This includes DMX‑recorded time‑varying illumination for matching live action, de‑lighting workflows for LiDAR/panoramic IBL captures, HDR/PBR relighting of volumetric performance capture, day‑for‑night adjustments, and production renderer features (e.g., RenderMan light filters: barn doors, gobos, intensity ramping, light decay).  
+
+## Closing Thoughts
+
+As an update to the original document, in September 2026 there has been a range of interesting, novel improvements for 3DGS and 4DGS relighting. It's truly the start of accessible tools for color grading volumetric assets to match the rest of the elements  in the 3D scene graph.
+
+- [Houdini 22](https://www.sidefx.com/products/whats-new-in-h22/gaussian-splats/) adds Gaussian Splat relighting features and animation rigging tools for modifying splats
+- [SuperSplat Editor 3.0 ](https://www.cgchannel.com/2026/09/playcanvas-releases-supersplat-editor-3-0/)adds PLY tools for changing [color and appearance](https://developer.playcanvas.com/user-manual/supersplat/editor/color-and-appearance/)
+-
