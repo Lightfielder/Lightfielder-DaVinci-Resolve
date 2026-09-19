@@ -47,6 +47,12 @@ Note: The bundled sound effects were acquired with a license specifically for th
 	- Note: BMD removed access to the Resolve API's UI Manager (GUI) user interface library at Resolve (Free) v19.1.
 	- Note: BMD removed access to the Resolve API's entire Python scripting functionality at Resolve (Free) v21.1.0.
 
+**Resolve (Free) Volumetric Beginner Tip:**
+
+If you are a hobbyist, indie filmmaker, or educator, and your volumetric camera array uses 4K UHD resolution video cameras, you can still use a majority of the Lightfielder features with DaVinci Resolve (Free).
+
+This approach certainly gives an accessible and affordable route to enter volumetric research and learning. If you enjoy the process, you can easily upgrade to Resolve Studio at any time, when you wish to unlock access to higher-resolution editing timelines, or the extra features BMD offers in their paid products.
+
 ## Example Projects
 
 Additional learning content and example project files are being prepared for Lightfielder this month.
