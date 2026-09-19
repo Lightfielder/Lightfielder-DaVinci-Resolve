@@ -4,37 +4,37 @@
 
 Media Command is a scriptable interface for batch processing content that resides in your Resolve Media Pool. This streamlines the process of selecting footage and running automation scripts on those specific items.
 
-When Media Command is launched, it automatically scans for Lua and Python scripts that are located on your hard disk inside the "Reactor:/Deploy/Scripts/MediaCommand/" folder. These items are added to the "Command Script" ComboMenu in the interface.
+When Media Command is launched, it automatically scans for Lua and Python scripts that are located on your hard disk inside the "Lightfielder:/Resolve/Scripts/MediaCommand/" folder. These items are added to the "Command Script" ComboMenu in the interface.
 
 If you are a long-time Fusion user, you will find that the Media Command script was designed to give your Media page content management operations the same power and flexibility as you have with a Fusion page "tool" script in the Fusion nodes view context.
 
-![Media Command](Images/script_18_Media_Command_media_command.png)
+![Media Command](images/script_18_Media_Command_media_command.png)
 
 ### Search Controls
 
 The "Type:" ComboMenu allows you to limit the tree view to show only media of a certain format. The menu options are: "All", "Still", "Video", "Video + Audio", "Audio", "Compound", "Fusion", "Generator", "Geometry", "Stereo", "Subtitle", and "Timeline".
 
-![Type](Images/script_18_Media_Command_type_combomenu.png)
+![Type](images/script_18_Media_Command_type_combomenu.png)
 
 The "Search:" text field allows you to narrow down the results in the tree view with a plain text search of the "Clip Name" and "File Name" records.
 
-![Search](Images/script_18_Media_Command_search_field.png)
+![Search](images/script_18_Media_Command_search_field.png)
 
 The "Select: (All) (None) (Invert)" buttons can be used to quickly modify the footage that is selected in the tree view. It is worth noting that the select buttons work on the content that is visible in the tree view at the current moment so you can apply the select buttons to the filtered search results, then flip back to the full unfiltered list of content in the tree view.
 
-![Select](Images/script_18_Media_Command_select_buttons.png)
+![Select](images/script_18_Media_Command_select_buttons.png)
 
 ### Script Controls
 
 The "Command Script:" ComboMenu allows you to select a Lua or Python script you would like to run.
 
-![Command Scripts](Images/script_18_Media_Command_command_script.png)
+![Command Scripts](images/script_18_Media_Command_command_script.png)
 
 The (Edit) button will open the active command script using the script editor defined in the Fusion preferences.
 
 The (Go!) button will run the active command script and use it to process the media that is selected in the tree view.
 
-![Edit Go Buttons](Images/script_18_Media_Command_edit_go_buttons.png)
+![Edit Go Buttons](images/script_18_Media_Command_edit_go_buttons.png)
 
 ### View Controls
 
@@ -44,7 +44,7 @@ The "Console" button toggles the visibility of the Console window. If you need t
 
 The "Refresh" button allows you to reload the tree view listing. This is something you might want to do after modifying the content in the Media Pool/Media page, or if you have changed the currently active bin.
 
-![View Button](Images/script_18_Media_Command_view_buttons.png)
+![View Button](images/script_18_Media_Command_view_buttons.png)
 
 ### Script Usage
 
@@ -87,14 +87,14 @@ Opens a new DeoVR Player on Windows session where the currently selected images 
 **XR/Send to PTGui.lua**  
 Opens a new PTGui session where the currently selected images are auto-loaded into the project.
 
-![Send to PTGui](Images/script_18_Media_Command_script_send_to_ptgui.png)
+![Send to PTGui](images/script_18_Media_Command_script_send_to_ptgui.png)
 
 ### Example Comps
 
 **Clip Lua Table to ScriptVal.comp**  
 This example shows how "Copy Lua Table" script exports can be used with the Vonk data nodes.
 
-![Clip Lua Table to ScriptVal](Images/script_18_Media_Command_example_clip_lua_table_to_scriptval.png)
+![Clip Lua Table to ScriptVal](images/script_18_Media_Command_example_clip_lua_table_to_scriptval.png)
 
 The file is available on disk at the following PathMap location:
 
