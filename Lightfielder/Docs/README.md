@@ -1,8 +1,8 @@
-# Lightfielder v26.09.16 B2 for DaVinci Resolve
+# Lightfielder v26.09.18 B3 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 2 Release
+## Public Beta 3 Release
 
 This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
@@ -39,6 +39,13 @@ Go to the GitHub [Releases page](https://github.com/Lightfielder/Lightfielder-Da
 Lightfielder is cross-platform compatible and works across Linux, macOS, and Windows. The software is released under a permissive free open-source LPGPL/GPL license. Attribution is required and must be maintained on forks of the Lightfielder project's codebase and scripts. 
 
 Note: The bundled sound effects were acquired with a license specifically for the Lightfielder/Kartaverse project so are not open-source/public domain licensed content.
+
+## Software Requirements
+
+- If you are running Lightfielder with Resolve Studio, it is suggested to have either Resolve Studio v20.x or 21.1.x installed.
+- If you are running Lightfielder with Resolve (Free), it is suggested to have either Resolve (Free) v18.6.6 or v19.0.3 installed. Using v19.0.3 is the highest version number possible with a free copy of Resolve for the reasons listed below:
+	- Note: BMD removed access to the Resolve API's UI Manager (GUI) user interface library at Resolve (Free) v19.1.
+	- Note: BMD removed access to the Resolve API's entire Python scripting functionality at Resolve (Free) v21.1.0.
 
 ## Example Projects
 
@@ -80,7 +87,7 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 		- [15 EDL Export](Scripts_15_EDL_Export.md)
 		- [16 Extensions](Scripts_16_Extensions.md)
 		- [17 Edit Jupyter Link](Scripts_17_Jupyter_Link.md)
-		- [18 Open Lightfielder Folder](Scripts_18_Open_Lightfielder_Folder.md)
+		- [18 Media Command](Scripts_18_Media_Command.md)
 		- [19 Show Console](Scripts_19_Show_Console.md)
 		- [20 Documentation](Scripts_20_Documentation.md)
 		- [21 Edit Python Module](Scripts_21_Edit_Python_Module.md)

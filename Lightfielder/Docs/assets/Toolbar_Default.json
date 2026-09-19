@@ -124,10 +124,10 @@
 		},
 		"Tool18": {
 			"Icon": "fa-file-code-o",
-			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/18 Edit Python Module.py",
-			"TargetID": "Docs",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/18 Media Command.lua",
+			"TargetID": "MediaCommandWin",
 			"Text": "18",
-			"Tooltip": "18 Edit Python Module"
+			"Tooltip": "18 Media Command"
 		},
 		"Tool19": {
 			"Icon": "fa-file-code-o",

@@ -1,12 +1,12 @@
 """
-Lightfielder 00 Toolbar.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 00 Toolbar.py 2026-09-18 09.33 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
-The Lightfielder Toolbar cuts down the effort needed to access the "Workspace > Scripts > Lightfielder > " menu items. It acts as a launcher interface for starting the Resolve based Python scripts.
+The Lightfielder Toolbar cuts down the effort needed to access the "Workspace > Scripts > Lightfielder > " menu items. It acts as a launcher interface for starting the Resolve-based Python scripts.
 
-Tip: Hold down the shift key when clicking on a toolbar item to force-reload the script. This is handy if you have edited the script and want to refresh the view to show the changes.
+Tip: Hold down the Shift key when clicking on a toolbar item to force-reload the script. This is handy if you have edited the script and want to refresh the view to show the changes.
 
-Tip: When the Toolbar window "X" close box is clicked, if the shift modifier key is held down at the same moment, the extra floating palette windows are force-closed at the same time, too. This makes it a quick task to de-clutter your workspace if you need to focus on something else.
+Tip: When the Toolbar window "X" close box is clicked, if the Shift modifier key is held down at the same moment, the extra floating palette windows are force-closed at the same time, too. This makes it a quick task to de-clutter your workspace if you need to focus on something else.
 
 Copyright:
 Icons by Fork Awesome (https://forkaweso.me/Fork-Awesome/icons/) used under an SIL open-source font license.
@@ -253,7 +253,7 @@ def CreateToolbarWindow():
 						"Text": " 18",
 						"ToolTip": str(GetWindowTitleFromToolNum("Tool18")),
 						"MinimumSize": iconMinimumSize,
-						"Checkable": False,
+						"Checkable": True,
 						"Icon": toolbarUI.Icon({"File": str(iconFolderPathMap) + str(GetIconFromToolNum("Tool18"))}),
 						"Weight": 0.01
 					}),

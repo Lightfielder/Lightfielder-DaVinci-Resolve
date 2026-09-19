@@ -1,5 +1,5 @@
 """
-Lightfielder Python Module 2026-09-16 (UTC -3)
+Lightfielder Python Module 2026-09-18 09.55 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Lightfielder Script Usage Tip:
@@ -31,7 +31,7 @@ fu = getattr(__main__, "fu", None)
 def LFGetVersion(label):
 	# Provide the Lightfielder version number when requested
 	# return str(label) + "26.09"
-	return str(label) + "26.09.16"
+	return str(label) + "26.09.18 Beta 3"
 
 def execfile(filepath, globals = None, locals = None):
 	try:
@@ -226,7 +226,7 @@ def GetToolScript(tool):
 			"Tool15": f"{baseFolderPathMap}/15 EDL Export.py",
 			"Tool16": f"{baseFolderPathMap}/16 Extensions.py",
 			"Tool17": f"{baseFolderPathMap}/17 Jupyter Link.py",
-			"Tool18": f"{baseFolderPathMap}/18 Open Lightfielder Folder.py",
+			"Tool18": f"{baseFolderPathMap}/18 Media Command.lua",
 			"Tool19": f"{baseFolderPathMap}/19 Edit Python Module.py",
 			"Tool20": f"{baseFolderPathMap}/20 Show Console.py",
 			"Tool21": f"{baseFolderPathMap}/21 Documentation.py",
@@ -252,7 +252,7 @@ def GetToolScript(tool):
 			"Tool15": f"{baseFolderPathMap}/15 EDL Export.py",
 			"Tool16": f"{baseFolderPathMap}/16 Extensions.py",
 			"Tool17": f"{baseFolderPathMap}/17 Jupyter Link.py",
-			"Tool18": f"{baseFolderPathMap}/18 Open Lightfielder Folder.py",
+			"Tool18": f"{baseFolderPathMap}/18 Media Command.lua",
 			"Tool19": f"{baseFolderPathMap}/19 Edit Python Module.py",
 			"Tool20": f"{baseFolderPathMap}/20 Show Console.py",
 			"Tool21": f"{baseFolderPathMap}/21 Documentation.py",
@@ -347,7 +347,7 @@ def GetWindowTitleFromToolNum(tool):
 	elif tool == "Tool17":
 		return "17 Jupyter Link"
 	elif tool == "Tool18":
-		return "18 Open Lightfielder Folder"
+		return "18 Media Command"
 	elif tool == "Tool19":
 		return "19 Edit Python Module"
 	elif tool == "Tool20":
@@ -396,7 +396,7 @@ def GetWindowIDFromToolNum(tool):
 	elif tool == "Tool17":
 		return "JupyterWin"
 	elif tool == "Tool18":
-		return "Docs"
+		return "MediaCommandWin"
 	elif tool == "Tool19":
 		return "Docs"
 	elif tool == "Tool20":
@@ -446,7 +446,7 @@ def GetToolNumFromWindowID(windowID):
 		return "Tool17"
 	elif windowID == "Docs":
 		return "Tool18"
-	elif windowID == "Docs":
+	elif windowID == "MediaCommandWin":
 		return "Tool19"
 	elif windowID == "Console":
 		return "Tool20"

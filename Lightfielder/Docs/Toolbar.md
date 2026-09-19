@@ -30,7 +30,7 @@ The scripts present in this menu area include:
 - [15 EDL Export](Scripts_15_EDL_Export.md)
 - [16 Extensions](Scripts_16_Extensions.md)
 - [17 Edit Jupyter Link](Scripts_17_Jupyter_Link.md)
-- [18 Open Lightfielder Folder](Scripts_18_Open_Lightfielder_Folder.md)
+- [18 Media Command](Scripts_18_Media_Command.md)
 - [19 Show Console](Scripts_19_Show_Console.md)
 - [20 Documentation](Scripts_20_Documentation.md)
 - [21 Edit Python Module](Scripts_21_Edit_Python_Module.md)

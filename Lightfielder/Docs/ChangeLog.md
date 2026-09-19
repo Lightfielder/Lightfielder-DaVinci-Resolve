@@ -1,5 +1,11 @@
 # Lightfielder | ChangeLog
 
+## 2026-09-18
+
+- Updated the "18" Toolbar item run the "[18 Media Command](Scripts_18_Media_Command.md)" script. This script allows you to quickly select footage in the Media Pool, and then process it with a short and simple Lua or Python script. 
+	- The "Media Command" script takes a bit less effort to use, compared to the [17 Jupyter Link](Scripts_17_Jupyter_Link.md) approach, which requires the user to have a working copy of Jupyter installed along with an existing Jupyter Notebook file before you can make use of it.
+	- The previous script wired to the Toolbar "18" button is now located in the "Open > Open Lightfielder Folder" menu entry.
+
 ## 2026-09-16
 
 - Docs updates

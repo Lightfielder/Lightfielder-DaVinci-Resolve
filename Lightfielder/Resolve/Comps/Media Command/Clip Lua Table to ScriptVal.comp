@@ -1,0 +1,490 @@
+Composition {
+	CurrentTime = 1,
+	RenderRange = { 1, 3 },
+	GlobalRange = { 1, 3 },
+	CurrentID = 90,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "Fusion Studio 18.1 build 38",
+	SavedOutputs = 2,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		vTextCreateMultiline2 = Fuse.vTextCreateMultiline {
+			Inputs = {
+				Text = Input { Value = "{\n	{\n		[\"End TC\"] = \"00:00:00:01\",\n		[\"Field Dominance\"] = \"Auto\",\n		Out = \"\",\n		Flags = \"\",\n		Proxy = \"None\",\n		[\"Proxy Media Path\"] = \"\",\n		Resolution = \"2700x2700\",\n		MediaID = \"a46de3d9-6904-4de5-96f8-3bb3a23a77ba\",\n		[\"Roll/Card\"] = \"\",\n		[\"S3D Sync\"] = \"\",\n		[\"Sample Rate\"] = \"\",\n		Sharpness = \"\",\n		[\"Slate TC\"] = \"00:00:00:00\",\n		Comments = \"\",\n		Start = \"1\",\n		[\"Start KeyKode\"] = \"\",\n		[\"Start TC\"] = \"00:00:00:00\",\n		[\"Synced Audio\"] = \"\",\n		Usage = \"0\",\n		[\"V-FLIP\"] = \"Off\",\n		[\"Video Codec\"] = \"JPEG\",\n		[\"Super Scale\"] = 1,\n		Take = \"\",\n		Shot = \"\",\n		Scene = \"\",\n		[\"Reel Name\"] = \"\",\n		PAR = \"Square\",\n		[\"Online Status\"] = \"Online\",\n		[\"Offline Reference\"] = \"\",\n		[\"Noise Reduction\"] = \"\",\n		[\"Date Created\"] = \"Sat Sep 17 2022 21:40:51\",\n		[\"Input Sizing Preset\"] = \"None\",\n		[\"Input LUT\"] = \"\",\n		[\"Input Color Space\"] = \"Project\",\n		Type = \"Still\",\n		[\"Data Level\"] = \"Auto\",\n		[\"Alpha mode\"] = \"None\",\n		Angle = \"\",\n		[\"Audio Bit Depth\"] = \"\",\n		[\"Audio Ch\"] = \"0\",\n		[\"Camera #\"] = \"\",\n		[\"Audio Codec\"] = \"\",\n		[\"Audio Offset\"] = \"\",\n		[\"Bit Depth\"] = \"8\",\n		[\"File Name\"] = \"CameraA.0001.jpg\",\n		[\"Clip Name\"] = \"CameraA.0001.jpg\",\n		[\"Clip Color\"] = \"\",\n		[\"File Path\"] = \"C:\\\\ProgramData\\\\Blackmagic Design\\\\Fusion\\\\Reactor\\\\Deploy\\\\Comps\\\\KartaVR\\\\WarpStitch\\\\WarpStitch Under the Bridge\\\\Media\\\\CameraA.0001.jpg\",\n		Format = \"JPEG\",\n		FPS = 24,\n		Frames = \"1\",\n		[\"Date Added\"] = \"Mon Oct 3 2022 13:36:20\",\n		[\"Good Take\"] = \"\",\n		[\"H-FLIP\"] = \"Off\",\n		[\"Date Modified\"] = \"Sat Sep 17 21:40:51 2022\",\n		IDT = \"\",\n		In = \"\",\n		Description = \"\",\n		[\"Drop frame\"] = \"0\",\n		Duration = \"00:00:00:01\",\n		Keyword = \"\",\n		[\"Enable Deinterlacing\"] = \"0\",\n		End = \"1\"\n	},\n	{\n		[\"End TC\"] = \"00:00:00:01\",\n		[\"Field Dominance\"] = \"Auto\",\n		Out = \"\",\n		Flags = \"\",\n		Proxy = \"None\",\n		[\"Proxy Media Path\"] = \"\",\n		Resolution = \"2700x2700\",\n		MediaID = \"db6ad95d-7112-4204-bd5f-70beb3008ba6\",\n		[\"Roll/Card\"] = \"\",\n		[\"S3D Sync\"] = \"\",\n		[\"Sample Rate\"] = \"\",\n		Sharpness = \"\",\n		[\"Slate TC\"] = \"00:00:00:00\",\n		Comments = \"\",\n		Start = \"1\",\n		[\"Start KeyKode\"] = \"\",\n		[\"Start TC\"] = \"00:00:00:00\",\n		[\"Synced Audio\"] = \"\",\n		Usage = \"0\",\n		[\"V-FLIP\"] = \"Off\",\n		[\"Video Codec\"] = \"JPEG\",\n		[\"Super Scale\"] = 1,\n		Take = \"\",\n		Shot = \"\",\n		Scene = \"\",\n		[\"Reel Name\"] = \"\",\n		PAR = \"Square\",\n		[\"Online Status\"] = \"Online\",\n		[\"Offline Reference\"] = \"\",\n		[\"Noise Reduction\"] = \"\",\n		[\"Date Created\"] = \"Sat Sep 17 2022 21:41:29\",\n		[\"Input Sizing Preset\"] = \"None\",\n		[\"Input LUT\"] = \"\",\n		[\"Input Color Space\"] = \"Project\",\n		Type = \"Still\",\n		[\"Data Level\"] = \"Auto\",\n		[\"Alpha mode\"] = \"None\",\n		Angle = \"\",\n		[\"Audio Bit Depth\"] = \"\",\n		[\"Audio Ch\"] = \"0\",\n		[\"Camera #\"] = \"\",\n		[\"Audio Codec\"] = \"\",\n		[\"Audio Offset\"] = \"\",\n		[\"Bit Depth\"] = \"8\",\n		[\"File Name\"] = \"CameraB.0001.jpg\",\n		[\"Clip Name\"] = \"CameraB.0001.jpg\",\n		[\"Clip Color\"] = \"\",\n		[\"File Path\"] = \"C:\\\\ProgramData\\\\Blackmagic Design\\\\Fusion\\\\Reactor\\\\Deploy\\\\Comps\\\\KartaVR\\\\WarpStitch\\\\WarpStitch Under the Bridge\\\\Media\\\\CameraB.0001.jpg\",\n		Format = \"JPEG\",\n		FPS = 24,\n		Frames = \"1\",\n		[\"Date Added\"] = \"Mon Oct 3 2022 13:36:20\",\n		[\"Good Take\"] = \"\",\n		[\"H-FLIP\"] = \"Off\",\n		[\"Date Modified\"] = \"Sat Sep 17 21:41:29 2022\",\n		IDT = \"\",\n		In = \"\",\n		Description = \"\",\n		[\"Drop frame\"] = \"0\",\n		Duration = \"00:00:00:01\",\n		Keyword = \"\",\n		[\"Enable Deinterlacing\"] = \"0\",\n		End = \"1\"\n	},\n	{\n		[\"End TC\"] = \"00:00:00:01\",\n		[\"Field Dominance\"] = \"Auto\",\n		Out = \"\",\n		Flags = \"\",\n		Proxy = \"None\",\n		[\"Proxy Media Path\"] = \"\",\n		Resolution = \"2700x2700\",\n		MediaID = \"1766e3e3-5c3a-4d8a-b97d-f21994370ad1\",\n		[\"Roll/Card\"] = \"\",\n		[\"S3D Sync\"] = \"\",\n		[\"Sample Rate\"] = \"\",\n		Sharpness = \"\",\n		[\"Slate TC\"] = \"00:00:00:00\",\n		Comments = \"\",\n		Start = \"1\",\n		[\"Start KeyKode\"] = \"\",\n		[\"Start TC\"] = \"00:00:00:00\",\n		[\"Synced Audio\"] = \"\",\n		Usage = \"0\",\n		[\"V-FLIP\"] = \"Off\",\n		[\"Video Codec\"] = \"JPEG\",\n		[\"Super Scale\"] = 1,\n		Take = \"\",\n		Shot = \"\",\n		Scene = \"\",\n		[\"Reel Name\"] = \"\",\n		PAR = \"Square\",\n		[\"Online Status\"] = \"Online\",\n		[\"Offline Reference\"] = \"\",\n		[\"Noise Reduction\"] = \"\",\n		[\"Date Created\"] = \"Sat Sep 17 2022 21:42:16\",\n		[\"Input Sizing Preset\"] = \"None\",\n		[\"Input LUT\"] = \"\",\n		[\"Input Color Space\"] = \"Project\",\n		Type = \"Still\",\n		[\"Data Level\"] = \"Auto\",\n		[\"Alpha mode\"] = \"None\",\n		Angle = \"\",\n		[\"Audio Bit Depth\"] = \"\",\n		[\"Audio Ch\"] = \"0\",\n		[\"Camera #\"] = \"\",\n		[\"Audio Codec\"] = \"\",\n		[\"Audio Offset\"] = \"\",\n		[\"Bit Depth\"] = \"8\",\n		[\"File Name\"] = \"CameraC.0001.jpg\",\n		[\"Clip Name\"] = \"CameraC.0001.jpg\",\n		[\"Clip Color\"] = \"\",\n		[\"File Path\"] = \"C:\\\\ProgramData\\\\Blackmagic Design\\\\Fusion\\\\Reactor\\\\Deploy\\\\Comps\\\\KartaVR\\\\WarpStitch\\\\WarpStitch Under the Bridge\\\\Media\\\\CameraC.0001.jpg\",\n		Format = \"JPEG\",\n		FPS = 24,\n		Frames = \"1\",\n		[\"Date Added\"] = \"Mon Oct 3 2022 13:36:20\",\n		[\"Good Take\"] = \"\",\n		[\"H-FLIP\"] = \"Off\",\n		[\"Date Modified\"] = \"Sat Sep 17 21:42:16 2022\",\n		IDT = \"\",\n		In = \"\",\n		Description = \"\",\n		[\"Drop frame\"] = \"0\",\n		Duration = \"00:00:00:01\",\n		Keyword = \"\",\n		[\"Enable Deinterlacing\"] = \"0\",\n		End = \"1\"\n	}\n}", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 220, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		Underlay1 = Underlay {
+			CtrlWZoom = false,
+			ViewInfo = UnderlayInfo {
+				Pos = { 605, -49.5 },
+				Size = { 924.542, 152.061 }
+			},
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		Note1 = Note {
+			Inputs = {
+				Comments = Input { Value = "This example comp works with the Media Command script's \"Copy Lua Table.lua\" export option. This approach is used to select \"Still Image\" footage from the Media page and export those specific items' clip properties. \n\nIn a new Fusion page/Fusion Studio based composite a Vonk data node graph is then able to read the exported Lua table data structure into a ScriptVal based table record. \n\nIn the node graph below the clip propertyLua table data is pasted manually into the \"vTextCreateMultiline2\" node as a block of text. A \"vScriptValFromText1\" node creates the ScriptVal data stream. \n\nThe current timeline frame value is accessed using the \"vNumberCompReqTime1\" node. This timeline playhead position information is used to increment the current element read from the Lua table via the \"vScriptValGetElementToTable1\" node. \n\nA \"vScriptValGetToTable1\" node is used to access the \"File Path\" key from the Lua table. This text based information then has any duplicate slashes removed from the file path. And the quotes are removed from the path as well. The file path is used with a \"vImageFromFile\" node to load in the image data into the Fusion Viewer.\n\nWhen the timeline play head is incremented through the start frame to end frame range a new image is loaded automatically. The \"vScriptValCount1\" node lists how many image records are in the ScriptVal element array.", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 275, -247.5 },
+				Flags = {
+					Expanded = true
+				},
+				Size = { 760.667, 159.545 }
+			},
+		},
+		vTextNormalizeSlashes1 = Fuse.vTextNormalizeSlashes {
+			Inputs = {
+				Text = Input {
+					SourceOp = "vScriptValToText1",
+					Source = "Output",
+				},
+				RemoveDuplicates = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 770, 49.5 } },
+		},
+		vNumberCompReqTime1 = Fuse.vNumberCompReqTime {
+			ViewInfo = OperatorInfo { Pos = { 440, -16.5 } },
+		},
+		vScriptValGetElementToTable1 = Fuse.vScriptValGetElementToTable {
+			Inputs = {
+				ScriptVal = Input {
+					SourceOp = "vScriptValFromText1",
+					Source = "ScriptVal",
+				},
+				Index = Input {
+					SourceOp = "vNumberCompReqTime1",
+					Source = "Output",
+				},
+				ShowInput = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		vImageFromFile1 = Fuse.vImageFromFile {
+			CtrlWZoom = false,
+			Inputs = {
+				Input = Input {
+					SourceOp = "vTextSubReplace1",
+					Source = "Output",
+				},
+				TimeMode = Input { Value = 3, },
+				ShowInput = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 990, 49.5 } },
+		},
+		vTextViewer1 = Fuse.vTextViewer {
+			Inputs = {
+				Input = Input {
+					SourceOp = "vScriptValToText1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 770, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		vScriptValFromText1 = Fuse.vScriptValFromText {
+			Inputs = {
+				Text = Input {
+					SourceOp = "vTextCreateMultiline2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		vScriptValGetToTable1 = Fuse.vScriptValGetToTable {
+			Inputs = {
+				ScriptVal = Input {
+					SourceOp = "vScriptValGetElementToTable1",
+					Source = "Output",
+				},
+				Key = Input { Value = "File Path", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 550, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		vTextSubReplace1 = Fuse.vTextSubReplace {
+			Inputs = {
+				Text = Input {
+					SourceOp = "vTextNormalizeSlashes1",
+					Source = "Output",
+				},
+				Pattern = Input { Value = "\"", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 880, 49.5 } },
+		},
+		vScriptValToText1 = Fuse.vScriptValToText {
+			Inputs = {
+				ScriptVal = Input {
+					SourceOp = "vScriptValGetToTable1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 16.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		},
+		vScriptValCount1 = Fuse.vScriptValCount {
+			Inputs = {
+				ScriptVal = Input {
+					SourceOp = "vScriptValFromText1",
+					Source = "ScriptVal",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 49.5 } },
+			Colors = { TileColor = { R = 1, G = 0.658823529411765, B = 0.2 }, }
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			PresetName = "Default",
+			Left = 0,
+			Top = 27,
+			Width = 1600,
+			Height = 741,
+			ZoneInfo = {
+				AuxRight = { Expanded = true },
+				["!Left"] = {
+				},
+				AuxLeft = { Expanded = true },
+				Right = { Expanded = true, },
+				Left = { Expanded = false, },
+				["!Right"] = {
+				}
+			},
+			ViewInfo = {
+				Viewer1 = { Show = true, RatioY = 0.01, RatioX = 1.16855753646677, },
+				InnerLeft = {
+				},
+				MainSplit = {
+					RatioX = 100,
+					RatioY = 1.7546362339515,
+				},
+				CenterSplit = {
+					RatioX = 1.03874415497662,
+					RatioY = 100,
+				},
+				Viewer2 = { Show = true, RatioY = 0.01, RatioX = 0.831442463533222, },
+				Comments = { Show = false },
+				Time = { Show = true, RatioX = 100, },
+				InnerColumns = {
+					RatioX = 100,
+					RatioY = 1.2453637660485,
+				},
+				Keyframes = { Show = false, },
+				LayoutStrip = { Show = true, RatioX = 100, },
+				Inspector = { Show = true, RatioY = 1, RatioX = 100, },
+				InnerRight = {
+				},
+				MediaPool = { Show = false, },
+				OuterColumns = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Effects = { Show = false, },
+				ActionStrip = { Show = false, Adjust = true, MRU = 0, RatioX = 100, },
+				Metadata = { Show = false, },
+				OuterLeft = {
+				},
+				ViewerSplit = {
+					RatioX = 100,
+					RatioY = 1,
+				},
+				Nodes = { Show = true, RatioY = 100, RatioX = 1, },
+				OuterRight = {
+					PixelX = 362,
+					RatioY = 100,
+				},
+				Clips = { Show = false, },
+				Spline = { Show = false, }
+			},
+			Views = ordered() {
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							Navigator = true,
+							AutoHideNavigator = true,
+							AutoSnap = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 0.686292,
+						RootOffset = { -87.1744, 252.96 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 320 },
+							ScaleX = 0.00428849902534113,
+							OffsetX = 0.900584795321637,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = false,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "frame"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.2,
+						ScaleY = 0.00338983050847458,
+						OffsetX = -3.4,
+						OffsetY = 0,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = false,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = false,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView"
+			},
+			Layout = {
+				{ ID = "LayoutStrip", FixedY = 36, Resolve = false, Flat = true },
+				{
+					{
+						{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+						{ ID = "Effects", RatioX = 1 },
+						Zone = "Left",
+						Rows = 2,
+						PaneID = "OuterLeft",
+						PixelX = 420
+					},
+					{
+						{
+							{
+								{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+								{ ID = "Effects", RatioX = 1 },
+								PaneID = "InnerLeft",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Left"
+							},
+							{
+								{
+									{ ID = "Viewer1", RatioY = 0.01, RatioX = 1 },
+									{ ID = "Viewer2", RatioX = 1 },
+									RatioY = 1,
+									Columns = 2,
+									PaneID = "ViewerSplit"
+								},
+								{ ID = "Time", FixedY = 83, Flat = true },
+								RatioX = 1,
+								Rows = 2
+							},
+							{
+								{ ID = "Inspector", RatioY = 1 },
+								{ ID = "Metadata", RatioY = 1, Fusion = false },
+								PaneID = "InnerRight",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Right"
+							},
+							RatioY = 2,
+							Columns = 3,
+							PaneID = "InnerColumns"
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{
+							{ ID = "Nodes", RatioX = 1 },
+							{ ID = "Spline", RatioX = 1 },
+							{ ID = "Keyframes", RatioX = 1 },
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "MainSplit"
+						},
+						{ Fusion = false, ID = "Clips", LARGE_FixedY = 160, MEDIUM_FixedY = 138, SMALL_FixedY = 110 },
+						RatioX = 1,
+						Rows = 4,
+						PaneID = "CenterSplit"
+					},
+					{
+						{ ID = "Inspector", RatioY = 1 },
+						{ ID = "Metadata", RatioY = 1, Fusion = false },
+						Zone = "Right",
+						Rows = 2,
+						PaneID = "OuterRight",
+						PixelX = 420
+					},
+					RatioY = 1,
+					Columns = 3,
+					PaneID = "OuterColumns"
+				},
+				RatioX = 1,
+				Rows = 2,
+				RatioY = 1
+			},
+			TopBar = {
+				Left = { "Left", "MediaPool", "Effects", "Clips", "Nodes", "Console" },
+				Right = { "Spline", "Keyframes", "Metadata", "Inspector", "Right" }
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Memory = {
+				FramesAtOnce = 10,
+				Render = {
+					SimultaneousBranching = true
+				},
+				Interactive = {
+					SimultaneousBranching = true,
+				}
+			},
+			Views = {
+				RightView = {
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = false,
+							LUTPlugin = "FusionViewLUT",
+							FitMarginY = 0,
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					},
+				},
+				LeftView = {
+					Viewer = {
+						ScaleMode = 1
+					},
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = false,
+							LUTPlugin = "FusionViewLUT",
+							FitMarginY = 0,
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					},
+				},
+				View1 = {
+					PrevCtrlInactiveColor = 4278255360,
+					PickW = 1,
+					PickH = 1,
+					PrevCtrlActiveColor = 4278190335,
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = false,
+							LUTPlugin = "FusionViewLUT",
+							FitMarginY = 0,
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					}
+				},
+			},
+			Paths = {
+				Map = {
+				},
+			},
+			FrameFormat = {
+				GuideRatio = 1.77777777777778,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalStart = 1,
+				GlobalEnd = 3
+			},
+			FlowView = {
+				RemoveRouters = false
+			},
+			QuickTime = {
+			},
+		}
+	},
+}
+

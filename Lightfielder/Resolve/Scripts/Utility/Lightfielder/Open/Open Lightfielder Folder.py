@@ -1,5 +1,5 @@
 """
-Lightfielder 18 Open Lightfielder Folder.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Open Lightfielder Folder.py 2026-09-18 09.18 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Open the Lightfielder folder:
