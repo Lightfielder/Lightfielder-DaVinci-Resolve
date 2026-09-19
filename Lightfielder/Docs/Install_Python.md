@@ -1,23 +1,23 @@
 # Lightfielder | Install Python
 
-These days Python based post-production pipelines are built using Python v3.
+These days, Python-based post-production pipelines are built using Python v3.
 
 ## Python on Linux
 
 The average RHEL/Rocky Linux 10.x system is typically running Python 3.12.x on a graphical workstation setup.
 
-If you don't have a copy of Python 3 installed on a RHEL based Linux distro, the dnf package manager can be used from a terminal session to install the Python package:
+If you don't have a copy of Python 3 installed on a RHEL-based Linux distro, the dnf package manager can be used from a terminal session to install the Python package:
 
 ```bash
 sudo dnf update -y
 sudo dnf install python3 python3-pip -y
 ```
 
-**Note:** on REHL based Linux distros, dnf replaces the earlier YUM package manager.
+**Note:** On RHEL-based Linux distros, dnf replaces the earlier YUM package manager.
 
-Note: If you are using a Ubuntu based Linux distro you need to use the APT package manager to install Python.
+Note: If you are using an Ubuntu-based Linux distro, you need to use the APT package manager to install Python.
 
-**Note:** Python version 3.12 is a good choice in the year 2026 for a Linux system that is running without a virtual environment like [Conda](https://www.anaconda.com) / [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main). If you have a virtual environment, and use it to launch a Resolve session then you are able to more easily use a wider variety of compatible Python versions on the host computer.
+**Note:** Python version 3.12 is a good choice in the year 2026 for a Linux system that is running without a virtual environment like [Conda](https://www.anaconda.com) / [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main). If you have a virtual environment and use it to launch a Resolve session, then you are able to more easily use a wider variety of compatible Python versions on the host computer.
 
 ## Python on macOS
 
@@ -141,10 +141,11 @@ The macOS & Linux Terminal based install commands for OpenTimelineIO are:
 python3 -m pip install --upgrade pip
 pip3 install OpenImageIO
 pip3 install OpenTimelineIO
+pip3 install usd-core
 pip3 install PySide6
 ```
 
-If the OTIO library functions as expected you can start a Python3 interactive scripting session in the terminal by typing in:
+If the OTIO library functions as expected, you can start a Python3 interactive scripting session in the terminal by typing in:
 
 ```bash
 python3
@@ -182,6 +183,7 @@ The error dialog message content is:
 pip3 install --upgrade pip
 pip3 install OpenImageIO
 pip3 install OpenTimelineIO
+pip3 install usd-core
 pip3 install PySide6
 ```
 
@@ -245,5 +247,6 @@ The macOS & Linux Terminal based Python package uninstall commands for OpenTimel
 python3 -m pip install --upgrade pip
 pip3 uninstall OpenImageIO
 pip3 uninstall OpenTimelineIO
+pip3 uninstall usd-core
 pip3 uninstall PySide6
 ```

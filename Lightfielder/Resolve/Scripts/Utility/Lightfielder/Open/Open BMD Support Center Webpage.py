@@ -1,5 +1,5 @@
 """
-Lightfielder Open BMD Support Center Webpage.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Open BMD Support Center Webpage.py 2026-09-18 11.54 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Open the Blackmagic Design Support Centre website in the default web browser. This webpage is where new Resolve Studio releases are downloaded from.

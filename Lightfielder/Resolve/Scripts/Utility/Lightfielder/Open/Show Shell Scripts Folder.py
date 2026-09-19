@@ -1,9 +1,8 @@
 """
-Lightfielder Open Lightfielder Folder.py 2026-09-18 11.54 PM (UTC -3)
+Lightfielder Show Shell Scripts Folder 2026-09-18 11.54 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
-Open the Lightfielder folder:
-$HOME/Lightfielder/
+Shows the Lightfielder "Shell Scripts" folder in a new folder browsing window.
 
 """
 
@@ -18,5 +17,6 @@ if lightfielder_path not in sys.path:
 	from lightfielder import *
 
 if __name__ == "__main__":
-	print("[Lightfielder][Open Folder][PathMap] \"Lightfielder:/\" \t[Absolute Path] \"" + str(app.MapPath("Lightfielder:/")) + "\"")
-	ShowFolderFromFilepath("Lightfielder:/")
+	print("[Lightfielder][Open Folder][PathMap] Shell Scripts Folder")
+
+	ShowFolderFromFilepath("Lightfielder:/Extras/Shell Scripts/")

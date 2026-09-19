@@ -1,5 +1,5 @@
 """
-Lightfielder Show OpenFX Plugins Folder 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Show OpenFX Plugins Folder 2026-09-18 11.54 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Shows the OpenFX plugins folder in a new folder browsing window.

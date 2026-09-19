@@ -3610,13 +3610,16 @@ except AttributeError:
 pip3 install --upgrade pip
 pip3 install OpenImageIO
 pip3 install OpenTimelineIO
+pip3 install usd-core
 pip3 install PySide6
 pip3 install virtualenv
 """
 	elif currentOS == "Windows":
 		messsage = """The OTIO Python module is missing. The Windows Command Prompt based install commands for OpenTimelineIO and other libraries are:
 python3 -m pip install --upgrade pip
+pip3 install OpenImageIO
 pip3 install OpenTimelineIO
+pip3 install usd-core
 pip3 install PySide6
 pip3 install virtualenv
 """
@@ -3627,6 +3630,7 @@ sudo dnf install python3 python3-pip -y
 pip3 install --upgrade pip
 pip3 install OpenImageIO
 pip3 install OpenTimelineIO
+pip3 install usd-core
 pip3 install PySide6
 pip3 install virtualenv
 """

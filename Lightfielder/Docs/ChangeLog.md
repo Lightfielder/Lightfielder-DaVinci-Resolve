@@ -1,8 +1,42 @@
 # Lightfielder | ChangeLog
 
+## 2026-09-19
+
+- Added the Python module "usd-core" as a Python module dependency for Lightfielder. This allows Python's to work with Pixar's OpenUSD data. It is used by the new Script "Workspace > Lightfielder > Scenegraph > Fusion USD Outliner.py".
+- Added a "Workspace > Lightfielder > Developer > Light Editor" script that streamlines the process of editing light parameters in a Fusion 3D workspace-based scene.
+- Added new "Open > " menu-based scripts for:
+	- Reset Lightfielder Fusion.prefs Entries.py
+	- Show Comps Folder.py
+	- Show Deliver Page Presets Folder.py
+	- Show Extras Folder.py
+	- Show Fuses Folder.py
+	- Show Logs Folder.py
+	- Show Lua Modules Folder.py
+	- Show Macros Folder.py
+	- Show Shell Scripts Folder.py
+	- Show Unit Tests Folder.py
+- Added new "Workspace > Lightfielder > Scenegraph" menu-based scripts for:
+	- Fusion USD Outliner.py
+	- Fusion Copy As Mermaid Flowchart.lua
+	- Fusion Light Editor.py
+	- Fusion Render Time Profiler.lua
+	- Fusion to HQueue Render.py
+- Moved the Technisync JSON-related scripts into the "Workspace > Lightfielder > Technisync Rigs > " sub-folder:
+	- Read Technisync Config JSON.py
+	- Read Technisync Shotlog JSON.py
+- Added new "Workspace > Lightfielder > Tools" menu-based scripts for:
+	- Create All Data Nodes.lua
+	- Invert Node Selection.lua
+	- List Fuses in Comp.lua
+	- List Node Inputs and Outputs.lua
+	- Recurse Node Flow.lua
+	- Remove Unselected Nodes.lua
+	- Render Current Frame.lua
+	- Render Selected.lua
+
 ## 2026-09-18
 
-- Updated the "18" Toolbar item run the "[18 Media Command](Scripts_18_Media_Command.md)" script. This script allows you to quickly select footage in the Media Pool, and then process it with a short and simple Lua or Python script. 
+- Updated the "18" Toolbar item run the "[18 Media Command](Scripts_18_Media_Command.md)" script. This script allows you to quickly select footage in the Media Pool and then process it with a short and simple Lua or Python script. 
 	- The "Media Command" script takes a bit less effort to use, compared to the [17 Jupyter Link](Scripts_17_Jupyter_Link.md) approach, which requires the user to have a working copy of Jupyter installed along with an existing Jupyter Notebook file before you can make use of it.
 	- The previous script wired to the Toolbar "18" button is now located in the "Open > Open Lightfielder Folder" menu entry.
 

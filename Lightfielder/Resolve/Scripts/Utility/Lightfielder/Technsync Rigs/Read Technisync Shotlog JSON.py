@@ -1,5 +1,5 @@
 """
-Lightfielder Read Technisync Shotlog JSON 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Read Technisync Shotlog JSON 2026-09-19 12.31 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A script to extract and parse shotlog data from the Technisync Lightfielder camera array. The output is dumped to the terminal with indented JSON formatting to make it easier to read.
@@ -7,17 +7,16 @@ A script to extract and parse shotlog data from the Technisync Lightfielder came
 Each log file entry is formatted as:
 YYYY-MM-DD HH:MM:SS.SSSSSS {JSON}
 
-A single line of data from the shotlog file holds a JSON encoded blob of information with keys for:
+A single line of data from the shotlog file holds a JSON-encoded blob of information with keys for:
 
 - appConfig
 - camConfig
 - sysConfig
 
-
 # Script Usage
 
-1. Run the "Workspace > Scripts > Lightfielder > Development > Read Technisync Shotlog JSON.py" file.
-1. Select a Technsync shotlog .json file using the file browser dialog that appears.
+1. Run the "Workspace > Scripts > Lightfielder > Technsync Rigs > Read Technisync Shotlog JSON.py" file.
+1. Select a Technisync shotlog .json file using the file browser dialog that appears.
 2. Open the Console window to see the results.
 
 

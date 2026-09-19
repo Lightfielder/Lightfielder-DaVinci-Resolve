@@ -1,0 +1,17 @@
+--[[
+==============================================================================
+Lightfielder Fusion Copy As Mermaid Flowchart - Menu 2026-09-19 12.42 AM (UTC -3)
+==============================================================================
+]]--
+
+{
+	Menus
+	{
+		Target = "ChildFrame",
+
+		After "Edit\\Copy"
+		{
+			"RunScript{Name = 'Copy As Mermaid Flowchart', filename = 'Lightfielder:/Resolve/Scripts/Utility/Lightfielder/Scenegraph/Fusion Copy As Mermaid Flowchart.lua'}",
+		},
+	},
+}

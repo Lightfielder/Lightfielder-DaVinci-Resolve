@@ -1,5 +1,5 @@
 """
-Lightfielder Open Fusion.prefs 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Open Fusion.prefs 2026-09-18 11.54 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Edits the "Fusion.prefs" file that stores the PathMap values, and the Lightfielder preferences, using the script editor defined in Fusion's preferences.

@@ -1,5 +1,6 @@
 OpenImageIO
 OpenTimelineIO
+usd-core
 PySide6
 jupyter
 ipykernel

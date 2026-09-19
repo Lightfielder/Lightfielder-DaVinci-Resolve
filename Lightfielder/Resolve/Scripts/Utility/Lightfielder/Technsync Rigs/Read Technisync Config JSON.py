@@ -1,13 +1,13 @@
 """
-Lightfielder Read Technisync Config JSON.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Read Technisync Config JSON.py 2026-09-19 12.32 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A script to parse camera array data from the "activeTechnisyncConfig.json" file.
 
 # Script Usage
 
-1. Run the "Workspace > Scripts > Lightfielder > Development > Read Technisync Config JSON.py" file.
-1. Select a Technsync config .json file using the file browser dialog that appears.
+1. Run the "Workspace > Scripts > Lightfielder > Technsync Rigs > Read Technisync Config JSON.py" file.
+1. Select a Technisync config .json file using the file browser dialog that appears.
 2. Open the Console window to see the results.
 
 Sample Console Window Output:
