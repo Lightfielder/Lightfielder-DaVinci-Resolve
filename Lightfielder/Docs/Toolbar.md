@@ -6,7 +6,7 @@ Lightfielder ships with a custom toolbar. The scripts are numbered in linear ord
 
 ![Toolbar](images/toolbar.png)
 
-The Davinci Resolve Studio based Lightfielder workflow automation scripts are accessed using the "Workspace \> Scripts \> Lightfielder \> Toolbar" menu item.
+The DaVinci Resolve Studio based Lightfielder workflow automation scripts are accessed using the "Workspace \> Scripts \> Lightfielder \> Toolbar" menu item.
 
 ![Workspace Menu](images/menu_workspace_lightfielder_toolbar.png)
 
@@ -31,12 +31,12 @@ The scripts present in this menu area include:
 - [16 Extensions](Scripts_16_Extensions.md)
 - [17 Edit Jupyter Link](Scripts_17_Jupyter_Link.md)
 - [18 Media Command](Scripts_18_Media_Command.md)
-- [19 Show Console](Scripts_19_Show_Console.md)
-- [20 Documentation](Scripts_20_Documentation.md)
-- [21 Edit Python Module](Scripts_21_Edit_Python_Module.md)
+- [19 Edit Python Module](Scripts_19_Edit_Python_Module.md)
+- [20 Show Console](Scripts_20_Show_Console)
+- [21 Documentation](Scripts_21_Documentation.md)
 - [22 About Lightfielder](Scripts_22_About_Lightfielder.md)
 
-**Tip:** Hold down the shift key when clicking on a toolbar item to force-reload the script. This is handy if you have edited the script and want to refresh the view to show the changes.
+**Tip:** Hold down the Shift key when clicking on a toolbar item to force-reload the script. This is handy if you have edited the script and want to refresh the view to show the changes.
 
 **Tip:** Hold down the Command (macOS) or Control (Win/Linux) key when clicking on a toolbar item to edit that Python script. This works if you have a script editor program defined in the Fusion page settings.
 

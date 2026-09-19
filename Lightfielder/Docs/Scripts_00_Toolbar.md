@@ -37,163 +37,150 @@ The JSON based preset files allow you to customize every parameter used in the t
 ```json
 {
 	"version": 1,
-	"width": 11,
+	"width": 10,
 	"height": 2,
-	"toolbar": {
-		"tool1": {
-			"icon": "fa-gear",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/01 Preferences.py",
-			"id": "PrefsWin",
-			"text": "01",
-			"tooltip": "01 Preferences"
+	"Toolbar": {
+		"Tool1": {
+			"Icon": "fa-gear",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/01 Preferences.py",
+			"TargetID": "PrefsWin",
+			"Text": "01",
+			"Tooltip": "01 Preferences"
 		},
-		"tool2": {
-			"icon": "fa-archive",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/02 Bin Templates.py",
-			"id": "BinWin",
-			"text": "02",
-			"tooltip": "02 Bin Templates"
+		"Tool2": {
+			"Icon": "fa-archive",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/02 Bin Templates.py",
+			"TargetID": "BinWin",
+			"Text": "02",
+			"Tooltip": "02 Bin Templates"
 		},
-		"tool3": {
-			"icon": "fa-medkit",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/03 Shot Validator.py",
-			"id": "ShotlogPreFlightWin",
-			"text": "03",
-			"tooltip": "03 Shot Pre-Flight"
+		"Tool3": {
+			"Icon": "fa-medkit",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/03 Shot Validator.py",
+			"TargetID": "ShotlogValidatorWin",
+			"Text": "03",
+			"Tooltip": "03 Shot Validator"
 		},
-		"tool4": {
-			"icon": "fa-list-alt",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/04 Import Footage.py",
-			"id": "ImportFootageWin",
-			"text": "04",
-			"tooltip": "04 Import Footage"
+		"Tool4": {
+			"Icon": "fa-list-alt",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/04 Import Footage.py",
+			"TargetID": "ImportFootageWin",
+			"Text": "04",
+			"Tooltip": "04 Import Footage"
 		},
-		"tool5": {
-			"icon": "fa-tags",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/05 Metadata Sync.py",
-			"id": "MetadataWin",
-			"text": "05",
-			"tooltip": "05 Metadata Sync"
+		"Tool5": {
+			"Icon": "fa-tags",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/05 Metadata Sync.py",
+			"TargetID": "MetadataWin",
+			"Text": "05",
+			"Tooltip": "05 Metadata Sync"
 		},
-		"tool6": {
-			"icon": "fa-qrcode",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/06 Still Frames Export.py",
-			"id": "CalibrationWin",
-			"text": "06",
-			"tooltip": "06 Still Frames Export"
+		"Tool6": {
+			"Icon": "fa-qrcode",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/06 Still Frames Export.py",
+			"TargetID": "CalibrationWin",
+			"Text": "06",
+			"Tooltip": "06 Still Frames Export"
 		},
-		"tool7": {
-			"icon": "fa-film",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/07 Create EDLs.py",
-			"id": "CreateEDLWin",
-			"text": "07",
-			"tooltip": "07 Create EDLs"
+		"Tool7": {
+			"Icon": "fa-film",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/07 Create EDLs.py",
+			"TargetID": "CreateEDLWin",
+			"Text": "07",
+			"Tooltip": "07 Create EDLs"
 		},
-		"tool8": {
-			"icon": "fa-cut",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/08 Batch Trim.py",
-			"id": "TrimWin",
-			"text": "08",
-			"tooltip": "08 Batch Trim"
+		"Tool8": {
+			"Icon": "fa-cut",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/08 Batch Trim.py",
+			"TargetID": "TrimWin",
+			"Text": "08",
+			"Tooltip": "08 Batch Trim"
 		},
-		"tool09": {
-			"icon": "fa-level-up",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/11 EDL Stack Swizzle.py",
-			"id": "EDLStackSwizzleWin",
-			"text": "09",
-			"tooltip": "09 EDL Stack Swizzle"
+		"Tool9": {
+			"Icon": "fa-fire",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/09 EDL Checker.py",
+			"TargetID": "EDLChecker",
+			"Text": "09",
+			"Tooltip": "09 EDL Checker"
 		},
-		"tool10": {
-			"icon": "fa-fire",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/10 EDL Checker.py",
-			"id": "EDLChecker",
-			"text": "10",
-			"tooltip": "10 EDL Checker"
+		"Tool10": {
+			"Icon": "fa-triangle",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/10 Log Viewer.py",
+			"TargetID": "LogViewerWin",
+			"Text": "10",
+			"Tooltip": "10 Log Viewer"
 		},
-		"tool11": {
-			"icon": "fa-triangle",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/11 Log Viewer.py",
-			"id": "LogViewerWin",
-			"text": "11",
-			"tooltip": "11 Log Viewer"
+		"Tool11": {
+			"Icon": "fa-level-up",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/11 EDL Stack Swizzle.py",
+			"TargetID": "EDLStackSwizzleWin",
+			"Text": "11",
+			"Tooltip": "11 EDL Stack Swizzle"
 		},
-		"tool12": {
-			"icon": "fa-check-circle",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/12 Video Track Solo.py",
-			"id": "VideoTrackSoloWin",
-			"text": "12",
-			"tooltip": "12 Video Track Solo"
+		"Tool12": {
+			"Icon": "fa-check-circle",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/12 Video Track Solo.py",
+			"TargetID": "VideoTrackSoloWin",
+			"Text": "12",
+			"Tooltip": "12 Video Track Solo"
 		},
-		"tool13": {
-			"icon": "fa-camera",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/13 Camera Contact Sheet.py",
-			"id": "CCSWin",
-			"text": "13",
-			"tooltip": "13 Camera Contact Sheet"
+		"Tool13": {
+			"Icon": "fa-camera",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/13 Camera Contact Sheet.py",
+			"TargetID": "CCSWin",
+			"Text": "13",
+			"Tooltip": "13 Camera Contact Sheet"
 		},
-		"tool14": {
-			"icon": "fa-eyedropper",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/14 Grade Automation.py",
-			"id": "GradeAutomationWin",
-			"text": "14",
-			"tooltip": "14 Grade Automation"
+		"Tool14": {
+			"Icon": "fa-eyedropper",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/14 Grade Automation.py",
+			"TargetID": "GradeAutomationWin",
+			"Text": "14",
+			"Tooltip": "14 Grade Automation"
 		},
-		"tool15": {
-			"icon": "fa-paper-plane",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/15 EDL Export.py",
-			"id": "EDLExportWin",
-			"text": "15",
-			"tooltip": "15 EDL Export"
+		"Tool15": {
+			"Icon": "fa-paper-plane",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/15 EDL Export.py",
+			"TargetID": "EDLExportWin",
+			"Text": "15",
+			"Tooltip": "15 EDL Export"
 		},
-		"tool16": {
-			"icon": "fa-puzzle-piece",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/16 Extensions.py",
-			"id": "ExtensionsWin",
-			"text": "16",
-			"tooltip": "16 Extensions"
+		"Tool16": {
+			"Icon": "fa-puzzle-piece",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/16 Extensions.py",
+			"TargetID": "ExtensionsWin",
+			"Text": "16",
+			"Tooltip": "16 Extensions"
 		},
-		"tool17": {
-			"icon": "fa-book",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/17 Jupyter Link.py",
-			"id": "JupyterWin",
-			"text": "17",
-			"tooltip": "17 Jupyter Link"
+		"Tool17": {
+			"Icon": "fa-folder-open",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/17 Open Lightfielder Folder.py",
+			"TargetID": "Docs",
+			"Text": "17",
+			"Tooltip": "17 Open Lightfielder Folder"
 		},
-		"tool18": {
-			"icon": "fa-folder-open",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/18 Open Lightfielder Folder.py",
-			"id": "Docs",
-			"text": "18",
-			"tooltip": "18 Open Lightfielder Folder"
+		"Tool18": {
+			"Icon": "fa-file-code-o",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/18 Media Command.lua",
+			"TargetID": "MediaCommandWin",
+			"Text": "18",
+			"Tooltip": "18 Media Command"
 		},
-		"tool19": {
-			"icon": "fa-file-code-o",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/19 Edit Python Module.py",
-			"id": "Docs",
-			"text": "19",
-			"tooltip": "19 Edit Python Module"
+		"Tool19": {
+			"Icon": "fa-file-code-o",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/19 Console.py",
+			"TargetID": "fa-file-code-o",
+			"Text": "19",
+			"Tooltip": "19 Show Console"
 		},
-		"tool20": {
-			"icon": "fa-file-code-o",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/20 Console.py",
-			"id": "fa-file-code-o",
-			"text": "20",
-			"tooltip": "20 Show Console"
-		},
-		"tool21": {
-			"icon": "fa-code",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/21 Documentation.py",
-			"id": "Docs",
-			"text": "21",
-			"tooltip": "21 Documentation"
-		},
-		"tool22": {
-			"icon": "fa-info-circle",
-			"script": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/22 About Lightfielder",
-			"id": "AboutWin",
-			"text": "22",
-			"tooltip": "22 About Lightfielder"
+		"Tool20": {
+			"Icon": "fa-code",
+			"ScriptFile": "Lightfielder:/Resolve/Scripts/Utility/Lightfielder/20 Documentation.py",
+			"TargetID": "Docs",
+			"Text": "20",
+			"Tooltip": "20 Documentation"
 		}
 	}
 }
+
 ```

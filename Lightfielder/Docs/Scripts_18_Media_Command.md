@@ -96,7 +96,6 @@ This example shows how "Copy Lua Table" script exports can be used with the Vonk
 
 ![Clip Lua Table to ScriptVal](Images/script_18_Media_Command_example_clip_lua_table_to_scriptval.png)
 
-
 The file is available on disk at the following PathMap location:
 
 > Lightfielder:/Resolve/Comps/Media Command/Clip Lua Table to ScriptVal.comp
