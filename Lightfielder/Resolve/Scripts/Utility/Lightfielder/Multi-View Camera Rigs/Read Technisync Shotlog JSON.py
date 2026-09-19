@@ -15,7 +15,7 @@ A single line of data from the shotlog file holds a JSON-encoded blob of informa
 
 # Script Usage
 
-1. Run the "Workspace > Scripts > Lightfielder > Technsync Rigs > Read Technisync Shotlog JSON.py" file.
+1. Run the "Workspace > Scripts > Lightfielder > Multi-View Camera Rigs > Read Technisync Shotlog JSON.py" file.
 1. Select a Technisync shotlog .json file using the file browser dialog that appears.
 2. Open the Console window to see the results.
 

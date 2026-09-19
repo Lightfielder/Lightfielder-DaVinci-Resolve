@@ -16,7 +16,7 @@ farmOS = "Auto"
 # farmOS = "Linux"
 
 """
-Lightfielder Fusion to HQueue Render 2026-09-19 12.17 AM (UTC -3)
+Lightfielder Fusion HQueue Render 2026-09-19 12.17 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 ## Overview
@@ -40,9 +40,9 @@ Windows support is currently under development. On Windows, the following error 
 
 Step 1. Open the HQueue management webpage. (Typically this defaults to "http://localhost:5000"). Use the HQueue webUI to create an HQueue "Client Group" called "Fusion".
 
-Step 2. Open a Fusion comp. Select the "Utility > Lightfielder > Scenegraph > Fusion to HQueue Render" menu item to submit a Fusion composite to your render farm.
+Step 2. Open a Fusion comp. Select the "Utility > Lightfielder > Scenegraph > Fusion HQueue Render" menu item to submit a Fusion composite to your render farm.
 
-Set the "Frames Per Task" value to define how large of a frame chunk you want each job task to use. A value of zero sets the job to render as a single job task.
+Set the "Frames Per Task" value to define how large a frame chunk you want each job task to use. A value of zero sets the job to render as a single job task.
 
 # Todo List
 - Store the HQueue server address and port number in the fusion prefs

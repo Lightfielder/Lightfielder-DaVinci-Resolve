@@ -6,7 +6,7 @@ A script to parse camera array data from the "activeTechnisyncConfig.json" file.
 
 # Script Usage
 
-1. Run the "Workspace > Scripts > Lightfielder > Technsync Rigs > Read Technisync Config JSON.py" file.
+1. Run the "Workspace > Scripts > Lightfielder > Multi-View Camera Rigs > Read Technisync Config JSON.py" file.
 1. Select a Technisync config .json file using the file browser dialog that appears.
 2. Open the Console window to see the results.
 

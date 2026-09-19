@@ -16,14 +16,39 @@
 	- Show Shell Scripts Folder.py
 	- Show Unit Tests Folder.py
 - Added new "Workspace > Lightfielder > Scenegraph" menu-based scripts for:
-	- Fusion USD Outliner.py
 	- Fusion Copy As Mermaid Flowchart.lua
 	- Fusion Light Editor.py
+	- Fusion Open Containing Folder.lua
 	- Fusion Render Time Profiler.lua
-	- Fusion to HQueue Render.py
-- Moved the Technisync JSON-related scripts into the "Workspace > Lightfielder > Technisync Rigs > " sub-folder:
+	- Fusion HQueue Render.py
+	- Fusion USD Outliner.py
+- Added new "Workspace > Lightfielder > Multi-View Camera Rigs > " sub-folder. Placed the Technisync JSON shotlog scripts and a live video feed capture script into this subfolder:
 	- Read Technisync Config JSON.py
 	- Read Technisync Shotlog JSON.py
+	- Live Video Snapshot.lua
+		- The "Live Video Snapshot" script might require you to manually customize the script's source code to enter the exact location of the ffmpeg executable path on your computer. This is required if you are not using the "Reactor Package Manager" supplied version of ffmpeg that is defined in the script as the initial value on Windows and macOS:
+			```lua
+			-- FFmpeg program path
+			defaultFFmpegProgram = ''
+			if platform == 'Windows' then
+				-- Where is ffmpeg installed on Windows?
+				defaultFFmpegProgram = comp:MapPath('Reactor:/Deploy/Bin/ffmpeg/bin/ffmpeg.exe')
+				-- defaultFFmpegProgram = 'C:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe'
+				-- defaultFFmpegProgram = 'C:\\ffmpeg\\bin\\ffmpeg.exe'
+			elseif platform == 'Mac' then
+				-- Where is ffmpeg installed on your MacOS?
+				defaultFFmpegProgram = comp:MapPath('Reactor:/Deploy/Bin/ffmpeg/bin/ffmpeg')
+				-- defaultFFmpegProgram = '/opt/local/bin/ffmpeg'
+				-- defaultFFmpegProgram = '/usr/local/bin/ffmpeg'
+				-- defaultFFmpegProgram = 'ffmpeg'
+			else
+				-- Linux
+				-- Where is ffmpeg installed on Linux?
+				defaultFFmpegProgram = '/opt/local/bin/ffmpeg'
+				-- defaultFFmpegProgram = '/usr/local/bin/ffmpeg'
+				-- defaultFFmpegProgram = 'ffmpeg'
+			end
+			```
 - Added new "Workspace > Lightfielder > Tools" menu-based scripts for:
 	- Create All Data Nodes.lua
 	- Invert Node Selection.lua
