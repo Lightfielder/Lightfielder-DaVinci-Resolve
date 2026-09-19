@@ -2,6 +2,7 @@
 
 ## 2026-09-19
 
+- Added a Fusion Studio loading guard so the "Scripts:/Lightfielder.scriptlib" file only launches in a Resolve Studio session. This avoids errors from appearing if the same "Lightfielder:/" PathMap is defined in both Resolve Studio and Fusion Studio at the same time.
 - Added the Python module "usd-core" as a Python module dependency for Lightfielder. This allows Python's to work with Pixar's OpenUSD data. It is used by the new Script "Workspace > Lightfielder > Scenegraph > Fusion USD Outliner.py".
 - Added a "Workspace > Lightfielder > Developer > Light Editor" script that streamlines the process of editing light parameters in a Fusion 3D workspace-based scene.
 - Added new "Open > " menu-based scripts for:

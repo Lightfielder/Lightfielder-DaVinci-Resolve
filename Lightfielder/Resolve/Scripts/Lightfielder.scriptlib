@@ -1,5 +1,5 @@
 --[[--
-Lightfielder ScriptLib 2026-09-16 (UTC -3)
+Lightfielder ScriptLib 2026-09-19 01.30 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A scriptlib module is a Lua script that is automatically run when DaVinci Resolve launches.
@@ -9,14 +9,27 @@ Code added to this scriptlib document can set initial values for new editing ses
 
 The Lightfielder "01 Preferences" window has an "Autoload Toolbar On Launch" checkbox control. When this option is enabled, the Lightfielder Toolbar window will automatically load when DaVinci Resolve Studio is started.
 
-Todo: Add a Fusion Studio loading guard so this scriptlib only launches in Resolve Studio sessions.
-
 --]]--
 
 function GetTimestamp()
 	-- Date and Time docs: https://www.lua.org/pil/22.1.html
 	-- Time Format Example: 2026-08-23 2:14 PM
 	return tostring(os.date("%Y-%m-%d %I:%M:%S %p"))
+end
+
+-- Example: local hostOS = IsResolve()
+function IsResolve()
+	-- Check if Fusion Standalone or the Resolve Fusion page is active
+	host = fusion:MapPath("Fusion:/")
+	if string.lower(host):match("resolve") then
+		hostOS = "Resolve"
+		return hostOS
+	else
+		hostOS = "Fusion"
+		return hostOS
+	end
+
+	return nil
 end
 
 function AutostartToolbar()
@@ -90,4 +103,8 @@ function GetProject()
 end
 
 -- Show the Toolbar window when DaVinci Resolve starts up
-AutostartToolbar()
+if IsResolve() == "Resolve" then
+	AutostartToolbar()
+-- else:
+--	print("\n[Lightfielder ScriptLib][Error] No Resolve app session is open at this time. This scriptlib is not made for use with Fusion Studio")
+end
