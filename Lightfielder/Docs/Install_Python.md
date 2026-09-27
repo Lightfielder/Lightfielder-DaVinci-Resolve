@@ -254,8 +254,8 @@ The macOS & Linux Terminal based Python package uninstall commands for OpenTimel
 
 ```bash
 python3 -m pip install --upgrade pip
-pip3 uninstall OpenImageIO
-pip3 uninstall OpenTimelineIO
-pip3 uninstall usd-core
-pip3 uninstall PySide6
+pip3 uninstall OpenImageIO -y  
+pip3 uninstall OpenTimelineIO -y  
+pip3 uninstall usd-core -y  
+pip3 uninstall PySide6 -y  
 ```
