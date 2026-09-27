@@ -126,9 +126,18 @@ python -m pip install --upgrade pip
 
 If you open the Terminal and change the directory to the Lightfielder-DaVinci-Resolve folder you can run the following command to add the required Python modules in a single step:
 
+macOS and Linux:
+
 ```bash
 cd $HOME/Lightfielder/Extras/
-pip install -r requirements.txt
+pip3 install -r requirements.txt
+```
+
+Windows:
+
+```bash
+cd %USERPROFILE%/Lightfielder/Extras/
+pip3 install -r requirements.txt
 ```
 
 ## OpenTimelineIO Install
