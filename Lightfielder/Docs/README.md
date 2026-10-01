@@ -109,7 +109,7 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 - [Lightfielder HDR Image Based Rendering](Workflow_Guides/Lightfielder_HDR_Image_Based_Rendering.md)
 - [Volumetric Color Decision Lists](Workflow_Guides/Volumetric_Color_Decision_Lists.md)
 - [PBR-GS Physically Based Rendering of Gaussian Splats](Workflow_Guides/Physically_Based_Rendering_of_Gaussian_Splats.md)
-- [The OBJ-GS Guide | Wavefront OBJ Format Extensions for VFX](OBJ-GS.md)
+- [The OBJ-GS Guide | Wavefront OBJ Format Extensions for VFX](Workflow_Guides/OBJ-GS.md)
 
 ## Blog Content
 
