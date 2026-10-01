@@ -1,5 +1,5 @@
 """
-Lightfielder 16 Extensions.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 16 Extensions.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Extensions allow 3rd party Python based plugins to extend the Lightfielder ecosystem.

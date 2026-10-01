@@ -1,5 +1,5 @@
 """
-Lightfielder 08 Batch Trim.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 08 Batch Trim.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Apply a Batch Trim to all of the clips in a timeline.

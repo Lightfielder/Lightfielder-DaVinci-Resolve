@@ -1,5 +1,5 @@
 """
-Lightfielder Apply Dewarp Comp to Timeline Clips 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Apply Dewarp Comp to Timeline Clips 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Import an external Fusion .comp file and attach it to each of the clips in a timeline.

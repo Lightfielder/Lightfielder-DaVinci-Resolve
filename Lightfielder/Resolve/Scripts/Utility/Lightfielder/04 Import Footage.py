@@ -1,5 +1,5 @@
 """
-Lightfielder 04 Import Footage.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 04 Import Footage.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Import R3D footage into the Resolve media page.

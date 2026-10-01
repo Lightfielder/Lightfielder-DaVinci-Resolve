@@ -1,5 +1,5 @@
 """
-Lightfielder 01 Preferences.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 01 Preferences.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Allows you to change Lightfielder settings for attributes like rig geometry. This makes it possible to work with volumetric footage from the different eras of the camera array design.

@@ -1,5 +1,5 @@
 --[[--
-Lightfielder 18 Media Command.lua 2026-09-18 09.19 PM (UTC -3)
+Lightfielder 18 Media Command.lua 2026-09-02 07.10 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Media Command is a scriptable interface for batch processing content that resides in your Resolve Media Pool. This streamlines the process of selecting footage and running automation scripts on those specific items.

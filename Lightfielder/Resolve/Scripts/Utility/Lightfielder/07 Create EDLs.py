@@ -1,5 +1,5 @@
 """
-Lightfielder 07 Create EDLs.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 07 Create EDLs.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Creates new editing timelines with the multi-view content placed vertically across many tracks, or in a single horizontal track.

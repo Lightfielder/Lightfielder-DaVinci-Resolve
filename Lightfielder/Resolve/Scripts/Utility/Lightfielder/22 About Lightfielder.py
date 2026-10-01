@@ -1,5 +1,5 @@
 """
-Lightfielder 22 About Lightfielder.py 2026-09-14 09.52 AM (UTC -3)
+Lightfielder 22 About Lightfielder.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Shows an about dialog with details about the toolset:

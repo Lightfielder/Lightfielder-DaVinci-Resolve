@@ -1,5 +1,5 @@
 """
-Lightfielder 12 Video Track Solo.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 12 Video Track Solo.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Solo a video track in the Edit page.

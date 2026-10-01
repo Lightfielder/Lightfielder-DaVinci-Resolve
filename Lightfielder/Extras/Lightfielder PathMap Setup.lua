@@ -1,5 +1,5 @@
 --[[--
-Lightfielder PathMap Setup.lua 2026-09-02 07.10 PM (UTC -3)
+Lightfielder PathMap Setup.lua 2026-10-01 12.07 AM (UTC -3)
 
 Setting up Lightfielder for the first time is a 2 step process.
 
@@ -14,7 +14,9 @@ Note: You can also copy the contents of this script and manually paste it into t
 print('[Lightfielder PathMap Setup]')
 
 -- Add the platform specific folder slash character
-osSeparator = package.config:sub(1,1)
+osSeparator = "/"
+-- Resolve Free v21.1 no longer allows "package.config:sub(1,1)" to be used. So we are going to use "app:MapPath()" to handle the path normalization step
+-- osSeparator = package.config:sub(1,1)
 
 -- Set the customized Lightfielder PathMap
 local home = os.getenv([[HOME]]) or os.getenv([[USERPROFILE]]) 

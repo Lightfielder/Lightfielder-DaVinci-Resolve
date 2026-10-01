@@ -1,5 +1,5 @@
 """
-Lightfielder 09 EDL Stack Swizzle.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 09 EDL Stack Swizzle.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Converts a multi-view video track layout between a horizontal stack (HStack) and vertical stack (VStack) timeline format.

@@ -1,5 +1,10 @@
 # Lightfielder | ChangeLog
 
+## 2026-10-01
+
+- Updated the `Lightfielder PathMap Setup.lua` script to improve Resolve v21.1 support
+- Added a draft edition of a new workflow guide titled [The OBJ-GS Guide | Wavefront OBJ Format Extensions for VFX](Workflow_Guides/OBJ-GS.md).
+
 ## 2026-09-19
 
 - Added a Fusion Studio loading guard so the "Scripts:/Lightfielder.scriptlib" file only launches in a Resolve Studio session. This avoids errors from appearing if the same "Lightfielder:/" PathMap is defined in both Resolve Studio and Fusion Studio at the same time.

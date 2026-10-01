@@ -1,5 +1,5 @@
 --[[--
-Render Selected.lua 2026-09-02 07.10 PM
+Render Selected.lua 2026-10-01 12.26 AM
 
 The "Render Selected" script will render the actively selected node in Fusion Standalone/Resolve's Fusion page Nodes view. This means you can output content in Resolve's Fusion Page directly to disk using nodes like Vonk node graphs, FBXExporter, Saver, LifeSaver, pioSaver, or custom EXRIO based Fuses.
 

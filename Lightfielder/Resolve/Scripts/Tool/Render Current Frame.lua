@@ -1,5 +1,5 @@
 --[[--
-Render Current Frame.lua - 2026-09-02 07.10 PM
+Render Current Frame.lua - 2026-10-01 12.26 AM
 
 The "Render Current Frame" script will render the current frame using the actively selected node in Fusion Standalone/Resolve's Fusion page Nodes view.
 

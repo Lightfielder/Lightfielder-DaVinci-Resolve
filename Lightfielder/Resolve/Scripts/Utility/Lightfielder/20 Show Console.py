@@ -1,5 +1,5 @@
 """
-Lightfielder 20 Show Console.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 20 Show Console.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Toggle the visibility of the Resolve Console window. This allows you to troubleshoot Lightfielder script errors if the Python scripts stop working as expected in future Resolve Studio versions.

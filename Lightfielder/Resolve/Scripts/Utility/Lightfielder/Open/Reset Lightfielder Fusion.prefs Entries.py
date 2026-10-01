@@ -1,5 +1,5 @@
 """
-Reset Lightfielder Fusion.prefs Entries.py 2026-09-02 07.10 PM (UTC -3)
+Reset Lightfielder Fusion.prefs Entries.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Quickly reset the location of the Lightfielder script windows and their settings by zeroing out the Lightfielder entries in the Fusion.prefs file.

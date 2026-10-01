@@ -1,5 +1,5 @@
 """
-Lightfielder 05 Metadata Sync.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 05 Metadata Sync.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Add metadata to existing clips in the media pool. This data is sourced from the shotlog (.csv) and the .r3d filename.

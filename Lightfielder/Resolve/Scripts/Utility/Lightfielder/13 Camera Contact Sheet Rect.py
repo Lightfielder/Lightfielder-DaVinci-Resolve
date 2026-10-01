@@ -1,5 +1,5 @@
 """
-Lightfielder 13 Camera Contact Sheet Rect.py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 13 Camera Contact Sheet Rect.py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Control the visibility of the CCS (Camera Contact Sheet) views. This window acts as a camera array layout preview window which helps you understand the relationship between the physical camera names and the clip layout in the timeline.

@@ -1,5 +1,5 @@
 """
-Lightfielder Comma Separated Values (CSV).py 2026-09-02 07.10 PM (UTC -3)
+Lightfielder Comma Separated Values (CSV).py 2026-10-01 12.26 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 The extensions script is a placeholder. It represents a script that will eventually provide an Comma Separated Value based camera geometry definition.

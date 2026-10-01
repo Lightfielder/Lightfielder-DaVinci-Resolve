@@ -1,8 +1,8 @@
-# Lightfielder v26.09.18 B3 for DaVinci Resolve
+# Lightfielder v26.10.01 B4 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 3 Release
+## Public Beta 4 Release
 
 This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
@@ -109,6 +109,7 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 - [Lightfielder HDR Image Based Rendering](Workflow_Guides/Lightfielder_HDR_Image_Based_Rendering.md)
 - [Volumetric Color Decision Lists](Workflow_Guides/Volumetric_Color_Decision_Lists.md)
 - [PBR-GS Physically Based Rendering of Gaussian Splats](Workflow_Guides/Physically_Based_Rendering_of_Gaussian_Splats.md)
+- [The OBJ-GS Guide | Wavefront OBJ Format Extensions for VFX](OBJ-GS.md)
 
 ## Blog Content
 
