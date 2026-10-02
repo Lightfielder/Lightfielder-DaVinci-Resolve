@@ -99,7 +99,9 @@ So this skunkworks project is more of an OBJ overlay/extension than a full repla
 
 Using an "OBJ zipped folder" project wrapper approach also makes single file uploads work mlre effectively with "Web app" hosted SaaS like content running in a web browser session called a ([PWA](https://web.dev/learn/pwa/progressive-web-apps/)) Progressive Web App. 
 
-Additionally, the single-file archived OBJ project hiearchy idea allows compact portable assets to be displayed using [WebXR](https://immersive-web.github.io/), [WebGPU](https://webgpu.org/), [BabylonJS](.), and [ThreeJS](https://threejs.org/) like webpage embeds. This "OBJ \+ more" concept makes it feasible to push single-file assets to LAN based air-gapped local web browser sessions, or for indies to use online hosted javascript powered simple SaaS platforms that could interact with the scene exchange focused containerized assets on a mobile phone or tablet device.
+Additionally, the single-file archived OBJ project hiearchy idea allows compact portable assets to be displayed using [WebXR](https://immersive-web.github.io/), [WebGPU](https://webgpu.org/), [BabylonJS](https://www.babylonjs.com/), and [ThreeJS](https://threejs.org/) like webpage embeds. 
+
+This "OBJ \+ more" concept makes it feasible to push single-file assets to LAN based air-gapped local web browser sessions, or for indies to use online hosted javascript powered simple SaaS platforms that could interact with the scene exchange focused containerized assets on a mobile phone or tablet device.
 
 Yeah, OpenUSD does much of what the OBJ extension wants to do, but [USDZ](https://openusd.org/release/spec_usdz.html) is failing in many places to be **fully interoperable** without severe issues, across all DCC apps and key utilities that are essential to a project's completion. 
 
