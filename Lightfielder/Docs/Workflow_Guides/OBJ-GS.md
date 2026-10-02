@@ -103,7 +103,9 @@ Additionally, the single-file archived OBJ project hiearchy idea allows compact 
 
 Yeah, OpenUSD does much of what the OBJ extension wants to do, but [USDZ](https://openusd.org/release/spec_usdz.html) is failing in many places to be **fully interoperable** without severe issues, across all DCC apps and key utilities that are essential to a project's completion. 
 
-In my view of things, increasing the overall pipeline R\&D cost, and allocated budget spend level to play with OpenUSD assets, at the same level of depth and capability as Houdini, Katana, Multiverse, or Clarisse (EOL) provide for scene assembly tasks, is very often understated at the start of a project. And it is not miscalculated by a small margin, but infact by a whole a lot of 💸💸💸.
+In my view of things, increasing the overall pipeline R\&D cost, and allocated budget spend level to play with OpenUSD assetsis essier said the acomplished. That spending increase is essential, if you need to operate at the same level of depth and capability, as dominant VFC software like Houdini, Katana, Multiverse, or Clarisse (EOL). 
+
+Those apps took years to grow up, in order to solve the needs of broader scene assembly tasks. As a key technical note, this need for more capabilities is very often understated at the start of a project. And it is not miscalculated by a small margin, but infact miscalculated by a whole a lot of 💸💸💸.
 
 My intuition normally attributes this large disparity gap in implementation cost vs overall benifit, as something reducable to a mix of key factors, including naive optimism, and the very real excitement to be playing with innovative tech on the cutting edge. At the end of a long, drawn out project, even the most ardent 
 OpenUSD supporters seem to recalibrate their sentiment with hindsite informed from personal experience.
