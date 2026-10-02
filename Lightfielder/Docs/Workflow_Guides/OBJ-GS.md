@@ -105,11 +105,12 @@ Yeah, OpenUSD does much of what the OBJ extension wants to do, but [USDZ](https:
 
 In my view of things, increasing the overall pipeline R\&D cost, and allocated budget spend level to play with OpenUSD assets, at the same level of depth and capability as Houdini, Katana, Multiverse, or Clarisse (EOL) provide for scene assembly tasks, is very often understated at the start of a project. And it is not miscalculated by a small margin, but infact by a whole a lot of 💸💸💸.
 
-My intuition normally attributes this large disparity gap in implementation cost vs overall benifit, as something reducable to a mix of key factors, including naive optimism, and the very real excitement to be playing with innovative tech on the cutting edge. At the end of a long, drawn out project, event the most ardent supporters seem to recalibrate their sentiment with hindsite informed from personal experience.
+My intuition normally attributes this large disparity gap in implementation cost vs overall benifit, as something reducable to a mix of key factors, including naive optimism, and the very real excitement to be playing with innovative tech on the cutting edge. At the end of a long, drawn out project, even the most ardent 
+OpenUSD supporters seem to recalibrate their sentiment with hindsite informed from personal experience.
 
-Often, the technical debt issues with deploying a pure USD workflow are too high, to receive the full architectural upsides promised "on the side of the tin", when you initially played along with your in-house experts and agreed to adopt it system wide. 🙂
+Often, the technical debt issues with deploying a pure end-to-end USD workflow are too high, to receive the full architectural upsides promised "on the side of the tin", when you initially played along with your in-house experts and agreed to adopt it, system wide, just to make a named specific staff member happy. 🙂
 
-The idea for this paper is built from these prior efforts:
+The idea for this OBJ-GS paper is built primarily from these prior efforts:
 
 * [https://github.com/Kartaverse/PBR-GS](https://github.com/Kartaverse/PBR-GS)  
 * [https://ben3d.ca/blog/extended-wavefront-obj-mtl-for-pbr](https://ben3d.ca/blog/extended-wavefront-obj-mtl-for-pbr)  
@@ -118,9 +119,11 @@ The idea for this paper is built from these prior efforts:
 
 # Why can't you just accept OpenUSD as the one true post-production format for all? Are you just trying to be difficult?
 
-The real world has shades of grey, in every direction you look so there is no black & white like simplicity to anything left on your todo list. And that is the fact for any pipeline developer or standards pusher to find and accept. If you want to work today you need to get the work done today. 
+The real world is constructed from shades of grey, that extends in every direction and in all of the varying world / scene scales you look at. So there is no black & white like simplicity, to any complex decision remaining unsolved on your longterm todo list. 
 
-So Yes… OpenUSD, Alembic, and FBX files are going to be scattered everywhere in an XR pipeline.  That is unavoidable when linking many staff people, with many tools used together to make a larger creative project happen. 
+This is an important factual realization for a new pipeline developer, or standards pusher to findout IRL and accept. Its quite similar to "Murphy's Law" or rapidly discovering the existence of actual physically bound Karma (which is often classed as a "FAFO" decision making event, in our part of the media sector). 
+
+So Yes… OpenUSD, Alembic, and FBX files are going to be scattered everywhere in an XR pipeline once you go past the first staff person doing everything by themself. That format war, is pretty much unavoidable, when linking many staff people, with many tools, where they need to be used together, to make a larger creative project happen. 
 
 If a 3D scanned mesh needs to go through a manual rebuilding of the mesh topology or UV layout, then you will often send the model out to a 3rd party sculpting tool, or a voxel based app that works with OpenVDB or Wavefront OBJs. 
 
