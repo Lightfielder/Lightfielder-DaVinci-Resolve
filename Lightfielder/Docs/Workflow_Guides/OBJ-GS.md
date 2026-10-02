@@ -1,6 +1,8 @@
 # **The OBJ-GS Guide**
 
-Hi. Welcome to the initial draft version of the "Wavefront OBJ | Gaussian Splatting" guide. An up-to-date version of this same content can be found on the [Lightfielder PBR-GS GitHub Repo](https://github.com/Lightfielder/PBR-GS/edit/master/OBJ-GS.md).
+Hi there. 👋 
+
+Welcome to the initial draft version of the "Wavefront OBJ | Gaussian Splatting" guide. An up-to-date version of this same content can be found on the [Lightfielder PBR-GS GitHub Repo](https://github.com/Lightfielder/PBR-GS/edit/master/OBJ-GS.md).
 
 This document describes a novel approach to convert the frozen (static) Alias | Wavefront .obj file format into something that continues forward, into an extended living file format. This extension to the established spec has transparent backwards compatibility that gracefully works with legacy 1996-2024 era OBJ file parser code. 
 
