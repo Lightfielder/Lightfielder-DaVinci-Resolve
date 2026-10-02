@@ -27,7 +27,7 @@ Lightfielder Ops is intended to be used primarily as a rapid on-set previz/tech-
 # **Wavefront OBJ Format Extensions for VFX**
 
 Date Created: Sept 28, 2026 at 02:07 PM (UTC \-3)  
-Date Updated: Sept 30, 2026 at 07:48 AM (UTC \-3)  
+Date Updated: Oct 1, 2026 at 11:31 PM (UTC \-3)  
 Docs Written By: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)  
 OBJ-GS Project Title Named By: [Didier Muanza](mailto:didier.muanza@gmail.com)
 
@@ -57,7 +57,7 @@ Edition: Draft Zero of the core idea:
     * Cameras.txt files hold SfM ([Structure from Motion](https://en.wikipedia.org/wiki/Structure_from_motion)) style [COLMAP](https://colmap.github.io/) camera poses for 3D scanning, and multi-plane DMP (Digital [Matte Painting](https://en.wikipedia.org/wiki/Matte_painting)) camera texture projection needs  
     * [Open-Pose JSON](https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/md_doc_02_output.html) for character rigs, and for ComfyUI \+ NVIDIA DLSS like style transfer, and paint-over workflows  
     * Audio clips for lip synced dialog, soundtracks, room tone, or sound effects  
-    * Subtitle.srt file a llows [subtitles](https://en.wikipedia.org/wiki/SubRip) for multi-shot and animation timing work  
+    * Subtitle.srt adds [subtitles](https://en.wikipedia.org/wiki/SubRip) for multi-shot EDLs, multi-lingual lipsync dialog assistance, and animation timing work  
     * Lens.json for defining the settings used in Lens-space [STMAP](https://docs.google.com/document/d/1lQ-wc9ucLJqj-HL7iKMNWA71klV5O1fk2-JicRB6gDY/edit?tab=t.0#heading=h.abzdtec4alet) lens distort maps, Brown Conrady / [OpenCV](https://docs.opencv.org/4.13.0/dc/dbb/tutorial_py_calibration.html) / Nuke K1-K3+ [lens distortion](https://en.wikipedia.org/wiki/Distortion_\(optics\)), or [OpenTrackIO](https://ris-pub.smpte.org/ris-osvp-metadata-camdkit/) / [OpenLensIO](https://ris-pub.smpte.org/ris-osvp-metadata-camdkit/res/OpenLensIO_v1-0-1.pdf)  
     * [Cooke Optics /i Technology](https://cookeoptics.com/product/i-technlogy/) lens metadata with per-frame support from cinema lenses  
     * [CDL](https://en.wikipedia.org/wiki/ASC_CDL)/[LUT](https://en.wikipedia.org/wiki/3D_lookup_table)/[OpenTimelineIO](https://github.com/AcademySoftwareFoundation/OpenTimelineIO) EDLs for post-production to apply multi-shot [volumetric grading](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/blob/main/Lightfielder/Docs/Workflow_Guides/Volumetric_Color_Decision_Lists.md), and editing/timeline based [clip sequencing](https://github.com/Lightfielder/LightfielderOperators/blob/main/Ops/Docs/Sequencer.md)  
