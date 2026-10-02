@@ -123,7 +123,7 @@ The idea for this OBJ-GS paper is built primarily from these prior efforts:
 
 # Why can't you just accept OpenUSD as the one true post-production format for all? Are you just trying to be difficult?
 
-The real world is constructed from shades of grey, that extends in every direction and in all of the varying world / scene scales you look at. So there is no black & white like simplicity, to any complex decision remaining unsolved on your longterm todo list. 
+The real world is constructed from shades of grey, that extends in every direction and in all of the varying world / scene scales you look at. So there is no black & white like simplicity, to any complex decision remaining unsolved on your longterm todo list. This operates like a frosty iceberg with the majority of it lying submerged in an arctic sea, just outside of a direct viewable state.
 
 This is an important factual realization for a new pipeline developer, or standards pusher to findout IRL and accept. Its quite similar to "Murphy's Law" or rapidly discovering the existence of actual physically bound Karma (which is often classed as a "FAFO" decision making event, in our part of the media sector). 
 
