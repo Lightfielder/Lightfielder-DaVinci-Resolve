@@ -174,6 +174,13 @@ export default function Home() {
                 <Link className="button button--primary button--lg" to="/docs/">
                   Read the Docs
                 </Link>
+                <a
+                  className="button button--secondary button--lg"
+                  href="https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Download
+                </a>
                 <Link className="button button--secondary button--lg" to="/docs/installation/install-lightfielder">
                   Install Lightfielder
                 </Link>
