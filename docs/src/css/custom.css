@@ -1,0 +1,692 @@
+/**
+ * Lightfielder for DaVinci Resolve global theme.
+ *
+ * Ported from the VFXPedia docs site (itself adapted from the Swiftpedia and
+ * Kartaverse Vonk Ultra docs sites) so the projects read as one design family:
+ * IBM Plex typography, an indigo light theme, a deep blue-black + gold dark
+ * theme, glassy navbar chrome, and a shared card / table / footer treatment.
+ *
+ * Docusaurus bundles Infima; the tokens and rules below layer the shared look
+ * on top of it. Node-reference-only classes (node badges, connection chips,
+ * per-data-type icon colours) are intentionally not carried over.
+ */
+
+/* ── Fonts ────────────────────────────────────────────────────────────────
+ * IBM Plex Sans for headings + body, IBM Plex Mono for code/tables/labels.
+ * The two faces share the same design DNA. Loaded via `stylesheets` in
+ * docusaurus.config.js.
+ */
+:root {
+  --ifm-font-family-base: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --ifm-heading-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --ifm-code-font-size: 90%;
+
+  /* Brand gold, shared across the docs sites. */
+  --lf-gold: #ffcb6b;
+
+  /* Card / panel colour — single knob. The dark value is set below. */
+  --lf-card-bg: #ffffff;
+  --ifm-background-surface-color: var(--lf-card-bg);
+}
+
+/* Two-tone brand wordmark — "Light" in gold, "fielder" in plain ink. Used by
+ * the navbar brand (src/theme/Logo) and the homepage H1. */
+.brand-gold {
+  color: var(--lf-gold);
+}
+
+.brand-plain {
+  color: #1c1e21;
+}
+
+[data-theme='dark'] .brand-plain {
+  color: #ffffff;
+}
+
+/* ── Light theme: clean slate with a vibrant indigo accent ──────────────── */
+:root {
+  --ifm-color-primary: #4f46e5;
+  --ifm-color-primary-dark: #4338ca;
+  --ifm-color-primary-darker: #3730a3;
+  --ifm-color-primary-darkest: #312e81;
+  --ifm-color-primary-light: #6366f1;
+  --ifm-color-primary-lighter: #818cf8;
+  --ifm-color-primary-lightest: #a5b4fc;
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.85);
+  --ifm-footer-background-color: #05070b; /* fallback only — live value is on .footer--dark */
+  --ifm-toc-border-color: #e2e8f0;
+  --ifm-code-background: #f1f5f9;
+  --docusaurus-highlighted-code-line-bg: rgba(79, 70, 229, 0.08);
+}
+
+/* ── Dark theme: deep space with a gold accent ──────────────────────────────
+ * SELECTOR MUST KEEP THE `html` PREFIX: Infima declares its dark scale on
+ * `html[data-theme=dark]`, which would otherwise out-specify a bare
+ * `[data-theme='dark']` and leave the emphasis scale, surfaces, hover overlay,
+ * code background and TOC border on Infima's grey defaults.
+ */
+html[data-theme='dark'] {
+  --ifm-color-primary: #ffcb6b;
+  --ifm-color-primary-dark: #e6c700;
+  --ifm-color-primary-darker: #d9bc00;
+  --ifm-color-primary-darkest: #b39b00;
+  --ifm-color-primary-light: #ffe01a;
+  --ifm-color-primary-lighter: #ffe226;
+  --ifm-color-primary-lightest: #ffe74d;
+
+  --ifm-background-color: #131820;
+  --lf-card-bg: #0c0f14;
+  --ifm-background-surface-color: var(--lf-card-bg);
+
+  --ifm-navbar-background-color: rgba(19, 24, 32, 0.85);
+  --ifm-footer-background-color: #05070b; /* fallback only — live value is on .footer--dark */
+  --ifm-dropdown-background-color: #131820;
+  --ifm-card-background-color: #131820;
+  --ifm-code-background: #1a202c;
+  --ifm-color-emphasis-0: #090c10;
+  --ifm-color-emphasis-100: #131820;
+  --ifm-color-emphasis-200: #1e293b;
+  --ifm-color-emphasis-300: #2d3748;
+  --ifm-color-emphasis-400: #4a5568;
+  --ifm-color-emphasis-500: #64748b;
+  --ifm-color-emphasis-600: #94a3b8;
+  --ifm-color-emphasis-700: #cbd5e1;
+  --ifm-color-emphasis-800: #e2e8f0;
+  --ifm-color-emphasis-900: #f1f5f9;
+  --ifm-color-emphasis-1000: #f8fafc;
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-heading-color: #f1f5f9;
+  --ifm-menu-color: #94a3b8;
+  --ifm-toc-link-color: #94a3b8;
+  --ifm-toc-border-color: #1e293b;
+  --ifm-link-color: var(--lf-gold);
+  --ifm-link-hover-color: #ffe0a3;
+  --ifm-breadcrumb-color-active: var(--lf-gold);
+  --ifm-menu-color-active: #f1f5f9;
+  --ifm-hover-overlay: rgba(255, 203, 107, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 203, 107, 0.15);
+  --docsearch-searchbox-background: #131820;
+  --docsearch-footer-background: #131820;
+  --docsearch-modal-background: #090c10;
+}
+
+/* ── Heading typography ────────────────────────────────────────────────────
+ * One family, one weight, one accent colour, so hierarchy is carried by size
+ * alone — no display flourishes, nothing extra to load.
+ * `h1[class^='title_']` is the generated-index page title, which lives in a
+ * <header> rather than an <article>, so it needs the same rule to match the
+ * markdown H1 styling. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1[class^='title_'] {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+}
+
+/* Page titles sit one step heavier than section headings. */
+h1,
+h1[class^='title_'] {
+  font-weight: 600;
+}
+
+article h1,
+h1[class^='title_'] {
+  font-size: 33px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+article h2 {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+article h3 {
+  line-height: 1.2;
+}
+
+/* ── Base text ───────────────────────────────────────────────────────────── */
+body {
+  font-size: 16px;
+}
+
+/* ── Navbar: glassy + blurred, with a gold under-glow in dark mode ──────── */
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #1e293b;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent);
+  opacity: 0.3;
+}
+
+/* ── Sidebar / table of contents ────────────────────────────────────────── */
+[data-theme='dark'] .menu__link--active {
+  background: rgba(129, 140, 248, 0.12);
+  border-right: 2px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .menu__link--sublist {
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .table-of-contents__link--active {
+  color: #e2e8f0;
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────────
+ * docusaurus.config.js sets `footer.style: 'dark'`, which puts `footer--dark`
+ * on the <footer> element — Infima declares the colour right there, so this is
+ * the declaration that actually carries the value. */
+.footer--dark {
+  --ifm-footer-background-color: #05070b;
+}
+
+/* Footer type scale — hierarchy through size as well as weight. */
+.footer__title {
+  font-size: 0.95rem;
+}
+
+.footer__link-item {
+  font-size: 0.85rem;
+}
+
+.footer__bottom {
+  font-size: 0.8rem;
+}
+
+[data-theme='dark'] .footer {
+  border-top: 1px solid #1e293b;
+}
+
+/* ── Links: underline grows in on hover, in article body only ───────────── */
+article a:not(.menu__link):not(.toc__link) {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.2s ease;
+}
+
+article a:not(.menu__link):not(.toc__link):hover {
+  background-size: 100% 1px;
+}
+
+/* ── Code ────────────────────────────────────────────────────────────────── */
+[data-theme='dark'] pre {
+  border: 1px solid #1e293b;
+}
+
+/* ── Mermaid diagrams ────────────────────────────────────────────────────── */
+.docusaurus-mermaid-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.docusaurus-mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+[data-theme='dark'] .docusaurus-mermaid-container .node .label {
+  color: #1e293b !important;
+}
+
+/* ── Collapsible details / info panels ──────────────────────────────────── */
+[data-theme='dark'] details.alert--info {
+  --ifm-alert-background-color: rgba(25, 60, 71, 0.4);
+  --ifm-alert-border-color: rgba(76, 179, 212, 0.4);
+}
+
+/* ── Breadcrumbs ────────────────────────────────────────────────────────── */
+.breadcrumbs {
+  margin-bottom: 40px;
+  padding-left: 0;
+}
+
+.theme-doc-breadcrumbs .breadcrumbs__link,
+.breadcrumbs__link {
+  border-radius: var(--ifm-global-radius);
+}
+
+/* ── Cards ────────────────────────────────────────────────────────────────
+ * Shared card treatment for the homepage grid, ported `.cat-card` usage, and
+ * (via the `.card` rules below) Docusaurus's default doc cards. */
+.cat-cards,
+.lf-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cat-card,
+.lf-section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  background: var(--lf-card-bg);
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cat-card:hover,
+.lf-section-card:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Dark mode: outline the hovered card in the gold accent. */
+[data-theme='dark'] .cat-card:hover,
+[data-theme='dark'] .lf-section-card:hover {
+  border-color: var(--lf-gold);
+}
+
+/* Dark mode: resting outline painted in the page background so cards read flat. */
+[data-theme='dark'] .cat-card,
+[data-theme='dark'] .lf-section-card {
+  border-color: var(--ifm-background-color);
+}
+
+.cat-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--ifm-color-emphasis-500);
+}
+
+.cat-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cat-card-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cat-card-count {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.cat-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Default Docusaurus doc card (generated-index pages) — match the look above. */
+.card {
+  border-radius: var(--ifm-global-radius);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme='dark'] .card {
+  border-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .card:hover {
+  border-color: var(--lf-gold);
+}
+
+/* ── Doc images ────────────────────────────────────────────────────────────
+ * Docusaurus writes each image's pixel dimensions onto the rendered <img>.
+ * Infima only sets max-width: 100%, so the width clamps to the article column
+ * while the height attribute is kept — which vertically stretches wide
+ * screenshots. height:auto restores the aspect ratio, and the 700px cap keeps
+ * Retina-sized screenshots from dominating the page. */
+.theme-doc-markdown img {
+  display: block;
+  height: auto;
+  margin: 1em auto;
+  max-width: min(100%, 700px);
+}
+
+/* ── Tables ────────────────────────────────────────────────────────────────
+ * Row-only dividers, a quiet eyebrow-style header and a zebra stripe, replacing
+ * Infima's dense bordered grid. Native table layout is kept (no CSS-grid
+ * rewrite) so tables of any column count stay correct. */
+.markdown table {
+  font-size: 0.92rem;
+  margin-bottom: 2rem;
+}
+
+.markdown table th,
+.markdown table td {
+  border: none;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.65rem 1rem;
+}
+
+.markdown table th {
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-color-emphasis-100);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.markdown table tbody tr:nth-child(2n) > td {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.markdown table tr:last-child > td {
+  border-bottom: none;
+}
+
+.markdown table td code {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.82rem;
+}
+
+/* ── Content color accents ────────────────────────────────────────────────
+ * Utility classes used by the Shotlog guide for the RED R3D filename color
+ * coding. They replace raw HTML inline style attributes, which React cannot
+ * server-render. */
+.lf-color-red {
+  color: rgb(234, 51, 34);
+}
+
+.lf-color-blue {
+  color: rgb(83, 175, 235);
+}
+
+.lf-color-green {
+  color: rgb(77, 172, 87);
+}
+
+.lf-color-tan {
+  color: rgb(241, 193, 150);
+}
+
+.lf-color-steel {
+  color: rgb(95, 131, 185);
+}
+
+.lf-color-olive {
+  color: rgb(127, 148, 80);
+}
+
+/* ── Lightfielder doc components ───────────────────────────────────────────────
+ * Inline MDX helpers (DocNote, DocWarn, DocHeader, DocIndex, DocTitle) from
+ * src/components, registered in src/theme/MDXComponents.js. */
+.doc_header {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.doc_title {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  font-size: 33px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0;
+  border-bottom: none;
+}
+
+.doc_note,
+.doc_warn {
+  position: relative;
+  min-height: 2rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  margin: 1rem 0;
+}
+
+.doc_note::before {
+  content: "\2139\FE0F";
+  position: absolute;
+  left: 0.85rem;
+  top: 0.7rem;
+  font-size: 1.1em;
+}
+
+.doc_warn::before {
+  content: "\26A0\FE0F";
+  position: absolute;
+  left: 0.85rem;
+  top: 0.7rem;
+  font-size: 1.1em;
+}
+
+.doc_index {
+  background: var(--lf-card-bg);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+
+.doc_index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doc_index li {
+  display: inline;
+  margin-right: 1rem;
+  font-size: 90%;
+}
+
+.doc_index a {
+  text-decoration: none;
+}
+
+/* Responsive 16:9 YouTube playlist embed */
+.youtube_playlist {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.youtube_playlist iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Inline doc styles */
+.doc_menu,
+.doc_context,
+.doc_pref {
+  font-style: italic;
+  display: inline;
+}
+
+.doc_key {
+  font-weight: bold;
+  display: inline;
+}
+
+.doc_tool {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  display: inline;
+}
+
+.doc_control {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.doc_path {
+  display: inline;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* ── Homepage (src/pages/index.js) ──────────────────────────────────────── */
+.lf-main-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.lf-hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Split hero: copy on the left, the polar "ray" diagram on the right.
+ * Layout ported from the Kartaverse Vonk Ultra landing page. */
+.lf-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .lf-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Polar "ray" diagram (src/pages/index.js NodeDiagram). Inherits currentColor
+ * so it adapts to the light and dark themes automatically. */
+.lf-diagram {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  color: var(--ifm-color-emphasis-400);
+  opacity: 0.85;
+}
+
+.lf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-color-emphasis-100);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.25rem;
+}
+
+.lf-hero-title {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.lf-hero-sub {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.75rem;
+}
+
+.lf-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.lf-sections-grid {
+  margin: 2.5rem 0 3rem;
+}
+
+.lf-section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.lf-section-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lf-section-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+/* ── Print ──────────────────────────────────────────────────────────────── */
+@media print {
+  .navbar,
+  .menu,
+  .table-of-contents,
+  .footer {
+    display: none;
+  }
+}

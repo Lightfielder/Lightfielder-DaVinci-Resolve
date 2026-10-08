@@ -1,0 +1,12 @@
+{
+  "label": "Usage",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Usage",
+    "description": "The Lightfielder toolbar scripts, reference data formats, and validation tools.",
+    "slug": "/category/usage"
+  }
+}

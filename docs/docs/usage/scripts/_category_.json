@@ -1,0 +1,12 @@
+{
+  "label": "Toolbar Scripts",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Toolbar Scripts",
+    "description": "Documentation for each numbered Lightfielder toolbar script.",
+    "slug": "/category/toolbar-scripts"
+  }
+}

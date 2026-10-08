@@ -1,0 +1,12 @@
+{
+  "label": "Project",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Project",
+    "description": "Release history, known issues, and the development punch list.",
+    "slug": "/category/project"
+  }
+}

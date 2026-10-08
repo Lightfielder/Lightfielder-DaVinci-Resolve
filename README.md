@@ -65,4 +65,10 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 
 ## Documentation
 
-The Lightfielder docs during the initial public beta phase are located on-disk at: [Lightfielder:/Docs/README.md](Lightfielder/Docs/README.md)  
+The Lightfielder documentation is published with Docusaurus and GitHub Pages:
+
+[https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/](https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/)
+
+The docs site source lives in this repo at [docs/](docs/), and the original
+on-disk help topics are still available at
+[Lightfielder:/Docs/README.md](Lightfielder/Docs/README.md).  

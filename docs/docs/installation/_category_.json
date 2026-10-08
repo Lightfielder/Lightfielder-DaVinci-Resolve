@@ -1,0 +1,12 @@
+{
+  "label": "Installation",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Installation",
+    "description": "Deploy the Lightfielder for DaVinci Resolve toolset and its Python dependencies.",
+    "slug": "/category/installation"
+  }
+}
