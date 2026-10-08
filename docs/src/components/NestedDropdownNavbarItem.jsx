@@ -1,25 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 
 /**
  * A navbar item that renders a clickable root link plus a dropdown whose items
- * may themselves contain nested items (sub-sub fold-outs). Docusaurus forbids
- * nested `dropdown` items in config, so this custom `custom-nestedDropdown`
- * item provides that capability.
+ * may contain nested groups. Nested groups expand INLINE, downward within the
+ * same dropdown column (accordion style) — they do not fly out to the right.
+ *
+ * Docusaurus forbids nested `dropdown` items in config, so this custom
+ * `custom-nestedDropdown` item provides that capability.
  *
  * Config shape:
  *   {
  *     type: 'custom-nestedDropdown',
- *     label: 'Toolbar',
- *     to: '/docs/usage/toolbar',        // root link (clickable)
+ *     label: 'Resolve/Fusion',
+ *     to: '/docs/',                 // root link (clickable)
  *     items: [
- *       { label: 'Overview', to: '/docs/usage/toolbar' },
- *       {
- *         label: 'Toolbar Scripts',
- *         to: '/docs/category/toolbar-scripts',
- *         items: [ { label: '00 Toolbar', to: '/docs/usage/scripts/toolbar' }, ... ],
- *       },
+ *       { label: 'Overview', to: '/docs/' },
+ *       { label: 'Installation', items: [ { label: 'Install Lightfielder', to: '...' }, ... ] },
  *     ],
  *   }
  */
@@ -28,7 +26,7 @@ function isExternal(href) {
   return typeof href === 'string' && /^https?:\/\//.test(href);
 }
 
-function ItemLink({ item, className, mobile, onClick }) {
+function ItemLink({item, className, onClick}) {
   if (item.to) {
     return (
       <Link className={className} to={item.to} onClick={onClick}>
@@ -41,60 +39,66 @@ function ItemLink({ item, className, mobile, onClick }) {
       className={className}
       href={item.href}
       onClick={onClick}
-      {...(isExternal(item.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+      {...(isExternal(item.href) ? {target: '_blank', rel: 'noopener noreferrer'} : {})}>
       {item.label}
     </a>
   );
 }
 
-function DesktopItems({ items, nested }) {
+function Leaf({item}) {
   return (
-    <ul className={nested ? 'lf-submenu__menu' : 'dropdown__menu'}>
-      {items.map((item, i) => {
-        const hasChildren = Array.isArray(item.items) && item.items.length > 0;
-        if (hasChildren) {
-          return (
-            <li className="lf-submenu" key={i}>
-              <span className="lf-submenu__row">
-                <ItemLink item={item} className="dropdown__link lf-submenu__link" />
-                <span className="lf-submenu__caret" aria-hidden="true">
-                  ›
-                </span>
-              </span>
-              <DesktopItems items={item.items} nested />
-            </li>
-          );
-        }
-        return (
-          <li key={i}>
-            <ItemLink item={item} className="dropdown__link" />
-          </li>
-        );
-      })}
-    </ul>
+    <li>
+      <ItemLink item={item} className="dropdown__link" />
+    </li>
   );
 }
 
-function MobileItems({ items, nested, onClick }) {
+function Group({item}) {
+  const [open, setOpen] = useState(false);
   return (
-    <ul className="menu__list">
-      {items.map((item, i) => {
-        const hasChildren = Array.isArray(item.items) && item.items.length > 0;
-        return (
-          <li className="menu__list-item" key={i}>
-            <ItemLink
-              item={item}
-              className="menu__link"
-              mobile
-              onClick={onClick}
-            />
-            {hasChildren && (
-              <MobileItems items={item.items} nested onClick={onClick} />
-            )}
-          </li>
-        );
-      })}
-    </ul>
+    <li className="lf-group">
+      <button
+        type="button"
+        className="lf-group__toggle"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}>
+        <span className="lf-group__label">{item.label}</span>
+        <span className="lf-group__caret" aria-hidden="true">
+          {open ? '▾' : '▸'}
+        </span>
+      </button>
+      {open && (
+        <ul className="lf-group__menu">
+          {item.items.map((child, i) => (
+            <Node item={child} key={i} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
+
+function Node({item}) {
+  return Array.isArray(item.items) && item.items.length > 0 ? (
+    <Group item={item} />
+  ) : (
+    <Leaf item={item} />
+  );
+}
+
+function MobileNode({item, onClick}) {
+  const hasChildren = Array.isArray(item.items) && item.items.length > 0;
+  return (
+    <li className="menu__list-item">
+      <ItemLink item={item} className="menu__link" mobile onClick={onClick} />
+      {hasChildren && (
+        <ul className="menu__list">
+          {item.items.map((child, i) => (
+            <MobileNode item={child} key={i} onClick={onClick} />
+          ))}
+        </ul>
+      )}
+    </li>
   );
 }
 
@@ -109,14 +113,18 @@ export default function NestedDropdownNavbarItem({
   className,
   ...rest
 }) {
-  const rootItem = { label, to, href };
+  const rootItem = {label, to, href};
 
   if (mobile) {
     return (
       <li className={clsx('menu__list-item', className)}>
         <ItemLink item={rootItem} className="menu__link" mobile onClick={onClick} />
         {items.length > 0 && (
-          <MobileItems items={items} onClick={onClick} />
+          <ul className="menu__list">
+            {items.map((item, i) => (
+              <MobileNode item={item} key={i} onClick={onClick} />
+            ))}
+          </ul>
         )}
       </li>
     );
@@ -134,7 +142,11 @@ export default function NestedDropdownNavbarItem({
       )}
       {...rest}>
       <ItemLink item={rootItem} className="navbar__link" />
-      <DesktopItems items={items} />
+      <ul className="dropdown__menu">
+        {items.map((item, i) => (
+          <Node item={item} key={i} />
+        ))}
+      </ul>
     </div>
   );
 }

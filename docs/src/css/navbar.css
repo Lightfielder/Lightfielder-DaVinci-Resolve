@@ -1,74 +1,54 @@
 /**
- * Nested navbar dropdown ("sub-sub" fold-outs).
+ * Nested navbar dropdown with INLINE (accordion) sub-menus.
  *
- * Used by the custom `custom-nestedDropdown` navbar item (Toolbar scripts and
- * the Resolve/Fusion topic tree). The root menu reuses Infima's
- * `.dropdown__menu`; each nested level is a fly-out positioned to the right and
- * revealed on hover/focus.
+ * Used by the custom `custom-nestedDropdown` navbar item (Resolve/Fusion topic
+ * tree). The root menu reuses Infima's `.dropdown__menu`; nested groups expand
+ * downward inside the same column instead of flying out to the right.
  */
 
 .lf-nested-dropdown .dropdown__menu {
-  min-width: 260px;
+  min-width: 280px;
+  max-height: 78vh;
+  overflow-y: auto;
 }
 
-/* A branch row inside a dropdown (its own label + a caret). */
-.lf-submenu {
-  position: relative;
-}
-
-.lf-submenu__row {
+/* The clickable group header (click to unfold downward). */
+.lf-group__toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 0;
+  border-radius: var(--ifm-global-radius);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
 }
 
-.lf-submenu__link {
-  flex: 1 1 auto;
+.lf-group__toggle:hover,
+.lf-group__toggle:focus {
+  background-color: var(--ifm-color-emphasis-100);
+  outline: none;
 }
 
-.lf-submenu__caret {
-  padding: 0 0.75rem;
-  opacity: 0.55;
-  font-size: 1rem;
+.lf-group__caret {
+  opacity: 0.6;
+  font-size: 0.85rem;
   line-height: 1;
 }
 
-/* The nested fly-out menu. */
-.lf-submenu__menu {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  min-width: 260px;
-  margin: 0;
-  padding: 0.5rem 0;
+/* The inline, indented child list. */
+.lf-group__menu {
   list-style: none;
-  background: var(--ifm-dropdown-background-color, var(--ifm-background-surface-color));
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: var(--ifm-global-radius);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-  display: none;
-  z-index: 1100;
+  margin: 0;
+  padding: 0 0 0 0.85rem;
 }
 
-.lf-submenu:hover > .lf-submenu__menu,
-.lf-submenu:focus-within > .lf-submenu__menu {
-  display: block;
-}
-
-/* On narrow viewports the dropdowns are rendered inside the mobile sidebar, so
- * drop the absolute fly-out positioning and show nested lists inline. */
-@media (max-width: 996px) {
-  .lf-submenu__menu {
-    position: static;
-    display: block;
-    min-width: 0;
-    border: 0;
-    box-shadow: none;
-    padding: 0 0 0 0.75rem;
-    background: transparent;
-  }
-
-  .lf-submenu__caret {
-    display: none;
-  }
+.lf-group__menu .dropdown__link {
+  font-weight: 400;
 }
