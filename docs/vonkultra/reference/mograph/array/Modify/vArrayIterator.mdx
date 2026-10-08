@@ -1,0 +1,57 @@
+---
+sidebar_position: 6
+title: vArrayIterator
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayIterator
+
+Loop an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayIterator.png').default} alt="vArrayIterator node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Step - (skip x triplets) | Integer | `1` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayUnPacker.OutputArray -> vArrayIterator.ArrayA 
+    vArrayIterator.Output -> vArrayPacker.ArrayA
+    vArrayPacker.Output -> vArrayViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="./vArrayPacker">vArrayPacker</a>
+</div>
+
+{/*
+Generated page — node: vArrayIterator (Array/Modify).
+Source: fuse vArrayIterator.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

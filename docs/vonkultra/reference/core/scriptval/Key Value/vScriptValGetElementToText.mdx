@@ -1,0 +1,43 @@
+---
+sidebar_position: 3
+title: vScriptValGetElementToText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValGetElementToText
+
+Gets an element from a ScriptVal array An example of array like elements in a Lua table would look like this: \{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", \} The "Index" control is used to access individual entries from a ScriptVal array like object. The first item is accessed at Index position 1. The output from the vScriptValGetElementToText node is a text based data type. It is possible to translate the text based output from this node into numerical values via the vNumberFromText node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/scriptval/vScriptValGetElementToText.png').default} alt="vScriptValGetElementToText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| ScriptVal | ScriptVal | `—` | — |
+| Index | Integer | `1` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValGetElementToNumber">vScriptValGetElementToNumber</a>
+  <a className="node-chip" href="./vScriptValGetElementToTable">vScriptValGetElementToTable</a>
+  <a className="node-chip" href="./vScriptValGetElementXYZToNumber">vScriptValGetElementXYZToNumber</a>
+  <a className="node-chip" href="./vScriptValGetToNumber">vScriptValGetToNumber</a>
+</div>
+
+{/*
+Generated page — node: vScriptValGetElementToText (Core/ScriptVal/Key Value).
+Source: fuse vScriptValGetElementToText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,100 @@
+---
+sidebar_position: 17
+title: vJSONShapeRenderTextPath
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONShapeRenderTextPath
+
+Using Text and Strings on Array based Lua table of XY points path
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONShapeRenderTextPath.png').default} alt="vJSONShapeRenderTextPath node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Separator_1 | Float | `—` | — |
+| Offset Text | Integer | `0` | — |
+| Offset Text Y Pos | Float | `0` | — |
+| Path Width | Float | `0.001` | — |
+| Show Path | Integer | `1` | — |
+
+<details>
+<summary>+31 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text Mode | Integer | `Generate` | — |
+| Generate Random →  | Integer | `2.0` | — |
+| Array length | Integer | `1` | — |
+| Seed | Float | `0` | — |
+| Styled Text | Text | `—` | — |
+| Font | Text | `—` | — |
+| Style | Text | `—` | — |
+| Size | Float | `0.03` | — |
+| Character Spacing | Float | `0.02` | — |
+| Letter Case | Integer | `NONE` | — |
+| Justification | Integer | `Center` | — |
+| Horizontal Adjustment | Float | `0.0` | — |
+| Vertical Adjustment | Float | `0.0` | — |
+| Show Box Background | Integer | `0.0` | — |
+| Box Padding | Float | `0.5` | — |
+| Box Vertical Adjustment | Float | `0.0` | — |
+| Box Round Corners | Float | `0.01` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `1.0` | — |
+| Blue | Float | `0.0` | — |
+| Alpha | Float | `1.0` | — |
+| Separator_2 | Float | `—` | — |
+| Red | Float | `0` | — |
+| Green | Float | `0` | — |
+| Blue | Float | `0.3` | — |
+| Alpha | Float | `1.0` | — |
+| Position | Point | `—` | — |
+| Show Input | Integer | `1.0` | — |
+| Input | Image | `—` | — |
+| Input Text | Text | `—` | — |
+| JSON Path | Text | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONCircularPoints.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONConvert2D_3D.ArrayA
+    vJSONConvert2D_3D.Output -> vJSONShapeRenderTextPath.JSONpath
+    Background.Output -> vJSONShapeRenderTextPath.Input
+    vTextCreate.Output -> vJSONShapeRenderTextPath.inputtext
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONCircularPoints">vJSONCircularPoints</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../Modify/vJSONConvert2D_3D">vJSONConvert2D_3D</a>
+</div>
+
+{/*
+Generated page — node: vJSONShapeRenderTextPath (JSON/ShapeRender).
+Source: fuse vJSONShapeRenderTextPath.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

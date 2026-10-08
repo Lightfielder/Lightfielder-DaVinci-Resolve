@@ -1,0 +1,70 @@
+---
+sidebar_position: 41
+title: vScriptValLogarithmicSpiral
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValLogarithmicSpiral
+
+Generate a Logarithmic Spiral spline
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValLogarithmicSpiral.png').default} alt="vScriptValLogarithmicSpiral node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Mode | Integer | `Spiral` | — |
+| Growth coefficient | Float | `0.04` | — |
+| Expansion factor | Float | `0.22` | — |
+| Max angle | Integer | `6` | — |
+| Step size | Float | `1.23` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Rotation | Float | `0` | — |
+| Scale Factor | Float | `1` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValLogarithmicSpiral.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValLogarithmicSpiral (ScriptVal/Create).
+Source: fuse vScriptValLogarithmicSpiral.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,46 @@
+---
+sidebar_position: 3
+title: vJSONDataComposite
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONDataComposite
+
+Passes an image through unchanged while forcing one or two connected JSON data branches to cook every frame the image is required — even though their values never touch the pixels. Use it to make a side-effect node (e.g. vJSONToFile) execute on every frame instead of only while its own Viewer is focused.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONDataComposite.png').default} alt="vJSONDataComposite node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Force Data Cook | Integer | `1` | — |
+| Image | Image | `—` | — |
+| Data A | Text | `—` | — |
+| Data B | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONAppend">vJSONAppend</a>
+  <a className="node-chip" href="./vJSONAppendGroup">vJSONAppendGroup</a>
+  <a className="node-chip" href="./vJSONFontArray">vJSONFontArray</a>
+  <a className="node-chip" href="./vJSONInfo">vJSONInfo</a>
+</div>
+
+{/*
+Generated page — node: vJSONDataComposite (JSON/Utility).
+Source: fuse vJSONDataComposite.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

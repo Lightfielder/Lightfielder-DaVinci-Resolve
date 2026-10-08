@@ -1,0 +1,79 @@
+---
+sidebar_position: 61
+title: vArraySortByDistance
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArraySortByDistance
+
+Re-order vArray elements by their spatial proximity — essential for nearest-neighbour connections, path optimisation, and proximity-based effects.
+
+<div className="node-badge-row">
+  <span className="node-badge node-badge--intermediate">Intermediate</span>
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArraySortByDistance.png').default} alt="vArraySortByDistance node" />
+</div>
+
+vArraySortByDistance reorders the elements in a vArray from nearest to farthest based on inter-point distances. Use it before vArrayShapeRender to draw connections in spatially optimised order, or before vArrayBuffer to record proximity-sorted trails.
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Smallest Distance | Integer | `0.01` | Minimum distance threshold. Point pairs closer than this value are treated as coincident and their relative order is preserved. Increase to loosen large-scale sorting. |
+| Show Input | Checkbox | `0` | Reveals the Array input port on the node in the Fusion node graph. |
+| Array | Float | `—` | The vArray of XYZ point positions to sort by spatial proximity. |
+
+<details>
+<summary>Read the full description</summary>
+
+vArraySortByDistance performs a spatial sort on a vArray, reordering elements so that each consecutive point is the nearest unvisited neighbour of the previous one. This greedy nearest-neighbour traversal produces a path through the point cloud that minimises jump distances — useful for line-drawing effects where you want continuous connected strokes rather than random teleports across the frame.
+
+Smallest Distance sets a proximity threshold. Points closer together than this value are treated as coincident and their relative order is left unchanged. Increasing this threshold loosens the sort, allowing short-range clusters to remain in their original order while only sorting at larger scales.
+
+A common application is connecting scattered OBJ vertices with vArrayShapeRender's edge mode after sorting — the result looks like a hand-drawn path tracing through a point cloud rather than randomly ordered segments. Pair with vArrayBuffer to record the sorted path over time for trail effects that trace the proximity order across frames.
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="proximity-sorted-edge-drawing" label="Proximity-sorted edge drawing" default>
+
+```
+vArrayFromOBJ.Points -> vArraySortByDistance.Array
+vArraySortByDistance.Output -> vArrayCameraProjection.ArrayA
+vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+<TabItem value="sorted-trail-recording" label="Sorted trail recording">
+
+```
+vArrayPointsOnGrid.Output -> vArraySortByDistance.Array
+vArraySortByDistance.Output -> vArrayBuffer.Input
+vArrayBuffer.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../array/Create/vArrayFromOBJ">vArrayFromOBJ</a>
+  <a className="node-chip" href="../../array/Create/vArrayBuffer">vArrayBuffer</a>
+  <a className="node-chip" href="../../array/ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Rich page restored from _output/vArraySortByDistance_page.json. Source of truth: fuses.ts / vonkultratools data model.
+*/}

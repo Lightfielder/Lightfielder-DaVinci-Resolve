@@ -1,0 +1,8 @@
+{
+  "label": "Reference",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "The full node reference, organized by data type — Mograph and Core are separate tool families."
+  }
+}

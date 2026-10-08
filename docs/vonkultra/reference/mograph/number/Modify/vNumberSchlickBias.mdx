@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+title: vNumberSchlickBias
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberSchlickBias
+
+Custom easing curve via schlick bias and gain
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberSchlickBias.png').default} alt="vNumberSchlickBias node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Value | Float | `0` | — |
+| Gain | Float | `0.5` | — |
+| Bias | Float | `0.5` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vNumberSchlickBias.Output -> vJSONInterpolate.Progress
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../JSON/Modify/vJSONInterpolate">vJSONInterpolate</a>
+</div>
+
+{/*
+Generated page — node: vNumberSchlickBias (Number/Modify).
+Source: fuse vNumberSchlickBias.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

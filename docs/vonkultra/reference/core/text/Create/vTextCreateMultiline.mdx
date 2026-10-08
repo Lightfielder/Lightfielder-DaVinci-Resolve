@@ -1,0 +1,43 @@
+---
+sidebar_position: 4
+title: vTextCreateMultiline
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextCreateMultiline
+
+Creates a multi-line Fusion Text object The "Text" field supports entering multi-line text blocks that can include indentation, tabs, newlines, returns and other plain-text formatting variations. If you need to view this multi-line text based content downstream in the comp, try the vTextViewer node. This node is especially useful if you needed to create the original textual contents used for a shell script that you would save to disk using the vTextToFile node, and then run with a vTextProcessOpen node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextCreateMultiline.png').default} alt="vTextCreateMultiline node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Display Lines | Integer | `25` | — |
+| Wrap Lines | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextCreate">vTextCreate</a>
+  <a className="node-chip" href="./vTextCreateArch">vTextCreateArch</a>
+  <a className="node-chip" href="./vTextCreateBrowse">vTextCreateBrowse</a>
+  <a className="node-chip" href="./vTextCreateMultilineCode">vTextCreateMultilineCode</a>
+</div>
+
+{/*
+Generated page — node: vTextCreateMultiline (Core/Text/Create).
+Source: fuse vTextCreateMultiline.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

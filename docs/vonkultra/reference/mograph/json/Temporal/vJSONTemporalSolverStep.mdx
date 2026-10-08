@@ -1,0 +1,58 @@
+---
+sidebar_position: 5
+title: vJSONTemporalSolverStep
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONTemporalSolverStep
+
+Temporal feedback solver step for JSON arrays.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONTemporalSolverStep.png').default} alt="vJSONTemporalSolverStep node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Operation | Integer | `0` | — |
+| Feedback Blend | Float | `0.5` | — |
+| Lerp Amount | Float | `0.5` | — |
+| Clamp Displacement | Integer | `0` | — |
+| Max Displacement | Float | `0.1` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Frame Step | Integer | `1` | — |
+| Reset | Integer | `0` | — |
+| Input | DATATYPE | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONAccumulator">vJSONAccumulator</a>
+  <a className="node-chip" href="./vJSONAccumulatorOBJ">vJSONAccumulatorOBJ</a>
+  <a className="node-chip" href="./vJSONTemporalDelta">vJSONTemporalDelta</a>
+  <a className="node-chip" href="./vJSONTemporalSmooth">vJSONTemporalSmooth</a>
+</div>
+
+{/*
+Generated page — node: vJSONTemporalSolverStep (JSON/Temporal).
+Source: fuse vJSONTemporalSolverStep.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

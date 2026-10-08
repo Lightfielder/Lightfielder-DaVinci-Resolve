@@ -1,0 +1,80 @@
+---
+sidebar_position: 59
+title: vArrayRotateValues
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayRotateValues
+
+Cycle the elements of a vArray by N positions — the sequencer shift node for looping patterns and staggered animation offsets.
+
+<div className="node-badge-row">
+  <span className="node-badge node-badge--beginner">Beginner</span>
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayRotateValues.png').default} alt="vArrayRotateValues node" />
+</div>
+
+vArrayRotateValues shifts all elements in a vArray forward or backward by a set number of positions, wrapping values that fall off one end back to the other. It is the primary tool for creating cyclic sequences and stagger offsets across point arrays.
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Rotate Amount | Integer | `1` | Number of positions to shift the array elements. Positive shifts forward, negative shifts backward. Range: –100 to 100. |
+| Pass Thru: 0 or 1 | Checkbox | `0` | When enabled, bypasses the rotation and passes the input array through unchanged. Use during development to toggle the effect. |
+| Show Input | Checkbox | `0` | Reveals the Array A connection port on the node in the Fusion node graph. |
+| Array A | Float | `—` | The vArray whose element order will be circularly shifted. |
+
+<details>
+<summary>Read the full description</summary>
+
+vArrayRotateValues performs a circular shift on the element order of a vArray. Elements shifted off the end of the array wrap around to the beginning, preserving the total element count. This is fundamentally different from 3D rotation — it is a data sequencing operation, not a spatial transform.
+
+Rotate Amount accepts positive values (shift forward) and negative values (shift backward), and its range of –100 to 100 covers most practical use cases. Animating this parameter over time creates a continuous cycling effect through the array — valuable for sequencing lights in a ring, cycling colour maps, or producing offset wave propagation across a point cloud.
+
+Pass Thru mode bypasses the shift entirely, outputting the array unchanged. This is useful during node graph development when you want to temporarily disable the rotation without disconnecting or deleting the node. Pair vArrayRotateValues with vArrayWave to create directional wave patterns that travel through a point array over time.
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="cycling-ring-sequence" label="Cycling ring sequence" default>
+
+```
+vArrayPointsOnCircle.Output -> vArrayRotateValues.ArrayA
+vArrayRotateValues.Output -> vArrayCameraProjection.ArrayA
+vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+<TabItem value="stagger-before-wave" label="Stagger before wave">
+
+```
+vArrayPointsOnGrid.Output -> vArrayRotateValues.ArrayA
+vArrayRotateValues.Output -> vArrayWave.ArrayA
+vArrayWave.Output -> vArrayCameraProjection.ArrayA
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../array/Modify/vArrayWave">vArrayWave</a>
+  <a className="node-chip" href="../../array/Create/vArrayBuffer">vArrayBuffer</a>
+  <a className="node-chip" href="../../array/Modify/vArrayInterpolate">vArrayInterpolate</a>
+</div>
+
+{/*
+Rich page restored from _output/vArrayRotateValues_page.json. Source of truth: fuses.ts / vonkultratools data model.
+*/}

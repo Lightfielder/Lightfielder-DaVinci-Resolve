@@ -1,0 +1,53 @@
+---
+sidebar_position: 5
+title: vJSONInfo
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONInfo
+
+Returns info of an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONInfo.png').default} alt="vJSONInfo node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnCube.Output -> vJSONUnPacker.ArrayB
+    vJSONUnPacker.OutputArray -> vJSONInfo.ArrayA
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnCube">vJSONPointsOnCube</a>
+  <a className="node-chip" href="../Modify/vJSONUnPacker">vJSONUnPacker</a>
+</div>
+
+{/*
+Generated page — node: vJSONInfo (JSON/Utility).
+Source: fuse vJSONInfo.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,66 @@
+---
+sidebar_position: 54
+title: vScriptValPointAttractor
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValPointAttractor
+
+2D/3D point attractor/repulsor with spring dynamics
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValPointAttractor.png').default} alt="vScriptValPointAttractor node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Strength (+attract/-repel) | Float | `0.001` | — |
+| Radius | Float | `1.0` | — |
+| Falloff Power | Float | `1.0` | — |
+| Spring Return | Float | `0.1` | — |
+| Spring Bounce | Float | `0.01` | — |
+
+<details>
+<summary>+11 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Damping | Float | `0.98` | — |
+| Time Step | Float | `10.0` | — |
+| Center | Point | `—` | — |
+| Z Offset | Float | `0` | — |
+| Attractor Position | Point | `—` | — |
+| Attractor Z | Float | `0.5` | — |
+| Axis | Point | `—` | — |
+| Relative Flare Offset | Float | `1.5` | — |
+| Multiplier | Float | `1` | — |
+| Use 3D Points | Float | `1` | — |
+| ScriptVal | ScriptVal | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValBoundingBox">vScriptValBoundingBox</a>
+  <a className="node-chip" href="./vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="./vScriptValConvert2D_3D">vScriptValConvert2D_3D</a>
+  <a className="node-chip" href="./vScriptValDisplaceValues">vScriptValDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vScriptValPointAttractor (ScriptVal/Modify).
+Source: fuse vScriptValPointAttractor.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

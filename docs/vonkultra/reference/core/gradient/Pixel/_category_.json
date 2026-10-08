@@ -1,0 +1,8 @@
+{
+  "label": "Pixel",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Pixel-level image data."
+  }
+}

@@ -1,0 +1,68 @@
+---
+sidebar_position: 4
+title: vNumberWave
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberWave
+
+Creates a Delay while passing a Fusion Number object
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberWave.png').default} alt="vNumberWave node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Wave | FuID | `—` | — |
+| Start at Frame | Integer | `0` | — |
+| Period | Float | `5.0` | — |
+| Strength | Float | `1.0` | — |
+| Delay | Float | `0.0` | — |
+
+<details>
+<summary>+5 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Offset | Float | `—` | — |
+| Limit | Float | `0.0` | — |
+| Repeat | Float | `1.0` | — |
+| Reverse | Float | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vNumberWave.Number -> vNumberViewer.Number1
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vNumberMaterialEasing">vNumberMaterialEasing</a>
+  <a className="node-chip" href="./vNumberSmootherStep">vNumberSmootherStep</a>
+  <a className="node-chip" href="./vNumberTween">vNumberTween</a>
+</div>
+
+{/*
+Generated page — node: vNumberWave (Number/Utility).
+Source: fuse vNumberWave.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

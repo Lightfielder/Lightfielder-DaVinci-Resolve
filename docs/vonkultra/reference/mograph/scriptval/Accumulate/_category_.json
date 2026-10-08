@@ -1,0 +1,8 @@
+{
+  "label": "Accumulate",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Build up values and carry state across frames."
+  }
+}

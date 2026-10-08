@@ -1,0 +1,61 @@
+---
+sidebar_position: 8
+title: vArrayMergeOBJ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayMergeOBJ
+
+Merge Wavefront OBJ geometry with edge and point Arrays
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayMergeOBJ.png').default} alt="vArrayMergeOBJ node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Points 1 | DATATYPE | `—` | — |
+| Edges 1 | DATATYPE | `—` | — |
+| Points 2 | DATATYPE | `—` | — |
+| Edges 2 | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayFromOBJ1.Points -> vArrayMergeOBJ.Points1
+    vArrayFromOBJ1.Edges -> vArrayMergeOBJ.Edges1
+    vArrayFromOBJ2.Points -> vArrayMergeOBJ.Points2
+    vArrayFromOBJ2.Edges -> vArrayMergeOBJ.Edges2
+    vArrayMergeOBJ.OutputPoints -> vArrayToOBJ.ArrayPoints
+    vArrayMergeOBJ.OutputEdges -> vArrayToOBJ.ArrayEdges
+    vArrayToOBJ.Output -> vTextViewer.Input
+    vArrayToOBJ.Output -> vTextToFile.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayToOBJ">vArrayToOBJ</a>
+</div>
+
+{/*
+Generated page — node: vArrayMergeOBJ (Array/Utility).
+Source: fuse vArrayMergeOBJ.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

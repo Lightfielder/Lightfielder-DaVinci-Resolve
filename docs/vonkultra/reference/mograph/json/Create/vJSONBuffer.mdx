@@ -1,0 +1,60 @@
+---
+sidebar_position: 1
+title: vJSONBuffer
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONBuffer
+
+FIFO (first in first out) in an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONBuffer.png').default} alt="vJSONBuffer node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array Length (min 2) | Integer | `2` | — |
+| Low | Float | `-1` | — |
+| High | Float | `1` | — |
+| Offset Range | Float | `0.0` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONBuffer.Low = 1
+    vJSONBuffer.High = 10
+    vJSONBuffer.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONCircularPoints">vJSONCircularPoints</a>
+  <a className="node-chip" href="./vJSONCreate">vJSONCreate</a>
+  <a className="node-chip" href="./vJSONCreateAsset">vJSONCreateAsset</a>
+  <a className="node-chip" href="./vJSONCreateAttractorPoints">vJSONCreateAttractorPoints</a>
+</div>
+
+{/*
+Generated page — node: vJSONBuffer (JSON/Create).
+Source: fuse vJSONBuffer.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

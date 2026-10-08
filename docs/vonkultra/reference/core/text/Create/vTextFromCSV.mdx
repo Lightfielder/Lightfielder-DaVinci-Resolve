@@ -1,0 +1,57 @@
+---
+sidebar_position: 12
+title: vTextFromCSV
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextFromCSV
+
+Creates a Fusion Text object by extracting a single cell from a CSV formatted block of text The "Row" control is used to define the CSV line number to read. The "Column" control is used to increment through each set of comma separated entries on a single line of CSV input data. The "Ignore Header Row" checkbox will offset the first index position to start at line 2 in the CSV file. This will skip over a labelled header row in the source document to avoid that information being accessed as part of the ingested data.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextFromCSV.png').default} alt="vTextFromCSV node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Row | Integer | `1` | — |
+| Column | Integer | `1` | — |
+| Ignore Header Row | Integer | `0.0` | — |
+| Input | Text | `—` | — |
+| Display Lines | Integer | `10` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Wrap Lines | Integer | `0.0` | — |
+| Expand Escaped Characters | Integer | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+| Get Heading | Float | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextCreate">vTextCreate</a>
+  <a className="node-chip" href="./vTextCreateArch">vTextCreateArch</a>
+  <a className="node-chip" href="./vTextCreateBrowse">vTextCreateBrowse</a>
+  <a className="node-chip" href="./vTextCreateMultiline">vTextCreateMultiline</a>
+</div>
+
+{/*
+Generated page — node: vTextFromCSV (Core/Text/Create).
+Source: fuse vTextFromCSV.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,82 @@
+---
+sidebar_position: 5
+title: vArrayInterpolate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayInterpolate
+
+Blend between two vArrays with easing curves — the morph node for smooth shape transitions and animated layout changes.
+
+<div className="node-badge-row">
+  <span className="node-badge node-badge--intermediate">Intermediate</span>
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayInterpolate.png').default} alt="vArrayInterpolate node" />
+</div>
+
+vArrayInterpolate blends element-by-element between Array A and Array B using a Progress value from 0 to 1. Multiple easing options control the interpolation curve, making it the primary node for smooth animated transitions between two point cloud states.
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Progress | Integer | `0` | Blend position from 0.0 (Array A) to 1.0 (Array B). Keyframe this parameter to animate the morph over time. |
+| Select Easing | Integer | `0` | Easing curve applied to the Progress value: 0 = Linear, 1 = Ease In, 2 = Ease Out, 3 = Ease In-Out, 4 = Back. |
+| Show Input | Checkbox | `0` | Reveals the Array A and Array B connection ports on the node in the Fusion node graph. |
+| Array A | Float | `—` | First vArray state — the output at Progress 0.0. Must have the same element count as Array B. |
+| Array B | Float | `—` | Second vArray state — the output at Progress 1.0. Must have the same element count as Array A. |
+
+<details>
+<summary>Read the full description</summary>
+
+vArrayInterpolate performs a per-element linear or eased blend between two vArrays of equal length. At Progress 0.0 the output equals Array A exactly; at 1.0 it equals Array B exactly; at 0.5 each element is the midpoint between the two inputs. This makes it the canonical morph node for animated layout transitions in the vArray system.
+
+The Select Easing dropdown applies a non-linear curve to the Progress value, transforming what would be a mechanical linear blend into a smooth acceleration or deceleration. Ease In, Ease Out, Ease In-Out, and Back variants are available, making transitions feel physically plausible without needing separate expression-based easing on the Progress parameter.
+
+A key workflow is morphing between two structurally different point layouts — such as a grid transitioning to a sphere — by connecting vArrayPointsOnGrid to Array A and vArrayPointsOnSphere to Array B, then animating Progress from 0 to 1. Both arrays must have the same element count; mismatched lengths will produce unexpected results. Connect the output to vArrayCameraProjection and vArrayShapeRender for the final render.
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="grid-to-sphere-morph" label="Grid-to-sphere morph" default>
+
+```
+vArrayPointsOnGrid.Output -> vArrayInterpolate.ArrayA
+vArrayPointsOnSphere.Output -> vArrayInterpolate.ArrayB
+vArrayInterpolate.Output -> vArrayCameraProjection.ArrayA
+vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+<TabItem value="circle-to-random-transition" label="Circle-to-random transition">
+
+```
+vArrayPointsOnCircle.Output -> vArrayInterpolate.ArrayA
+vArrayCreateRandom.Output -> vArrayInterpolate.ArrayB
+vArrayInterpolate.Output -> vArrayCameraProjection.ArrayA
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../array/Create/vArrayPointsOnSphere">vArrayPointsOnSphere</a>
+  <a className="node-chip" href="../../array/Modify/vArrayWave">vArrayWave</a>
+  <a className="node-chip" href="../../array/Modify/vArrayMapRange">vArrayMapRange</a>
+</div>
+
+{/*
+Rich page restored from _output/vArrayInterpolate_page.json. Source of truth: fuses.ts / vonkultratools data model.
+*/}

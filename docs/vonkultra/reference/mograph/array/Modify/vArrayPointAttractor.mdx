@@ -1,0 +1,66 @@
+---
+sidebar_position: 54
+title: vArrayPointAttractor
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPointAttractor
+
+2D/3D point attractor/repulsor with spring dynamics
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPointAttractor.png').default} alt="vArrayPointAttractor node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Strength (+attract/-repel) | Float | `0.001` | — |
+| Radius | Float | `1.0` | — |
+| Falloff Power | Float | `1.0` | — |
+| Spring Return | Float | `0.1` | — |
+| Spring Bounce | Float | `0.01` | — |
+
+<details>
+<summary>+11 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Damping | Float | `0.98` | — |
+| Time Step | Float | `10.0` | — |
+| Center | Point | `—` | — |
+| Z Offset | Float | `0` | — |
+| Attractor Position | Point | `—` | — |
+| Attractor Z | Float | `0.5` | — |
+| Axis | Point | `—` | — |
+| Relative Flare Offset | Float | `1.5` | — |
+| Multiplier | Float | `1` | — |
+| Use 3D Points | Float | `1` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayBoundingBox">vArrayBoundingBox</a>
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="./vArrayConvert2D_3D">vArrayConvert2D_3D</a>
+  <a className="node-chip" href="./vArrayDisplaceValues">vArrayDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vArrayPointAttractor (Array/Modify).
+Source: fuse vArrayPointAttractor.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

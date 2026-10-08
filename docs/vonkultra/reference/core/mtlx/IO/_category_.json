@@ -1,0 +1,8 @@
+{
+  "label": "IO",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Import and export data in and out of the pipeline."
+  }
+}

@@ -1,0 +1,76 @@
+---
+sidebar_position: 20
+title: vScriptValCreateMinMax
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValCreateMinMax
+
+Creates Array based on Max/Min operations
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValCreateMinMax.png').default} alt="vScriptValCreateMinMax node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array length | Integer | `1` | — |
+| Mode Select  | Integer | `XY` | — |
+| line1Separator | Float | `—` | — |
+| Min1 | Float | `-1` | — |
+| Max1 | Float | `1` | — |
+
+<details>
+<summary>+10 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line2Separator | Float | `—` | — |
+| Min2 | Float | `-1` | — |
+| Max2 | Float | `1` | — |
+| line3Separator | Float | `—` | — |
+| Min3 | Float | `-1` | — |
+| Max3 | Float | `1` | — |
+| line5Separator | Float | `—` | — |
+| Seed | Integer | `0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValCreateMinMax.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValCreateMinMax (ScriptVal/Create).
+Source: fuse vScriptValCreateMinMax.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

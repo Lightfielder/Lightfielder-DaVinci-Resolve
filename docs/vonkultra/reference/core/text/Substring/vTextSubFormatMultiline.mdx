@@ -1,0 +1,55 @@
+---
+sidebar_position: 3
+title: vTextSubFormatMultiline
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextSubFormatMultiline
+
+Formats a multi-line template string with input values Each input connection on the vTextSubFormat node can be placed exactly where it is needed using a token approach. A token value is entered using curly braces that surround an integer number like "`\{1\}`" or "`\{2\}`" that represent an input connection number on the node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextSubFormatMultiline.png').default} alt="vTextSubFormatMultiline node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Which | Integer | `—` | — |
+| Text1 | Text | `—` | — |
+| Format | Text | `—` | — |
+| Display Lines | Integer | `25` | — |
+| Wrap Lines | Integer | `1.0` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| "Text" .. i | Text | `—` | — |
+| "Text" .. (inp_nr + 1) | Text | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextMerge">vTextMerge</a>
+  <a className="node-chip" href="./vTextSubFormat">vTextSubFormat</a>
+  <a className="node-chip" href="./vTextSubJoin">vTextSubJoin</a>
+  <a className="node-chip" href="./vTextSubReplace">vTextSubReplace</a>
+</div>
+
+{/*
+Generated page — node: vTextSubFormatMultiline (Core/Text/Substring).
+Source: fuse vTextSubFormatMultiline.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

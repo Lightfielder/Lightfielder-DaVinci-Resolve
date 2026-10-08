@@ -1,0 +1,8 @@
+{
+  "label": "Create",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Generate new arrays, point sets, and objects."
+  }
+}

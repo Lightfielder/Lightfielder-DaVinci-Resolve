@@ -1,0 +1,79 @@
+/**
+ * Examples section styles.
+ *
+ * Example project cards use the shared card visual language and expose their
+ * actions as plain text links (download + read the detailed documentation)
+ * rather than an overlaid icon.
+ */
+
+.example-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  background: var(--lf-card-bg);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.example-card:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme='dark'] .example-card {
+  border-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .example-card:hover {
+  border-color: var(--lf-gold);
+}
+
+.example-card-badge {
+  align-self: flex-start;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.example-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.example-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.example-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.example-card-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}

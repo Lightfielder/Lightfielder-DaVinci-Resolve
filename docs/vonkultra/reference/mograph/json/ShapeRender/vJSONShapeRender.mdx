@@ -1,0 +1,131 @@
+---
+sidebar_position: 7
+title: vJSONShapeRender
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONShapeRender
+
+Create a polygon dot shapes from a JSON based Lua table of XY point pairs
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONShapeRender.png').default} alt="vJSONShapeRender node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Separator_1 | Float | `—` | — |
+| Use Edge Data | Integer | `0` | — |
+| Show Lines | Integer | `0` | — |
+| Show Dots | Integer | `1` | — |
+| Show Custom | Integer | `0` | — |
+
+<details>
+<summary>+64 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show Index | Integer | `0` | — |
+| Line Width | Float | `0.001` | — |
+| Dot Line Width | Float | `0.001` | — |
+| Connect Text Groups | Integer | `0` | — |
+| Render Outline Lines | Integer | `1` | — |
+| Close Edge Loops | Integer | `1` | — |
+| Max XY Line Distance | Float | `0.0` | — |
+| Separator_2 | Float | `—` | — |
+| Red | Float | `0` | — |
+| Green | Float | `1` | — |
+| Blue | Float | `1` | — |
+| Alpha | Float | `1.0` | — |
+| Hide Default Dots | Integer | `0` | — |
+| Render Outline Dots | Integer | `0` | — |
+| Dot Sides | Integer | `6` | — |
+| Dot Radius | Float | `0.01` | — |
+| Dots Scale | Float | `1.0` | — |
+| Separator_3 | Float | `—` | — |
+| Color | Float | `Default` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `0.0` | — |
+| Blue | Float | `0.5` | — |
+| Alpha | Float | `1.0` | — |
+| Separator_Line | Float | `—` | — |
+| Color | Float | `Default` | — |
+| Red | Float | `0` | — |
+| Green | Float | `1` | — |
+| Blue | Float | `1` | — |
+| Alpha | Float | `1.0` | — |
+| Render Outline Shape | Integer | `0` | — |
+| Render Outline Background | Integer | `1` | — |
+| Show / Hide Background | Integer | `0` | — |
+| Shape Outline | Float | `0.002` | — |
+| Background Outline | Float | `0.002` | — |
+| line2Separator | Float | `—` | — |
+| Shape Scale | Float | `1.0` | — |
+| line3Separator | Float | `—` | — |
+| Color | Float | `Default` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `0.9` | — |
+| Blue | Float | `0.6` | — |
+| Alpha | Float | `1.0` | — |
+| Separator_8 | Float | `—` | — |
+| Red | Float | `0.079` | — |
+| Green | Float | `0.079` | — |
+| Blue | Float | `0.079` | — |
+| Alpha | Float | `1.0` | — |
+| Text Size | Float | `0.025` | — |
+| Text Style | Float | `Bold` | — |
+| Separator_4 | Float | `—` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `1` | — |
+| Blue | Float | `1` | — |
+| Alpha | Float | `1.0` | — |
+| Filter | Float | `Gaussian` | — |
+| Soft Edge | Float | `0` | — |
+| Line Type | Float | `Solid` | — |
+| Join Type | Float | `2.0` | — |
+| Input | Image | `—` | — |
+| JSON Point | Text | `—` | — |
+| JSON Edge | Text | `—` | — |
+| JSON Custom Shape | ScriptVal | `—` | — |
+| JSON Text Groups | ScriptVal | `—` | — |
+| JSON Custom Color | ScriptVal | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONFromOBJ.Points -> vJSONCameraProjection.ArrayA
+    vJSONFromOBJ.Edges -> vJSONShapeRender.ArrayEdge
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONFromOBJ">vJSONFromOBJ</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+</div>
+
+{/*
+Generated page — node: vJSONShapeRender (JSON/ShapeRender).
+Source: fuse vJSONShapeRender.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: vMetadataFromText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vMetadataFromText
+
+Creates a Fusion image with metadata added from text This node is similar to the SetMetadata.fuse with the addition of input connections on the node that accepts a Text data type for the "Field Name", and "Field Value". A metadata example for Fusion Viewer based Stereo3D "Over/Under" image content is: Field Name: Stereo Field Value: \{Method = "vstack"\} A metadata example for Fusion Viewer based Stereo3D "Side by Side" image content is: Field Name: Stereo Field Value: \{Method = "hstack"\} A metadata example for Fusion Viewer window based 360VR "Latitude/Longitude" image projection content is: Field Name: Pano Field Value: \{Format = "LatLong"\}
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Meta</span>
+  <span className="node-badge">Meta</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/meta/vMetadataFromText.png').default} alt="vMetadataFromText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Image | `—` | — |
+| Field Name | Text | `—` | — |
+| Field Value | Text | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vMetadataFilename">vMetadataFilename</a>
+  <a className="node-chip" href="./vMetadataToText">vMetadataToText</a>
+</div>
+
+{/*
+Generated page — node: vMetadataFromText (Core/Meta/Text).
+Source: fuse vMetadataFromText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

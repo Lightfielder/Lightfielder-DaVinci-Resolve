@@ -1,0 +1,69 @@
+---
+sidebar_position: 48
+title: vArrayPointsHexagonGrid
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPointsHexagonGrid
+
+Generate points on Hexagon Grid
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPointsHexagonGrid.png').default} alt="vArrayPointsHexagonGrid node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Rows | Integer | `10` | — |
+| Colums | Integer | `10` | — |
+| Tile X Offset | Float | `0.1` | — |
+| Tile Y Offset | Float | `0.1` | — |
+| Multiplyer | Float | `0.5` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Direction | Integer | `Vertical` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsHexagonGrid.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayPointsHexagonGrid (Array/Create).
+Source: fuse vArrayPointsHexagonGrid.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

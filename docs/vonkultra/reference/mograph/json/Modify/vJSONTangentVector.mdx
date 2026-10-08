@@ -1,0 +1,60 @@
+---
+sidebar_position: 62
+title: vJSONTangentVector
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONTangentVector
+
+Create a vector that is tangent to a curve or surface at a given point
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONTangentVector.png').default} alt="vJSONTangentVector node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Mode | Integer | `Start` | — |
+| Max angle | Integer | `0` | — |
+| Scale Factor | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+| JSON Path | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONLogarithmicSpiral.Output -> vJSONTangentVector.JSONpath
+    vJSONTangentVector.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONLogarithmicSpiral">vJSONLogarithmicSpiral</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONTangentVector (JSON/Modify).
+Source: fuse vJSONTangentVector.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

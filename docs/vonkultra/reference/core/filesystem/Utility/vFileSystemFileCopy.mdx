@@ -1,0 +1,44 @@
+---
+sidebar_position: 6
+title: vFileSystemFileCopy
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vFileSystemFileCopy
+
+Copies a file This node allows you to define a "Source File" that will be copied to the disk-based filepath defined in the "Destination File" field. The "Create Destination Directory" checkbox is useful if you need to dynamically create the output folder at the same time.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / FileSystem</span>
+  <span className="node-badge">FileSystem</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/filesystem/vFileSystemFileCopy.png').default} alt="vFileSystemFileCopy node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Source File | Text | `—` | — |
+| Destination File | Text | `—` | — |
+| Create Destination Directory | Integer | `1.0` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vFileSystemChmod">vFileSystemChmod</a>
+  <a className="node-chip" href="./vFileSystemColorTags">vFileSystemColorTags</a>
+  <a className="node-chip" href="./vFileSystemCreateDir">vFileSystemCreateDir</a>
+  <a className="node-chip" href="./vFileSystemDirExists">vFileSystemDirExists</a>
+</div>
+
+{/*
+Generated page — node: vFileSystemFileCopy (Core/FileSystem/Utility).
+Source: fuse vFileSystemFileCopy.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

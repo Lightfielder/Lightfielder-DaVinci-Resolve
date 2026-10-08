@@ -1,0 +1,60 @@
+---
+sidebar_position: 59
+title: vJSONRotateValues
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONRotateValues
+
+Rotate an array indexes and values
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONRotateValues.png').default} alt="vJSONRotateValues node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Rotate Amount | Integer | `1` | — |
+| Pass Thru: 0 or 1 | Integer | `0.0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsHexagonGrid.Output -> vJSONRotateValues.ArrayA
+    vJSONRotateValues.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsHexagonGrid">vJSONPointsHexagonGrid</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONRotateValues (JSON/Modify).
+Source: fuse vJSONRotateValues.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,73 @@
+---
+sidebar_position: 49
+title: vScriptValPointsOnRectangle
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValPointsOnRectangle
+
+Generate points on Rectangle
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValPointsOnRectangle.png').default} alt="vScriptValPointsOnRectangle node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Segments | Integer | `24` | — |
+| Width | Float | `0.5` | — |
+| Height | Float | `0.5` | — |
+| Border Radius | Float | `0.5` | — |
+| Line Strip | Integer | `0.0` | — |
+
+<details>
+<summary>+7 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Loop | Integer | `0.0` | — |
+| line6Separator | Float | `—` | — |
+| TopLeft Corner  | Integer | `1.0` | — |
+| TopRight Corner  | Integer | `1.0` | — |
+| BottomLeft Corner  | Integer | `1.0` | — |
+| BottomRight Corner  | Integer | `1.0` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValPointsOnRectangle.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValPointsOnRectangle (ScriptVal/Create).
+Source: fuse vScriptValPointsOnRectangle.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,70 @@
+---
+sidebar_position: 41
+title: vJSONLogarithmicSpiral
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONLogarithmicSpiral
+
+Generate a Logarithmic Spiral spline
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONLogarithmicSpiral.png').default} alt="vJSONLogarithmicSpiral node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Mode | Integer | `Spiral` | — |
+| Growth coefficient | Float | `0.04` | — |
+| Expansion factor | Float | `0.22` | — |
+| Max angle | Integer | `6` | — |
+| Step size | Float | `1.23` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Rotation | Float | `0` | — |
+| Scale Factor | Float | `1` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONLogarithmicSpiral.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONLogarithmicSpiral (JSON/Create).
+Source: fuse vJSONLogarithmicSpiral.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

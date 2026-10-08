@@ -1,0 +1,8 @@
+{
+  "label": "Point",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Point construction and math."
+  }
+}

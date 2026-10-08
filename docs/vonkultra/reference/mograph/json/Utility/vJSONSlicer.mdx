@@ -1,0 +1,70 @@
+---
+sidebar_position: 9
+title: vJSONSlicer
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONSlicer
+
+Trimming the start and end of single or multi-dimensional arrays
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONSlicer.png').default} alt="vJSONSlicer node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+| Start | Integer | `1` | — |
+| Stop | Integer | `1` | — |
+| Offset Range | Integer | `0` | — |
+| Continuous | Integer | `1.0` | — |
+
+<details>
+<summary>+1 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONCircularPoints.Output -> vJSONSlicer.Input
+    vJSONSlicer.Array -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+    vJSONShapeText.OutputValShape -> vJSONShapeRender.JSONCustomShape
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONCircularPoints">vJSONCircularPoints</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONSlicer (JSON/Utility).
+Source: fuse vJSONSlicer.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

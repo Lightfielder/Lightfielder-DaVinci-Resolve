@@ -1,0 +1,70 @@
+---
+sidebar_position: 8
+title: vJSONMapRange
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONMapRange
+
+Apply range mapping operations to an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONMapRange.png').default} alt="vJSONMapRange node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| OldMin | Float | `-10` | — |
+| OldMax | Float | `10` | — |
+| line2Separator | Float | `—` | — |
+| Mode Select  | Integer | `-1 - 1` | — |
+| NewMin | Float | `-10` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| NewMax | Float | `10` | — |
+| line3Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONUnPacker.OutputArray -> vJSONMapRange.ArrayA
+    vJSONMapRange.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+</div>
+
+{/*
+Generated page — node: vJSONMapRange (JSON/Modify).
+Source: fuse vJSONMapRange.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

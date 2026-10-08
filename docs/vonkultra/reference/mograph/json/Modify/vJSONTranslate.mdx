@@ -1,0 +1,77 @@
+---
+sidebar_position: 64
+title: vJSONTranslate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONTranslate
+
+Transforms array positions
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONTranslate.png').default} alt="vJSONTranslate node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `—` | — |
+| Lock X/Y | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Y Scale | Float | `1.0` | — |
+| Array A | DATATYPE | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnGrid.Output -> vJSONUnPacker.ArrayA
+    vJSONUnPacker.OutputArray -> vJSONTranslate.ArrayA
+    vJSONTranslate.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONWave.ArrayA
+    vJSONWave.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnGrid">vJSONPointsOnGrid</a>
+  <a className="node-chip" href="./vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+  <a className="node-chip" href="./vJSONWave">vJSONWave</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONTranslate (JSON/Modify).
+Source: fuse vJSONTranslate.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

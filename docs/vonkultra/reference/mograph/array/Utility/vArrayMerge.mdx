@@ -1,0 +1,82 @@
+---
+sidebar_position: 6
+title: vArrayMerge
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayMerge
+
+Concatenate two or more vArrays into a single output — the essential combiner for multi-source point cloud compositions.
+
+<div className="node-badge-row">
+  <span className="node-badge node-badge--beginner">Beginner</span>
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayMerge.png').default} alt="vArrayMerge node" />
+</div>
+
+vArrayMerge joins multiple vArrays end-to-end into one combined array. Use it to assemble point clouds from different generators — grid, circle, sphere, OBJ — into a single array for a unified render pass.
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Which | Integer | `—` | Sets the number of active array inputs to merge. Start at 1 and increase as you add more source arrays. |
+| Array1 | Float | `—` | First vArray input. Additional inputs (Array2, Array3 etc.) appear as Which increases. |
+| Array Structure | Integer | `0` | Controls how arrays are combined: 0 = simple concatenation (append end-to-end), 1 = interleaved merge (alternate elements from each array). |
+| Show Input | Checkbox | `0` | Reveals the array input ports on the node in the Fusion node graph. |
+
+<details>
+<summary>Read the full description</summary>
+
+vArrayMerge is the array concatenation node. It takes two or more vArray inputs and appends them sequentially into a single output array. This is the standard method for combining point clouds from different generators — such as a vArrayPointsOnGrid and a vArrayPointsOnSphere — into one unified dataset that flows into a single vArrayShapeRender node.
+
+The Which parameter controls how many inputs are active, and Array Structure Mode determines whether arrays are merged by interleaving values or simple concatenation. Use simple concatenation (mode 0) when combining point clouds from separate generators. Interleaved mode is useful when merging parallel per-element data streams that should stay in sync.
+
+A typical compositional workflow stacks multiple generators, each offset with vArrayTranslate, then merges them all into a single array before the projection and render steps. This keeps the node graph clean and ensures vArrayShapeRender only needs a single connection, making parameter changes easier to manage at scale.
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="merge-grid-and-circle-into-one-render" label="Merge grid and circle into one render" default>
+
+```
+vArrayPointsOnGrid.Output -> vArrayTranslate.ArrayA
+vArrayTranslate.Output -> vArrayMerge.Array1
+vArrayPointsOnCircle.Output -> vArrayMerge.Array2
+vArrayMerge.Output -> vArrayCameraProjection.ArrayA
+vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+<TabItem value="combine-obj-and-sphere" label="Combine OBJ and sphere">
+
+```
+vArrayFromOBJ.Points -> vArrayMerge.Array1
+vArrayPointsOnSphere.Output -> vArrayMerge.Array2
+vArrayMerge.Output -> vArrayCameraProjection.ArrayA
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../array/Modify/vArrayTranslate">vArrayTranslate</a>
+  <a className="node-chip" href="../../array/Utility/vArraySlicer">vArraySlicer</a>
+  <a className="node-chip" href="../../array/Utility/vArrayAppend">vArrayAppend</a>
+</div>
+
+{/*
+Rich page restored from _output/vArrayMerge_page.json. Source of truth: fuses.ts / vonkultratools data model.
+*/}

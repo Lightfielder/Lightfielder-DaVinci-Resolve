@@ -1,0 +1,53 @@
+---
+sidebar_position: 53
+title: vScriptValToXYZ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValToXYZ
+
+Convert a Fusion ScriptVal object into XYZ ASCII Text
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValToXYZ.png').default} alt="vScriptValToXYZ node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| ScriptVal | ScriptVal | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValFromXYZ.ScriptValPoints -> vScriptValToXYZ.ScriptVal
+    vScriptValToXYZ.Output -> vTextToFile.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValFromXYZ">vScriptValFromXYZ</a>
+</div>
+
+{/*
+Generated page — node: vScriptValToXYZ (ScriptVal/Create).
+Source: fuse vScriptValToXYZ.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

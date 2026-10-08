@@ -1,0 +1,68 @@
+---
+sidebar_position: 34
+title: vScriptValFromOBJ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValFromOBJ
+
+Convert Wavefront OBJ mesh data into a ScriptVal
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValFromOBJ.png').default} alt="vScriptValFromOBJ node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| Input | Text | `—` | — |
+| UISeparator1 | Float | `—` | — |
+
+<details>
+<summary>+1 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Scale File Units By | Float | `1` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValFromOBJ.ScriptValPoints -> vScriptValCameraProjection.ScriptVal
+    vScriptValFromOBJ.ScriptValEdges -> vScriptValShapeRender.ScriptValEdge
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValFromOBJ (ScriptVal/Create).
+Source: fuse vScriptValFromOBJ.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

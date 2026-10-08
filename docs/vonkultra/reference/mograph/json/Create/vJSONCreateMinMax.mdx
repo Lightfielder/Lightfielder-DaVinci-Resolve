@@ -1,0 +1,76 @@
+---
+sidebar_position: 20
+title: vJSONCreateMinMax
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONCreateMinMax
+
+Creates Array based on Max/Min operations
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONCreateMinMax.png').default} alt="vJSONCreateMinMax node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array length | Integer | `1` | — |
+| Mode Select  | Integer | `XY` | — |
+| line1Separator | Float | `—` | — |
+| Min1 | Float | `-1` | — |
+| Max1 | Float | `1` | — |
+
+<details>
+<summary>+10 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line2Separator | Float | `—` | — |
+| Min2 | Float | `-1` | — |
+| Max2 | Float | `1` | — |
+| line3Separator | Float | `—` | — |
+| Min3 | Float | `-1` | — |
+| Max3 | Float | `1` | — |
+| line5Separator | Float | `—` | — |
+| Seed | Integer | `0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONCreateMinMax.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONCreateMinMax (JSON/Create).
+Source: fuse vJSONCreateMinMax.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

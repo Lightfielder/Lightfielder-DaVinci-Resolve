@@ -108,6 +108,33 @@ const sections = [
     ],
   },
   {
+    title: 'Lightfielder Ops',
+    links: [
+      { label: 'Ops Overview', href: '/docs/Ops/' },
+      { label: 'Install Ops', href: '/docs/Ops/installation/install-ops' },
+      { label: 'Sequencer View', href: '/docs/Ops/usage/sequencer' },
+      { label: 'Nodes View', href: '/docs/Ops/usage/nodes' },
+      { label: 'Lightfielder Viewport', href: '/docs/Ops/viewport/' },
+    ],
+  },
+  {
+    title: 'Vonk Ultra',
+    links: [
+      { label: 'Overview', href: '/VonkUltra/' },
+      { label: 'Getting Started', href: '/VonkUltra/getting-started/introduction' },
+      { label: 'Reference', href: '/VonkUltra/reference' },
+      { label: 'Guides', href: '/VonkUltra/guides/overview' },
+      { label: 'Tutorials', href: '/VonkUltra/tutorials/video-tutorials' },
+    ],
+  },
+  {
+    title: 'Examples',
+    links: [
+      { label: 'Example Projects', href: '/docs/Examples/' },
+      { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
+    ],
+  },
+  {
     title: 'Project',
     links: [
       { label: 'ChangeLog', href: '/docs/project/changelog' },

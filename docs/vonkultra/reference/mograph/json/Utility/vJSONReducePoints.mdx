@@ -1,0 +1,70 @@
+---
+sidebar_position: 8
+title: vJSONReducePoints
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONReducePoints
+
+Reduce points Operations on an Array Decimation Method options include: - Grid-Based - Random Sampling - Curvature-Based (SLOW)
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONReducePoints.png').default} alt="vJSONReducePoints node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Decimation Method | Integer | `Grid-Based` | — |
+| Grid Size | Float | `0.01` | — |
+| Target Count | Float | `3.0` | — |
+| Neighborhood Size | Float | `0.2` | — |
+| line4Separator | Float | `—` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnSphere.Output -> vJSONReducePoints.ArrayA
+    vJSONReducePoints.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnSphere">vJSONPointsOnSphere</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONReducePoints (JSON/Utility).
+Source: fuse vJSONReducePoints.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

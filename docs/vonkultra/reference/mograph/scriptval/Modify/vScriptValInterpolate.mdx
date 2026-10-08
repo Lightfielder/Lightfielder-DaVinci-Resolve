@@ -1,0 +1,60 @@
+---
+sidebar_position: 5
+title: vScriptValInterpolate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValInterpolate
+
+Interpolate between corresponding values in two arrays Select Easing options include: - linear - easeInQuad - easeOutQuad - easeInOutQuad - easeInExpo - easeOutExpo - easeInOutExpo Match Array options include: - Trim Array to match - Add Zeros to match
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValInterpolate.png').default} alt="vScriptValInterpolate node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Progress | Float | `0` | — |
+| Select Easing | Integer | `linear` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal1 | DATATYPE | `—` | — |
+| ScriptVal2 | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValCircularPoints1.Output -> vScriptValInterpolate.ScriptVal1
+    vScriptValCircularPoints2.Output -> vScriptValInterpolate.ScriptVal2
+    vScriptValInterpolate.Output -> vScriptValViewer.ScriptVal
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValBoundingBox">vScriptValBoundingBox</a>
+  <a className="node-chip" href="./vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="./vScriptValConvert2D_3D">vScriptValConvert2D_3D</a>
+  <a className="node-chip" href="./vScriptValDisplaceValues">vScriptValDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vScriptValInterpolate (ScriptVal/Modify).
+Source: fuse vScriptValInterpolate.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

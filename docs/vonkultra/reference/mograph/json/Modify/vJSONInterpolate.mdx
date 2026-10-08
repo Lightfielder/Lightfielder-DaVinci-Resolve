@@ -1,0 +1,60 @@
+---
+sidebar_position: 5
+title: vJSONInterpolate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONInterpolate
+
+Interpolate between corresponding values in two arrays Select Easing options include: - linear - easeInQuad - easeOutQuad - easeInOutQuad - easeInExpo - easeOutExpo - easeInOutExpo Match Array options include: - Trim Array to match - Add Zeros to match
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONInterpolate.png').default} alt="vJSONInterpolate node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Progress | Float | `0` | — |
+| Select Easing | Integer | `linear` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+| Array B | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONCircularPoints1.Output -> vJSONInterpolate.ArrayA
+    vJSONCircularPoints2.Output -> vJSONInterpolate.ArrayB
+    vJSONInterpolate.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONBoundingBox">vJSONBoundingBox</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="./vJSONConvert2D_3D">vJSONConvert2D_3D</a>
+  <a className="node-chip" href="./vJSONDisplaceValues">vJSONDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vJSONInterpolate (JSON/Modify).
+Source: fuse vJSONInterpolate.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

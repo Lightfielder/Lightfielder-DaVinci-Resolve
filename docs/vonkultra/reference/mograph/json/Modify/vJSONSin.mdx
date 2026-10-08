@@ -1,0 +1,75 @@
+---
+sidebar_position: 60
+title: vJSONSin
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONSin
+
+Math Sin - Cos Operations on an Array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONSin.png').default} alt="vJSONSin node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Math Function | Integer | `Sin` | — |
+| Phase | Float | `0.0` | — |
+| Frequency | Float | `0.1` | — |
+| Amplitude | Float | `0.01` | — |
+| Offset | Float | `0.0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line4Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnCircle.Output -> vJSONUnPacker.ArrayB
+    vJSONUnPacker.OutputArray -> vJSONSin.ArrayA
+    vJSONSin.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnCircle">vJSONPointsOnCircle</a>
+  <a className="node-chip" href="./vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONSin (JSON/Modify).
+Source: fuse vJSONSin.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

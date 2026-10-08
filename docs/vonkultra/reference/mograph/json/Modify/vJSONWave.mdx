@@ -1,0 +1,81 @@
+---
+sidebar_position: 66
+title: vJSONWave
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONWave
+
+Animates an Array Wave options include: - Line - Saw - Tri - Square - Sine - Noise
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONWave.png').default} alt="vJSONWave node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Wave | FuID | `—` | — |
+| Start At Frame | Integer | `0` | — |
+| Period | Float | `5.0` | — |
+| Strength | Float | `1.0` | — |
+| line4Separator | Float | `—` | — |
+
+<details>
+<summary>+13 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Delay | Float | `0.0` | — |
+| Offset | Float | `—` | — |
+| Repeat Limit | Integer | `1.0` | — |
+| Limit | Float | `0.0` | — |
+| Reverse | Float | `0.0` | — |
+| line1Separator | Float | `—` | — |
+| Falloff | Float | `0.01` | — |
+| Point Delay | Float | `0.0` | — |
+| X Position | Float | `0.0` | — |
+| Y Position | Float | `0.0` | — |
+| Z Position | Float | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnGrid.Output -> vJSONWave.ArrayA
+    vJSONWave.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnGrid">vJSONPointsOnGrid</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONWave (JSON/Modify).
+Source: fuse vJSONWave.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

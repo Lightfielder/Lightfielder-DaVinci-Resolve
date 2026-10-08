@@ -1,0 +1,59 @@
+---
+sidebar_position: 61
+title: vJSONSortByDistance
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONSortByDistance
+
+Sort array by point distance
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONSortByDistance.png').default} alt="vJSONSortByDistance node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Smallest Distance | Float | `1.0` | — |
+| Distance Mode | Float | `Preferred` | — |
+| Show Input | Integer | `0.0` | — |
+| Array | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONUnPacker.OutputArray -> vJSONLogicBetween.ArrayA
+    vJSONLogicBetween.Output -> vJSONSortByDistance.Array
+    vJSONSortByDistance.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="../Logic/vJSONLogicBetween">vJSONLogicBetween</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+</div>
+
+{/*
+Generated page — node: vJSONSortByDistance (JSON/Modify).
+Source: fuse vJSONSortByDistance.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

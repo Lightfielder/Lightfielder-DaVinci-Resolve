@@ -1,0 +1,8 @@
+{
+  "label": "Guides",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Task-oriented walkthroughs that cross data-type boundaries — for when you know what you want to build, not which node type you need."
+  }
+}

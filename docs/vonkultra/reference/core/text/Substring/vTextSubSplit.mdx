@@ -1,0 +1,43 @@
+---
+sidebar_position: 7
+title: vTextSubSplit
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextSubSplit
+
+Returns a substring of a string The "Pattern" text field uses [Lua Patterns](http://lua-users.org/wiki/PatternsTutorial) to parse the string into a JSON like Array object. Additional information about patterns can be read in the [Lua manual](https://www.lua.org/manual/5.3/manual.html#6.4.1). The portion of the pattern you want to return should be placed inside a pair of parentheses characters "(" and ")". If you wanted to return all of the characters from the input string you would use a Pattern of: `(.*)` If you had a list of single word objects that were comma separated like: `Apple;Orange,Pear,Mango` Then you could break the text down into individual objects using a Pattern of: `(%a+),-` The output would be formatted as: `\{"size":4,"array":["Apple","Orange","Pear","Mango"]\}` If you had a string with an IPv4 style IP address in it like "192.168.1.1", you could break the text down into individual digits groupings using a Pattern of: `(%d+)` The output would be formatted as: `\{"size":4,"array":["192","168","1","1"]\}`
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextSubSplit.png').default} alt="vTextSubSplit node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Pattern | Text | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextMerge">vTextMerge</a>
+  <a className="node-chip" href="./vTextSubFormat">vTextSubFormat</a>
+  <a className="node-chip" href="./vTextSubFormatMultiline">vTextSubFormatMultiline</a>
+  <a className="node-chip" href="./vTextSubJoin">vTextSubJoin</a>
+</div>
+
+{/*
+Generated page — node: vTextSubSplit (Core/Text/Substring).
+Source: fuse vTextSubSplit.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,54 @@
+---
+sidebar_position: 1
+title: vNumberCircleCoordinates
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberCircleCoordinates
+
+Calculates a vector (x and y) coordinates of a circle
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberCircleCoordinates.png').default} alt="vNumberCircleCoordinates node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Position | Float | `0` | — |
+| Radius | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vNumberCircleCoordinates.Output -> vJSONConvert2D_3D1.ArrayA
+    vJSONConvert2D_3D1.Output -> vJSONCameraProjection1.ArrayA
+    vJSONCameraProjection1.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../JSON/ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vNumberCircleCoordinates (Number/Trigonometry).
+Source: fuse vNumberCircleCoordinates.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

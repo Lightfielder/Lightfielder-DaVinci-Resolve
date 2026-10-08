@@ -1,0 +1,18 @@
+---
+sidebar_position: 0
+title: Reference Overview
+slug: /reference
+---
+
+# Reference
+
+The node reference is split into two tool families:
+
+- **[Mograph](/VonkUltra/reference/mograph)** — the newer, motion-graphics-focused toolset (Array, HTML, JSON, Matrix, Number, ScriptVal). Fully ported: one page per node.
+- **[Core](/VonkUltra/reference/core)** — the original, general-purpose Vonk toolset (3D, Array, Base64, CBOR, Color, FileSystem, Gradient, Guide, Image, JSON, Matrix, Meta, MTLX, Number, Point, ScriptVal, Shape, Text, USD, Vector, YAML). Fully ported: one page per node.
+
+Within each, nodes are grouped by data type — matching the `v<Type>*` naming convention nodes already use (`vArrayCreate`, `vJSONFromFile`, `vMatrixCreateTRS`...). See `00-planning/content-plan.md` for the full rationale.
+
+:::note
+Both families are fully ported — one page per node, with parameter tables extracted from the source fuses. Parameter *descriptions* on generated pages are pending the content pass (content-plan.md §6).
+:::

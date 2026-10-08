@@ -1,12 +1,12 @@
 {
-  "label": "Project",
+  "label": "Editorial/Grading Project",
   "position": 5,
   "collapsible": true,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Project",
-    "description": "Release history, known issues, and the development punch list.",
+    "title": "Editorial/Grading Project",
+    "description": "Lightfielder for Resolve Development Notes",
     "slug": "/category/project"
   }
 }

@@ -1,0 +1,42 @@
+---
+sidebar_position: 9
+title: vFileSystemFileSize
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vFileSystemFileSize
+
+Returns the file size This node takes a single filename as a text based input. It checks the file size of the document and returns the value in the unit of measure you specify. The Unit field supports a wide range of file size output scales including: "Byte (B)", "Kilobyte (KB)", "Kibibyte (KiB)", "Megabyte (MB)", "Mebibyte (MiB)", "Gigabyte (GB)", "Gibibyte (GiB)", "Terabyte (TB)", and "Tebibyte (TiB)". The node has two output connections labelled "Output" and "OutputUnit". The "OutputUnit" connection is handy if you need to create a visual overlay with a Text+ node of file size and want to indicate the scale of measure.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / FileSystem</span>
+  <span className="node-badge">FileSystem</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/filesystem/vFileSystemFileSize.png').default} alt="vFileSystemFileSize node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Unit | Integer | `0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vFileSystemChmod">vFileSystemChmod</a>
+  <a className="node-chip" href="./vFileSystemColorTags">vFileSystemColorTags</a>
+  <a className="node-chip" href="./vFileSystemCreateDir">vFileSystemCreateDir</a>
+  <a className="node-chip" href="./vFileSystemDirExists">vFileSystemDirExists</a>
+</div>
+
+{/*
+Generated page — node: vFileSystemFileSize (Core/FileSystem/Utility).
+Source: fuse vFileSystemFileSize.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

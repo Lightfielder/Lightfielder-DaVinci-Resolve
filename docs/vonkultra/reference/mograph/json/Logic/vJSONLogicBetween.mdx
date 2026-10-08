@@ -1,0 +1,69 @@
+---
+sidebar_position: 4
+title: vJSONLogicBetween
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONLogicBetween
+
+Logic Between Operations on an Array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONLogicBetween.png').default} alt="vJSONLogicBetween node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line1Separator | Float | `—` | — |
+| Min | Float | `0` | — |
+| Max | Float | `0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+<details>
+<summary>+1 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONUnPacker.OutputArray -> vJSONLogicBetween.ArrayA
+    vJSONLogicBetween.Output -> vJSONSortByDistance.Array
+    ArraySortByDistance.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="../Modify/vJSONSortByDistance">vJSONSortByDistance</a>
+  <a className="node-chip" href="../Modify/vJSONPacker">vJSONPacker</a>
+</div>
+
+{/*
+Generated page — node: vJSONLogicBetween (JSON/Logic).
+Source: fuse vJSONLogicBetween.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

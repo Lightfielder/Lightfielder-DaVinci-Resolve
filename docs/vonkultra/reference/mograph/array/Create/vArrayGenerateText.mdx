@@ -1,0 +1,100 @@
+---
+sidebar_position: 41
+title: vArrayGenerateText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayGenerateText
+
+Example, generating random Text and Strings The following Generate Random options are available: - Pick from → input Array - Lorem ipsum Basics: - Bool - Character - Word - Letter - Vowel Names: - Name - Male name - Male name w/last - Name w/last - Female name - Female name w/last Numbers: - Hash - Integer - Integer w/min - Integer w/both Color: - rgb - rgba - hsl - hsla Tech: - ip - ipv4 - ipv6 Location: - Phone - Address - Street Strings: - String - Syllable - Shuffle Lorem ipsum Node Connections: vArrayGenerateText.chanceOperation = "Lorem ipsum" vArrayGenerateText.selectMode = "Paragraph" vArrayGenerateText.paragraphCount = 8 Name Node Connections: vArrayGenerateText.chanceOperation = "Name" vArrayGenerateText.arrayLength = 1 Female name with last name Node Connections: vArrayGenerateText.chanceOperation = "Female name w/last" vArrayGenerateText.arrayLength = 1 RGB Color Node Connections: vArrayGenerateText.chanceOperation = "rgb" vArrayGenerateText.arrayLength = 12 IPv4 Node Connections: vArrayGenerateText.chanceOperation = "ipv4" vArrayGenerateText.arrayLength = 1
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayGenerateText.png').default} alt="vArrayGenerateText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Generate Random →  | Integer | `2.0` | — |
+| Array length | Integer | `1` | — |
+| Seed | Float | `0` | — |
+| line1Separator | Float | `—` | — |
+| Select Mode →  | Integer | `0.0` | — |
+
+<details>
+<summary>+8 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Character Count | Integer | `10` | — |
+| Word Count | Integer | `5` | — |
+| Sentence Count | Integer | `1` | — |
+| Paragraph Count | Integer | `1` | — |
+| line2Separator | Float | `—` | — |
+| Letter Case | Integer | `NONE` | — |
+| Show Input | Integer | `1.0` | — |
+| ScriptVal Text | ScriptVal | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayGenerateText.Output -> vArrayTextWrap.Array
+    vArrayTextWrap.Text -> vTextViewer.Input
+```
+
+</TabItem>
+<TabItem value="example-2" label="Example 2">
+
+```
+vArrayGenerateText.Output -> vArrayViewer.Text
+```
+
+</TabItem>
+<TabItem value="example-3" label="Example 3">
+
+```
+vArrayGenerateText.Output -> vArrayViewer.Text
+```
+
+</TabItem>
+<TabItem value="example-4" label="Example 4">
+
+```
+vArrayGenerateText.OutputValData -> vArrayViewer.Text
+```
+
+</TabItem>
+<TabItem value="example-5" label="Example 5">
+
+```
+vArrayGenerateText.OutputValData -> vArrayViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayTextWrap">vArrayTextWrap</a>
+</div>
+
+{/*
+Generated page — node: vArrayGenerateText (Array/Create).
+Source: fuse vArrayGenerateText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

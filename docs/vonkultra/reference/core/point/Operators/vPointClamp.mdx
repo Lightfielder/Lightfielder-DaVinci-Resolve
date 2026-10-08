@@ -1,0 +1,44 @@
+---
+sidebar_position: 3
+title: vPointClamp
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vPointClamp
+
+Clamp a Fusion Point object to specific boundaries This acts as a hard limiter on the range of numbers that can pass through the Point control. Numbers that exist below the minimum range, or above the maximum range are clipped to those boundaries.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Point</span>
+  <span className="node-badge">Point</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/point/vPointClamp.png').default} alt="vPointClamp node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Point | Point | `—` | — |
+| Minimum | Float | `0` | — |
+| Maximum | Float | `1.0` | — |
+| Show Input | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vPointAbsolute">vPointAbsolute</a>
+  <a className="node-chip" href="./vPointAdd">vPointAdd</a>
+  <a className="node-chip" href="./vPointDivide">vPointDivide</a>
+  <a className="node-chip" href="./vPointMix">vPointMix</a>
+</div>
+
+{/*
+Generated page — node: vPointClamp (Core/Point/Operators).
+Source: fuse vPointClamp.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

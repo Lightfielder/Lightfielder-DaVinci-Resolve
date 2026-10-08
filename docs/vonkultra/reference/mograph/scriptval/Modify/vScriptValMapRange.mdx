@@ -1,0 +1,70 @@
+---
+sidebar_position: 8
+title: vScriptValMapRange
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValMapRange
+
+Apply range mapping operations to an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValMapRange.png').default} alt="vScriptValMapRange node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| OldMin | Float | `-10` | — |
+| OldMax | Float | `10` | — |
+| line2Separator | Float | `—` | — |
+| Mode Select  | Integer | `-1 - 1` | — |
+| NewMin | Float | `-10` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| NewMax | Float | `10` | — |
+| line3Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValUnPacker.ScriptVal1 -> vScriptValMapRange.ScriptVal
+    vScriptValMapRange.Output -> vScriptValPacker.ScriptVal
+    vScriptValPacker.ScriptVal -> vScriptValViewer.ScriptVal
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValUnPacker">vScriptValUnPacker</a>
+  <a className="node-chip" href="./vScriptValPacker">vScriptValPacker</a>
+</div>
+
+{/*
+Generated page — node: vScriptValMapRange (ScriptVal/Modify).
+Source: fuse vScriptValMapRange.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

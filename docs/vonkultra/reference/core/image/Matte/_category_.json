@@ -1,0 +1,8 @@
+{
+  "label": "Matte",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Alpha, matte, and channel data."
+  }
+}

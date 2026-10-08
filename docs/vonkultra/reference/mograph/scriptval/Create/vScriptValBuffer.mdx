@@ -1,0 +1,60 @@
+---
+sidebar_position: 1
+title: vScriptValBuffer
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValBuffer
+
+FIFO (first in first out) in an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValBuffer.png').default} alt="vScriptValBuffer node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array Length (min 2) | Integer | `2` | — |
+| Low | Float | `-1` | — |
+| High | Float | `1` | — |
+| Offset Range | Float | `0.0` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValBuffer.Low = 1
+    vScriptValBuffer.High = 10
+    vScriptValBuffer.Output -> vScriptValViewer.ScriptVal
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValCircularPoints">vScriptValCircularPoints</a>
+  <a className="node-chip" href="./vScriptValCreate">vScriptValCreate</a>
+  <a className="node-chip" href="./vScriptValCreateAsset">vScriptValCreateAsset</a>
+  <a className="node-chip" href="./vScriptValCreateAttractorPoints">vScriptValCreateAttractorPoints</a>
+</div>
+
+{/*
+Generated page — node: vScriptValBuffer (ScriptVal/Create).
+Source: fuse vScriptValBuffer.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

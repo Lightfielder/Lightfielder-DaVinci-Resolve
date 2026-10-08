@@ -1,0 +1,41 @@
+---
+sidebar_position: 7
+title: vFileSystemFileExists
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vFileSystemFileExists
+
+Checks if a file exists This node reads a filepath defined in the "Text" field and checks if the document exists on disk. The output is the number 0 if the file does not exist, and the number 1 if the file does exist. If you want to connect this node to a Switch node's "Which" field, you will have to use a vNumberAdd node to offset the value up by one to go from a 0-1 range to a 1-2 range.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / FileSystem</span>
+  <span className="node-badge">FileSystem</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/filesystem/vFileSystemFileExists.png').default} alt="vFileSystemFileExists node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vFileSystemChmod">vFileSystemChmod</a>
+  <a className="node-chip" href="./vFileSystemColorTags">vFileSystemColorTags</a>
+  <a className="node-chip" href="./vFileSystemCreateDir">vFileSystemCreateDir</a>
+  <a className="node-chip" href="./vFileSystemDirExists">vFileSystemDirExists</a>
+</div>
+
+{/*
+Generated page — node: vFileSystemFileExists (Core/FileSystem/Utility).
+Source: fuse vFileSystemFileExists.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

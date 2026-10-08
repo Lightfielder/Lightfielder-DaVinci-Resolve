@@ -1,0 +1,76 @@
+---
+sidebar_position: 4
+title: vScriptValDisplaceValues
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValDisplaceValues
+
+Displace XYZ positions using noise with spherical falloff.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValDisplaceValues.png').default} alt="vScriptValDisplaceValues node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Nosie Scale | Float | `0` | — |
+| Nosie Rate | Float | `0.001` | — |
+| Amplitude | Float | `0` | — |
+| line1Separator | Float | `—` | — |
+| FallOff Sphere X | Float | `0` | — |
+
+<details>
+<summary>+8 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| FallOff Sphere Y | Float | `0` | — |
+| FallOff Sphere Z | Float | `0` | — |
+| FallOff Radius | Float | `0` | — |
+| FallOff Tightness | Float | `0.1` | — |
+| Invert falloff | Integer | `0.0` | — |
+| line2Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValCircularPoints.Output -> vScriptValDisplaceValues.ScriptVal
+    vScriptValDisplaceValues.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vScriptValCircularPoints">vScriptValCircularPoints</a>
+  <a className="node-chip" href="./vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValDisplaceValues (ScriptVal/Modify).
+Source: fuse vScriptValDisplaceValues.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

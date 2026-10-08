@@ -1,0 +1,59 @@
+---
+sidebar_position: 22
+title: vJSONCreateParametricCurve
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONCreateParametricCurve
+
+Generate points from parametric expressions.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONCreateParametricCurve.png').default} alt="vJSONCreateParametricCurve node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X(t) | Text | `—` | — |
+| Y(t) | Text | `—` | — |
+| Z(t) | Text | `—` | — |
+| T Min | Float | `0` | — |
+| T Max | Float | `2 * math.pi` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Sample Count | Integer | `360` | — |
+| Scale | Float | `1` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONBuffer">vJSONBuffer</a>
+  <a className="node-chip" href="./vJSONCircularPoints">vJSONCircularPoints</a>
+  <a className="node-chip" href="./vJSONCreate">vJSONCreate</a>
+  <a className="node-chip" href="./vJSONCreateAsset">vJSONCreateAsset</a>
+</div>
+
+{/*
+Generated page — node: vJSONCreateParametricCurve (JSON/Create).
+Source: fuse vJSONCreateParametricCurve.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

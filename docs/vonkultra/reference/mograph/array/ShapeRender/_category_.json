@@ -1,0 +1,8 @@
+{
+  "label": "ShapeRender",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Draw dots, lines, shapes, and glyphs from points."
+  }
+}

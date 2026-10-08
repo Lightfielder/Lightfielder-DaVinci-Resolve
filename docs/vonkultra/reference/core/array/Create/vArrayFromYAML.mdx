@@ -1,0 +1,41 @@
+---
+sidebar_position: 8
+title: vArrayFromYAML
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayFromYAML
+
+Creates a JSON array from YAML Technology Note: [YAML](https://yaml.org/) is used as part of Film & TV production lens metadata workflows by Cine lenses with sensors and encoders like the [Cooke Optics /i Technology](https://cookeoptics.com/i-technology/) metadata system. YAML metadata exchange is also starting to be used by other Cine lens manufacturers, in match-moving and tracking packages like [SynthEyes](https://www.ssontech.com/) and PFTrack, and as part of data exchange approaches like [OpenTimelineIO](https://github.com/reinecke/otio-cookelensmetadata), too. Blackmagic BRAW media filmed on a [BMD URSA Mini Pro 12K](https://www.blackmagicdesign.com/products/blackmagicursaminipro) camera with a Cooke Optics PL-mount lens is capable of holding this YAML metadata recorded lens information internally. This is useful for supporting better data interchange between VP (Virtual Production) onset ICVFX (In-Camera VFX) departments and subsequent post-production workflows carried out by external vendors.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Array</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/array/vArrayFromYAML.png').default} alt="vArrayFromYAML node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayFromCSV">vArrayFromCSV</a>
+  <a className="node-chip" href="./vArrayFromDataWindow">vArrayFromDataWindow</a>
+  <a className="node-chip" href="./vArrayFromJSON">vArrayFromJSON</a>
+  <a className="node-chip" href="./vArrayFromLuaTable">vArrayFromLuaTable</a>
+</div>
+
+{/*
+Generated page — node: vArrayFromYAML (Core/Array/Create).
+Source: fuse vArrayFromYAML.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

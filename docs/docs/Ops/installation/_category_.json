@@ -1,0 +1,12 @@
+{
+  "label": "Installation",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Install Ops",
+    "slug": "/Ops/installation",
+    "description": "Deploy Lightfielder Operators and its Python dependencies."
+  }
+}

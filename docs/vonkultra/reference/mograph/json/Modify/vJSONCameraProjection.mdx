@@ -1,0 +1,79 @@
+---
+sidebar_position: 2
+title: vJSONCameraProjection
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONCameraProjection
+
+Transforms arrays using a perspective projection matrix
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONCameraProjection.png').default} alt="vJSONCameraProjection node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `1.0` | — |
+| Rotation Order | Float | ` XYZ ` | — |
+| X Rotation | Float | `—` | — |
+
+<details>
+<summary>+13 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| Lock X/Y | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+| Y Scale | Float | `1.0` | — |
+| Field of view | Float | `90.0` | — |
+| Screen aspect ratio | Float | `16 / 9` | — |
+| Near clipping plane | Float | `0.1` | — |
+| Far clipping plane | Float | `1000` | — |
+| X Shear | Float | `0.0` | — |
+| Y Shear | Float | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONFromXYZ.Points -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONFromXYZ">vJSONFromXYZ</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONCameraProjection (JSON/Modify).
+Source: fuse vJSONCameraProjection.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,8 @@
+{
+  "label": "Subtitle",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Subtitle and caption text."
+  }
+}

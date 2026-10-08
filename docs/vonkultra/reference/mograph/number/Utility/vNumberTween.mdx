@@ -1,0 +1,75 @@
+---
+sidebar_position: 3
+title: vNumberTween
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberTween
+
+Tween numbers
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberTween.png').default} alt="vNumberTween node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| START AT FRAME | Integer | `0` | — |
+| Ease Function | Integer | `15` | — |
+| Custom BackOut Strength | Float | `1` | — |
+| DURATION | Integer | `50` | — |
+| SPEED | Float | `1` | — |
+
+<details>
+<summary>+10 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line1Separator | Float | `—` | — |
+| Activate BACK TO | Integer | `0.0` | — |
+| BACK TO DELAY TIME | Integer | `20` | — |
+| line2Separator | Float | `—` | — |
+| NumberStart | Float | `0` | — |
+| NumberEnd | Float | `0` | — |
+| NumberAfter | Float | `0` | — |
+| Do Loops | Integer | `1.0` | — |
+| Number of Loops | Integer | `1` | — |
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+NumberCreate1.Output -> vNumberTween.NumberStart
+    NumberCreate1.Output -> vNumberTween.NumberEnd
+    vNumberTween.Number -> vNumberViewer.Number1
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vNumberMaterialEasing">vNumberMaterialEasing</a>
+  <a className="node-chip" href="./vNumberSmootherStep">vNumberSmootherStep</a>
+  <a className="node-chip" href="./vNumberWave">vNumberWave</a>
+</div>
+
+{/*
+Generated page — node: vNumberTween (Number/Utility).
+Source: fuse vNumberTween.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

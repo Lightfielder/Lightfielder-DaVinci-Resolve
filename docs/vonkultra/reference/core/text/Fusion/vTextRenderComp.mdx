@@ -1,0 +1,55 @@
+---
+sidebar_position: 5
+title: vTextRenderComp
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextRenderComp
+
+Launches a command-line Fusion Render Node based .comp or .dfq process via popen This node currently works on macOS and Linux. Windows support is a WIP task that is yet to be completed. The Fusion composite specified in the "Comp File" field will be batch rendered in the background by the Fusion Render Node executable. The "Render Mode" control allows you to adjust how the composite will be rendered. If "Current Frame" is selected, the parent comp's current frame will be passed to the Fusion Render Node program as the frame to render in the child comp. If "Comp Frame Range" is selected, the parent comp's Render Start - Render End frame range will be sent to the Fusion Render Node program as the frame range to render in the child comp. If "Comp Frame Range" is selected, the parent comp's Render Start - Render End frame range will be sent to the Fusion Render Node program as the frame range to render in the child comp. If "Custom Frame Range" is selected, a set of numerical input controls will be displayed. These controls allow you to manually drive the frame range used by the Fusion Render Node program on the fly. The "Render Node Version" control allows you to choose the exact Fusion Render Node executable version number you would like to launch when the .comp file is rendered. This allows you the flexibility to target a different Fusion Render node release than you are using to run the GUI session inside of Fusion Studio.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextRenderComp.png').default} alt="vTextRenderComp node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Comp File | Text | `—` | — |
+| Render Mode | Integer | `0` | — |
+| Start Frame | Integer | `0` | — |
+| End Frame | Integer | `0` | — |
+| Step | Integer | `1` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Render Node Version | Integer | `5` | — |
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextPopulateToolsByCategory">vTextPopulateToolsByCategory</a>
+  <a className="node-chip" href="./vTextPopulateToolsByCategory_ArraysCreate">vTextPopulateToolsByCategory_ArraysCreate</a>
+  <a className="node-chip" href="./vTextPopulateToolsByCategory_ArraysModify">vTextPopulateToolsByCategory_ArraysModify</a>
+  <a className="node-chip" href="./vTextPopulateToolsByCategory_x">vTextPopulateToolsByCategory_x</a>
+</div>
+
+{/*
+Generated page — node: vTextRenderComp (Core/Text/Fusion).
+Source: fuse vTextRenderComp.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

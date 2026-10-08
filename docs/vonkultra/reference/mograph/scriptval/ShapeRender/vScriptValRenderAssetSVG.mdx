@@ -1,0 +1,137 @@
+---
+sidebar_position: 5
+title: vScriptValRenderAssetSVG
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValRenderAssetSVG
+
+Export an SVG wireframe from a ScriptVal Lua table of vGeometry mesh data Example Node Connections:
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValRenderAssetSVG.png').default} alt="vScriptValRenderAssetSVG node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| View Mode | Integer | `0` | — |
+| Show Bounding Box | Integer | `0` | — |
+| SVG File | Text | `—` | — |
+| Field of View | Float | `90.0` | — |
+| Screen aspect ratio | Float | `16 / 9` | — |
+
+<details>
+<summary>+54 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Near clipping plane | Float | `0.1` | — |
+| Far clipping plane | Float | `1000` | — |
+| X Shear | Float | `0.0` | — |
+| Y Shear | Float | `0.0` | — |
+| Use Edge Data | Integer | `1` | — |
+| Show Lines | Integer | `1` | — |
+| Show Per-Object Color | Integer | `0.0` | — |
+| Show Dots | Integer | `1` | — |
+| Show Index | Integer | `0` | — |
+| Line Width | Float | `0.005` | — |
+| Dot Radius | Float | `0.0025` | — |
+| Separator_2 | Float | `—` | — |
+| Red | Float | `0.466` | — |
+| Green | Float | `0.847` | — |
+| Blue | Float | `0.588` | — |
+| Alpha | Float | `1.0` | — |
+| Dot Sides | Integer | `4` | — |
+| Dot Width | Float | `0.0` | — |
+| Hide Default Dots | Integer | `0` | — |
+| Hide Custom Dots | Integer | `0` | — |
+| Render Outline Dots | Integer | `0` | — |
+| Scale Dots | Float | `1` | — |
+| Separator_3 | Float | `—` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `1.0` | — |
+| Blue | Float | `0.56` | — |
+| Alpha | Float | `1.0` | — |
+| Text Size | Float | `0.02` | — |
+| Text Style | Float | `Bold` | — |
+| Separator_4 | Float | `—` | — |
+| Red | Float | `1.0` | — |
+| Green | Float | `1` | — |
+| Blue | Float | `1` | — |
+| Alpha | Float | `1.0` | — |
+| Separator_5 | Float | `—` | — |
+| Fade Color | Float | `0.1` | — |
+| Separator_6 | Float | `—` | — |
+| Filter | Float | `Gaussian` | — |
+| Soft Edge | Float | `0` | — |
+| Line Type | Float | `Solid` | — |
+| Join Type | Float | `2.0` | — |
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `1.0` | — |
+| Rotation Order | Float | ` XYZ ` | — |
+| X Rotation | Float | `—` | — |
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| Lock X/Y | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+| Y Scale | Float | `1.0` | — |
+| Input | Image | `—` | — |
+| vGeometry | ScriptVal | `—` | — |
+| ScriptVal Shape | ScriptVal | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValFromOBJ.ScriptValPoints -> vScriptValCreateAsset.ScriptValPoints
+    vScriptValFromOBJ.ScriptValEdges -> vScriptValCreateAsset.ScriptValEdges
+    vScriptValFromOBJ.ScriptValUVs -> vScriptValCreateAsset.ScriptValUVs
+    vScriptValFromOBJ.ScriptValUVEdges -> vScriptValCreateAsset.ScriptValEdges
+    vScriptValCreateAsset.Output -> vScriptValMergeAsset.ScriptVal1
+    vScriptValMergeAsset.Output -> vScriptValRenderAssetSVG.vGeometry
+    Background.Output -> vScriptValRenderAssetSVG.Input
+```
+
+</TabItem>
+<TabItem value="example-2" label="Example 2">
+
+```
+vMatrixCreateTRS.Output -> vScriptValLocatorAsset.Matrix
+    vScriptValLocatorAsset.Output -> vScriptValMergeAsset.ScriptVal
+    vScriptValMergeAsset.Output -> vScriptValRenderAssetSVG.vGeometry
+    Background.Output -> vScriptValRenderAssetSVG.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vScriptValFromOBJ">vScriptValFromOBJ</a>
+  <a className="node-chip" href="../Create/vScriptValCreateAsset">vScriptValCreateAsset</a>
+  <a className="node-chip" href="../Utility/vScriptValMergeAsset">vScriptValMergeAsset</a>
+  <a className="node-chip" href="../../Matrix/Create/vMatrixCreateTRS">vMatrixCreateTRS</a>
+  <a className="node-chip" href="../Create/vScriptValLocatorAsset">vScriptValLocatorAsset</a>
+</div>
+
+{/*
+Generated page — node: vScriptValRenderAssetSVG (ScriptVal/ShapeRender).
+Source: fuse vScriptValRenderAssetSVG.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

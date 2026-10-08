@@ -1,0 +1,8 @@
+{
+  "label": "Temporal",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Time-based effects, delays, and frame offsets."
+  }
+}

@@ -1,0 +1,75 @@
+---
+sidebar_position: 53
+title: vJSONPerlin3Noise
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONPerlin3Noise
+
+Perlin Noise function on array values
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONPerlin3Noise.png').default} alt="vJSONPerlin3Noise node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+| Noise Type | Integer | `Perlin` | — |
+| Time | Float | `1` | — |
+| Frequency | Float | `1` | — |
+| Scale | Float | `1` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Octaves | Float | `1` | — |
+| Persistence | Float | `0.5` | — |
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONCircularPoints.Output->  vJSONUnPacker.ArrayA
+    vJSONUnPacker.OutputArray -> vJSONPerlin3Noise.Input
+    vJSONPerlin3Noise.Array ->  vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONCircularPoints">vJSONCircularPoints</a>
+  <a className="node-chip" href="./vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONPerlin3Noise (JSON/Modify).
+Source: fuse vJSONPerlin3Noise.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

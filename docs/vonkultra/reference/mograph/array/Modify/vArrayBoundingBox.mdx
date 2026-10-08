@@ -1,0 +1,57 @@
+---
+sidebar_position: 1
+title: vArrayBoundingBox
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayBoundingBox
+
+Calculate a 3D, 2D, or 1D bounding box volume from an Array of XYZ/XY/X points
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayBoundingBox.png').default} alt="vArrayBoundingBox node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayFromOBJ.Points -> vArrayBoundingBox.ArrayA
+    vArrayBoundingBox.Points -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    vArrayBoundingBox.Edges -> vArrayShapeRender.ArrayEdge
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayFromOBJ">vArrayFromOBJ</a>
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayBoundingBox (Array/Modify).
+Source: fuse vArrayBoundingBox.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

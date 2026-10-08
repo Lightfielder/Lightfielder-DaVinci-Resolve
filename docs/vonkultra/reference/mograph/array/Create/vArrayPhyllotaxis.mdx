@@ -1,0 +1,58 @@
+---
+sidebar_position: 46
+title: vArrayPhyllotaxis
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPhyllotaxis
+
+Generate points on Phyllotaxis
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPhyllotaxis.png').default} alt="vArrayPhyllotaxis node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Count | Integer | `1` | — |
+| Scale | Float | `0.01` | — |
+| Rotation | Float | `0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPhyllotaxis.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayPhyllotaxis (Array/Create).
+Source: fuse vArrayPhyllotaxis.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

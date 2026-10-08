@@ -1,0 +1,8 @@
+{
+  "label": "Custom Data",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Attach and read custom data records."
+  }
+}

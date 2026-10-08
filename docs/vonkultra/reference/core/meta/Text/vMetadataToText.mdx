@@ -1,0 +1,41 @@
+---
+sidebar_position: 3
+title: vMetadataToText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vMetadataToText
+
+Creates a Fusion Text object from metadata This node is similar to the GetMetadata.fuse with the addition of a "Key" input connection on the node that accepts a Text data type. The "Key" field is used to specify the metadata record. An example of an image metadata record "Key" entry would be the Loader node added attribute of "Filename".
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Meta</span>
+  <span className="node-badge">Meta</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/meta/vMetadataToText.png').default} alt="vMetadataToText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Image | `—` | — |
+| Key | Text | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vMetadataFilename">vMetadataFilename</a>
+  <a className="node-chip" href="./vMetadataFromText">vMetadataFromText</a>
+</div>
+
+{/*
+Generated page — node: vMetadataToText (Core/Meta/Text).
+Source: fuse vMetadataToText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

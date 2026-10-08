@@ -1,0 +1,40 @@
+---
+sidebar_position: 1
+title: vBase64DecodeFromText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vBase64DecodeFromText
+
+Base64 decodes text from a Fusion Text object. A Base64 formatted block of text is converted back into plain ASCII text that can be passed downstream via a text data type. The "Text" field is used to specify a block of text that is currently Base64 encoded. The "Show Input" checkbox allows you to source the Text information from an external Text based data node connection.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Base64</span>
+  <span className="node-badge">Base64</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/base64/vBase64DecodeFromText.png').default} alt="vBase64DecodeFromText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vBase64DecodeImageFromFile">vBase64DecodeImageFromFile</a>
+  <a className="node-chip" href="./vBase64DecodeImageFromText">vBase64DecodeImageFromText</a>
+</div>
+
+{/*
+Generated page — node: vBase64DecodeFromText (Core/Base64/Decode).
+Source: fuse vBase64DecodeFromText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

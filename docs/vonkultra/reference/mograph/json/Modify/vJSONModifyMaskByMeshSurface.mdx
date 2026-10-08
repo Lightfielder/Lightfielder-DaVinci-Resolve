@@ -1,0 +1,67 @@
+---
+sidebar_position: 25
+title: vJSONModifyMaskByMeshSurface
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONModifyMaskByMeshSurface
+
+Keep only input points within a distance threshold of the OBJ mesh surface.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONModifyMaskByMeshSurface.png').default} alt="vJSONModifyMaskByMeshSurface node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Points | DATATYPE | `—` | — |
+| Scale File Units By | Float | `1` | — |
+| Max Distance | Float | `0.1` | — |
+| Min Distance | Float | `0.0` | — |
+| Invert Mask | Integer | `0` | — |
+
+<details>
+<summary>+12 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Mask Mode | Integer | `Hard` | — |
+| Falloff Distance | Float | `0.0` | — |
+| Weight Power | Float | `1.0` | — |
+| Min Output Weight | Float | `0.01` | — |
+| Append Weight As 4th Value | Integer | `0` | — |
+| Keep Input If Mesh Missing | Integer | `1` | — |
+| Output Position | Integer | `Original` | — |
+| Surface Offset | Float | `0.0` | — |
+| Mesh Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| OBJ Text | Text | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONBoundingBox">vJSONBoundingBox</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="./vJSONConvert2D_3D">vJSONConvert2D_3D</a>
+  <a className="node-chip" href="./vJSONDisplaceValues">vJSONDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vJSONModifyMaskByMeshSurface (JSON/Modify).
+Source: fuse vJSONModifyMaskByMeshSurface.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

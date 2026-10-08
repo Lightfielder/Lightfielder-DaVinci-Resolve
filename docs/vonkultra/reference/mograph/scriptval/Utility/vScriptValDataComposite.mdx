@@ -1,0 +1,46 @@
+---
+sidebar_position: 3
+title: vScriptValDataComposite
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValDataComposite
+
+Passes an image through unchanged while forcing one or two connected ScriptVal data branches to cook every frame the image is required — even though their values never touch the pixels. Use it to make a side-effect node (e.g. a ScriptVal writer) execute on every frame instead of only while its own Viewer is focused.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValDataComposite.png').default} alt="vScriptValDataComposite node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Force Data Cook | Integer | `1` | — |
+| Image | Image | `—` | — |
+| Data A | ScriptVal | `—` | — |
+| Data B | ScriptVal | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValAppend">vScriptValAppend</a>
+  <a className="node-chip" href="./vScriptValAppendGroup">vScriptValAppendGroup</a>
+  <a className="node-chip" href="./vScriptValFontArray">vScriptValFontArray</a>
+  <a className="node-chip" href="./vScriptValInfo">vScriptValInfo</a>
+</div>
+
+{/*
+Generated page — node: vScriptValDataComposite (ScriptVal/Utility).
+Source: fuse vScriptValDataComposite.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

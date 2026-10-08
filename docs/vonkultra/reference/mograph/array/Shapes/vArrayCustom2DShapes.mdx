@@ -1,0 +1,79 @@
+---
+sidebar_position: 1
+title: vArrayCustom2DShapes
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayCustom2DShapes
+
+Dynamically create 2D Shape elements
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayCustom2DShapes.png').default} alt="vArrayCustom2DShapes node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Shape Type | Float | `Ticks` | — |
+| Shape Selector | Integer | `1` | — |
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `—` | — |
+
+<details>
+<summary>+6 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Rotation | Float | `—` | — |
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| XY Scale | Float | `0.05` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal1 | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnCircle1.Output -> vArrayUnPacker.ArrayB
+    vArrayUnPacker.OutputArray -> vArraySin.ArrayA 
+    vArraySin.Output -> vArrayPacker.ArrayA
+    vArrayPacker.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    vArrayCustom2DShapes.Output -> vArrayShapeRender.ArrayShape
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="../Modify/vArraySin">vArraySin</a>
+  <a className="node-chip" href="../Modify/vArrayPacker">vArrayPacker</a>
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayCustom2DShapes (Array/Shapes).
+Source: fuse vArrayCustom2DShapes.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

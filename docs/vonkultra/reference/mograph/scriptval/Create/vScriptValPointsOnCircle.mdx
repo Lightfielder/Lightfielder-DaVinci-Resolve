@@ -1,0 +1,68 @@
+---
+sidebar_position: 46
+title: vScriptValPointsOnCircle
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValPointsOnCircle
+
+Generate points on a circle
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValPointsOnCircle.png').default} alt="vScriptValPointsOnCircle node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Radius | Float | `0.1` | — |
+| Round Segments | Integer | `3` | — |
+| Rounds | Float | `0` | — |
+| Point Offset | Float | `0` | — |
+| Rotate Amount | Float | `0` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValPointsOnCircle.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValPointsOnCircle (ScriptVal/Create).
+Source: fuse vScriptValPointsOnCircle.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

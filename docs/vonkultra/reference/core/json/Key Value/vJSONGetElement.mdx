@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+title: vJSONGetElement
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONGetElement
+
+Gets the element of a JSON array The "Index" control is used to access individual entries from a JSON array type of object. The node expects a text based JSON array object as the input. The output from the vJSONGetElement node is a text based data type. It is possible to translate the text based output from this node into numerical values via the vNumberFromText node. The first item is accessed at Index position 1.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / JSON</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/json/vJSONGetElement.png').default} alt="vJSONGetElement node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+| Index | Integer | `1` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONGet">vJSONGet</a>
+  <a className="node-chip" href="./vJSONSet">vJSONSet</a>
+</div>
+
+{/*
+Generated page — node: vJSONGetElement (Core/JSON/Key Value).
+Source: fuse vJSONGetElement.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

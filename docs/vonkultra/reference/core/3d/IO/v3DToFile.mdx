@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+title: v3DToFile
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# v3DToFile
+
+Writes PointCloud3D data from the Fusion 3D node-graph to a file. Connect a PointCloud3D node's output connection directly to the v3DToFile node: PointCloud3D.Output -> v3DToFile.Input The "Input 3D" connection accepts a wireless link style drag-and-drop attachment of a PointCloud3D node. Clicking the "Show 3D Source" button will select the connected upstream node in the Nodes view, which displays the node in the Inspector view. The "Point Cloud Format" ComboControl allows you to select the export format used. Options include: "XYZ ASCII (.xyz)", "PLY ASCII (.ply)", and "PIXAR USDA ASCII (.usda)". The "Filename" text field supports Vonk vText based connections. This allows you to dynamically generate a filename via data node approaches. The Filename field contents can include relative PathMap values like "Comp:/" that will be expanded at render time. If a sub-folder is specified in the filename field, and it is missing at render time, the sub-folders will be re-created automatically when the file is saved to disk. This is helpful if you want to use per--timeline-frame numbered folders in the output filepath.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / 3D</span>
+  <span className="node-badge">3D</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/3d/v3DToFile.png').default} alt="v3DToFile node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input 3D | DataType3D | `—` | — |
+| Show 3D Source | Float | `—` | — |
+| Point Cloud Format | Dropdown | `0` | — |
+| Filename | Text | `—` | — |
+| Show 3D Input | Integer | `1.0` | — |
+
+<details>
+<summary>+1 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show File Input | Integer | `0.0` | — |
+
+</details>
+
+
+
+{/*
+Generated page — node: v3DToFile (Core/3D/IO).
+Source: fuse v3DToFile.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,8 @@
+{
+  "label": "Trigonometry",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Trigonometric functions and angle math."
+  }
+}

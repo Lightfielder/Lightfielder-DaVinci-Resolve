@@ -1,0 +1,8 @@
+{
+  "label": "Core",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "reference/core/index"
+  }
+}

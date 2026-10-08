@@ -1,0 +1,53 @@
+---
+sidebar_position: 2
+title: vNumberSmootherStep
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberSmootherStep
+
+Performs a interpolate smoothly between two input values, ensuring smooth acceleration and deceleration
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberSmootherStep.png').default} alt="vNumberSmootherStep node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Min | Float | `0` | — |
+| Max | Float | `0` | — |
+| Weight | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vNumberSmootherStep.Output -> vNumberDegreeToVector.Degree
+    vNumberDegreeToVector.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Trigonometry/vNumberDegreeToVector">vNumberDegreeToVector</a>
+</div>
+
+{/*
+Generated page — node: vNumberSmootherStep (Number/Utility).
+Source: fuse vNumberSmootherStep.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

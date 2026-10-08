@@ -1,0 +1,51 @@
+---
+sidebar_position: 2
+title: vNumberDegreeToVector
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberDegreeToVector
+
+Calculates a vector (x and y) based on an angle in degrees
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/number/vNumberDegreeToVector.png').default} alt="vNumberDegreeToVector node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Degree | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vNumberCompCurrentTime.Output -> vNumberDegreeToVector.Degree
+    vNumberDegreeToVector.Output -> vJSONViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vNumberCircleCoordinates">vNumberCircleCoordinates</a>
+</div>
+
+{/*
+Generated page — node: vNumberDegreeToVector (Number/Trigonometry).
+Source: fuse vNumberDegreeToVector.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

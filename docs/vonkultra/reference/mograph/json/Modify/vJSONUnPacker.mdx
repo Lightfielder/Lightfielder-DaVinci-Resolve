@@ -1,0 +1,74 @@
+---
+sidebar_position: 65
+title: vJSONUnPacker
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONUnPacker
+
+Unpack Operations on an Array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONUnPacker.png').default} alt="vJSONUnPacker node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Custom Group Size | Integer | `1` | — |
+| 1 Array | Float | `—` | — |
+| 2 Arrays | Float | `—` | — |
+| 3 Arrays | Float | `—` | — |
+| 4 Arrays | Float | `—` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnCircle.Output -> vJSONUnPacker.ArrayB
+    vJSONUnPacker.OutputArray -> vJSONSin.ArrayA
+    vJSONSin.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONPointsOnCircle">vJSONPointsOnCircle</a>
+  <a className="node-chip" href="./vJSONSin">vJSONSin</a>
+  <a className="node-chip" href="./vJSONPacker">vJSONPacker</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONUnPacker (JSON/Modify).
+Source: fuse vJSONUnPacker.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,82 @@
+---
+sidebar_position: 66
+title: vScriptValWave
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValWave
+
+Animates an Array Wave options include: - Line - Saw - Tri - Square - Sine - Noise
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValWave.png').default} alt="vScriptValWave node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Wave | FuID | `—` | — |
+| Start At Frame | Integer | `0` | — |
+| Period | Float | `5.0` | — |
+| Strength | Float | `1.0` | — |
+| line4Separator | Float | `—` | — |
+
+<details>
+<summary>+14 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Delay | Float | `0.0` | — |
+| Offset | Float | `—` | — |
+| Repeat Limit | Integer | `1.0` | — |
+| Limit | Float | `0.0` | — |
+| Reverse | Float | `0.0` | — |
+| line1Separator | Float | `—` | — |
+| Falloff | Float | `0.0` | — |
+| Point Delay | Float | `0.0` | — |
+| X Position | Float | `0.0` | — |
+| Y Position | Float | `0.0` | — |
+| Z Position | Float | `0.0` | — |
+| Custom Value | Float | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+| ScriptVal | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValPointsOnGrid.Output -> vScriptValWave.ScriptVal
+    vScriptValWave.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vScriptValPointsOnGrid">vScriptValPointsOnGrid</a>
+  <a className="node-chip" href="./vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValWave (ScriptVal/Modify).
+Source: fuse vScriptValWave.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+title: vScriptValTemporalSmooth
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValTemporalSmooth
+
+Temporal low-pass smoothing using previous frame data.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValTemporalSmooth.png').default} alt="vScriptValTemporalSmooth node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Smooth Factor | Float | `0.2` | — |
+| Frame Step | Integer | `1` | — |
+| Fallback To Current | Integer | `1` | — |
+| Input | DATATYPE | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValTemporalDelta">vScriptValTemporalDelta</a>
+  <a className="node-chip" href="./vScriptValTemporalSolverStep">vScriptValTemporalSolverStep</a>
+  <a className="node-chip" href="./vScriptValTemporalTimeShiftArray">vScriptValTemporalTimeShiftArray</a>
+  <a className="node-chip" href="./vScriptValTemporalTrailFromPoints">vScriptValTemporalTrailFromPoints</a>
+</div>
+
+{/*
+Generated page — node: vScriptValTemporalSmooth (ScriptVal/Temporal).
+Source: fuse vScriptValTemporalSmooth.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

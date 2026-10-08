@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+title: vJSONGet
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONGet
+
+Gets the value of a JSON key The "Key" text-field is used to select and isolate a specific entry from a JSON file. The output from the vJSONGet node is a text based data type. You can stack several vJSONGet nodes in a row to browse upwards in the hierarchy of a nested JSON structure. It is possible to translate this text based output from this node into numerical values via the vNumberFromText node. This is a useful step if you want to perform math operations downstream of this node, or if you need to connect a numerical value to an Inspector based attribute on another node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / JSON</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/json/vJSONGet.png').default} alt="vJSONGet node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+| Key | Text | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Get Key | Float | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONGetElement">vJSONGetElement</a>
+  <a className="node-chip" href="./vJSONSet">vJSONSet</a>
+</div>
+
+{/*
+Generated page — node: vJSONGet (Core/JSON/Key Value).
+Source: fuse vJSONGet.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

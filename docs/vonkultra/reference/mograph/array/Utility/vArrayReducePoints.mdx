@@ -1,0 +1,70 @@
+---
+sidebar_position: 9
+title: vArrayReducePoints
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayReducePoints
+
+Reduce points Operations on an Array Decimation Method options include: - Grid-Based - Random Sampling - Curvature-Based (SLOW)
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayReducePoints.png').default} alt="vArrayReducePoints node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Decimation Method | Integer | `Grid-Based` | — |
+| Grid Size | Float | `0.01` | — |
+| Target Count | Float | `3.0` | — |
+| Neighborhood Size | Float | `0.2` | — |
+| line4Separator | Float | `—` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnSphere.Output -> vArrayReducePoints.ArrayA
+    vArrayReducePoints.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayPointsOnSphere">vArrayPointsOnSphere</a>
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayReducePoints (Array/Utility).
+Source: fuse vArrayReducePoints.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

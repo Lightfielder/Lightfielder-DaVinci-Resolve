@@ -1,0 +1,8 @@
+{
+  "label": "Encode",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Encode data into another format."
+  }
+}

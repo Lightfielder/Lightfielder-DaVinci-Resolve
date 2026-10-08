@@ -1,0 +1,8 @@
+{
+  "label": "Font",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Font metrics and font list operations."
+  }
+}

@@ -1,0 +1,69 @@
+---
+sidebar_position: 4
+title: vArrayLogicBetween
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayLogicBetween
+
+Logic Between Operations on an Array. If value of array is between min and max then the value is 1 else 0
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayLogicBetween.png').default} alt="vArrayLogicBetween node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line1Separator | Float | `—` | — |
+| Min | Float | `0` | — |
+| Max | Float | `0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+<details>
+<summary>+1 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayUnPacker.OutputArray -> vArrayLogicBetween.ArrayA 
+    vArrayLogicBetween.Output -> vArraySortByDistance.Array
+    ArraySortByDistance.Output -> vArrayPacker.ArrayA
+    vArrayPacker.Output -> vArrayViewer.Text
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="../Modify/vArraySortByDistance">vArraySortByDistance</a>
+  <a className="node-chip" href="../Modify/vArrayPacker">vArrayPacker</a>
+</div>
+
+{/*
+Generated page — node: vArrayLogicBetween (Array/Logic).
+Source: fuse vArrayLogicBetween.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

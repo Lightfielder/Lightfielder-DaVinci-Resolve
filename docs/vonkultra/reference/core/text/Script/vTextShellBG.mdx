@@ -1,0 +1,42 @@
+---
+sidebar_position: 6
+title: vTextShellBG
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextShellBG
+
+Launch a command-line shell task in the background via `bmd.executebg()` The "Wait" checkbox can be used to make the node act in a blocking fashion that will pause the rendering of this branch of the comp until the launched process has completed and exited. Note: Make sure to write in the absolute filepath for the executable program you want to run. You can discover this by typing "which SomeProgramName" into the Terminal window on macOS/Linux: which open /usr/bin/open Also, the vTextShellBG node is used to launch a program with its command line arguments specified. It is not a full terminal environment so shell redirection approaches and expanding environment variable tokens in the command string are not supported. If you need those extended command line scripting features, write out a temporary .bat/.sh/.command file to disk then use vTextShellBG to run the script.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextShellBG.png').default} alt="vTextShellBG node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| File | Text | `—` | — |
+| Wait | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextDoAction">vTextDoAction</a>
+  <a className="node-chip" href="./vTextDoString">vTextDoString</a>
+  <a className="node-chip" href="./vTextExecute">vTextExecute</a>
+  <a className="node-chip" href="./vTextProcessOpen">vTextProcessOpen</a>
+</div>
+
+{/*
+Generated page — node: vTextShellBG (Core/Text/Script).
+Source: fuse vTextShellBG.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

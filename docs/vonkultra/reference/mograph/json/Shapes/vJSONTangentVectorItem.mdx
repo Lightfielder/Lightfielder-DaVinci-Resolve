@@ -1,0 +1,81 @@
+---
+sidebar_position: 6
+title: vJSONTangentVectorItem
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONTangentVectorItem
+
+Create a vector that is tangent to a curve or surface at a given point
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONTangentVectorItem.png').default} alt="vJSONTangentVectorItem node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Max angle | Integer | `0` | — |
+| Line length | Float | `0` | — |
+| Scale Factor | Float | `1` | — |
+| line1Separator | Float | `—` | — |
+| Amplitude | Float | `0` | — |
+
+<details>
+<summary>+12 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Frequency | Float | `0` | — |
+| Phase | Float | `0` | — |
+| Damping Mode | Integer | `--` | — |
+| Damping | Float | `0` | — |
+| line2Separator | Float | `—` | — |
+| Node Sides | Float | `6` | — |
+| Node Size | Float | `0.01` | — |
+| Node Rotation | Float | `0` | — |
+| line3Separator | Float | `—` | — |
+| Time | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+| JSON Path | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONLogarithmicSpiral.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONTangentVectorItem.JSON_Path
+    vJSONTangentVectorItem.Output -> vJSONShapeRender.JSONCustomShape
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONLogarithmicSpiral">vJSONLogarithmicSpiral</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONTangentVectorItem (JSON/Shapes).
+Source: fuse vJSONTangentVectorItem.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

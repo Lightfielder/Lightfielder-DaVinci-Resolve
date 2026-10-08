@@ -1,0 +1,8 @@
+{
+  "label": "Comp",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Composition and host metadata."
+  }
+}

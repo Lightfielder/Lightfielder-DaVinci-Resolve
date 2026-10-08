@@ -1,0 +1,30 @@
+---
+title: "Kartaverse Vonk Ultra"
+sidebar_label: "Overview"
+sidebar_position: 0
+description: "A free, open-source (GPL-3.0) node toolset for Blackmagic Fusion — build data-driven motion graphics without writing code."
+---
+
+import VonkUltraHome from '@site/src/components/VonkUltraHome';
+
+<VonkUltraHome />
+
+## Documentation map
+
+- [Getting Started](/VonkUltra/getting-started/introduction) — install Vonk Ultra from Reactor and build your first comp.
+- [Node Reference](/VonkUltra/reference) — every node, organized by data type across the Core and Mograph families.
+- [Guides](/VonkUltra/guides/overview) — task-oriented walkthroughs that cross data-type boundaries.
+- [Tutorials](/VonkUltra/tutorials/video-tutorials) — video tutorials, comp and tool scripts, and worked examples.
+
+### Two tool families
+
+Node names tell you which family you are looking at:
+
+- **Core** — the general-purpose Vonk toolset (3D, Array, Base64, CBOR, Color, FileSystem, Gradient, Guide, Image, JSON, Matrix, Meta, MTLX, Number, Point, ScriptVal, Shape, Text, USD, Vector, YAML). This is the original toolset.
+- **Mograph** — a newer, more focused set of `vArray`/`vJSON`/`vMatrix`/etc. nodes purpose-built for motion-graphics pipelines (Array, HTML, JSON, Matrix, Number, ScriptVal).
+
+Every node is prefixed by the data type it works with — `vArray*`, `vJSON*`, `vMatrix*`, `vText*` — which is also how you would search for it in Fusion's own **Select Tool** dialog (Shift+Spacebar). That naming convention is why the reference is organized by data type first.
+
+:::note Migration in progress
+This reference was migrated from the [Vonk Ultra Docsify documentation](https://kartaverse.github.io/VonkUltra/#/), which remains the canonical source until the new site reaches content parity.
+:::

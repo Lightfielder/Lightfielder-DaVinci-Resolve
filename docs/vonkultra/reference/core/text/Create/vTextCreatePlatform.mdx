@@ -1,0 +1,44 @@
+---
+sidebar_position: 6
+title: vTextCreatePlatform
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextCreatePlatform
+
+Creates a unique Fusion Text object per OS platform This node provides a series of text fields that allow you to enter three different string values. The correct string that matches the current operating system platform will be returned when the comp is rendered. This node is a handy way to define the correct parameters to use with a vTextSubFormat or ProcessOpen node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextCreatePlatform.png').default} alt="vTextCreatePlatform node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| macOS | Text | `—` | — |
+| Windows | Text | `—` | — |
+| Linux | Text | `—` | — |
+| Expand PathMaps | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextCreate">vTextCreate</a>
+  <a className="node-chip" href="./vTextCreateArch">vTextCreateArch</a>
+  <a className="node-chip" href="./vTextCreateBrowse">vTextCreateBrowse</a>
+  <a className="node-chip" href="./vTextCreateMultiline">vTextCreateMultiline</a>
+</div>
+
+{/*
+Generated page — node: vTextCreatePlatform (Core/Text/Create).
+Source: fuse vTextCreatePlatform.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

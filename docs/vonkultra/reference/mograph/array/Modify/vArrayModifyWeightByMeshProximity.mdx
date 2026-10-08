@@ -1,0 +1,60 @@
+---
+sidebar_position: 49
+title: vArrayModifyWeightByMeshProximity
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayModifyWeightByMeshProximity
+
+Output a 1D weight per input point based on distance to the closest point on an OBJ mesh surface.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayModifyWeightByMeshProximity.png').default} alt="vArrayModifyWeightByMeshProximity node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Points | DATATYPE | `—` | — |
+| Mesh Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| OBJ Text | Text | `—` | — |
+
+<details>
+<summary>+5 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Scale File Units By | Float | `1` | — |
+| Max Distance | Float | `0.5` | — |
+| Falloff | Integer | `Linear` | — |
+| Invert Weight | Integer | `0` | — |
+| Project Amount | Float | `1` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayBoundingBox">vArrayBoundingBox</a>
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="./vArrayConvert2D_3D">vArrayConvert2D_3D</a>
+  <a className="node-chip" href="./vArrayDisplaceValues">vArrayDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vArrayModifyWeightByMeshProximity (Array/Modify).
+Source: fuse vArrayModifyWeightByMeshProximity.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

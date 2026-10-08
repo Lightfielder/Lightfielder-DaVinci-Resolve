@@ -1,0 +1,75 @@
+---
+sidebar_position: 60
+title: vArraySin
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArraySin
+
+Math Sin - Cos Operations on an Array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArraySin.png').default} alt="vArraySin node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Math Function | Integer | `Sin` | — |
+| Animation Speed | Float | `0` | — |
+| Frequency | Float | `0.1` | — |
+| Amplitude | Float | `0.01` | — |
+| Offset | Float | `0.0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| line4Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnCircle.Output -> vArrayUnPacker.ArrayB
+    vArrayUnPacker.OutputArray -> vArraySin.ArrayA 
+    vArraySin.Output -> vArrayPacker.ArrayA
+    vArrayPacker.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayPointsOnCircle">vArrayPointsOnCircle</a>
+  <a className="node-chip" href="./vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="./vArrayPacker">vArrayPacker</a>
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArraySin (Array/Modify).
+Source: fuse vArraySin.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

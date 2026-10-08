@@ -1,0 +1,53 @@
+---
+sidebar_position: 5
+title: vScriptValInfo
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValInfo
+
+Returns info of an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValInfo.png').default} alt="vScriptValInfo node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| ScriptVal | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValPointsOnCube.Output -> vScriptValUnPacker.ScriptVal
+    vScriptValUnPacker.ScriptVal1 -> vScriptValInfo.ScriptVal
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vScriptValPointsOnCube">vScriptValPointsOnCube</a>
+  <a className="node-chip" href="../Modify/vScriptValUnPacker">vScriptValUnPacker</a>
+</div>
+
+{/*
+Generated page — node: vScriptValInfo (ScriptVal/Utility).
+Source: fuse vScriptValInfo.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

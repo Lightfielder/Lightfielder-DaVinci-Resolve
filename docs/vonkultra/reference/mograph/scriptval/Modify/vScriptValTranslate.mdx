@@ -1,0 +1,77 @@
+---
+sidebar_position: 64
+title: vScriptValTranslate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValTranslate
+
+Transforms array positions
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValTranslate.png').default} alt="vScriptValTranslate node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `—` | — |
+| Lock X/Y | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Y Scale | Float | `1.0` | — |
+| ScriptVal | DATATYPE | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValPointsOnGrid.Output -> vScriptValUnPacker.ScriptVal
+    vScriptValUnPacker.ScriptVal1 -> vScriptValTranslate.ScriptVal
+    vScriptValTranslate.Output -> vScriptValPacker.ScriptVal
+    vScriptValPacker.ScriptVal -> vScriptValWave.ScriptVal
+    vScriptValWave.Output -> vScriptValCameraProjection.ScriptVal
+    vScriptValCameraProjection.Output -> vScriptValShapeRender.ScriptValPoint
+    Background.Output -> vScriptValShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vScriptValPointsOnGrid">vScriptValPointsOnGrid</a>
+  <a className="node-chip" href="./vScriptValUnPacker">vScriptValUnPacker</a>
+  <a className="node-chip" href="./vScriptValPacker">vScriptValPacker</a>
+  <a className="node-chip" href="./vScriptValWave">vScriptValWave</a>
+  <a className="node-chip" href="./vScriptValCameraProjection">vScriptValCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vScriptValShapeRender">vScriptValShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vScriptValTranslate (ScriptVal/Modify).
+Source: fuse vScriptValTranslate.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

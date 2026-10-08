@@ -1,0 +1,78 @@
+---
+sidebar_position: 1
+title: vArrayAccumulator
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayAccumulator
+
+Temporally concatenate array elements
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayAccumulator.png').default} alt="vArrayAccumulator node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | DATATYPE | `—` | — |
+| Start Frame | Integer | `0` | — |
+| End Frame | Integer | `0` | — |
+| Step | Float | `1` | — |
+| Offset X | Float | `0` | — |
+
+<details>
+<summary>+6 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Offset Y | Float | `0` | — |
+| Offset Z | Float | `0` | — |
+| Rotate X | Float | `0` | — |
+| Rotate Y | Float | `0` | — |
+| Rotate Z | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayCreateTextFont.Output -> vArrayAccumulator.ArrayA
+    vNumberCompRenderStart.Output -> vArrayAccumulator.StartFrame
+    vNumberCompRenderEnd.Output -> vArrayAccumulator.EndFrame
+    vArrayAccumulator.Output -> vArrayUnPacker.ArrayA
+    vArrayUnPacker.OutputArray_1 -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayCreateTextFont">vArrayCreateTextFont</a>
+  <a className="node-chip" href="../Modify/vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayAccumulator (Array/Temporal).
+Source: fuse vArrayAccumulator.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

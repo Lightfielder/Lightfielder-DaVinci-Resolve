@@ -1,0 +1,53 @@
+---
+sidebar_position: 52
+title: vJSONToXYZ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONToXYZ
+
+Convert a JSON Array into XYZ ASCII Text
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONToXYZ.png').default} alt="vJSONToXYZ node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONFromXYZ.Points -> vJSONToXYZ.ArrayA
+    vJSONToXYZ.Output -> vTextToFile.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONFromXYZ">vJSONFromXYZ</a>
+</div>
+
+{/*
+Generated page — node: vJSONToXYZ (JSON/Create).
+Source: fuse vJSONToXYZ.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

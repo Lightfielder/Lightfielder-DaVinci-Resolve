@@ -1,0 +1,74 @@
+/**
+ * Nested navbar dropdown ("sub-sub" fold-outs).
+ *
+ * Used by the custom `custom-nestedDropdown` navbar item (Toolbar scripts and
+ * the Resolve/Fusion topic tree). The root menu reuses Infima's
+ * `.dropdown__menu`; each nested level is a fly-out positioned to the right and
+ * revealed on hover/focus.
+ */
+
+.lf-nested-dropdown .dropdown__menu {
+  min-width: 260px;
+}
+
+/* A branch row inside a dropdown (its own label + a caret). */
+.lf-submenu {
+  position: relative;
+}
+
+.lf-submenu__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lf-submenu__link {
+  flex: 1 1 auto;
+}
+
+.lf-submenu__caret {
+  padding: 0 0.75rem;
+  opacity: 0.55;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* The nested fly-out menu. */
+.lf-submenu__menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 260px;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  background: var(--ifm-dropdown-background-color, var(--ifm-background-surface-color));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  display: none;
+  z-index: 1100;
+}
+
+.lf-submenu:hover > .lf-submenu__menu,
+.lf-submenu:focus-within > .lf-submenu__menu {
+  display: block;
+}
+
+/* On narrow viewports the dropdowns are rendered inside the mobile sidebar, so
+ * drop the absolute fly-out positioning and show nested lists inline. */
+@media (max-width: 996px) {
+  .lf-submenu__menu {
+    position: static;
+    display: block;
+    min-width: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0 0 0 0.75rem;
+    background: transparent;
+  }
+
+  .lf-submenu__caret {
+    display: none;
+  }
+}

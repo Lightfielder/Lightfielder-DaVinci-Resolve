@@ -1,0 +1,81 @@
+---
+sidebar_position: 6
+title: vArrayTangentVectorItem
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayTangentVectorItem
+
+Create a vector that is tangent to a curve or surface at a given point
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayTangentVectorItem.png').default} alt="vArrayTangentVectorItem node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Max angle | Integer | `0` | — |
+| Line length | Float | `0` | — |
+| Scale Factor | Float | `1` | — |
+| line1Separator | Float | `—` | — |
+| Amplitude | Float | `0` | — |
+
+<details>
+<summary>+12 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Frequency | Float | `0` | — |
+| Phase | Float | `0` | — |
+| Damping Mode | Integer | `--` | — |
+| Damping | Float | `0` | — |
+| line2Separator | Float | `—` | — |
+| Node Sides | Float | `6` | — |
+| Node Size | Float | `0.01` | — |
+| Node Rotation | Float | `0` | — |
+| line3Separator | Float | `—` | — |
+| Time | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+| ArrayPath | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayLogarithmicSpiral.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayTangentVectorItem.ArrayPath
+    vArrayTangentVectorItem.Output -> vArrayShapeRender.ArrayShape
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayLogarithmicSpiral">vArrayLogarithmicSpiral</a>
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayTangentVectorItem (Array/Shapes).
+Source: fuse vArrayTangentVectorItem.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

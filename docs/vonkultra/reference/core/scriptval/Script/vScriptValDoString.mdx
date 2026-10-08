@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: vScriptValDoString
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValDoString
+
+Return a ScriptVal object from running a string of Lua code The ScriptVal based input connection on the node can be accessed in the script using a Lua table variable named "tbl". The ScriptVal based output connection on the node receives the data that is defined by the "return" command. The "Script Header Wire" input is used to specify a text datatype connection of code that is appended to the top of the Lua Script field contents when run. The script content connected to the Script Header Wire field is typically sourced from a vTextCreateMultiline or vTextFromFile node. The vScriptValMerge node can be used to combine multiple ScriptVal objects before they are passed into the vScriptValDoString node. In your Lua Script code you can iterate through each record in the Lua table data using: for i, v in ipairs(tbl) do end If you need to temporarily troubleshoot the internals of what your code is doing in the vScriptValDoString node there are two diagnostic checkbox controls labelled "Show Code" and "Show Dump". The output from those options is displayed in the Console window. For performance reasons you probably want to leave those options turned off most of the time when rendering long sequences in Fusion to reduce the Console logging overhead.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/scriptval/vScriptValDoString.png').default} alt="vScriptValDoString node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| ScriptVal | DATATYPE | `—` | — |
+| Script Header Wire | Text | `—` | — |
+| > | Float | `—` | — |
+| Input | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValDoFile">vScriptValDoFile</a>
+  <a className="node-chip" href="./vScriptValDoStringMultiplex">vScriptValDoStringMultiplex</a>
+</div>
+
+{/*
+Generated page — node: vScriptValDoString (Core/ScriptVal/Script).
+Source: fuse vScriptValDoString.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

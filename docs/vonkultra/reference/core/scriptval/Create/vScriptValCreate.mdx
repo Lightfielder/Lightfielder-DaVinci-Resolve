@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+title: vScriptValCreate
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValCreate
+
+Create a Fusion ScriptVal object The ScriptVal datatype in Fusion is used to pass Lua tables that hold arbitrary data between nodes. This makes it possible to create custom c-code struct like records that travel through the node graph in a seamless fashion. An example of Lua table formatted information is: \{ num = 3.14, foo = "Hello", snafu = \{ tarfu = "Fuse", \}, bar = "World", \}
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/scriptval/vScriptValCreate.png').default} alt="vScriptValCreate node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Lua Table Text | Text | `—` | — |
+| Display Lines | Integer | `25` | — |
+| Wrap Lines | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValFromApp">vScriptValFromApp</a>
+  <a className="node-chip" href="./vScriptValFromCSV">vScriptValFromCSV</a>
+  <a className="node-chip" href="./vScriptValFromDate">vScriptValFromDate</a>
+  <a className="node-chip" href="./vScriptValFromListFiles">vScriptValFromListFiles</a>
+</div>
+
+{/*
+Generated page — node: vScriptValCreate (Core/ScriptVal/Create).
+Source: fuse vScriptValCreate.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

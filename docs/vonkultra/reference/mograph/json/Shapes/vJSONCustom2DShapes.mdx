@@ -1,0 +1,79 @@
+---
+sidebar_position: 1
+title: vJSONCustom2DShapes
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONCustom2DShapes
+
+Dynamically create 2D Shape elements
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONCustom2DShapes.png').default} alt="vJSONCustom2DShapes node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Shape Type | Float | `Ticks` | — |
+| Shape Selector | Integer | `1` | — |
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `—` | — |
+
+<details>
+<summary>+6 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Rotation | Float | `—` | — |
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| XY Scale | Float | `0.05` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal1 | ScriptVal | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONPointsOnCircle1.Output -> vJSONUnPacker.ArrayB
+    vJSONUnPacker.OutputArray -> vJSONSin.ArrayA
+    vJSONSin.Output -> vJSONPacker.ArrayA
+    vJSONPacker.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    vJSONCustom2DShapes.Output -> vJSONShapeRender.JSONCustomShape
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONUnPacker">vJSONUnPacker</a>
+  <a className="node-chip" href="../Modify/vJSONSin">vJSONSin</a>
+  <a className="node-chip" href="../Modify/vJSONPacker">vJSONPacker</a>
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONCustom2DShapes (JSON/Shapes).
+Source: fuse vJSONCustom2DShapes.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

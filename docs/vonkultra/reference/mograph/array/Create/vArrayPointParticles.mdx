@@ -1,0 +1,115 @@
+---
+sidebar_position: 47
+title: vArrayPointParticles
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPointParticles
+
+Simple particle generator
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPointParticles.png').default} alt="vArrayPointParticles node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| --- Start --- | Float | `—` | — |
+| Restart System | Float | `—` | — |
+| Time | Float | `0` | — |
+| Start Time | Float | `0` | — |
+| Particles Count | Integer | `24` | — |
+
+<details>
+<summary>+49 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Global Scale | Float | `1` | — |
+| --- Emission_1 --- | Float | `—` | — |
+| Emission Type | Integer | `2` | — |
+| Size X | Float | `1` | — |
+| Size Y | Float | `1` | — |
+| Size Z | Float | `1` | — |
+| Center X | Integer | `0` | — |
+| Center Y | Integer | `0` | — |
+| Center Z | Integer | `0` | — |
+| Noise Scale | Float | `0.1` | — |
+| Noise Strength | Float | `0.5` | — |
+| Noise Seed | Integer | `42` | — |
+| Fibonacci Radius | Float | `0.3` | — |
+| Fibonacci Height | Float | `2` | — |
+| --- Movement --- | Float | `—` | — |
+| Movement X | Float | `0.1` | — |
+| Movement Y | Float | `0.1` | — |
+| Movement Z | Float | `0.1` | — |
+| --- Forces --- | Float | `—` | — |
+| Enable Gravity | Integer | `1` | — |
+| Gravity Strength | Float | `0` | — |
+| Enable Wind | Integer | `1` | — |
+| Wind X | Float | `0` | — |
+| Wind Y | Float | `0` | — |
+| Wind Z | Float | `0` | — |
+| Enable Turbulence | Integer | `1` | — |
+| Turbulence Strength | Float | `0.2` | — |
+| --- Attractors --- | Float | `—` | — |
+| Enable Attractor | Integer | `1` | — |
+| Attractor X | Float | `0` | — |
+| Attractor Y | Float | `0` | — |
+| Attractor Z | Float | `0` | — |
+| Attractor Strength | Float | `0.0` | — |
+| Attractor Falloff | Float | `1` | — |
+| --- Flocking --- | Float | `—` | — |
+| Enable Flocking | Integer | `1` | — |
+| Separation Radius | Float | `0.5` | — |
+| Separation Strength | Float | `0.3` | — |
+| Alignment Radius | Float | `1` | — |
+| Alignment Strength | Float | `0.1` | — |
+| Cohesion Radius | Float | `1` | — |
+| Cohesion Strength | Float | `0.1` | — |
+| --- Lifetime --- | Float | `—` | — |
+| Lifetime | Float | `2` | — |
+| Lifetime Minimum | Float | `1` | — |
+| --- Performance --- | Float | `—` | — |
+| Flocking Optimization | Integer | `1` | — |
+| --- Debug --- | Float | `—` | — |
+| Show Input | Integer | `0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointParticles.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayPointParticles (Array/Create).
+Source: fuse vArrayPointParticles.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

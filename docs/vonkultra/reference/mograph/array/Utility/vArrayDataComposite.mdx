@@ -1,0 +1,46 @@
+---
+sidebar_position: 3
+title: vArrayDataComposite
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayDataComposite
+
+Passes an image through unchanged while forcing one or two connected Array data branches to cook every frame the image is required — even though their values never touch the pixels. Use it to make a side-effect node (e.g. an Array writer) execute on every frame instead of only while its own Viewer is focused.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayDataComposite.png').default} alt="vArrayDataComposite node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Force Data Cook | Integer | `1` | — |
+| Image | Image | `—` | — |
+| Data A | Text | `—` | — |
+| Data B | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayAppend">vArrayAppend</a>
+  <a className="node-chip" href="./vArrayAppendGroup">vArrayAppendGroup</a>
+  <a className="node-chip" href="./vArrayFontArray">vArrayFontArray</a>
+  <a className="node-chip" href="./vArrayInfo">vArrayInfo</a>
+</div>
+
+{/*
+Generated page — node: vArrayDataComposite (Array/Utility).
+Source: fuse vArrayDataComposite.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,80 @@
+---
+sidebar_position: 28
+title: vArrayCreateRandom
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayCreateRandom
+
+Generate a seeded array of random values — the noise source for data-driven variation, scatter, and stochastic animation.
+
+<div className="node-badge-row">
+  <span className="node-badge node-badge--beginner">Beginner</span>
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayCreateRandom.png').default} alt="vArrayCreateRandom node" />
+</div>
+
+vArrayCreateRandom produces a vArray of pseudo-random numbers from a seed and length. Use it to drive displacement magnitudes, colour offsets, scale variation, or any parameter that needs reproducible randomness.
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array length | Integer | `2` | Number of random values to generate. Must match the length of the array you intend to drive — typically equal to the point count of your generator. |
+| Seed | Integer | `0` | Seed for the random number generator. Different seeds produce different sequences. Animating this value creates evolving randomness. |
+| Pack To | Integer | `0` | Output packing mode: 0 = flat 1D array of scalar values, 1 = packed as XY pairs, 2 = packed as XYZ triplets for 3D use. |
+| Show Input | Checkbox | `0` | Reveals optional input ports on the node in the Fusion node graph. |
+
+<details>
+<summary>Read the full description</summary>
+
+vArrayCreateRandom generates a flat array of pseudo-random values using a seed-based algorithm. Because the output is deterministic for any given seed, you get the same random layout every time — critical for production workflows where renders must be reproducible across machines and sessions.
+
+Array length sets how many values to generate (minimum 2). Seed controls which random sequence is produced — increment it to explore different variations while keeping all other parameters fixed. Pack To determines whether values are packed as a flat 1D stream or grouped as XYZ triplets for 3D displacement use.
+
+Connect the output to vArrayMath to scale the range, then to vArrayDisplaceValues to add per-point noise to a structured grid or sphere. Alternatively drive it directly into vArrayShapeRender's scale or colour input for stochastic size and hue variation across a point cloud. Animating the Seed parameter over time produces a flickering randomness effect.
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="random-displacement-on-a-grid" label="Random displacement on a grid" default>
+
+```
+vArrayPointsOnGrid.Output -> vArrayDisplaceValues.ArrayA
+vArrayCreateRandom.Output -> vArrayDisplaceValues.ArrayB
+vArrayDisplaceValues.Output -> vArrayCameraProjection.ArrayA
+vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+<TabItem value="scale-random-values-to-range" label="Scale random values to range">
+
+```
+vArrayCreateRandom.Output -> vArrayMath.ArrayA
+vArrayMath.Output -> vArrayShapeRender.ArrayPoint
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../array/Modify/vArrayDisplaceValues">vArrayDisplaceValues</a>
+  <a className="node-chip" href="../../array/Modify/vArrayMapRange">vArrayMapRange</a>
+  <a className="node-chip" href="../../array/Modify/vArrayMath">vArrayMath</a>
+</div>
+
+{/*
+Rich page restored from _output/vArrayCreateRandom_page.json. Source of truth: fuses.ts / vonkultratools data model.
+*/}

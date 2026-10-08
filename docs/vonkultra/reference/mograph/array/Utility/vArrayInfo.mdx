@@ -1,0 +1,53 @@
+---
+sidebar_position: 5
+title: vArrayInfo
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayInfo
+
+Returns info of an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayInfo.png').default} alt="vArrayInfo node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnCube.Output -> vArrayUnPacker.ArrayB
+    vArrayUnPacker.OutputArray -> vArrayInfo.ArrayA
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayPointsOnCube">vArrayPointsOnCube</a>
+  <a className="node-chip" href="../Modify/vArrayUnPacker">vArrayUnPacker</a>
+</div>
+
+{/*
+Generated page — node: vArrayInfo (Array/Utility).
+Source: fuse vArrayInfo.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

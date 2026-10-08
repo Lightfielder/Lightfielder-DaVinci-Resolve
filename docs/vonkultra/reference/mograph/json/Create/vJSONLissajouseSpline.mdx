@@ -1,0 +1,71 @@
+---
+sidebar_position: 39
+title: vJSONLissajouseSpline
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONLissajouseSpline
+
+Generate a Lissajouse spline
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONLissajouseSpline.png').default} alt="vJSONLissajouseSpline node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Formula | Integer | `Formula A` | — |
+| Number A | Integer | `5` | — |
+| Number B | Integer | `4` | — |
+| Number C | Integer | `1` | — |
+| Number D | Integer | `2` | — |
+
+<details>
+<summary>+5 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Points Count | Integer | `1500` | — |
+| Step | Integer | `40` | — |
+| Scale Factor | Float | `1` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONLissajouseSpline.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONLissajouseSpline (JSON/Create).
+Source: fuse vJSONLissajouseSpline.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

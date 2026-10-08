@@ -1,0 +1,69 @@
+---
+sidebar_position: 39
+title: vArrayGenerateSphere
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayGenerateSphere
+
+Generates a Sphere with longitude/latitude lines
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayGenerateSphere.png').default} alt="vArrayGenerateSphere node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Radius | Float | `0.3` | — |
+| Number Lat Lines | Integer | `1` | — |
+| Number Lon Lines | Integer | `1` | — |
+| Trim Top | Float | `0` | — |
+| Trim Bottom | Float | `0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Include Lon Lines | Integer | `0.0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayGenerateSphere.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayGenerateSphere (Array/Create).
+Source: fuse vArrayGenerateSphere.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

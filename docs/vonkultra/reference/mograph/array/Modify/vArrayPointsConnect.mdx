@@ -1,0 +1,74 @@
+---
+sidebar_position: 55
+title: vArrayPointsConnect
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPointsConnect
+
+Connect points in an array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPointsConnect.png').default} alt="vArrayPointsConnect node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Mode | Integer | `Alternate` | — |
+| Reverse B | Integer | `0` | — |
+| Connection | Float | `1` | — |
+| Hide Unconnected | Integer | `0` | — |
+| Close Loop | Integer | `0` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Drop Duplicate Seam | Integer | `1` | — |
+| line4Separator | Float | `—` | — |
+| Array A | DATATYPE | `—` | — |
+| Array B | DATATYPE | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayLissajouseSpline1.Output->  vArrayUnPacker1.ArrayA
+    vArrayLissajouseSpline2.Output->  vArrayUnPacker2.ArrayA
+    vArrayUnPacker1.OutputArray -> vArrayPointsConnect.ArrayA
+    vArrayUnPacker2.OutputArray -> vArrayPointsConnect.ArrayB
+    vArrayPointsConnect.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayPointsConnect (Array/Modify).
+Source: fuse vArrayPointsConnect.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

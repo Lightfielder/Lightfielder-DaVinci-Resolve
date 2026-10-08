@@ -1,0 +1,41 @@
+---
+sidebar_position: 3
+title: vNumberCreateBool
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberCreateBool
+
+Returns a 0-1 range integer Fusion Number object This node uses a checkbox control to output a true (1) or false (0) logic state. Usage tip: This node's boolean like checkbox value can be used to drive a Switch node's "Which" control. This checkbox control makes it a single click operation in a macro node (MacroOperator or GroupOperator) to be able to toggle between an input1 / input2 connection. To do this you simply have to insert an vNumberAdd node, (that is set to increment the value up by 1), between the vNumberCreate node's output (0-1) logic state, and the Switch node: vNumberCreateBool.Output > vNumberAdd.Term1 > Switch.Which Node setting to change: vNumberAdd.Term2 = 1
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/number/vNumberCreateBool.png').default} alt="vNumberCreateBool node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Number | Integer | `0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vNumberCreate">vNumberCreate</a>
+  <a className="node-chip" href="./vNumberCreateArch">vNumberCreateArch</a>
+  <a className="node-chip" href="./vNumberCreateMultiButton">vNumberCreateMultiButton</a>
+  <a className="node-chip" href="./vNumberCreatePlatform">vNumberCreatePlatform</a>
+</div>
+
+{/*
+Generated page — node: vNumberCreateBool (Core/Number/Create).
+Source: fuse vNumberCreateBool.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

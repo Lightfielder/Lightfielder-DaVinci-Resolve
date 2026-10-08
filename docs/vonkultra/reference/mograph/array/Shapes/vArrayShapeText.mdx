@@ -1,0 +1,85 @@
+---
+sidebar_position: 5
+title: vArrayShapeText
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayShapeText
+
+Example, using Text and Strings
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayShapeText.png').default} alt="vArrayShapeText node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Generate Random →  | Integer | `3.0` | — |
+| Array length | Integer | `1` | — |
+| Seed | Float | `0` | — |
+| Font Select | Integer | `Use Font` | — |
+| Font | Text | `—` | — |
+
+<details>
+<summary>+17 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Style | Text | `—` | — |
+| Font Select Probability | Float | `0` | — |
+| Size | Float | `0.08` | — |
+| Character Spacing | Float | `0.0` | — |
+| Letter Case | Integer | `NONE` | — |
+| Justification | Integer | `Center` | — |
+| Horizontal Adjustment | Float | `0.0` | — |
+| Vertical Adjustment | Float | `0.0` | — |
+| Show Box Background | Integer | `0.0` | — |
+| Box Padding | Float | `0.5` | — |
+| Box Vertical Adjustment | Float | `0.0` | — |
+| Box Round Corners | Float | `0.01` | — |
+| Pos Adjustment | Float | `0.0` | — |
+| Show Input | Integer | `1.0` | — |
+| ScriptVal Font | ScriptVal | `—` | — |
+| ScriptVal Text | ScriptVal | `—` | — |
+| Text | Text | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnCircle.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+    vArrayShapeText.OutputValShape -> vArrayShapeRender.ArrayShape
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayPointsOnCircle">vArrayPointsOnCircle</a>
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayShapeText (Array/Shapes).
+Source: fuse vArrayShapeText.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

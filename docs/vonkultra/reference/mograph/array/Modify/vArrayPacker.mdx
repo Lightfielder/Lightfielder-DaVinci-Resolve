@@ -1,0 +1,63 @@
+---
+sidebar_position: 51
+title: vArrayPacker
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayPacker
+
+Pack Operations on an Array
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayPacker.png').default} alt="vArrayPacker node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Pack To: | Integer | `X` | — |
+| Custom Group Size | Integer | `0` | — |
+| Show Input | Integer | `0.0` | — |
+| Array A | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayPointsOnCircle.Output -> vArrayUnPacker.ArrayB
+    vArrayUnPacker.OutputArray -> vArraySin.ArrayA 
+    vArraySin.Output -> vArrayPacker.ArrayA
+    vArrayPacker.Output -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vArrayPointsOnCircle">vArrayPointsOnCircle</a>
+  <a className="node-chip" href="./vArrayUnPacker">vArrayUnPacker</a>
+  <a className="node-chip" href="./vArraySin">vArraySin</a>
+  <a className="node-chip" href="./vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vArrayPacker (Array/Modify).
+Source: fuse vArrayPacker.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

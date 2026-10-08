@@ -1,0 +1,69 @@
+---
+sidebar_position: 36
+title: vJSONGenerateSphere
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONGenerateSphere
+
+Generates a Sphere with longitude/latitude lines
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONGenerateSphere.png').default} alt="vJSONGenerateSphere node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Radius | Float | `0.3` | — |
+| Number Lat Lines | Integer | `10` | — |
+| Number Lon Lines | Integer | `0` | — |
+| Trim Top | Float | `0` | — |
+| Trim Bottom | Float | `0` | — |
+
+<details>
+<summary>+3 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Include Lon Lines | Integer | `0.0` | — |
+| line6Separator | Float | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONGenerateSphere.Output -> vJSONCameraProjection.ArrayA
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONGenerateSphere (JSON/Create).
+Source: fuse vJSONGenerateSphere.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

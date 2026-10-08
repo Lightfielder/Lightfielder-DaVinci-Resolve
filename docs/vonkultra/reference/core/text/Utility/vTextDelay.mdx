@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+title: vTextDelay
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextDelay
+
+Creates a Delay while passing a Fusion Text object The delay effect is measured in seconds. This node is implemented internally using the "`bmd.wait()`" function. Among several use cases one can find for a tool that can momentarily pause rendering; it can be used to simulate a slow to render comp task when testing a render farm program. It also has applications when running a command line task via the Vonk ProcessOpen node and the system requires a momentary pause.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextDelay.png').default} alt="vTextDelay node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Delay | Float | `—` | — |
+| Show Input | Integer | `1.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextDump">vTextDump</a>
+  <a className="node-chip" href="./vTextExpandEscapedCharacters">vTextExpandEscapedCharacters</a>
+  <a className="node-chip" href="./vTextFromCSVViewer">vTextFromCSVViewer</a>
+  <a className="node-chip" href="./vTextFromFilename">vTextFromFilename</a>
+</div>
+
+{/*
+Generated page — node: vTextDelay (Core/Text/Utility).
+Source: fuse vTextDelay.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

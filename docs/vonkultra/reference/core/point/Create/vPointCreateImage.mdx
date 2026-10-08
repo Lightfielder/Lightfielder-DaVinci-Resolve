@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+title: vPointCreateImage
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vPointCreateImage
+
+Create a Fusion Point object with an image visible in the background The "Add Metadata" checkbox creates image output metadata entries for the point coordinates formatted as: XOffset = 0.5 YOffset = 0.5 If you enable the viewer window's "Metadata" sub-viewer entry you can quickly see the information that is appended to the image output stream.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Point</span>
+  <span className="node-badge">Point</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/point/vPointCreateImage.png').default} alt="vPointCreateImage node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Image | Image | `—` | — |
+| Point | Point | `—` | — |
+| Flip Horiz | Integer | `0.0` | — |
+| Flip Vert | Integer | `0.0` | — |
+| Add Metadata | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vPointCreate">vPointCreate</a>
+  <a className="node-chip" href="./vPointCreateRandom">vPointCreateRandom</a>
+  <a className="node-chip" href="./vPointFromMousePos">vPointFromMousePos</a>
+</div>
+
+{/*
+Generated page — node: vPointCreateImage (Core/Point/Create).
+Source: fuse vPointCreateImage.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

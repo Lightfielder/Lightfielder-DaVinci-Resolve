@@ -1,0 +1,43 @@
+---
+sidebar_position: 5
+title: vTextFromZip
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextFromZip
+
+Reads a Text string from a zip archive This node accesses a plain-text formatted resource that is stored inside a Zip archive using the Fusion v16+/Resolve v15+ based ZipIO library. The "Zip File" field is used to define the filename of the zip archive. The "Extract File" field is used to define the resource that is stored inside the zip archive. Both attributes can be driven externally by a Text data type connection to the node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextFromZip.png').default} alt="vTextFromZip node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Zip File | Text | `—` | — |
+| Extract File | Text | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextFromClipboard">vTextFromClipboard</a>
+  <a className="node-chip" href="./vTextFromComp">vTextFromComp</a>
+  <a className="node-chip" href="./vTextFromFile">vTextFromFile</a>
+  <a className="node-chip" href="./vTextFromNet">vTextFromNet</a>
+</div>
+
+{/*
+Generated page — node: vTextFromZip (Core/Text/IO).
+Source: fuse vTextFromZip.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

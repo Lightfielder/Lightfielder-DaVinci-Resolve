@@ -6,11 +6,11 @@ description: "Lightfielder is a multi-view workflow automation toolset that stre
 slug: /
 ---
 
-# Lightfielder v26.10.01 B4 for DaVinci Resolve
+# Lightfielder v26.10.08 B5 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 4 Release
+## Public Beta 5 Release
 
 This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
@@ -65,7 +65,8 @@ This approach certainly gives an accessible and affordable route to enter volume
 
 Additional learning content and example project files are being prepared for Lightfielder this month.
 
-- [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK)
+- [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK) — [example details](Examples/pikachu-still-frame-50-view.mdx)
+- See the [Examples section](Examples/index.mdx) for a list of the available multi-view example project files and tutorials.
 
 ## Accessing Lightfielder inside Resolve
 
@@ -118,6 +119,29 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 - [Volumetric Color Decision Lists](workflow-guides/volumetric-color-decision-lists.md)
 - [PBR-GS Physically Based Rendering of Gaussian Splats](workflow-guides/physically-based-rendering-of-gaussian-splats.md)
 - [The OBJ-GS Guide | Wavefront OBJ Format Extensions for VFX](workflow-guides/obj-gs.md)
+
+## Lightfielder Ops
+
+- [Ops Overview](Ops/index.mdx)
+- [Install Ops](Ops/installation/install-ops.md)
+- [Install Python](Ops/installation/install-python.md)
+- [Uninstall Ops](Ops/installation/uninstall-ops.md)
+- [Sequencer View](Ops/usage/sequencer.md)
+- [Nodes View](Ops/usage/nodes.md)
+- [Export Presets](Ops/usage/presets.md)
+- [Unit Tests](Ops/usage/unit-tests.md)
+- [Lightfielder Viewport](Ops/viewport/index.md)
+
+## Vonk Ultra
+
+The Kartaverse Vonk Ultra node toolset documentation is now included in this
+site. It is a separate documentation section served under `/VonkUltra/`.
+
+- [Vonk Ultra Overview](/VonkUltra/)
+- [Getting Started](/VonkUltra/getting-started/introduction)
+- [Node Reference](/VonkUltra/reference)
+- [Guides](/VonkUltra/guides/overview)
+- [Tutorials](/VonkUltra/tutorials/video-tutorials)
 
 ## Blog Content
 

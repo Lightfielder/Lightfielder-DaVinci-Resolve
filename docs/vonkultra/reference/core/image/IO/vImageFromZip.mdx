@@ -1,0 +1,43 @@
+---
+sidebar_position: 7
+title: vImageFromZip
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vImageFromZip
+
+Reads an Image object from a zip archive This node accesses an image resource that is stored inside a Zip archive using the Fusion v16+/Resolve v15+ based ZipIO library. The "Zip File" field is used to define the filename of the zip archive. The "Extract Image" field is used to define the image resource that is stored inside the zip archive. Both attributes can be driven externally by a Text data type connection to the node.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Image</span>
+  <span className="node-badge">Image</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/image/vImageFromZip.png').default} alt="vImageFromZip node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Zip File | Text | `—` | — |
+| Extract Image | Text | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vImageEXRFromFile">vImageEXRFromFile</a>
+  <a className="node-chip" href="./vImageEXRToFile">vImageEXRToFile</a>
+  <a className="node-chip" href="./vImageFromClipboard">vImageFromClipboard</a>
+  <a className="node-chip" href="./vImageFromColor">vImageFromColor</a>
+</div>
+
+{/*
+Generated page — node: vImageFromZip (Core/Image/IO).
+Source: fuse vImageFromZip.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

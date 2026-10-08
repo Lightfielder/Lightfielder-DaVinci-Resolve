@@ -1,0 +1,37 @@
+---
+sidebar_position: 1
+title: vImageCreateTiles
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vImageCreateTiles
+
+Creates an image grid layout from an image sequence This node makes it easy to create tiled "texture atlas" like grid layouts. If you need the imagery to be scaled down to a specific size, attach a resize or scale node to the image stream before you connect it to the vImageCreateTiles node. The "Tiles X" control specifies how many images are stacked horizontally. The "Tiles Y" control specifies how many images are stacked vertically. The "Reverse X Order" and "Reverse Y Order" checkboxes are used to provide control over the image placement ordering when the grid layout is built. This allows you to start frame 1 at either of the 4 corners of the frame border.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Image</span>
+  <span className="node-badge">Image</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/image/vImageCreateTiles.png').default} alt="vImageCreateTiles node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Image | `—` | — |
+| Tiles X | Integer | `10` | — |
+| Tiles Y | Integer | `10` | — |
+| Reverse X Order | Integer | `0.0` | — |
+| Reverse Y Order | Integer | `1.0` | — |
+
+
+
+{/*
+Generated page — node: vImageCreateTiles (Core/Image/Create).
+Source: fuse vImageCreateTiles.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

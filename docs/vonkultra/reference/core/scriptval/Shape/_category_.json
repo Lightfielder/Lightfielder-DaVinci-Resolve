@@ -1,0 +1,8 @@
+{
+  "label": "Shape",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Shape helpers."
+  }
+}

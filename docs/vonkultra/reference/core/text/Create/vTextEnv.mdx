@@ -1,0 +1,42 @@
+---
+sidebar_position: 9
+title: vTextEnv
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vTextEnv
+
+Creates an environment variable based Fusion Text object This node will read an environment variable and return the result as a string. This is useful if you need to access a value like a SITE, SHOW, or SHOT env variable inside your composite. The "Text" field is used to enter the environment variable name like "PATH", "HOME", "USER", etc... If you need to troubleshoot the active environment variables on your Windows system using the Command Prompt you can type in "set". In the macOS/Linux terminal program you can type in "env \| sort" to see an alphabetically sorted list of the active environment variables.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Text</span>
+  <span className="node-badge">Text</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/text/vTextEnv.png').default} alt="vTextEnv node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Text | Text | `—` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vTextCreate">vTextCreate</a>
+  <a className="node-chip" href="./vTextCreateArch">vTextCreateArch</a>
+  <a className="node-chip" href="./vTextCreateBrowse">vTextCreateBrowse</a>
+  <a className="node-chip" href="./vTextCreateMultiline">vTextCreateMultiline</a>
+</div>
+
+{/*
+Generated page — node: vTextEnv (Core/Text/Create).
+Source: fuse vTextEnv.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

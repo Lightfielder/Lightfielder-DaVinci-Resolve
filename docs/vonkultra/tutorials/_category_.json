@@ -1,0 +1,8 @@
+{
+  "label": "Tutorials",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Video tutorials, Fusion menu scripts, general usage notes, and credits."
+  }
+}

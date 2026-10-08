@@ -1,0 +1,43 @@
+---
+sidebar_position: 14
+title: vNumberModulus
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vNumberModulus
+
+Returns the remainder of the division of x by y that rounds the quotient towards zero If a vNumberCompReqTime or vNumberCompCurrentTime node is piped into the "Dividend" input connection, you can use the modulus operator to create a looping number range with the Divisor control. For example, a Divisor value of 10 will cause the output from modulus to cycle from 0-9 in loops 5 times as the playhead advances through a render start/end frame range of 0 - 50.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Number</span>
+  <span className="node-badge">Number</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/number/vNumberModulus.png').default} alt="vNumberModulus node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Dividend | Float | `0` | — |
+| Divisor | Float | `0` | — |
+| Show Input | Integer | `0.0` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vNumberAbsolute">vNumberAbsolute</a>
+  <a className="node-chip" href="./vNumberAdd">vNumberAdd</a>
+  <a className="node-chip" href="./vNumberCeil">vNumberCeil</a>
+  <a className="node-chip" href="./vNumberClamp">vNumberClamp</a>
+</div>
+
+{/*
+Generated page — node: vNumberModulus (Core/Number/Operators).
+Source: fuse vNumberModulus.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

@@ -1,0 +1,58 @@
+---
+sidebar_position: 3
+title: vScriptValDoStringMultiplex
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValDoStringMultiplex
+
+Return a ScriptVal object from running a string of Lua code. Supports multi-input connections for ScriptVals, along with a header code block input for pre-made user defined functions
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/scriptval/vScriptValDoStringMultiplex.png').default} alt="vScriptValDoStringMultiplex node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Which | Integer | `—` | — |
+| Script Header Wire | Text | `—` | — |
+| > | Float | `—` | — |
+| Text | Text | `—` | — |
+| Display Lines | Integer | `25` | — |
+
+<details>
+<summary>+7 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Wrap Lines | Integer | `0.0` | — |
+| Show Input | Integer | `0.0` | — |
+| Show Code | Integer | `0.0` | — |
+| Show Dump | Integer | `0.0` | — |
+| ScriptVal1 | DATATYPE | `—` | — |
+| "ScriptVal" .. i | ScriptVal | `—` | — |
+| "ScriptVal" .. (inp_nr + 1) | ScriptVal | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValDoFile">vScriptValDoFile</a>
+  <a className="node-chip" href="./vScriptValDoString">vScriptValDoString</a>
+</div>
+
+{/*
+Generated page — node: vScriptValDoStringMultiplex (Core/ScriptVal/Script).
+Source: fuse vScriptValDoStringMultiplex.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

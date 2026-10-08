@@ -1,0 +1,59 @@
+---
+sidebar_position: 61
+title: vScriptValSortByDistance
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vScriptValSortByDistance
+
+Sort array by point distance
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / ScriptVal</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/scriptval/vScriptValSortByDistance.png').default} alt="vScriptValSortByDistance node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Smallest Distance | Float | `1.0` | — |
+| Distance Mode | Float | `Preferred` | — |
+| Show Input | Integer | `0.0` | — |
+| ScriptVal | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vScriptValUnPacker.ScriptVal1 -> vScriptValLogicBetween.ScriptVal
+    vScriptValLogicBetween.Output -> vScriptValSortByDistance.ScriptVal
+    vScriptValSortByDistance.Output -> vScriptValPacker.ScriptVal
+    vScriptValPacker.ScriptVal -> vScriptValViewer.ScriptVal
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vScriptValUnPacker">vScriptValUnPacker</a>
+  <a className="node-chip" href="../Logic/vScriptValLogicBetween">vScriptValLogicBetween</a>
+  <a className="node-chip" href="./vScriptValPacker">vScriptValPacker</a>
+</div>
+
+{/*
+Generated page — node: vScriptValSortByDistance (ScriptVal/Modify).
+Source: fuse vScriptValSortByDistance.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

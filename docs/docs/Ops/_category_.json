@@ -1,0 +1,10 @@
+{
+  "label": "Lightfielder Ops",
+  "position": 6,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "Ops/index"
+  }
+}

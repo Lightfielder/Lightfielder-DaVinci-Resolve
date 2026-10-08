@@ -1,0 +1,59 @@
+---
+sidebar_position: 63
+title: vJSONTextWrap
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONTextWrap
+
+Text wrap Operations on a JSON
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONTextWrap.png').default} alt="vJSONTextWrap node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Output As: | Integer | `String` | — |
+| Line length | Integer | `25` | — |
+| Number of Paragraphs | Integer | `1` | — |
+| Show Input | Integer | `0.0` | — |
+| Array | DATATYPE | `—` | — |
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONGenerateText.chanceOperation = "Lorem ipsum"
+    vJSONGenerateText.selectMode = "Paragraph"
+    vJSONGenerateText.paragraphCount = 8
+    vJSONGenerateText.OutputValData -> vJSONTextWrap.Array
+    vJSONTextWrap.Text -> vTextViewer.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vJSONGenerateText">vJSONGenerateText</a>
+</div>
+
+{/*
+Generated page — node: vJSONTextWrap (JSON/Modify).
+Source: fuse vJSONTextWrap.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

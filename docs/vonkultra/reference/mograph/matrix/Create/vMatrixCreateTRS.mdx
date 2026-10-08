@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+title: vMatrixCreateTRS
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vMatrixCreateTRS
+
+Creates a 4x4 matrix using traditional XYZ translation, rotation, and scale controls
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Matrix</span>
+  <span className="node-badge">Matrix</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/matrix/vMatrixCreateTRS.png').default} alt="vMatrixCreateTRS node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `0.0` | — |
+| Rotation Order | Float | ` XYZ ` | — |
+| X Rotation | Float | `—` | — |
+
+<details>
+<summary>+9 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| Lock X/Y/Z | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+| Y Scale | Float | `1.0` | — |
+| Z Scale | Float | `1.0` | — |
+| Show Translation Input | Integer | `0.0` | — |
+| Show Rotation Input | Integer | `0.0` | — |
+| Show Scale Input | Integer | `0.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vMatrixCreateTRS.Output -> vScriptValLocatorAsset.Matrix
+    vScriptValLocatorAsset.Output -> vScriptValMergeAsset.ScriptVal
+    vScriptValMergeAsset.Output -> vScriptValRenderAsset.vGeometry
+    Background.Output -> vScriptValRenderAsset.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../../ScriptVal/Create/vScriptValLocatorAsset">vScriptValLocatorAsset</a>
+  <a className="node-chip" href="../../ScriptVal/Utility/vScriptValMergeAsset">vScriptValMergeAsset</a>
+  <a className="node-chip" href="../../ScriptVal/ShapeRender/vScriptValRenderAsset">vScriptValRenderAsset</a>
+</div>
+
+{/*
+Generated page — node: vMatrixCreateTRS (Matrix/Create).
+Source: fuse vMatrixCreateTRS.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

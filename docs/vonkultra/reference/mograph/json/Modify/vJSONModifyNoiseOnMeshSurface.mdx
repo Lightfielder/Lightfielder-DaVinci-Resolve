@@ -1,0 +1,68 @@
+---
+sidebar_position: 28
+title: vJSONModifyNoiseOnMeshSurface
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONModifyNoiseOnMeshSurface
+
+Displace input points with Perlin/Fractal noise along mesh surface normal or in 3D.
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONModifyNoiseOnMeshSurface.png').default} alt="vJSONModifyNoiseOnMeshSurface node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Points | DATATYPE | `—` | — |
+| Scale File Units By | Float | `1` | — |
+| Noise Mode | Integer | `Normal Only` | — |
+| Noise Type | Integer | `Perlin` | — |
+| Amplitude | Float | `0.1` | — |
+
+<details>
+<summary>+13 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Frequency | Float | `1` | — |
+| Octaves | Integer | `4` | — |
+| Lacunarity | Float | `2` | — |
+| Gain | Float | `0.5` | — |
+| Random Seed | Integer | `0` | — |
+| Surface Offset | Float | `0` | — |
+| Affect X | Float | `1` | — |
+| Affect Y | Float | `1` | — |
+| Affect Z | Float | `1` | — |
+| Mesh Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| OBJ Text | Text | `—` | — |
+
+</details>
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vJSONBoundingBox">vJSONBoundingBox</a>
+  <a className="node-chip" href="./vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="./vJSONConvert2D_3D">vJSONConvert2D_3D</a>
+  <a className="node-chip" href="./vJSONDisplaceValues">vJSONDisplaceValues</a>
+</div>
+
+{/*
+Generated page — node: vJSONModifyNoiseOnMeshSurface (JSON/Modify).
+Source: fuse vJSONModifyNoiseOnMeshSurface.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

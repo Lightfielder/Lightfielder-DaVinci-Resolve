@@ -1,0 +1,67 @@
+---
+sidebar_position: 2
+title: vMatrixToMOVE
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vMatrixToMOVE
+
+Export translation matrix content to the Maya MOVE ASCII format
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Matrix</span>
+  <span className="node-badge">Matrix</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/matrix/vMatrixToMOVE.png').default} alt="vMatrixToMOVE node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Export Translation | Integer | `1.0` | — |
+| Export Rotation  | Integer | `1.0` | — |
+| Export Scale  | Integer | `0.0` | — |
+| Start Frame | Integer | `0` | — |
+| End Frame | Integer | `0` | — |
+
+<details>
+<summary>+4 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Step | Float | `1` | — |
+| Transpose Matrix | Integer | `0.0` | — |
+| Show Input | Integer | `0.0` | — |
+| Matrix1 | Text | `—` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vMatrixCreateTRS.Output -> vMatrixToMOVE.Input
+    vMatrixToMOVE.Output -> vTextViewer.Input
+    vTextViewer.Input -> vTextToFile.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Create/vMatrixCreateTRS">vMatrixCreateTRS</a>
+</div>
+
+{/*
+Generated page — node: vMatrixToMOVE (Matrix/IO).
+Source: fuse vMatrixToMOVE.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

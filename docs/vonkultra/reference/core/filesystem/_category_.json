@@ -1,0 +1,8 @@
+{
+  "label": "FileSystem",
+  "link": {
+    "type": "doc",
+    "id": "reference/core/filesystem/index"
+  },
+  "position": 6
+}

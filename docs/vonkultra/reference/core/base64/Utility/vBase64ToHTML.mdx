@@ -1,0 +1,38 @@
+---
+sidebar_position: 2
+title: vBase64ToHTML
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vBase64ToHTML
+
+Converts a Base64 encoded PNG image into an inline HTML `&lt;IMG>` embed. This node is useful to help prepare an inline Base64 encoded PNG image block. The most common use case for this node is to help fuse coders prepare new icons for use in a fuse's LabelControl element. This supports building Inspector view based icons for your custom fuses or macros. In your fuse the base64 encoded image element would be placed into a variable that is linked into the LabelControl like this: BrandLogo = [[ &lt;center>&lt;img width="160" height="75" src='data:image/png;base64,...'/>&lt;/center> ]] InLabel = self:AddInput(BrandLogo, "Label",\{ LINKID_DataType = "Text", INPID_InputControl = "LabelControl", LBLC_MultiLine = true, INP_External = false, INP_Passive = true, IC_ControlPage = -1, IC_NoLabel = true, IC_NoReset = true, \}) The "`IC_ControlPage = -1,`" tag will move the UI element above the Control Page tabs which makes the same icon visible as you switch between Control Pages. The end result from adding the Base64 icon to a LabelControl is the ability to create a more polished UI for your fuse.
+
+<div className="node-badge-row">
+  <span className="node-badge">Core / Base64</span>
+  <span className="node-badge">Base64</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/core/base64/vBase64ToHTML.png').default} alt="vBase64ToHTML node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input | Text | `—` | — |
+
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="./vBase64ImageViewer">vBase64ImageViewer</a>
+</div>
+
+{/*
+Generated page — node: vBase64ToHTML (Core/Base64/Utility).
+Source: fuse vBase64ToHTML.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

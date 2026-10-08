@@ -1,0 +1,90 @@
+---
+sidebar_position: 15
+title: vJSONCreateJSONFont
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vJSONCreateJSONFont
+
+Generates a JSON array-based font
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / JSON</span>
+  <span className="node-badge">JSON</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">Array</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/json/vJSONCreateJSONFont.png').default} alt="vJSONCreateJSONFont node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| Input | Text | `—` | — |
+| UISeparator1 | Float | `—` | — |
+
+<details>
+<summary>+22 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Styled Text | Text | `—` | — |
+| Size | Float | `1.0` | — |
+| Character Spacing | Float | `0.05` | — |
+| line Spacing | Float | `—` | — |
+| Letter Case | Integer | `ORIGINAL` | — |
+| Flip X | Integer | `1.0` | — |
+| Flip Y | Integer | `0.0` | — |
+| Justification | Integer | `Left` | — |
+| Horizontal Adjustment | Float | `0.0` | — |
+| Vertical Adjustment | Float | `0.0` | — |
+| Sample Points | Integer | `1` | — |
+| X Offset | Float | `—` | — |
+| Y Offset | Float | `—` | — |
+| Z Offset | Float | `0.0` | — |
+| Rotation Order | Float | ` XYZ ` | — |
+| X Rotation | Float | `—` | — |
+| Y Rotation | Float | `—` | — |
+| Z Rotation | Float | `—` | — |
+| Lock X/Y | Integer | `1` | — |
+| X Scale | Float | `1.0` | — |
+| Y Scale | Float | `1.0` | — |
+| Show Input | Integer | `1.0` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vJSONFromFile.Output -> vJSONCreateJSONFont.JSON_Font
+    vJSONCreateJSONFont.Output -> vJSONCameraProjection.ArrayA
+    vJSONCreateJSONFont.ScriptVal_Groups -> vJSONShapeRender.JSONTextGroups
+    vJSONCameraProjection.Output -> vJSONShapeRender.JSONPoint
+    Background.Output -> vJSONShapeRender.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vJSONCameraProjection">vJSONCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vJSONShapeRender">vJSONShapeRender</a>
+</div>
+
+{/*
+Generated page — node: vJSONCreateJSONFont (JSON/Create).
+Source: fuse vJSONCreateJSONFont.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}

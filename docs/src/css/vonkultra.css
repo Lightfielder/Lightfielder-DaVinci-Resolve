@@ -1,0 +1,307 @@
+/**
+ * Vonk Ultra node-reference styles.
+ *
+ * The shared site theme in custom.css was ported from the Kartaverse Vonk Ultra
+ * docs site, but the node-reference-only classes (node badges, node screenshots,
+ * connection chips, and the per-data-type icon colours) were intentionally left
+ * out. They are reintroduced here for the imported /VonkUltra/ node pages and
+ * category overview cards. These rules are additive and do not repaint the
+ * shared site chrome.
+ */
+
+/* ── Node badges (Core / 3D, etc.) ──────────────────────────────────────── */
+.node-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.node-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+  white-space: nowrap;
+}
+
+.node-badge--beginner {
+  background: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+}
+
+.node-badge--intermediate {
+  background: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+}
+
+.node-badge--advanced {
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-contrast-foreground);
+}
+
+/* ── Node screenshots ───────────────────────────────────────────────────── */
+.node-screenshot {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.node-screenshot img {
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ── Related / connection chips ─────────────────────────────────────────── */
+.node-chip-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.node-chip {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base);
+}
+
+.node-chip:hover {
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+/* ── SVG data-type icon glyph (Level 1 category cards) ──────────────────── */
+.cat-card-icon-glyph {
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  -webkit-mask: var(--cat-card-icon) center / contain no-repeat;
+  mask: var(--cat-card-icon) center / contain no-repeat;
+}
+
+/* Mograph data-type tile colours (Level 1). */
+.cat-card-icon--array { background: #3b82f6; }
+.cat-card-icon--html { background: #f97316; }
+.cat-card-icon--json { background: #ca8a04; }
+.cat-card-icon--matrix { background: #6366f1; }
+.cat-card-icon--number { background: #16a34a; }
+.cat-card-icon--scriptval { background: #db2777; }
+
+/* Function-group tile colours (shared across data types). */
+.cat-card-icon--accumulate { background: #0d9488; }
+.cat-card-icon--animate { background: #6366f1; }
+.cat-card-icon--create { background: #059669; }
+.cat-card-icon--io { background: #0284c7; }
+.cat-card-icon--logic { background: #d97706; }
+.cat-card-icon--modify { background: #2563eb; }
+.cat-card-icon--obj { background: #0891b2; }
+.cat-card-icon--shaperender { background: #db2777; }
+.cat-card-icon--shapes { background: #7c3aed; }
+.cat-card-icon--temporal { background: #ea580c; }
+.cat-card-icon--trigonometry { background: #e11d48; }
+.cat-card-icon--utility { background: #64748b; }
+
+/* Core data-type tile colours (Level 1). */
+.cat-card-icon--type-3d { background: #0f766e; }
+.cat-card-icon--type-base64 { background: #a16207; }
+.cat-card-icon--type-cbor { background: #64748b; }
+.cat-card-icon--type-color { background: #ea580c; }
+.cat-card-icon--type-filesystem { background: #059669; }
+.cat-card-icon--type-gradient { background: #d946ef; }
+.cat-card-icon--type-guide { background: #78716c; }
+.cat-card-icon--type-image { background: #db2777; }
+.cat-card-icon--type-meta { background: #4f46e5; }
+.cat-card-icon--type-mtlx { background: #475569; }
+.cat-card-icon--type-point { background: #2563eb; }
+.cat-card-icon--type-shape { background: #7c3aed; }
+.cat-card-icon--type-text { background: #dc2626; }
+.cat-card-icon--type-usd { background: #0ea5e9; }
+.cat-card-icon--type-vector { background: #16a34a; }
+.cat-card-icon--type-yaml { background: #b45309; }
+
+/* Core function-group tile colours (Level 2). */
+.cat-card-icon--fn-array { background: #3b82f6; }
+.cat-card-icon--fn-case { background: #0891b2; }
+.cat-card-icon--fn-color { background: #ea580c; }
+.cat-card-icon--fn-comp { background: #475569; }
+.cat-card-icon--fn-custom-data { background: #7c3aed; }
+.cat-card-icon--fn-decode { background: #059669; }
+.cat-card-icon--fn-encode { background: #0d9488; }
+.cat-card-icon--fn-flow { background: #0ea5e9; }
+.cat-card-icon--fn-font { background: #a16207; }
+.cat-card-icon--fn-fusion { background: #dc2626; }
+.cat-card-icon--fn-image { background: #db2777; }
+.cat-card-icon--fn-json { background: #ca8a04; }
+.cat-card-icon--fn-key-value { background: #64748b; }
+.cat-card-icon--fn-matte { background: #9333ea; }
+.cat-card-icon--fn-matrix { background: #6366f1; }
+.cat-card-icon--fn-meta { background: #4f46e5; }
+.cat-card-icon--fn-number { background: #16a34a; }
+.cat-card-icon--fn-operators { background: #d97706; }
+.cat-card-icon--fn-order { background: #78716c; }
+.cat-card-icon--fn-pixel { background: #db2777; }
+.cat-card-icon--fn-point { background: #2563eb; }
+.cat-card-icon--fn-resolve { background: #059669; }
+.cat-card-icon--fn-script { background: #b45309; }
+.cat-card-icon--fn-scriptval { background: #db2777; }
+.cat-card-icon--fn-shape { background: #7c3aed; }
+.cat-card-icon--fn-substring { background: #dc2626; }
+.cat-card-icon--fn-subtitle { background: #ca8a04; }
+.cat-card-icon--fn-surface { background: #0f766e; }
+.cat-card-icon--fn-text { background: #2563eb; }
+.cat-card-icon--fn-transform { background: #6366f1; }
+.cat-card-icon--fn-vector { background: #16a34a; }
+.cat-card-icon--fn-xml { background: #0ea5e9; }
+.cat-card-icon--fn-yaml { background: #b45309; }
+
+.cat-card-icon--default { background: var(--ifm-color-emphasis-500); }
+
+/* ── Level-3 node-card group icon (used by the DocCard swizzle) ─────────── */
+.doc-group-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--ifm-global-radius);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.doc-group-icon--default { background: var(--ifm-color-emphasis-200); color: var(--ifm-color-emphasis-600); }
+.doc-group-icon--accumulate { background: #ccfbf1; color: #0d9488; }
+.doc-group-icon--animate { background: #e0e7ff; color: #6366f1; }
+.doc-group-icon--create { background: #d1fae5; color: #059669; }
+.doc-group-icon--io { background: #e0f2fe; color: #0284c7; }
+.doc-group-icon--logic { background: #fef3c7; color: #d97706; }
+.doc-group-icon--modify { background: #dbeafe; color: #2563eb; }
+.doc-group-icon--obj { background: #cffafe; color: #0891b2; }
+.doc-group-icon--shaperender { background: #fce7f3; color: #db2777; }
+.doc-group-icon--shapes { background: #ede9fe; color: #7c3aed; }
+.doc-group-icon--temporal { background: #ffedd5; color: #ea580c; }
+.doc-group-icon--trigonometry { background: #ffe4e6; color: #e11d48; }
+.doc-group-icon--utility { background: #e2e8f0; color: #64748b; }
+.doc-group-icon--fn-array { background: #dbeafe; color: #3b82f6; }
+.doc-group-icon--fn-case { background: #cffafe; color: #0891b2; }
+.doc-group-icon--fn-color { background: #ffedd5; color: #ea580c; }
+.doc-group-icon--fn-comp { background: #e2e8f0; color: #475569; }
+.doc-group-icon--fn-custom-data { background: #ede9fe; color: #7c3aed; }
+.doc-group-icon--fn-decode { background: #d1fae5; color: #059669; }
+.doc-group-icon--fn-encode { background: #ccfbf1; color: #0d9488; }
+.doc-group-icon--fn-flow { background: #e0f2fe; color: #0ea5e9; }
+.doc-group-icon--fn-font { background: #fef3c7; color: #a16207; }
+.doc-group-icon--fn-fusion { background: #fee2e2; color: #dc2626; }
+.doc-group-icon--fn-image { background: #fce7f3; color: #db2777; }
+.doc-group-icon--fn-json { background: #fef3c7; color: #ca8a04; }
+.doc-group-icon--fn-key-value { background: #e2e8f0; color: #64748b; }
+.doc-group-icon--fn-matte { background: #f3e8ff; color: #9333ea; }
+.doc-group-icon--fn-matrix { background: #e0e7ff; color: #6366f1; }
+.doc-group-icon--fn-meta { background: #e0e7ff; color: #4f46e5; }
+.doc-group-icon--fn-number { background: #dcfce7; color: #16a34a; }
+.doc-group-icon--fn-operators { background: #fef3c7; color: #d97706; }
+.doc-group-icon--fn-order { background: #e7e5e4; color: #78716c; }
+.doc-group-icon--fn-pixel { background: #fce7f3; color: #db2777; }
+.doc-group-icon--fn-point { background: #dbeafe; color: #2563eb; }
+.doc-group-icon--fn-resolve { background: #d1fae5; color: #059669; }
+.doc-group-icon--fn-script { background: #fef3c7; color: #b45309; }
+.doc-group-icon--fn-scriptval { background: #fce7f3; color: #db2777; }
+.doc-group-icon--fn-shape { background: #ede9fe; color: #7c3aed; }
+.doc-group-icon--fn-substring { background: #fee2e2; color: #dc2626; }
+.doc-group-icon--fn-subtitle { background: #fef3c7; color: #ca8a04; }
+.doc-group-icon--fn-surface { background: #ccfbf1; color: #0f766e; }
+.doc-group-icon--fn-text { background: #dbeafe; color: #2563eb; }
+.doc-group-icon--fn-transform { background: #e0e7ff; color: #6366f1; }
+.doc-group-icon--fn-vector { background: #dcfce7; color: #16a34a; }
+.doc-group-icon--fn-xml { background: #e0f2fe; color: #0ea5e9; }
+.doc-group-icon--fn-yaml { background: #fef3c7; color: #b45309; }
+
+/* ── Connection chips (Example Connections sections) ────────────────────── */
+.connection-flow {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  align-items: center;
+  gap: 0.6rem 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.connection-line {
+  display: contents;
+}
+
+.connection-chip {
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.connection-chip--output {
+  justify-self: start;
+}
+
+.connection-chip--input {
+  justify-self: stretch;
+  width: 100%;
+}
+
+.connection-chip__bar {
+  width: 4px;
+  flex-shrink: 0;
+}
+
+.connection-chip--output .connection-chip__bar {
+  background: #8b5cf6;
+}
+
+.connection-chip--input .connection-chip__bar {
+  background: #d97706;
+}
+
+.connection-chip__label {
+  padding: 0.3rem 0.7rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-800);
+  white-space: nowrap;
+}
+
+.connection-arrow {
+  justify-self: center;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .connection-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .connection-line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .connection-chip--input {
+    width: auto;
+  }
+
+  .connection-arrow {
+    transform: rotate(90deg);
+    margin-left: 0.5rem;
+  }
+}

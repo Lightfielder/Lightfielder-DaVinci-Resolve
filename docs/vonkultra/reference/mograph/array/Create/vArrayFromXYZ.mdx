@@ -1,0 +1,81 @@
+---
+sidebar_position: 38
+title: vArrayFromXYZ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# vArrayFromXYZ
+
+Convert ASCII XYZ point cloud data into a vArray format Transform XYZ Points Node Connections:
+
+<div className="node-badge-row">
+  <span className="node-badge">Mograph / Array</span>
+  <span className="node-badge">Array</span>
+  <span className="node-badge">ScriptVal</span>
+  <span className="node-badge">JSON</span>
+</div>
+
+<div className="node-screenshot">
+  <img src={require('@site/static/img/vonkultra/reference/mograph/array/vArrayFromXYZ.png').default} alt="vArrayFromXYZ node" />
+</div>
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Input Source | Integer | `File` | — |
+| Filename | Text | `—` | — |
+| URL | Text | `—` | — |
+| Input | Text | `—` | — |
+| UISeparator1 | Float | `—` | — |
+
+<details>
+<summary>+2 more parameters</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| Point Cloud Density | Integer | `100` | — |
+| Scale File Units By | Float | `1` | — |
+
+</details>
+
+## Example Connections
+
+<Tabs>
+<TabItem value="example-1" label="Example 1" default>
+
+```
+vArrayFromXYZ.Points -> vArrayCameraProjection.ArrayA
+    vArrayCameraProjection.Output -> vArrayShapeRender.ArrayPoint
+    Background.Output -> vArrayShapeRender.Input
+```
+
+</TabItem>
+<TabItem value="example-2" label="Example 2">
+
+```
+vArrayFromXYZ.Points -> vArrayMath.ArrayA
+    vMatrixCreateTRS1.Output -> vArrayMath.ArrayB
+    vArrayMath.Operation = "Matrix Multiply"
+    vArrayMath.Output -> vArrayToXYZ.ArrayA
+    vArrayToXYZ.Output -> vTextToFile.Input
+```
+
+</TabItem>
+</Tabs>
+
+## Related Nodes
+
+<div className="node-chip-row">
+  <a className="node-chip" href="../Modify/vArrayCameraProjection">vArrayCameraProjection</a>
+  <a className="node-chip" href="../ShapeRender/vArrayShapeRender">vArrayShapeRender</a>
+  <a className="node-chip" href="../Modify/vArrayMath">vArrayMath</a>
+  <a className="node-chip" href="./vArrayToXYZ">vArrayToXYZ</a>
+</div>
+
+{/*
+Generated page — node: vArrayFromXYZ (Array/Create).
+Source: fuse vArrayFromXYZ.fuse + Docsify mega-page. Param descriptions pending the content pass (content-plan.md §6).
+*/}
