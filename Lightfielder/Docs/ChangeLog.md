@@ -1,5 +1,10 @@
 # Lightfielder | ChangeLog
 
+## 2026-10-08
+
+- Added a new GitHub pages based documentation system. Based upon the "Vonk Ultra Motion Graphics Pro" Docusaurus theme by Dunn Lewis.
+-  Stared working on mult-view OGrapf lightfield title generators based upon the [Vonk Mograph Camera Engine](https://www.youtube.com/watch?v=GBoWOP9oB9w&list=PLVDcRvd92hcgumsGnIth-hDi3gvVTc71u&index=6) Tech Demo by Dunn Lewis. This is the future of image based rendering compatible motion graphics as true lightfield content synthesized procedurally using the European Broadcast format [OGraf](https://ograf.ebu.io/) and [Vonk Data Nodes](https://www.youtube.com/playlist?list=PLVDcRvd92hcgumsGnIth-hDi3gvVTc71u)  Tech.
+
 ## 2026-10-01
 
 - Updated the `Lightfielder PathMap Setup.lua` script to improve Resolve v21.1 support
