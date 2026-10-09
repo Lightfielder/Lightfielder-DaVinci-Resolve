@@ -12,6 +12,13 @@
   overflow-y: auto;
 }
 
+/* Toolbar menu: let the list extend to its full length so every script is
+ * visible to the bottom, with no internal scrollbar / height cap. */
+.lf-menu-full .dropdown__menu {
+  max-height: none;
+  overflow: visible;
+}
+
 /* The clickable group header (click to unfold downward). */
 .lf-group__toggle {
   display: flex;
