@@ -671,16 +671,27 @@ article a:not(.menu__link):not(.toc__link):hover {
 }
 
 .lf-btn-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content max-content;
   gap: 0.75rem;
   align-items: center;
+  justify-content: start;
 }
 
-/* Makes a button span the full button-row width, so "Install Lightfielder"
- * matches the combined width of the buttons on the row above. */
+/* "Install Lightfielder" spans both columns of the first row, so it is exactly
+ * as wide as the two buttons above it combined (not the full row width). */
 .lf-btn-row .lf-btn-row__full {
-  flex: 1 1 100%;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .lf-btn-row {
+    grid-template-columns: 1fr;
+  }
+
+  .lf-btn-row > * {
+    grid-column: 1 / -1;
+  }
 }
 
 .lf-sections-grid {
