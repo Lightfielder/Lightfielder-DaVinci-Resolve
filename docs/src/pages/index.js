@@ -181,7 +181,7 @@ export default function Home() {
                   rel="noopener noreferrer">
                   Download
                 </a>
-                <Link className="button button--secondary button--lg" to="/docs/installation/install-lightfielder">
+                <Link className="button button--secondary button--lg lf-btn-row__full" to="/docs/installation/install-lightfielder">
                   Install Lightfielder
                 </Link>
               </div>

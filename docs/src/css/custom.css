@@ -677,6 +677,12 @@ article a:not(.menu__link):not(.toc__link):hover {
   align-items: center;
 }
 
+/* Makes a button span the full button-row width, so "Install Lightfielder"
+ * matches the combined width of the buttons on the row above. */
+.lf-btn-row .lf-btn-row__full {
+  flex: 1 1 100%;
+}
+
 .lf-sections-grid {
   margin: 2.5rem 0 3rem;
 }
