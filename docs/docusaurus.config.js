@@ -67,9 +67,11 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Follow the OS light/dark preference on first visit.
+      // Default to the dark theme on first visit. Users can still toggle to
+      // light mode with the navbar color-mode switch; the choice is persisted.
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
       },
       mermaid: {
         theme: {

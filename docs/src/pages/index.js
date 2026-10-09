@@ -89,7 +89,7 @@ const sections = [
     ],
   },
   {
-    title: 'Reference',
+    title: 'LF Stand & Deliver',
     links: [
       { label: 'Metadata Tags', href: '/docs/usage/metadata-tags' },
       { label: 'Shotlog Format', href: '/docs/usage/shotlog' },
@@ -128,14 +128,14 @@ const sections = [
     ],
   },
   {
-    title: 'Examples',
+    title: 'Lightfield Example Projects',
     links: [
       { label: 'Example Projects', href: '/docs/Examples/' },
       { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
     ],
   },
   {
-    title: 'Project',
+    title: 'LF for Resolve',
     links: [
       { label: 'ChangeLog', href: '/docs/project/changelog' },
       { label: 'Known Issues', href: '/docs/project/known-issues' },
@@ -149,6 +149,9 @@ const sections = [
       { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
       { label: 'Lightfielder Ops', href: 'https://github.com/Lightfielder/LightfielderOperators' },
       { label: 'VFXPedia Docs Site', href: 'https://lightfielder.github.io/VFXPedia/' },
+      { label: 'Swiftpedia Docs Site', href: 'https://github.com/Lightfielder/Swiftpedia' },
+      { label: 'Maya Camera Snap', href: 'https://github.com/Lightfielder/Maya-CameraSnap-Tools' },
+      { label: 'Kartaverse for Houdini', href: 'https://kartaverse.github.io/Kartaverse-for-Houdini/' },
     ],
   },
 ];

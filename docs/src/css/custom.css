@@ -180,6 +180,40 @@ body {
   opacity: 0.3;
 }
 
+/* ── Keep the top-level nav on one line so the navbar ruler never slices the
+ * dropdown carets ─────────────────────────────────────────────────────────
+ * Infima gives the navbar a fixed height, and lets the top-level links shrink
+ * and wrap. With this site's many dropdowns that happens just above the 996px
+ * mobile breakpoint: a label ("Vonk Ultra") wraps to a second line, overflows
+ * the fixed height, and the navbar's bottom border — the full-page-wide ruler —
+ * cuts through the ▾ carets that show the menus expand.
+ *
+ * Holding every label on a single line and stopping the items from shrinking
+ * keeps all carets on one row, with the ruler sitting cleanly beneath them.
+ * The brand title truncates first, and the affected width band reclaims room
+ * by tightening item padding and the link font-size. */
+.navbar__inner {
+  flex-wrap: nowrap;
+}
+
+.navbar__link {
+  white-space: nowrap;
+}
+
+.navbar__items .navbar__item {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1300px) {
+  .navbar {
+    --ifm-navbar-item-padding-horizontal: 0.4rem;
+  }
+
+  .navbar__link {
+    font-size: 0.88rem;
+  }
+}
+
 /* ── Sidebar / table of contents ────────────────────────────────────────── */
 [data-theme='dark'] .menu__link--active {
   background: rgba(129, 140, 248, 0.12);
