@@ -17,7 +17,7 @@ Lightfielder Viewport provides a digital content creation environment for author
 
 Lightfielder feels like a mix of the most relevant ideas found in game engines, and the DCC (digital content creation) scene assembly capabilities typically found in big box 3D modelling, rendering and animation software. Those features are combined with a side-order of 3d scaning sector focused options you would normally need to access inside a dedicated SfM (Structure from Motion) based 3D reconstruction program.
 
-Viewport v1.0 beta is a [Swift language](https://www.swift.org/) based application that relies on [Metal API](https://developer.apple.com/metal/) based GPU acceleration to power the interactive session. The Viewport development effort was bootstrapped using open-source LGPL licensed [Kartaverse](https://github.com/Kartaverse) technology.
+Viewport v1.0 beta is a [Swift language](https://www.swift.org/) based application that relies on [Metal API](https://developer.apple.com/metal/) based GPU acceleration to power the interactive session. The Viewport development effort was bootstrapped using open-source LGPL licensed [Lightfielder](https://github.com/Lightfielder) technology.
 
 [![Watch the video](https://img.youtube.com/vi/MQZb7zJXfXA/maxresdefault.jpg)](https://www.youtube.com/watch?v=MQZb7zJXfXA)
 (Click to play the Youtube Video)

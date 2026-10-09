@@ -54,7 +54,7 @@ Edition: Draft Zero of the core idea:
     * OBJ file header has a comment with the [Timecode](https://en.wikipedia.org/wiki/Timecode) value  
     * [Pixar OpenSubD](https://www.opensubdiv.org/docs/intro.html) Crease support added to the OBJ file  
     * Wavefront MTL file referenced from OBJ mesh holds PBR attributes, as well as external [MaterialX](https://materialx.org/) .mtlx material and [PTEX](https://ptex.us/overview.html) resource file names  
-    * Support SPH ([Spherical Harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics)) data storage between MTL files and as per-point sample/per-vertex color records in the OBJ file. This data is encoded with the same attribute names present in 3DGS based .ply files. It is hoped that [PBR-GS](https://github.com/Kartaverse/PBR-GS) approaches and the concepts shared by the earlier [Kartaverse for Houdini COPs demos](https://kartaverse.github.io/Kartaverse-for-Houdini/#/pbr/pbr) would be useful to help support interactive asset relighting.  
+    * Support SPH ([Spherical Harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics)) data storage between MTL files and as per-point sample/per-vertex color records in the OBJ file. This data is encoded with the same attribute names present in 3DGS based .ply files. It is hoped that [PBR-GS](https://github.com/Lightfielder/PBR-GS) approaches and the concepts shared by the earlier [Lightfielder for Houdini COPs demos](https://lightfielder.github.io/Lightfielder-for-Houdini/#/pbr/pbr) would be useful to help support interactive asset relighting.  
   * Wavefront .mtl materials  
     * Add [OpenPBR](https://github.com/AcademySoftwareFoundation/OpenPBR) shading model support with a goal of handling [Substance Painter](https://www.adobe.com/products/substance3d/apps/painter.html) PBR Metal Roughness based texture maps. ([Exocortex lead a PBR effort so that concept pre-exists](https://ben3d.ca/blog/extended-wavefront-obj-mtl-for-pbr))  
     * [MaterialX](https://materialx.org/) file with relative path reference support added in .mtl file for shader attributes  
@@ -125,7 +125,7 @@ Often, the technical debt issues with deploying a pure end-to-end OpenUSD workfl
 
 The idea for this OBJ-GS paper is built primarily from these prior efforts:
 
-* [https://github.com/Kartaverse/PBR-GS](https://github.com/Kartaverse/PBR-GS)  
+* [https://github.com/Lightfielder/PBR-GS](https://github.com/Lightfielder/PBR-GS)  
 * [https://ben3d.ca/blog/extended-wavefront-obj-mtl-for-pbr](https://ben3d.ca/blog/extended-wavefront-obj-mtl-for-pbr)  
 * [https://projects.blender.org/blender/blender/commit/a99a62231e04](https://projects.blender.org/blender/blender/commit/a99a62231e04)  
 * [https://lebrov.com/octane-pipeline](https://lebrov.com/octane-pipeline)

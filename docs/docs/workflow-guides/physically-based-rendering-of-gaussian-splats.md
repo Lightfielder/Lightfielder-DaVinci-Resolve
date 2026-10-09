@@ -18,7 +18,7 @@ Developed in collaboration with [Eric Paré](mailto:eric@xangle.team) and [Didie
 
 ### Overview
 
-The Kartaverse development team has explored various workflows available to extend the existing 3DGS PLY container format. The primary goal is to add PBR shading attributes to support interactive relighting while preserving backwards compatibility with existing 3D Gaussian Splatting training / rendering workflows and tools.
+The Lightfielder development team has explored various workflows available to extend the existing 3DGS PLY container format. The primary goal is to add PBR shading attributes to support interactive relighting while preserving backwards compatibility with existing 3D Gaussian Splatting training / rendering workflows and tools.
 
 The most promising idea comes from Ben Houston's paper "[PBR extensions to Wavefront OBJ/MTL](https://benhouston3d.com/blog/extended-wavefront-obj-mtl-for-pbr)". We reached out to talk with Ben on 2025-07-29 and got his approval for this PBR GS concept to be scaffolded on-top of his core concepts and naming conventions. Thanks!
 
