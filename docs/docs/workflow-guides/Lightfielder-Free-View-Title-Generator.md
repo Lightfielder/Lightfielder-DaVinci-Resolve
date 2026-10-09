@@ -6,7 +6,14 @@ Lightfielder/Vonk Ultra's dev team is building a super exciting OGraf based 3D c
 
 The Ograf template runs as an edit page title template like element that exists in a fully 3D/4D navigable 6DoF (six degrees of freedom) virtual reality environment. With a bit of scripting help, the OGraf module is capable of pulling all of the camera settings from an SfM based volumetric video camera array.  You can now access a flexible 2D, 3D PBR, or 3D vector curve based graphics generator in Resolve/Fusion that has its own 3D workspace that runs faster than Fusion's native masking nodes do for shape creation. 
 
-The OGraf renderer is 100% end-user scriptable tech. Every aspect of this free-view motion graphics content creation space runs under your control via an interactive live-rendering HTML5 canvas. This approach was was developed and pioneered by [Dunn Lewis](https://ko-fi.com/dunnlewis) of the [Vonk Ultra "vMograph and OGraf"](https://ko-fi.com/dunnlewis) tools project. 
+The OGraf renderer is 100% end-user scriptable tech. Every aspect of this free-view motion graphics content creation space runs under your control via an interactive live-rendering HTML5 canvas. 
+
+This approach was was developed and pioneered by [Dunn Lewis](https://ko-fi.com/dunnlewis) of the [Vonk Ultra "vMograph and OGraf"](https://ko-fi.com/dunnlewis) tools project. 
+<YouTube 
+  id="GBoWOP9oB9w" 
+  list="PLVDcRvd92hcgumsGnIth-hDi3gvVTc71u" 
+  title="YouTube | Dunn Lewis | OGraf Camera Engine" 
+/>
 
 The new OGraf render engine is able to provide volumetric video editors with access to a unique title design system, that runs interactively on the Edit, Color, Fusion, and Deliver pages in Resolve. As a rendering solution, there is finally an efficient way to unlock true view-dependent "Lightfielder Title Graphics" technology via OGraf. What makes this concept so exciting is that it has the capacity to run on a stock Edit page session that has vertically stacked video tracks with "Lightfielder for DaVinci Resolve Studio v21.1". 
 
