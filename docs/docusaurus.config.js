@@ -355,10 +355,6 @@ module.exports = {
                 label: 'Releases',
                 href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases',
               },
-              {
-                label: 'Lightfielder Ops Repo',
-                href: 'https://github.com/Lightfielder/LightfielderOperators',
-              },
             ],
           },
         ],

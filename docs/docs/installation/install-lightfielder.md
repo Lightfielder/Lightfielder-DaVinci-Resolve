@@ -9,9 +9,10 @@ description: "Install the Lightfielder files, Resolve PathMaps, toolbar hotkey, 
 
 Installation Checklist:
 
-- Install the Lightfielder files
+- Download the latest [Lightfielder for Resolve Release on GitHub](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases)
+- Install the Lightfielder files (You Are Here)
 - Setup the Resolve PathMap settings
-- Assign a Lightfielder Toolbar Hotkey Entry
+- Assign a Lightfielder Toolbar Hotkey Entry in Resolve
 - Install [Python and the Python Modules](install-python.md)
 - Import the [Lightfielder Deliver Page presets](../usage/deliver-page-presets.md)
 - Configure the Resolve [Metadata Tag Lightfielder preset](../usage/metadata-tags.md)
@@ -158,7 +159,7 @@ cd /opt/resolve/bin/
 ./resolve
 ```
 
-## Assign a Toolbar Hotkey Entry
+## Assign a Toolbar Hotkey Entry in Resolve
 
 Let's add a custom Lightfielder hotkey entry to the Resolve "Keyboard Customization" window.
 
