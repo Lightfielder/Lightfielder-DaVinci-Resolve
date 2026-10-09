@@ -769,6 +769,10 @@ article a:not(.menu__link):not(.toc__link):hover {
   margin: 0;
 }
 
+.lf-note p + p {
+  margin-top: 0.6rem;
+}
+
 .lf-note h2 {
   margin: 0 0 0.5rem;
   font-size: 1.15rem;
