@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # The Lightfielder docs site is the only npm project in this repo (it lives
+  # under /docs). Grouping keeps the noisy Docusaurus transitive dependency
+  # churn into reviewable PRs instead of a flood of individual ones.
+  - package-ecosystem: "npm"
+    directory: "/docs"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      docusaurus:
+        patterns:
+          - "@docusaurus/*"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    labels:
+      - "dependencies"
+      - "docs"
+    commit-message:
+      prefix: "docs(deps)"
