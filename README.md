@@ -26,7 +26,7 @@ You might be. Are you a tech artist, photographer, or filmmaker working with mul
 
 Lightfield recordings of a real-world or virtual scene provide a unique experience compared to traditional legacy VR/XR media types (like 360VR, 180VR, Fulldome, 3DTV, or Spatial Media).
 
-When digitized, a lightfield based 3D scene-graph stores the captured content using a data structure that holds the individual samples of light rays. Each ray has a unique light intensity property and a light ray direction property that indicates the angle that the light beam is travelling along. 
+When digitized, a lightfield based 3D scene-graph stores the captured content using a data structure that holds the individual samples of light rays. Each ray has a unique light intensity property and a light ray direction property that indicates the angle that the light beam is traveling along. 
 
 This allows the observer of a lightfield scene asset to experience free-view motion (aka 6DoF navigation) when viewing the digital environment. The observer is able to interactively re-adjust the synthetic camera properties such as aperture, exposure, colour temperature, and shutter angle to sculpt the final cinematic result. A lightfield photography/filmmaking approach can be used to display a still representation of a scene (freezing a single moment in time), or a full motion version of the scene which supports narrative storytelling goals.
 
@@ -65,10 +65,7 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 
 ## Documentation
 
-The Lightfielder documentation is published with Docusaurus and GitHub Pages:
+The Lightfielder documentation is now hosted on the project's official website at [Lightfielder.com](https://lightfielder.com/).  
 
-[https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/](https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/)
-
-The docs site source lives in this repo at [docs/](docs/), and the original
-on-disk help topics are still available at
-[Lightfielder:/Docs/README.md](Lightfielder/Docs/README.md).  
+The Lightfielder repo has a copy of the on-disk help topics that are available at the
+"[Lightfielder:/Docs/README.md](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/tree/main/Lightfielder/Docs/README.md)" PathMap location.  
