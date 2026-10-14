@@ -1,5 +1,5 @@
 --[[--
-Lightfielder ScriptLib 2026-09-19 01.30 AM (UTC -3)
+Lightfielder ScriptLib 2026-10-14 08.14 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A scriptlib module is a Lua script that is automatically run when DaVinci Resolve launches.
@@ -13,7 +13,7 @@ The Lightfielder "01 Preferences" window has an "Autoload Toolbar On Launch" che
 
 function GetTimestamp()
 	-- Date and Time docs: https://www.lua.org/pil/22.1.html
-	-- Time Format Example: 2026-08-23 2:14 PM
+	-- Time Format Example: 2026-10-14 2:15 PM
 	return tostring(os.date("%Y-%m-%d %I:%M:%S %p"))
 end
 
@@ -69,7 +69,19 @@ function AutostartToolbar()
 				print("[Lightfielder][ScriptLib][Resolve Project Name] \"" .. tostring(projectName) .. "\"\t[Autostart Task] " .. tostring(GetTimestamp()) )
 
 				-- Display the Toolbar window
-				app:RunScript(scriptPath)
+				if scriptPath and app then
+					function GrabRunScript()
+						app:RunScript(scriptPath)
+						print("[Lightfielder][ScriptLib][Display the Toolbar] XPCALL RunScript()")
+					end
+					function GrabError(err)
+						print("[Lightfielder][ScriptLib][Display the Toolbar] XPCALL RunScript() Handler")
+					end
+
+					-- Capture the error even on Resolve v21.1.1
+					local status = xpcall(GrabRunScript, GrabError) 
+					print("[Lightfielder][ScriptLib][Display the Toolbar] ", status)
+				end
 			end
 		end
 	end
