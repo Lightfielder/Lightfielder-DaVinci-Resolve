@@ -67,6 +67,8 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Default social preview image relative to your static folder
+      image: 'img/social-card.png',
       // Default to the dark theme on first visit. Users can still toggle to
       // light mode with the navbar color-mode switch; the choice is persisted.
       colorMode: {
