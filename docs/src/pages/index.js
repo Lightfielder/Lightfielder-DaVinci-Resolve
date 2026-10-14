@@ -151,7 +151,7 @@ const sections = [
       { label: 'VFXPedia Docs Site', href: 'https://lightfielder.github.io/VFXPedia/' },
       { label: 'Swiftpedia Docs Site', href: 'https://github.com/Lightfielder/Swiftpedia' },
       { label: 'Maya Camera Snap', href: 'https://github.com/Lightfielder/Maya-CameraSnap-Tools' },
-      { label: 'Kartaverse for Houdini', href: 'https://kartaverse.github.io/Kartaverse-for-Houdini/' },
+      { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
     ],
   },
 ];
