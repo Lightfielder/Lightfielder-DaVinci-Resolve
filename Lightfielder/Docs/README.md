@@ -66,7 +66,7 @@ The Lightfielder workflow automation scripts are accessed using the "Workspace \
 ## Local Documentation
 
 The Lightfielder repo has a copy of the on-disk help topics that are available at the
-"[Lightfielder:/Docs/README.md](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/tree/main/Lightfielder/Docs/README.md)" PathMap location.  
+"[Lightfielder:/Docs/README.md](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/blob/main/Lightfielder/Docs/README.md)" PathMap location.  
 
 ## Table of Contents
 
