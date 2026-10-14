@@ -4,7 +4,7 @@ Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
 ## Public Beta 6 Release
 
-The Lightfielder proejct's online documentation is now hosted on the project's official website at [Lightfielder.com](https://lightfielder.com/). This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector. 
+The Lightfielder project's online documentation is now hosted on the official website at [Lightfielder.com](https://lightfielder.com/). This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
 ## Overview
 
