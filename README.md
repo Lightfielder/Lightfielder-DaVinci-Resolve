@@ -4,7 +4,7 @@ Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
 ## Public Beta 5 Release
 
-This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
+The Lightfielder project's online documentation is now hosted on the official website at [Lightfielder.com](https://lightfielder.com/). This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
 ## Overview
 
@@ -63,9 +63,7 @@ Additional learning content and example project files are being prepared for Lig
 
 The Lightfielder workflow automation scripts are accessed using the "Workspace \> Scripts \> Lightfielder \> " menu system, or the Lightfielder toolbar with the (Command + F11) hotkey.
 
-## Documentation
-
-The Lightfielder documentation is now hosted on the project's official website at [Lightfielder.com](https://lightfielder.com/).  
+## Local Documentation
 
 The Lightfielder repo has a copy of the on-disk help topics that are available at the
 "[Lightfielder:/Docs/README.md](https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/tree/main/Lightfielder/Docs/README.md)" PathMap location.  
