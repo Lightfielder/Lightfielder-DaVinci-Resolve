@@ -1,8 +1,8 @@
-# Lightfielder v26.10.08 B5 for DaVinci Resolve
+# Lightfielder v26.10.14 B6 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 5 Release
+## Public Beta 6 Release
 
 This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 

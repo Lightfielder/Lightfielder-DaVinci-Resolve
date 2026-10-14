@@ -13,7 +13,7 @@ module.exports = {
   title: 'Lightfielder for DaVinci Resolve',
   tagline: 'Multi-view workflow automation for volumetric post-production',
   url: 'https://lightfielder.github.io',
-  baseUrl: '/Lightfielder-DaVinci-Resolve/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   favicon: 'img/favicon.svg',
 

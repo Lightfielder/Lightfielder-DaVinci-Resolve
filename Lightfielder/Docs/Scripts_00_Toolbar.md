@@ -22,6 +22,36 @@ A typical value for the Script editor filepath would be something like `/Applica
 
 This feature requires the "xdg-open" package to be installed on Linux.
 
+## macOS Window Snapping Settings
+
+Lightfielder uses a lot of Python scripted tool windows since Resolve's native scripting APIs do not allow 3rd party developers to create custom user interface windows as docked panels.
+
+If you are running Lightfielder on macOS, you will likely come across several settings that macOS has enabled by default in the System Settings that can cause usability headaches.
+
+### Avoid Entering Fullscreen Mode on macOS
+
+For starters, it is likely a good idea to avoid pressing the green macOS "Enter Fullscreen Mode" button on the main Resolve program window.
+
+![Enter Fullscreen Mode Button](images/macos-window-resize-fullscreen-1.png)
+
+When 3rd party scripts open custom floating windows, macOS will attempt to force those smaller palette windows into a fullscreen state as well. This is likely not something that you would have expected to happen.
+
+This forced palette window resizing thing typically leads to an odd user interface experience at can gett a bit confusing the first few times it occurs. 
+
+If you have absent-mindedly entered fullscreen mode with Resolve, its a good idea to turn that mode off when you start using multiple Lightfielder scripted windows as it just get a bit strange.
+
+If you hover over the green button, newer versions of macOS can sometimes show a contextual pop-up menu.
+
+![Enter Fullscreen Mode Contextual Menu](images/macos-window-resize-fullscreen-2.png)
+
+### macOS Window Snapping Events
+
+When a Lightfielder "floating window" is dragged up next to the macOS menu bar, the default settings for the control "System Settings > Desktop and Dock > Drag windows to menu bar to fill screen" will do an instant forced resize on the palette window.
+
+Life is a lot more consistent if you turn the "Drag windows to menu bar to fill screen" option to an "Off" state. Then you can move the floating windows around and they never try to force resize the windows to take up all of the screen space on your monitor.
+
+![Drag windows to menu bar to fill screen](images/macos-dock-and-window-settings-drag-window-autoresize.png)
+
 ## User Editable JSON Toolbar Settings
 
 The Lightfielder v26.09 update is in the middle of porting the toolbar configuration data from existing in a Python script over to using a new JSON based preset system. When the toolbar code migration is completed, it will allow the preferences window to swap the active Lightfielder toolbar from a combo menu, and the user defined configuration files will also be able to choose the exact tools and icons they would like to have in their custom shelves.
