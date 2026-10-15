@@ -162,7 +162,7 @@ const sections = [
     title: 'Side Projects',
     links: [
       { label: 'Camera Sensor Database', href: 'https://github.com/EmberLightVFX/Camera-Sensor-Database' },
-      { label: 'Gyroflow to CSV', href: 'https://github.com/Lightfielder/Gyroflow-to-CSV' },
+      { label: 'Gyroflow to CSV', href: 'https://github.com/EmberLightVFX/Gyroflow-to-CSV' },
       { label: 'Lua-Python', href: 'https://github.com/Lightfielder/Lua-Python' },
       { label: 'Maya Camera Snap', href: 'https://github.com/Lightfielder/Maya-CameraSnap-Tools' },
       { label: 'Nusion Comp Converter', href: 'https://github.com/Lightfielder/NusionCompConverter' },
