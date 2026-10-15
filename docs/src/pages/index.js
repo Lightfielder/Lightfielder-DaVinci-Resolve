@@ -91,8 +91,8 @@ const sections = [
   {
     title: 'Multi-View Camera Array',
     links: [
-      { label: 'Metadata Tags', href: '/docs/usage/metadata-tags' },
       { label: 'Shotlog Format', href: '/docs/usage/shotlog' },
+      { label: 'Metadata Tags', href: '/docs/usage/metadata-tags' },
       { label: 'Deliver Page Presets', href: '/docs/usage/deliver-page-presets' },
       { label: 'Unit Tests', href: '/docs/usage/unit-tests' },
     ],
@@ -110,11 +110,11 @@ const sections = [
   {
     title: 'Lightfielder Ops',
     links: [
-      { label: 'Ops Overview', href: '/docs/Ops/' },
+      { label: 'LF Ops Overview', href: '/docs/Ops/' },
       { label: 'Install Ops', href: '/docs/Ops/installation/install-ops' },
-      { label: 'Sequencer View', href: '/docs/Ops/usage/sequencer' },
-      { label: 'Nodes View', href: '/docs/Ops/usage/nodes' },
-      { label: 'Lightfielder Viewport', href: '/docs/Ops/viewport/' },
+      { label: 'LF Viewport App', href: '/docs/Ops/viewport/' },
+      { label: 'LF Sequencer View', href: '/docs/Ops/usage/sequencer' },
+      { label: 'LF Nodes View', href: '/docs/Ops/usage/nodes' },
     ],
   },
   {
