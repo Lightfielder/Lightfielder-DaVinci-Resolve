@@ -1,7 +1,5 @@
 // Lightfielder for DaVinci Resolve — Docusaurus configuration.
 //
-// The site scaffolding, theme, and plugin lineup are ported/inspired by the
-// VFXPedia docs project (https://github.com/Lightfielder/VFXPedia) so the
 // Lightfielder help docs read as part of the same design family:
 // IBM Plex typography, indigo light theme, deep blue-black + gold dark theme,
 // Mermaid diagram support, and self-contained local full-text search.
@@ -15,7 +13,7 @@ module.exports = {
   url: 'https://lightfielder.github.io',
   baseUrl: '/',
   onBrokenLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: '/static/img/favicon.svg',
 
   organizationName: 'Lightfielder',
   projectName: 'Lightfielder-DaVinci-Resolve',
@@ -68,7 +66,7 @@ module.exports = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Default social preview image relative to your static folder
-      image: 'static/img/social-card.png',
+      image: '/static/img/social-card.png',
       // Default to the dark theme on first visit. Users can still toggle to
       // light mode with the navbar color-mode switch; the choice is persisted.
       colorMode: {
@@ -95,7 +93,7 @@ module.exports = {
         title: 'Lightfielder',
         logo: {
           alt: 'Lightfielder logo',
-          src: 'img/logo.svg',
+          src: '/static/img/logo.svg',
         },
         items: [
           {
@@ -210,15 +208,15 @@ module.exports = {
             position: 'left',
             to: '/docs/Ops/',
             items: [
-              { label: 'Ops Overview', to: '/docs/Ops/' },
+              { label: 'LF Ops Overview', to: '/docs/Ops/' },
               { label: 'Install Ops', to: '/docs/Ops/installation/install-ops' },
               { label: 'Install Python', to: '/docs/Ops/installation/install-python' },
               { label: 'Uninstall Ops', to: '/docs/Ops/installation/uninstall-ops' },
-              { label: 'Sequencer View', to: '/docs/Ops/usage/sequencer' },
-              { label: 'Nodes View', to: '/docs/Ops/usage/nodes' },
+              { label: 'LF Viewport App', to: '/docs/Ops/viewport/' },
+              { label: 'LF Sequencer View', to: '/docs/Ops/usage/sequencer' },
+              { label: 'LF Nodes View', to: '/docs/Ops/usage/nodes' },
               { label: 'Export Presets', to: '/docs/Ops/usage/presets' },
               { label: 'Unit Tests', to: '/docs/Ops/usage/unit-tests' },
-              { label: 'Lightfielder Viewport', to: '/docs/Ops/viewport/' },
             ],
           },
           {
@@ -241,8 +239,8 @@ module.exports = {
               {
                 label: 'Getting Started',
                 items: [
-                  { label: 'Introduction', to: '/VonkUltra/getting-started/introduction' },
-                  { label: 'Install', to: '/VonkUltra/getting-started/install' },
+                  { label: 'Vonk Introduction', to: '/VonkUltra/getting-started/introduction' },
+                  { label: 'Vonk Install', to: '/VonkUltra/getting-started/install' },
                   { label: 'Core Concepts', to: '/VonkUltra/getting-started/core-concepts' },
                   { label: 'Your First Comp', to: '/VonkUltra/getting-started/your-first-comp' },
                 ],
@@ -336,11 +334,11 @@ module.exports = {
             ],
           },
           {
-            title: 'Project',
+            title: 'Lightfielder for DaVinci Resolve',
             items: [
-              { label: 'ChangeLog', to: '/docs/project/changelog' },
-              { label: 'Known Issues', to: '/docs/project/known-issues' },
-              { label: 'PunchList', to: '/docs/project/punch-list' },
+              { label: 'LF ChangeLog', to: '/docs/project/changelog' },
+              { label: 'LF Known Issues', to: '/docs/project/known-issues' },
+              { label: 'LF PunchList', to: '/docs/project/punch-list' },
               { label: 'Unit Tests', to: '/docs/usage/unit-tests' },
             ],
           },
@@ -356,7 +354,7 @@ module.exports = {
                 href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve',
               },
               {
-                label: 'Releases',
+                label: 'GitHub Releases',
                 href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases',
               },
             ],
@@ -372,7 +370,7 @@ module.exports = {
       },
     }),
 
-  // Imported Kartaverse Vonk Ultra documentation site. It runs as a second,
+  // Imported Vonk Ultra documentation site. It runs as a second,
   // independent docs plugin instance so its four original sidebars and ~1000
   // node reference pages stay separate from the Lightfielder docs, and it is
   // served under the /VonkUltra/ route.
