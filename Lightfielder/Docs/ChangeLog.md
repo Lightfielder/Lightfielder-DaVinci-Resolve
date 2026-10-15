@@ -1,10 +1,10 @@
 # Lightfielder | ChangeLog
 
-## 2026-10-14
-
-- v26.10.14 Beta 6 documentation update. Added support showing for the new [Docusaurus](https://docusaurus.io/) formatted Lightfielder reference content with the "?" button in each of the scripted tool window.
+- A new [Lightfielder.com](http://Lightfielder.com) domain name was registered for the project.
+- v26.10.14 Beta 6 documentation update:
+	- Added support showing for the new [Docusaurus](https://docusaurus.io/) formatted Lightfielder reference content with the "?" button in each of the scripted tool window.
 - Updated the RunScript() Function to add extra error handling in the "`Lightfielder/Resolve/Scripts/Lightfielder.scriptlib`" file to better handle Resolve v21.1.1 API changes.
-	- This change solves a "[x] Autoload Toolbar" preference related console message of "attempt to call method 'RunScript' (a nil value)" that occurred with the Lightfielder.scriptlib file.
+	- This change solves a  Lightfielder "[x] Autoload Toolbar" preference related console message of "attempt to call method 'RunScript' (a nil value)" that occurred when Resolve v21.1.1 read the Lightfielder.scriptlib file.
 
 ## 2026-10-08
 

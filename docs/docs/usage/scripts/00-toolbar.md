@@ -17,7 +17,7 @@ The Lightfielder Toolbar cuts down the effort needed to access the "Workspace > 
 
 **Tip:** When the Toolbar window "X" close box is clicked, if the shift modifier key is held down at the same moment, the extra floating palette windows are force-closed at the same time, too. This makes it a quick task to de-clutter your workspace if you need to focus on something else.
 
-## Choosing a script editor
+## Choosing a Script Editor
 
 **Tip:** Hold down the Command (macOS) or Control (Win/Linux) key when clicking on a toolbar item to edit that Python script. This works if you have a script editor program defined in the Fusion page settings.
 

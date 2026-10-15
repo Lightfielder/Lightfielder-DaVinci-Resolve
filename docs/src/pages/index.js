@@ -76,7 +76,7 @@ const sections = [
     ],
   },
   {
-    title: 'Toolbar scripts',
+    title: 'Toolbar Scripts',
     links: [
       { label: 'Toolbar Overview', href: '/docs/usage/toolbar' },
       { label: '00 Toolbar', href: '/docs/usage/scripts/toolbar' },
@@ -89,7 +89,7 @@ const sections = [
     ],
   },
   {
-    title: 'LF Stand & Deliver',
+    title: 'Multi-View Camera Array',
     links: [
       { label: 'Metadata Tags', href: '/docs/usage/metadata-tags' },
       { label: 'Shotlog Format', href: '/docs/usage/shotlog' },
@@ -135,7 +135,7 @@ const sections = [
     ],
   },
   {
-    title: 'LF for Resolve',
+    title: 'Lightfielder for Resolve',
     links: [
       { label: 'ChangeLog', href: '/docs/project/changelog' },
       { label: 'Known Issues', href: '/docs/project/known-issues' },
