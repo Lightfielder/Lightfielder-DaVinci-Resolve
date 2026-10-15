@@ -150,7 +150,6 @@ const sections = [
       { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
       { label: 'Lightfielder PlayblastXR', href: 'https://github.com/Lightfielder/PlayblastXR' },
       { label: 'Lightfielder Extras', href: 'https://github.com/Lightfielder/LightfielderExtras' },
-      { label: 'Lightfielder Ops', href: 'https://github.com/Lightfielder/LightfielderOperators' },
       { label: 'Domemaster Photoshop Actions Pack', href: 'https://github.com/Lightfielder/Domemaster-Photoshop-Actions-Pack' },
       { label: 'OpenDisplayXR', href: 'https://github.com/Lightfielder/OpenDisplayXR' },
       { label: 'Media Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
