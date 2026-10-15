@@ -4,7 +4,7 @@ This folder contains the [Docusaurus](https://docusaurus.io/) powered
 documentation site for the **Lightfielder for DaVinci Resolve** project. It is
 published to GitHub Pages at:
 
-https://lightfielder.com
+[https://lightfielder.com](https://lightfielder.com)
 
 ## Folder Layout
 
@@ -48,6 +48,8 @@ docs/
 
 ## Local Development
 
+Use a git client like [GitKraken](https://www.gitkraken.com/download) or [GitHub Desktop](https://desktop.github.com/download/) to download a local copy of the Lightfielder git repo:.
+
 Install [Node.js](https://nodejs.org/en) (v20 or newer). In a terminal window,
 navigate to this `docs/` folder and run:
 
@@ -59,12 +61,11 @@ npm start
 }
 ```
 
-The local staging server opens on port 2000:
+If the NodeJS server activates without issue, you should be able to view the content live at the following localhost address in your default web-browser on port 2000:
 
 http://localhost:2000/Lightfielder-DaVinci-Resolve/
 
-Use `npm run build` to produce the static site in `docs/build/`, and
-`npm run serve` to preview the production build locally.
+Use `npm run build` to produce the static site in `docs/build/`, and `npm run serve` to preview the production build locally.
 
 ## GitHub Pages Publishing
 
