@@ -145,6 +145,15 @@ const sections = [
     ],
   },
   {
+    title: 'Lightfielder IDE Tools',
+    links: [
+      { label: 'Notepad++ for Fusion', href: 'https://github.com/Lightfielder/LuaModules' },
+      { label: 'Media Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
+      { label: 'LightWave3D MCP', href: 'https://github.com/Lightfielder/lightwave-mcp' },
+      { label: 'Pixal3D MCP', href: 'https://github.com/Lightfielder/Pixal3D-MCP' },
+    ],
+  },
+  {
     title: 'Lightfielder Resources',
     links: [
       { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
@@ -152,9 +161,6 @@ const sections = [
       { label: 'Lightfielder Extras', href: 'https://github.com/Lightfielder/LightfielderExtras' },
       { label: 'Domemaster Photoshop Actions Pack', href: 'https://github.com/Lightfielder/Domemaster-Photoshop-Actions-Pack' },
       { label: 'OpenDisplayXR', href: 'https://github.com/Lightfielder/OpenDisplayXR' },
-      { label: 'Media Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
-      { label: 'LightWave3D MCP', href: 'https://github.com/Lightfielder/lightwave-mcp' },
-      { label: 'Pixal3D MCP', href: 'https://github.com/Lightfielder/Pixal3D-MCP' },
     ],
   },
   {

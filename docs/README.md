@@ -4,12 +4,7 @@ This folder contains the [Docusaurus](https://docusaurus.io/) powered
 documentation site for the **Lightfielder for DaVinci Resolve** project. It is
 published to GitHub Pages at:
 
-https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/
-
-The site scaffolding, theme, Mermaid integration, and local search plugin are
-inspired by the [VFXPedia](https://github.com/Lightfielder/VFXPedia) docs
-project so the Lightfielder documentation reads as part of the same design
-family.
+https://lightfielder.com
 
 ## Folder Layout
 
@@ -57,8 +52,11 @@ Install [Node.js](https://nodejs.org/en) (v20 or newer). In a terminal window,
 navigate to this `docs/` folder and run:
 
 ```bash
+{
+cd "$HOME/Documents/Git/Lightfielder-DaVinci-Resolve/docs/"
 npm install
 npm start
+}
 ```
 
 The local staging server opens on port 2000:
