@@ -137,23 +137,25 @@ const sections = [
   {
     title: 'Lightfielder for Resolve',
     links: [
-      { label: 'ChangeLog', href: '/docs/project/changelog' },
-      { label: 'Known Issues', href: '/docs/project/known-issues' },
-      { label: 'PunchList', href: '/docs/project/punch-list' },
+      { label: 'GitHub Repository', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve' },
+      { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
+      { label: 'LF ChangeLog', href: '/docs/project/changelog' },
+      { label: 'LF Known Issues', href: '/docs/project/known-issues' },
+      { label: 'LF PunchList Tasks', href: '/docs/project/punch-list' },
     ],
   },
   {
     title: 'Lightfielder Resources',
     links: [
-      { label: 'GitHub Repository', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve' },
-      { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
       { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
       { label: 'Lightfielder PlayblastXR', href: 'https://github.com/Lightfielder/PlayblastXR' },
       { label: 'Lightfielder Extras', href: 'https://github.com/Lightfielder/LightfielderExtras' },
       { label: 'Lightfielder Ops', href: 'https://github.com/Lightfielder/LightfielderOperators' },
-      { label: 'Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
       { label: 'Domemaster Photoshop Actions Pack', href: 'https://github.com/Lightfielder/Domemaster-Photoshop-Actions-Pack' },
+      { label: 'Media Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
       { label: 'OpenDisplayXR', href: 'https://github.com/Lightfielder/OpenDisplayXR' },
+      { label: 'LightWave3D MCP', href: 'https://github.com/Lightfielder/lightwave-mcp' },
+      { label: 'Pixal3D MCP', href: 'https://github.com/Lightfielder/Pixal3D-MCP' },
     ],
   },
   {
