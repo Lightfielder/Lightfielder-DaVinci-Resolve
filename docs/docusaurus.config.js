@@ -13,7 +13,7 @@ module.exports = {
   url: 'https://lightfielder.github.io',
   baseUrl: '/',
   onBrokenLinks: 'warn',
-  favicon: '/static/img/favicon.svg',
+  favicon: '/img/favicon.svg',
 
   organizationName: 'Lightfielder',
   projectName: 'Lightfielder-DaVinci-Resolve',
@@ -66,7 +66,7 @@ module.exports = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Default social preview image relative to your static folder
-      image: '/static/img/social-card.png',
+      image: '/img/social-card.png',
       // Default to the dark theme on first visit. Users can still toggle to
       // light mode with the navbar color-mode switch; the choice is persisted.
       colorMode: {
@@ -93,7 +93,7 @@ module.exports = {
         title: 'Lightfielder',
         logo: {
           alt: 'Lightfielder logo',
-          src: '/static/img/logo.svg',
+          src: '/img/logo.svg',
         },
         items: [
           {
