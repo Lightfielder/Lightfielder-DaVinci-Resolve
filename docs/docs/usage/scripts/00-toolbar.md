@@ -29,7 +29,7 @@ A typical value for the Script editor filepath would be something like `/Applica
 
 This feature requires the "xdg-open" package to be installed on Linux.
 
-## macOS Window Snapping Settings
+## macOS Settings
 
 Lightfielder uses a lot of Python scripted tool windows since Resolve's native scripting APIs do not allow 3rd party developers to create custom user interface windows as docked panels.
 
