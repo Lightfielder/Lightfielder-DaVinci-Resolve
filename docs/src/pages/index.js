@@ -160,8 +160,10 @@ const sections = [
       { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
       { label: 'Lightfielder PlayblastXR', href: 'https://github.com/Lightfielder/PlayblastXR' },
       { label: 'Lightfielder Extras', href: 'https://github.com/Lightfielder/LightfielderExtras' },
+      { label: 'Renaissance Pipeline', href: 'https://github.com/Lightfielder/RenaissancePipeline' },
       { label: 'Domemaster Photoshop Actions Pack', href: 'https://github.com/Lightfielder/Domemaster-Photoshop-Actions-Pack' },
       { label: 'OpenDisplayXR', href: 'https://github.com/Lightfielder/OpenDisplayXR' },
+      { label: 'KickAss ShaderZ', href: 'https://github.com/ATSFSTUDIOS/KickAss-ShaderZ-for-Fusion-Studio' },
     ],
   },
   {
