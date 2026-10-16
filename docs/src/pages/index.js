@@ -147,7 +147,8 @@ const sections = [
   {
     title: 'Lightfielder IDE Tools',
     links: [
-      { label: 'Notepad++ for Fusion', href: 'https://github.com/Lightfielder/LuaModules' },
+      { label: 'Notepad++ for Fusion', href: 'https://github.com/Lightfielder/NPP-for-Fusion-Studio' },
+      { label: 'BBEdit FuScript Tools for Fusion', href: 'https://github.com/AndrewHazelden/Fusion-Studio-FuScript-IDE-Tools-and-Pipeline-Scripts' },
       { label: 'Media Lua Modules', href: 'https://github.com/Lightfielder/LuaModules' },
       { label: 'LightWave3D MCP', href: 'https://github.com/Lightfielder/lightwave-mcp' },
       { label: 'Pixal3D MCP', href: 'https://github.com/Lightfielder/Pixal3D-MCP' },
