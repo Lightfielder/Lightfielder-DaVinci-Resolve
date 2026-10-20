@@ -1,5 +1,7 @@
 # Lightfielder | ChangeLog
 
+## 2026-10-14
+
 - A new [Lightfielder.com](http://Lightfielder.com) domain name was registered for the project.
 - v26.10.14 Beta 6 documentation update:
 	- Added support showing for the new [Docusaurus](https://docusaurus.io/) formatted Lightfielder reference content with the "?" button in each of the scripted tool window.
