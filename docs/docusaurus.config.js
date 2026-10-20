@@ -136,12 +136,14 @@ module.exports = {
                 ],
               },
               {
-                label: 'Editorial/Grading Project',
+                label: 'Lightfielder for Resolve',
                 to: '/docs/category/project',
                 items: [
-                  { label: 'ChangeLog', to: '/docs/project/changelog' },
-                  { label: 'Known Issues', to: '/docs/project/known-issues' },
-                  { label: 'PunchList', to: '/docs/project/punch-list' },
+                  { label: 'GitHub Repository', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve' },
+                  { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
+                  { label: 'LF ChangeLog', to: '/docs/project/changelog' },
+                  { label: 'LF Known Issues', to: '/docs/project/known-issues' },
+                  { label: 'LF PunchList Tasks', to: '/docs/project/punch-list' },
                 ],
               },
               {

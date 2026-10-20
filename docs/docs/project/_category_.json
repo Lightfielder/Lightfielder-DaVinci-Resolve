@@ -1,11 +1,11 @@
 {
-  "label": "Editorial/Grading Project",
+  "label": "Lightfielder for Resolve",
   "position": 5,
   "collapsible": true,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Editorial/Grading Project",
+    "title": "Lightfielder for Resolve",
     "description": "Lightfielder for Resolve Development Notes",
     "slug": "/category/project"
   }
