@@ -1152,7 +1152,7 @@ def CreatePrefsWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_01_Preferences.md")
+			ShowHelpTopic("Scripts_01_Preferences.md", "preferences")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		# Click on the filename text label to open the filename in an external editor, or open the containing folder in the operating system's folder browsing view

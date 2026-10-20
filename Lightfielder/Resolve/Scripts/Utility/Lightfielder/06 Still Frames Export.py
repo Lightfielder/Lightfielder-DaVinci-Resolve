@@ -710,7 +710,7 @@ def CreateCalibrationWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_06_Still_Frames_Export.md")
+			ShowHelpTopic("Scripts_06_Still_Frames_Export.md", "still-frames-export")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		# Click on the filename text label to open the filename in an external editor, or open the containing folder in the operating system's folder browsing view

@@ -17,4 +17,4 @@ if lightfielder_path not in sys.path:
 	from lightfielder import *
 
 if __name__ == "__main__":
-	ShowHelpTopic("Docs/README.md")
+	ShowHelpTopic("README.md", "documentation")

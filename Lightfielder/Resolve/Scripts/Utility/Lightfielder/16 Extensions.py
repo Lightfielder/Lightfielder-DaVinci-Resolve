@@ -293,7 +293,7 @@ def CreateExtensions():
 
 	# Add your GUI element based event functions here:
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_16_Extensions.md")
+		ShowHelpTopic("Scripts_16_Extensions.md", "extensions")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 	# Add a header row

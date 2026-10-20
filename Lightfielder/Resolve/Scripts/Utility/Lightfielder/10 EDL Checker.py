@@ -288,7 +288,7 @@ def CreateEDLCheckerWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_10_EDL_Checker.md")
+			ShowHelpTopic("Scripts_10_EDL_Checker.md", "edl-checker")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		# Add a header row

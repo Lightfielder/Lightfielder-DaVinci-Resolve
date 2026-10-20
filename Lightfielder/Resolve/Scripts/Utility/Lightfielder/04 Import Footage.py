@@ -833,7 +833,7 @@ def ImportFootageWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_04_Import_Footage.md")
+			ShowHelpTopic("Scripts_04_Import_Footage.md", "import-footage")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		# Click on the filename text label to open the filename in an external editor, or open the containing folder in the operating system's folder browsing view

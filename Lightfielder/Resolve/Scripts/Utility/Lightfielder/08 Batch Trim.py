@@ -386,7 +386,7 @@ def CreateTrimWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_08_Batch_Trim.md")
+			ShowHelpTopic("Scripts_08_Batch_Trim.md", "batch-trim")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def AutoTrimGoButtonFunc(ev):

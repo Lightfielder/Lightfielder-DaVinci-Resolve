@@ -426,7 +426,7 @@ def CreateEDLStackSwizzleWindow():
 	# Add your GUI element based event functions here:
 
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_09_EDL_Stack_Swizzle.md")
+		ShowHelpTopic("Scripts_09_EDL_Stack_Swizzle.md", "edl-stack-swizzle")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 	def ShowTempButtonFunc(ev):

@@ -302,7 +302,7 @@ def ShotlogPreFlightWindow():
 
 		# Add your GUI element based event functions here:
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_03_Shotlog_PreFlight.md")
+			ShowHelpTopic("Scripts_03_Shotlog_PreFlight.md", "shotlog-preflight")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def GoButtonFunc(ev):

@@ -1042,7 +1042,7 @@ def CreateMetadataSyncWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_05_Metadata_Sync.md")
+			ShowHelpTopic("Scripts_05_Metadata_Sync.md", "metadata-sync")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		# Click on the filename text label to open the filename in an external editor, or open the containing folder in the operating system's folder browsing view

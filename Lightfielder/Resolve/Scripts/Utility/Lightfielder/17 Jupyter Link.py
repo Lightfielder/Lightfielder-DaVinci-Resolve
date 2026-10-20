@@ -538,7 +538,7 @@ def CreateJupyterWindow():
 		dlg.On.ImportCloseButton.Clicked = ImportCloseButtonFunc
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_17_Jupyter_Link.md")
+			ShowHelpTopic("Scripts_17_Jupyter_Link.md", "jupyter-link")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def ConsoleButtonFunc(ev):

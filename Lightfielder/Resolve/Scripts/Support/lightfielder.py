@@ -768,26 +768,21 @@ def ShowFolder(folder):
 	else:
 		print("[Lightfielder][Show Output Folder] The text field is empty.")
 
-def ShowHelpTopic(docsTopic):
-	# docsTopic = "/Docs/Scripts_10_Batch_Trim.md"
-
+def ShowHelpTopic(localTopic, webTopic):
 	# Is the preferences window "Use Local Help" checkbox enabled?
 	useLocalHelp = app.GetData("Lightfielder.UseLocalHelp")
-
-	if useLocalHelp is None or useLocalHelp == False:
-		# Use online GitHub repo hosted help docs
-		# None or False
-
-		# This is the Lightfielder beta help content link:
-		weblink = "https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/blob/main/Lightfielder/" + str(docsTopic)
-
-		print("[Lightfielder][Showing Help Topic] " + str(weblink))
-		ShowWebpage(weblink)
-	else:
+	if useLocalHelp and useLocalHelp == True:
 		# Use the local help docs
-		docsfile = str(app.MapPath("Lightfielder:/" + str(docsTopic)))
+		docsfile = str(app.MapPath("Lightfielder:/Docs/" + str(localTopic)))
 		print("[Lightfielder][Showing Local Help Topic] " + str(docsfile))
 		ShowWebpage(docsfile)
+	else:
+		# Use online GitHub repo hosted help docs
+		# This is the Lightfielder beta help content link:
+		weblink = "https://lightfielder.github.io/Lightfielder-DaVinci-Resolve/docs/usage/scripts/" + str(webTopic) + "/"
+		# weblink = "https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/blob/main/Lightfielder/Docs/" + str(localTopic)
+		print("[Lightfielder][Showing Help Topic] " + str(weblink))
+		ShowWebpage(weblink)
 
 def ShowInDefaultProgram(filename):
 	currentOS = GetPlatform()

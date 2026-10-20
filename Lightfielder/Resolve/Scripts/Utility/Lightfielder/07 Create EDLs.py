@@ -692,7 +692,7 @@ def CreateEDLWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_07_Create_EDLs.md")
+			ShowHelpTopic("Scripts_07_Create_EDLs.md", "create-edls")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def ShotTypePostCalibrationCheckboxFunc(ev):

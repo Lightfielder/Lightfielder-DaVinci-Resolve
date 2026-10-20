@@ -1331,7 +1331,7 @@ def CreateGradeWindow():
 			# Add your GUI element based event functions here:
 
 			def HelpButtonFunc(ev):
-				ShowHelpTopic("Docs/Scripts_14_Grade_Automation.md")
+				ShowHelpTopic("Scripts_14_Grade_Automation.md", "grade-automation")
 			dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 			def ShowPresetButtonFunc(ev):

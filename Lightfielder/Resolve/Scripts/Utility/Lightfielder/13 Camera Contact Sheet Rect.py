@@ -1022,7 +1022,7 @@ def CreateArrayWindow():
 	# Add your GUI element based event functions here:
 
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_13_Camera_Contact_Sheet.md")
+		ShowHelpTopic("Scripts_13_Camera_Contact_Sheet.md", "camera-contact-sheet")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 	# Row A

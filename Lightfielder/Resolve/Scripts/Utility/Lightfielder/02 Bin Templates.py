@@ -491,7 +491,7 @@ def GenerateBinsWindow():
 	# Add your GUI element based event functions here:
 
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_02_Bin_Templates.md")
+		ShowHelpTopic("Scripts_02_Bin_Templates.md", "bin-templates")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 	# Add the items to the Presets ComboBox menu

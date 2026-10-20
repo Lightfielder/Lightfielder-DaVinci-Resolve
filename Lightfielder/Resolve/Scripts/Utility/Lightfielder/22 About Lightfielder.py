@@ -252,7 +252,7 @@ The Python-scripted tools help automate common tasks that can be tedious and tim
 	# Add your GUI element based event functions here:
 
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_22_About_Lightfielder.md")
+		ShowHelpTopic("Scripts_22_About_Lightfielder.md", "about-lightfielder")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 	def ConsoleButtonFunc(ev):

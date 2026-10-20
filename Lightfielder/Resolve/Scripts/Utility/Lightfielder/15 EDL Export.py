@@ -342,7 +342,7 @@ def CreateEDLExportWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_15_EDL_Export.md")
+			ShowHelpTopic("Scripts_15_EDL_Export.md", "edl-export")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def GoButtonFunc(ev):

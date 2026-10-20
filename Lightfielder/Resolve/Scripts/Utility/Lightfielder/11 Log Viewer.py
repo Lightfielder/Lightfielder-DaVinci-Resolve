@@ -260,7 +260,7 @@ def CreateLogViewer():
 			return ""
 
 	def HelpButtonFunc(ev):
-		ShowHelpTopic("Docs/Scripts_11_Log_Viewer.md")
+		ShowHelpTopic("Scripts_11_Log_Viewer.md", "log-viewer")
 	dlg.On.HelpButton.Clicked = HelpButtonFunc
 	
 	def RefreshButtonFunc(ev):

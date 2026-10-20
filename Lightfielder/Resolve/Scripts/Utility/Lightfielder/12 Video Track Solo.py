@@ -268,7 +268,7 @@ def CreateWindow():
 		# Add your GUI element based event functions here:
 
 		def HelpButtonFunc(ev):
-			ShowHelpTopic("Docs/Scripts_12_Video_Track_Solo.md")
+			ShowHelpTopic("Scripts_12_Video_Track_Solo.md", "video-track-solo")
 		dlg.On.HelpButton.Clicked = HelpButtonFunc
 
 		def OnButtonFunc(ev):
