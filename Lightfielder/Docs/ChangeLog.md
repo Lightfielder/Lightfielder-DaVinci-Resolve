@@ -1,5 +1,9 @@
 # Lightfielder | ChangeLog
 
+## 2026-10-20
+
+- Added a new shell script for macOS named "`Lightfielder/Extras/Shell Scripts/Restart DaVinci Resolve.command`". It helps with testing Resolve scripted tasks from a freshly restarted state.
+
 ## 2026-10-14
 
 - A new [Lightfielder.com](http://Lightfielder.com) domain name was registered for the project.
