@@ -18,7 +18,7 @@ The Python-scripted tools help automate common tasks that can be tedious and tim
 
 Note: Lightfielder is also available as a separate standalone app. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
 
-## Am I Lightfielder?
+## Am I A Lightfielder?
 
 You might be. Are you a tech artist, photographer, or filmmaker working with multi-view content in the [plenoptic imaging](https://en.wikipedia.org/wiki/Light_field_camera) domain? Do you frequently capture or process lightfield data? If YES, then you can easily use the colloquial term "Lightfielder" to describe your craft.
 
