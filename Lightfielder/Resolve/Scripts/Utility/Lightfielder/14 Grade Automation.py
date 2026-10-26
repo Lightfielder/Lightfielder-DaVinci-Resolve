@@ -1,5 +1,5 @@
 """
-Lightfielder 14 Grade Automation.py 2026-10-01 12.26 AM (UTC -3)
+Lightfielder 14 Grade Automation.py 2026-10-26 04.32 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 The Grade Automation view allows you to apply CDL/DRX/LUT grades to the multi-view clips in a timeline.
@@ -53,19 +53,17 @@ def SavePresetWindow():
 		"FixedSize": [0, 85, 430, 130],
 		"Spacing": 0,
 	},[
-		ui.VGroup({"ID": "root", "Weight": 10.0,},[
+		ui.VGroup({"ID": "root", "Weight": 0.1,},[
 			ui.VGroup({
 				"Weight": 0.1,
 				#"StyleSheet": "background-color: rgb(37, 37, 37);",
 			},[
-				ui.HGroup({},[
-					ui.Label({
-						"ID": "ViewLabel",
-						"Text": "  Save Preset",
-						"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
-						"Weight": 0.01,
-					}),
-				]),
+				ui.Label({
+					"ID": "ViewLabel",
+					"Text": "  Save Preset",
+					"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
+					"Weight": 0.01,
+				}),
 				ui.Label({
 					"ID": "DividerLabel",
 					"StyleSheet": "QLabel { max-height: 3px; background-color: rgb(76, 154, 109); }",

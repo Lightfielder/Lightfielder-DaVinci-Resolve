@@ -62,18 +62,16 @@ def SavePresetWindow():
 		"FixedSize": [0, 85, 430, 130],
 		"Spacing": 0,
 	},[
-		ui.VGroup({"ID": "root", "Weight": 10.0,},[
+		ui.VGroup({"ID": "root", "Weight": 0.1,},[
 			ui.VGroup({
 				"Weight": 0.1,
 			},[
-				ui.HGroup({},[
-					ui.Label({
-						"ID": "ViewLabel",
-						"Text": "  Save Preset",
-						"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
-						"Weight": 0.01,
-					}),
-				]),
+				ui.Label({
+					"ID": "ViewLabel",
+					"Text": "  Save Preset",
+					"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
+					"Weight": 0.01,
+				}),
 				ui.Label({
 					"ID": "DividerLabel",
 					"StyleSheet": "QLabel { max-height: 3px; background-color: rgb(76, 154, 109); }",
@@ -82,11 +80,11 @@ def SavePresetWindow():
 					"Weight": 0.01,
 				}),
 			]),
-			ui.HGroup({"Weight": 0.0,},[
+			ui.HGroup({"Weight": 0.01,},[
 				ui.Label({"ID": "PresetLabel", "Text": "Preset Name:", "Weight": 0.1}),
 				ui.LineEdit({"ID": "PresetTxt", "Text": "New_Preset", "PlaceholderText": "Please enter a preset name", "Weight": 0.9}),
 			]),
-			ui.HGroup({"Weight": 0.0,},[
+			ui.HGroup({"Weight": 0.01,},[
 				ui.Button({
 					"ID": "CloseButton",
 					"Text": "Close",
@@ -102,7 +100,7 @@ def SavePresetWindow():
 	])
 
 	# Resize the window
-	dlg.RecalcLayout()
+	preset_dlg.RecalcLayout()
 
 	preset_itm = preset_dlg.GetItems()
 

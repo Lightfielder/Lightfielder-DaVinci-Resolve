@@ -4,6 +4,7 @@
 
 - Updated the Bin Templates to add a new preset named "Bin_Splat_Postshot.json"
 - Updated the Media Command script user interface
+- Updated the "Preset" dialog code for several scripts to make the user interface more compact
 
 ## 2026-10-20
 
