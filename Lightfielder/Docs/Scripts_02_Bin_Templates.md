@@ -31,3 +31,10 @@ Tip: The help "?" button at the top right of the window can be used to quickly s
 If you want to delete a preset, simply remove the .json file from the presets folder.
 
 The presets are saved as JSON formatted plain-text documents that can be viewed with a programmer's text editor. Each Bin folder path is entered on its own line and the path is wrapped inside a pair of quotes.
+
+### Custom 3DGS Bin Preset
+
+The "Bin_Splat_Postshot" preset is optimized for Gaussian Splatting workflows. It allows you to better manage your multi-view footage in Resolve, along with your [Postshot](https://www.jawset.com/) trained 3DGS output.
+
+![Postshot Bin Templates](images/bin_splat_postshot.png)
+
