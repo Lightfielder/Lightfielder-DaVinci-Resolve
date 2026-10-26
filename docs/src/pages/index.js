@@ -253,7 +253,7 @@ export default function Home() {
           ))}
         </div>
         <section className="lf-about">
-          <Heading as="h2">Am I Lightfielder?</Heading>
+          <Heading as="h2">Am I a Lightfielder?</Heading>
           <p>
             You might be. Are you a tech artist, photographer, or filmmaker working
             with multi-view content in the plenoptic imaging domain? Do you
