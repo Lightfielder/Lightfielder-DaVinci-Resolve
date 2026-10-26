@@ -464,7 +464,12 @@ function MediaCommand()
 					Weight = 0.01,
 					ID = "RefreshButton",
 					Text = "Refresh",
-					MinimumSize = {60, 24},
+					MinimumSize = {80, 24},
+					IconSize = {16, 16},
+					Icon = ui:Icon {
+						File = "Scripts:/Utility/Lightfielder/Icons/Pre-Flight/refresh.png",
+					},
+					Flat = true,
 				},
 			},
 			ui:Tree{
