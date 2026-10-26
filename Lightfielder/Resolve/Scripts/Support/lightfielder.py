@@ -733,7 +733,7 @@ def GetPlatform():
 		currentOS = "Windows"
 	elif platform.system() == "win32":
 		currentOS = "Windows"
-	elif platform.system()== "Darwin":
+	elif platform.system() == "Darwin":
 		currentOS = "Mac"
 	elif platform.system() == "Linux":
 		currentOS = "Linux"
@@ -944,7 +944,12 @@ def GetPythonBinFilepath(program):
 
 	# Probe the active Python version to create Jupyter filepath like:
 	# /Library/Frameworks/Python.framework/Versions/3.10/bin/jupyter-notebook
-	return os.path.join(sys.prefix, "bin", program)
+	if sys.platform == "win32" or sys.platform == "Windows":
+		# Windows
+		return os.path.join(sys.prefix, "Scripts", program)
+	else:
+		# Linux and macOS
+		return os.path.join(sys.prefix, "bin", program)
 
 def GetMediaFiles(dirPath):
 	# Note: The double parenthesis are used in the endswith() function to make the file types into a tupple like list

@@ -1,5 +1,5 @@
 """
-Lightfielder 17 Jupyter Link 2026-10-01 12.26 AM (UTC -3)
+Lightfielder 17 Jupyter Link 2026-10-26 04.32 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Connects the active Resolve Studio session with the Jupyter Notebook IDE using Python.
@@ -338,6 +338,8 @@ def CreateJupyterWindow():
 			itm["BrowserCombo"].AddItem("Safari")
 		itm["BrowserCombo"].AddItem("Chrome")
 		itm["BrowserCombo"].AddItem("Firefox")
+		# if platform.system() == "win32" or platform.system() == "Windows":
+		#	itm["BrowserCombo"].AddItem("Edge")
 
 		def PrefSave(winDlg):
 			# Save the prefs
@@ -473,8 +475,8 @@ def CreateJupyterWindow():
 			# Choose a default web-browser to use for Jupyter sessions
 			browser = itm["BrowserCombo"].CurrentText
 			# browser = "Safari"
-			#browser = "Chrome"
-			#browser = "Firefox"
+			# browser = "Chrome"
+			# browser = "Firefox"
 			if platform.system() == "Darwin":
 				# Build the launching command
 				# open -a "/Library/Frameworks/Python.framework/Versions/3.10/bin/jupyter-notebook" --args --browser=Safari &
@@ -487,7 +489,7 @@ def CreateJupyterWindow():
 				print("[Lightfielder][Launching Jupyter] " + str(args))
 				result = os.system(args)
 				print(result)
-			elif platform.system() == "Linux":
+			elif platform.system() == "Linux" or platform.system() == "Linux2":
 				# Build the launching command
 				jupyterPath = GetPythonBinFilepath("jupyter-notebook")
 				# jupyterPath = "$HOME/.local/bin/jupyter-notebook"
@@ -500,10 +502,13 @@ def CreateJupyterWindow():
 				result = os.system(args)
 				print(result)
 			else:
-				# Build the launching command
+				# Build the launching command for Windows
 				jupyterPath = GetPythonBinFilepath("jupyter-notebook")
-
-				args = '"' + str(jupyterPath) + '" ' + str(browserStr) + ' ' + presetAbsPath + ' &'
+				# jupyterPath = "C:\Python\Scripts\jupyter-notebook"
+				
+				# Start the Jupyter local service using a default web-browser
+				browserStr = "--browser=" + str(browser)
+				args = 'cmd.exe /c wt.exe "' + str(jupyterPath) + '" ' + str(browserStr) + ' ' + presetAbsPath + ' &'
 
 				print("[Lightfielder][Launching Jupyter] " + str(args))
 				result = os.system(args)
