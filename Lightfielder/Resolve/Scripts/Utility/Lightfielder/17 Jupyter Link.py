@@ -507,7 +507,7 @@ def CreateJupyterWindow():
 				# jupyterPath = "C:\Python\Scripts\jupyter-notebook"
 				
 				# Start the Jupyter local service using a default web-browser
-				browserStr = "--browser=" + str(browser)
+				browserStr = "-browser=" + str(browser)
 				args = 'cmd.exe /c wt.exe "' + str(jupyterPath) + '" ' + str(browserStr) + ' ' + presetAbsPath + ' &'
 
 				print("[Lightfielder][Launching Jupyter] " + str(args))
