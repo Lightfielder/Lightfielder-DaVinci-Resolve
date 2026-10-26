@@ -1,5 +1,5 @@
 --[[--
-Lightfielder 18 Media Command.lua 2026-09-02 07.10 PM (UTC -3)
+Lightfielder 18 Media Command.lua 2026-10-26 04.09 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Media Command is a scriptable interface for batch processing content that resides in your Resolve Media Pool. This streamlines the process of selecting footage and running automation scripts on those specific items.
@@ -376,7 +376,7 @@ function MediaCommand()
 	win = disp:AddWindow({
 		ID = "MediaCommandWin",
 		TargetID = "MediaCommandWin",
-		WindowTitle = "Media Command",
+		WindowTitle = "18 Media Command",
 		Geometry = {415, 30, width, height},
 		Spacing = 0,
 
@@ -445,6 +445,7 @@ function MediaCommand()
 					ID = "KeepOpenButton",
 					Text = "Keep Open",
 					MinimumSize = {80, 24},
+					Flat = true,
 					Checkable = true,
 				},
 				ui:Button{
@@ -452,6 +453,11 @@ function MediaCommand()
 					ID = "ConsoleButton",
 					Text = "Console",
 					MinimumSize = {80, 24},
+					IconSize = {16, 16},
+					Icon = ui:Icon {
+						File = "Scripts:/Utility/Lightfielder/Icons/Toolbar/fa-code.png",
+					},
+					Flat = true,
 					Checkable = true,
 				},
 				ui:Button{
