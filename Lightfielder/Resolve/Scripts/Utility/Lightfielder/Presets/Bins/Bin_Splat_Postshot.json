@@ -1,0 +1,27 @@
+{
+	"version": 1.0,
+	"bins":[
+		"01-delivery",
+		"02-timelines",
+		"02-timelines/still_frames",
+		"03-footage/calibration",
+		"03-footage/renders",
+		"03-footage/source",
+		"03-footage/still_frames",
+		"04-audio",
+		"05-comp",
+		"06-postshot/export/ply",
+		"06-postshot/export/spz",
+		"06-postshot/export/web",
+		"06-postshot/import/camera_poses",
+		"06-postshot/import/masks",
+		"06-postshot/import/metadata",
+		"06-postshot/import/point_clouds",
+		"06-postshot/import/still_frames",
+		"06-postshot/import/videos",
+		"06-postshot/projects",
+		"06-postshot/renders",
+		"07-documents",
+		"08-project_bu"
+	]
+}

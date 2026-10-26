@@ -1,5 +1,10 @@
 # Lightfielder | ChangeLog
 
+## 2026-10-26
+
+- Updated the Bin Templates to add a new preset named "Bin_Splat_Postshot.json"
+- Updated the Media Command script user interface
+
 ## 2026-10-20
 
 - Added a new shell script for macOS named "`Lightfielder/Extras/Shell Scripts/Restart DaVinci Resolve.command`". It helps with testing Resolve scripted tasks from a freshly restarted state.

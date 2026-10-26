@@ -1,5 +1,5 @@
 """
-Lightfielder 02 Bin Templates.py 2026-10-01 12.26 AM (UTC -3)
+Lightfielder 02 Bin Templates.py 2026-10-26 04.32 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 A Resolve new-project automation script to quickly create Media page based Bin folders.
@@ -571,7 +571,7 @@ def GenerateBinsWindow():
 
 # 	def BrowseButtonFunc(ev):
 # 		selectedPath = fu.RequestDir("", "", {
-# 			"FReqS_Title": "Choose a base folder for the new project hiearchy."
+# 			"FReqS_Title": "Choose a base folder for the new project hierarchy."
 # 		})
 # 		if selectedPath:
 # 			itm["FolderLineTxt"].Text = str(selectedPath)

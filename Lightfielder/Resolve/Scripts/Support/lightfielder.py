@@ -1,5 +1,5 @@
 """
-Lightfielder Python Module 2026-10-20 12.46 PM (UTC -3)
+Lightfielder Python Module 2026-10-26 04.32 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Lightfielder Script Usage Tip:
@@ -31,7 +31,7 @@ fu = getattr(__main__, "fu", None)
 def LFGetVersion(label):
 	# Provide the Lightfielder version number when requested
 	# return str(label) + "26.10"
-	return str(label) + "26.10.20 Beta 7"
+	return str(label) + "26.10.26 Beta 7"
 
 def execfile(filepath, globals = None, locals = None):
 	try:
@@ -3576,10 +3576,10 @@ pip3 install virtualenv
 """
 	elif currentOS == "Windows":
 		messsage = """The OTIO Python module is missing. The Windows Command Prompt based install commands for OpenTimelineIO and other libraries are:
-python3 -m pip install --upgrade pip
-pip3 install OpenTimelineIO
-pip3 install PySide6
-pip3 install virtualenv
+python -m pip install --upgrade pip
+pip install OpenTimelineIO
+pip install PySide6
+pip install virtualenv
 """
 	elif currentOS == "Linux":
 		messsage = """The OTIO Python module is missing. The Linux Terminal based install commands for OpenTimelineIO and other libraries are:
@@ -3611,12 +3611,12 @@ pip3 install virtualenv
 """
 	elif currentOS == "Windows":
 		messsage = """The OTIO Python module is missing. The Windows Command Prompt based install commands for OpenTimelineIO and other libraries are:
-python3 -m pip install --upgrade pip
-pip3 install OpenImageIO
-pip3 install OpenTimelineIO
-pip3 install usd-core
-pip3 install PySide6
-pip3 install virtualenv
+python -m pip install --upgrade pip
+pip install OpenImageIO
+pip install OpenTimelineIO
+pip install usd-core
+pip install PySide6
+pip install virtualenv
 """
 	elif currentOS == "Linux":
 		messsage = """The OTIO Python module is missing. The Linux Terminal based install commands for OpenTimelineIO and other libraries are:

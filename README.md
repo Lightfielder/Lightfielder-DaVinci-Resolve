@@ -1,8 +1,8 @@
-# Lightfielder v26.10.14 B6 for DaVinci Resolve
+# Lightfielder v26.10.26 B7 for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
-## Public Beta 6 Release
+## Public Beta 7 Release
 
 The Lightfielder project's online documentation is now hosted on the official website at [Lightfielder.com](https://lightfielder.com/). This initial documentation is aimed at a professional audience already working in the 3D graphics and immersive media sector.
 
@@ -18,7 +18,7 @@ The Python-scripted tools help automate common tasks that can be tedious and tim
 
 Note: Lightfielder is also available as a separate standalone app. This self-hosted version is called [Lightfielder Ops](https://github.com/Lightfielder/LightfielderOperators). The Ops (Operators) software is now entering its initial private beta testing phase.
 
-## Am I A Lightfielder?
+## Am I a Lightfielder?
 
 You might be. Are you a tech artist, photographer, or filmmaker working with multi-view content in the [plenoptic imaging](https://en.wikipedia.org/wiki/Light_field_camera) domain? Do you frequently capture or process lightfield data? If YES, then you can easily use the colloquial term "Lightfielder" to describe your craft.
 
