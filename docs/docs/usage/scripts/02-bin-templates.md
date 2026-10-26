@@ -43,5 +43,5 @@ The presets are saved as JSON formatted plain-text documents that can be viewed 
 
 The "Bin_Splat_Postshot" preset is optimized for Gaussian Splatting workflows. It allows you to better manage your multi-view footage in Resolve, along with your [Postshot](https://www.jawset.com/) trained 3DGS output.
 
-![Postshot Bin Templates](../../bin_splat_postshot.png)
+![Postshot Bin Templates](../../images/bin_splat_postshot.png)
 
