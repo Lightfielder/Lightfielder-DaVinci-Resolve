@@ -362,7 +362,7 @@ module.exports = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Lightfielder. Built with Docusaurus.`,
+        copyright: `Copyright © 2018 - ${new Date().getFullYear()} Lightfielder.`,
       },
       prism: {
         theme: prism.themes.github,
