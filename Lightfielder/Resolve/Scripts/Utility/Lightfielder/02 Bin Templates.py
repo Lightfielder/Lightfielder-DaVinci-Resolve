@@ -26,11 +26,10 @@ If you want to delete a preset, simply remove the .json file from the presets fo
 
 The presets are saved as JSON formatted plain-text documents that can be viewed with a programmer's text editor. Each Bin folder path is entered on its own line and the path is wrapped inside a pair of quotes.
 
+Folder Operations:
+The "Import External Folders" button allows you to select the base Resolve project folder on disk and import those folders into the Bin window. This will only bring in the empty folder structure. No files are imported during this process. This is a great way to clone a previous Resolve project folder hierarchy if you want to create a new Bin preset for a new project you are starting.
 
-Todo:
-Add back the options for on-disk folder creation in a separate section of the UI.
-
-The "Show folders on Completion" checkbox allows you to see the newly created folder structure in Finder (macOS)/Explorer (Win)/Nautilus (Linux) folder browsing views.
+The "Create External Folders" button is used to export the current bin hierarchy by creating those folder structures on disk.
 
 """
 
@@ -48,6 +47,95 @@ if lightfielder_path not in sys.path:
 	from lightfielder import *
 
 startTimer = datetime.datetime.now()
+
+def FolderWindow():
+	ui = fu.UIManager
+	folder_disp = bmd.UIDispatcher(ui)
+
+	folder_dlg = folder_disp.AddWindow({
+		"WindowTitle": "",
+		"ID": "FolderWin",
+		"TargetID" : "FolderWin",
+		"Geometry": [0, 85, 630, 135],
+		"MinimumSize": [0, 85, 630, 135],
+		"MinimumSize": [0, 85, 630, 135],
+		"Spacing": 0,
+	},[
+		ui.VGroup({"ID": "root", "Weight": 10.0,},[
+			ui.VGroup({
+				"Weight": 0.1,
+				#"StyleSheet": "background-color: rgb(37, 37, 37);",
+			},[
+				ui.HGroup({},[
+					ui.Label({
+						"ID": "ViewLabel",
+						"Text": "  Select a Folder",
+						"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
+						"Weight": 0.01,
+					}),
+				]),
+				ui.Label({
+					"ID": "DividerLabel",
+					"StyleSheet": "QLabel { max-height: 3px; background-color: rgb(76, 154, 109); }",
+					"Spacing": 0,
+					"Margin": 0,
+					"Weight": 0.01,
+				}),
+			]),
+			ui.HGroup({"Weight": 0.0,},[
+				ui.Label({"ID": "FolderLabel", "Text": "Folder Name:", "Weight": 0.1}),
+				ui.LineEdit({"ID": "FolderTxt", "Text": "", "PlaceholderText": "Please enter a folder name", "Weight": 0.9}),
+				ui.Button({"ID": "BrowseButton", "Text": "Browse", "Geometry": [0, 0, 30, 50], "Weight": 0.1}),
+			]),
+			ui.VGap(10),
+			ui.HGroup({"Weight": 0.0,},[
+				ui.Button({
+					"ID": "CloseButton",
+					"Text": "Cancel",
+					"Weight": 0.01,
+				}),
+				ui.Button({
+					"ID": "OKButton",
+					"Text": "OK",
+					"Weight": 0.01,
+				}),
+			]),
+		]),
+	])
+
+	folder_itm = folder_dlg.GetItems()
+
+	# The window was closed
+	def FolderWinFunc(ev):
+		folder_disp.ExitLoop()
+	folder_dlg.On.FolderWin.Close = FolderWinFunc
+
+	# Add your GUI element based event functions here:
+
+	def OKButtonFunc(ev):
+		print("[Lightfielder][Window][OK Button]")
+		folder_disp.ExitLoop()
+	folder_dlg.On.OKButton.Clicked = OKButtonFunc
+
+	def CloseButtonFunc(ev):
+		print("[Lightfielder][Window][Close Button]")
+		folder_itm["FolderTxt"].Text = ""
+		folder_disp.ExitLoop()
+	folder_dlg.On.CloseButton.Clicked = CloseButtonFunc
+
+	def BrowseButtonFunc(ev):
+		selectedPath = fu.RequestDir()
+		if selectedPath:
+			folder_itm["FolderTxt"].Text = str(selectedPath)
+	folder_dlg.On.BrowseButton.Clicked = BrowseButtonFunc
+
+	folder_dlg.Show()
+	folder_disp.RunLoop()
+	folder_dlg.Hide()
+
+	# When the window is closed send back the folder name
+	return str(folder_itm["FolderTxt"].Text)
+
 
 def SavePresetWindow():
 	ui = fu.UIManager
@@ -250,11 +338,11 @@ def GenerateBinsWindow():
 		"WindowFlags": {"Window": True, "WindowStaysOnTopHint": windowFloat},
 		"ID": "BinWin",
 		"TargetID" : "BinWin",
-		"Geometry": [10, 185, 482, 556],
-		"MinimumSize": [482, 556],
+		"Geometry": [10, 185, 482, 606],
+		"MinimumSize": [482, 606],
 		"Spacing": 0,
 	},[
-		ui.VGroup({"ID": "root", "Weight": 10.0,},[
+		ui.VGroup({"ID": "root", "Weight": 1.0,},[
 			ui.VGroup({
 				"Weight": 0.1,
 				#"StyleSheet": "background-color: rgb(37, 37, 37);",
@@ -288,6 +376,7 @@ def GenerateBinsWindow():
 					"Weight": 0.01,
 				}),
 			]),
+
 # 			ui.HGroup({"Weight": 0.0,},[
 # 				ui.Label({"ID": "BaseLabel", "Text": "Project Base Folder", "Weight": 0.1}),
 # 				ui.LineEdit({"ID": "FolderLineTxt", "Text": "", "PlaceholderText": "Please enter a folder path", "Weight": 0.9}),
@@ -309,7 +398,7 @@ def GenerateBinsWindow():
 				}),
 				ui.Button({"ID": "AddPresetButton", "Text": "+", "MinimumSize": [32, 32], "Weight": 0.1}),
 			]),
-			ui.VGroup({"ID": "root", "Weight": 10.0,},[
+			ui.VGroup({"Weight": 1.0,},[
 				ui.Label({"ID": "BinPreviewLabel", "Text": "Bin Preview", "Weight": 0.01,}),
 				ui.Tree({
 					"ID": "Tree",
@@ -323,12 +412,48 @@ def GenerateBinsWindow():
 						"ItemDoubleClicked": False,
 					},
 				}),
-# 				ui.CheckBox({
-# 					"ID": "ShowFoldersCheckbox",
-# 					"Text": "Show folders on Completion",
-# 					"Checked": True,
-# 					"Weight": 0.01,
-# 				}),
+				ui.Label({
+					"ID": "ViewLabel",
+					"Text": "  On-Disk Folder Operations",
+					"StyleSheet": "QLabel { color: white; font-weight: bold; font-size: 14px; }",
+					"Weight": 0.01,
+				}),
+				ui.Label({
+					"ID": "DividerLabel",
+					"StyleSheet": "QLabel { max-height: 1px; background-color: rgb(68, 68, 68); }",
+					"Spacing": 0,
+					"Margin": 0,
+					"Weight": 0.01,
+				}),
+				ui.HGroup({
+					"Weight": 0.1,
+				},[
+					ui.Button({
+					"ID": "ImportExternalFoldersButton",
+					"Text": "  Import External Folders",
+					"ToolTip": 
+					"Selects an on-disk project folder hierarchy and imports that (empty) folder structure \ninto the Resolve Media page bins. No files are imported during this process.",
+					"MinimumSize": [150, 24],
+					"IconSize": [16, 16],
+					"Icon": ui.Icon({"File": "Scripts:/Utility/Lightfielder/Icons/Toolbar/fa-folder-open.png"}),
+					"Flat": True,
+					"Margin": 0,
+					"Spacing": 0,
+					"Weight": 0.1
+					}),
+					ui.Button({
+					"ID": "CreateExternalFoldersButton",
+					"Text": "  Create External Folders",
+					"ToolTip": "Export the current Resolve Media page bin folders. This hierarchy \nwill be re-created as an on-disk folder structure.",
+					"MinimumSize": [150, 24],
+					"IconSize": [16, 16],
+					"Icon": ui.Icon({"File": "Scripts:/Utility/Lightfielder/Icons/Toolbar/fa-folder-open.png"}),
+					"Flat": True,
+					"Margin": 0,
+					"Spacing": 0,
+					"Weight": 0.1
+					}),
+				]),
 				ui.HGroup({
 					"Weight": 0.1
 				},[
@@ -574,6 +699,71 @@ def GenerateBinsWindow():
 # 		if selectedPath:
 # 			itm["FolderLineTxt"].Text = str(selectedPath)
 # 	dlg.On.BrowseButton.Clicked = BrowseButtonFunc
+
+	def ImportExternalFoldersButtonFunc(ev):
+		mediapool = GetMediaPool()
+		rootFolder = mediapool.GetRootFolder()
+
+		# Todo - Add a file dialog.
+		#dirPath = "/Users/vfx/Desktop/ID0001"
+		dirPath = FolderWindow()
+		if (dirPath != None) and (dirPath != ""):
+			# Scan the sub-folder hierarchy
+			for path, dirs, files in os.walk(dirPath):
+				relPath = path.replace(dirPath, "")
+				print(path)
+				print(relPath)
+				# Create the Media Pool Bins
+				binSubFolders = relPath.replace("\\", "/").split("/")
+				parentFolder = rootFolder
+				for f in binSubFolders:
+					if (f != None) and (f != ""):
+						parentFolder = GetFolder(parentFolder, f, mediapool)
+	dlg.On.ImportExternalFoldersButton.Clicked = ImportExternalFoldersButtonFunc
+
+	def CreateExternalFoldersButtonFunc(ev):
+		mediapool = GetMediaPool()
+		rootFolder = mediapool.GetRootFolder()
+
+		# Bin folders
+		binFolderItems = []
+
+		def GetSubFolder(parentFolder, path):
+			for folder in parentFolder.GetSubFolderList():
+				if path != "":
+					updatedPath = str(path) + "/" + str(folder.GetName())
+				else:
+					updatedPath = str(folder.GetName())
+				binFolderItems.append(updatedPath)
+				# Scan Deeper
+				GetSubFolder(folder, updatedPath)
+
+		# Todo - Add a file dialog.
+		#baseFolder = "/Users/vfx/Desktop/ID0001"
+		baseFolder = FolderWindow()
+		if (baseFolder != None) and (baseFolder != ""):
+			# Build the bin paths
+			GetSubFolder(rootFolder, "")
+
+			# Build the directories
+			for binItemPath in binFolderItems:
+				# Example: "/Users/vfx/Desktop/Bins/01_delivery/render_checks"
+				directoryPath = app.MapPath(baseFolder + "/" + binItemPath)
+
+				# Create the intermediate directories on disk for the tree item
+				if not os.path.exists(directoryPath):
+					try:
+						print("\t[Lightfielder][Bin][Make Directory]", directoryPath)
+						os.makedirs(directoryPath)
+					except OSError as error:
+						print("\t[Lightfielder][Bin][Make Directory Error]", error)
+				else:
+					print("\t[Lightfielder][Bin][Directory Exists]", directoryPath)
+
+		# Reveal folders on disk
+		app.Execute('bmd.openfileexternal("Open", [[' + str(baseFolder) + ']])')
+	dlg.On.CreateExternalFoldersButton.Clicked = CreateExternalFoldersButtonFunc
+
 
 	def GoButtonFunc(ev):
 		startTimer = datetime.datetime.now()

@@ -511,7 +511,7 @@ def CreateTimelineImportWindow():
 					#print(path)
 					#print(relPath)
 					# Create the Media Pool Bins
-					binSubFolders = relPath.split("/")
+					binSubFolders = relPath.replace("\\", "/").split("/")
 					parentFolder = rootFolder
 					for f in binSubFolders:
 						if (f != None) and (f != ""):

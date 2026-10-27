@@ -1082,7 +1082,7 @@ def CreateCalibrationWindow():
 
 				# Get the track count
 				timelineVideoTrackCount = timeline.GetTrackCount("video")
-				if timelineVideoTrackCount <= maxCameras:
+				if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
 					trackGoal = maxCameras - timelineVideoTrackCount
 					# Add the required video tracks
 					for x in range(trackGoal):
@@ -1092,7 +1092,7 @@ def CreateCalibrationWindow():
 						# trackResult = timeline.SetTrackName("video", x, str(GetCameraNumber(x)))
 						# print("[Track] v" + str(x) + " Renamed To " + str(GetCameraNumber(x)) + " [Status] " + str(trackResult))
 				timelineAudioTrackCount = timeline.GetTrackCount("audio")
-				if timelineAudioTrackCount <= maxCameras:
+				if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
 					trackGoal = maxCameras - timelineAudioTrackCount
 					# Add the required audio tracks
 					for x in range(trackGoal):

@@ -628,13 +628,13 @@ def CreateEDLStackSwizzleWindow():
 
 			# Get the track count
 			timelineVideoTrackCount = newTimeline.GetTrackCount("video")
-			if timelineVideoTrackCount <= maxCameras:
+			if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
 				trackGoal = maxCameras - timelineVideoTrackCount
 				# Add the required video tracks
 				for x in range(trackGoal):
 					newTimeline.AddTrack("video")
 			timelineAudioTrackCount = newTimeline.GetTrackCount("audio")
-			if timelineAudioTrackCount <= maxCameras:
+			if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
 				trackGoal = maxCameras - timelineAudioTrackCount
 				# Add the required audio tracks
 				for x in range(trackGoal):

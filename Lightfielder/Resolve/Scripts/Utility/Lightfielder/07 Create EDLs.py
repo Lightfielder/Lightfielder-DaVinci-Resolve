@@ -1176,13 +1176,14 @@ def CreateEDLWindow():
 											# Get the track count
 											if timeline is not None:
 												timelineVideoTrackCount = timeline.GetTrackCount("video")
-												if timelineVideoTrackCount <= maxCameras:
+												# If the vertical track layout is active
+												if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
 													trackGoal = maxCameras - timelineVideoTrackCount
 													# Add the required video tracks
 													for x in range(trackGoal):
 														timeline.AddTrack("video")
 												timelineAudioTrackCount = timeline.GetTrackCount("audio")
-												if timelineAudioTrackCount <= maxCameras:
+												if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
 													trackGoal = maxCameras - timelineAudioTrackCount
 													# Add the required audio tracks
 													for x in range(trackGoal):
