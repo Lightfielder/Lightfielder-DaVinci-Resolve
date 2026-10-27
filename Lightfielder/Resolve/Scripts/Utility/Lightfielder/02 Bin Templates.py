@@ -398,7 +398,11 @@ def GenerateBinsWindow():
 				}),
 				ui.Button({"ID": "AddPresetButton", "Text": "+", "MinimumSize": [32, 32], "Weight": 0.1}),
 			]),
-			ui.VGroup({"Weight": 1.0,},[
+			ui.VGroup({
+				"Weight": 1.0,
+				"Spacing": 0,
+				"Margin": 0,
+			},[
 				ui.Label({"ID": "BinPreviewLabel", "Text": "Bin Preview", "Weight": 0.01,}),
 				ui.Tree({
 					"ID": "Tree",
@@ -426,7 +430,9 @@ def GenerateBinsWindow():
 					"Weight": 0.01,
 				}),
 				ui.HGroup({
-					"Weight": 0.1,
+					"Weight": 0.01,
+					"Spacing": 0,
+					"Margin": 0,
 				},[
 					ui.Button({
 					"ID": "ImportExternalFoldersButton",
