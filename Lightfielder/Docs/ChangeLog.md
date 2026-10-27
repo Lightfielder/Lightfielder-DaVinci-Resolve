@@ -6,6 +6,7 @@
 - Updated the Media Command script user interface
 - Updated the "Preset" dialog code for several scripts to make the user interface more compact
 - Improved the Jupyter Link script support for Windows 11. New jupyter-notebook sessions are started using a "Windows Terminal" command-line interface view.
+- The "Remove Empty Tracks" option was added to the Still Frame Exports and Create EDLs scripts. Only a single video/audio track will be added when the "Track Layout" is set to use "To Horizontal Stack" and the "Remove Empty Tracks" checkbox is enabled.
 
 ## 2026-10-20
 

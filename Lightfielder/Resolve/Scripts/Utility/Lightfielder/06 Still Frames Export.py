@@ -138,9 +138,9 @@ def CreateCalibrationWindow():
 			"WindowFlags": {"Window": True, "WindowStaysOnTopHint": windowFloat},
 			"ID": "CalibrationWin",
 			"TargetID" : "CalibrationWin",
-			"Geometry": [500, 50, 515, 745],
-			"MinimumSize": [515, 745],
-			"FixedSize": [515, 745],
+			"Geometry": [500, 50, 615, 745],
+			"MinimumSize": [615, 745],
+			"FixedSize": [615, 745],
 			# "Spacing": 0,
 			# "Margin": 5,
 		},[
@@ -316,6 +316,13 @@ def CreateCalibrationWindow():
 							"Text": "Create One Timeline",
 							"ToolTip": "(WIP) Assemble a single timeline with the clips added from all takes and for all of the shot types.",
 							"Checked": False,
+						}),
+						ui.CheckBox({
+							"ID": "RemoveEmptyTracksCheckbox",
+							"Text": "Remove Empty Tracks",
+							"ToolTip": "(WIP) When a Vertical Stack is created, compact the video tracks in the timeline \nby removing any track that is missing its camera views. \n\nIf you had an array with 55 cameras, and 10 of the cameras were not set to \nrecord, you would receive a swizzled timeline created with only 45 video tracks \nand no empty video tracks.",
+							"Checked": False,
+							"Weight": 0.1,
 						}),
 						ui.CheckBox({
 							"ID": "FuzzyR3DDateMatchingCheckbox",
@@ -572,6 +579,7 @@ def CreateCalibrationWindow():
 				app.SetData("Lightfielder.Content", itm["ShotTypeContentCheckbox"].Checked)
 				app.SetData("Lightfielder.CreateOneTimeline", itm["CreateOneTimelineCheckbox"].Checked)
 				app.SetData("Lightfielder.FuzzyR3DDateMatching", itm["FuzzyR3DDateMatchingCheckbox"].Checked)
+				app.SetData("Lightfielder.RemoveEmptyTracksMode", itm["RemoveEmptyTracksCheckbox"].Checked)
 				# app.SetData("Lightfielder.RigSectionAsClipColor", itm["RigSectionAsClipColorCheckbox"].Checked)
 				app.SetData("Lightfielder.CalibrationWin.StartRendering", itm["StartRenderingCheckbox"].Checked)
 				app.SetData("Lightfielder.CalibrationWin.AddToRenderQueue", itm["AddToRenderQueueCheckbox"].Checked)
@@ -613,6 +621,10 @@ def CreateCalibrationWindow():
 				if pref != None:
 					# print(pref)
 					itm["FuzzyR3DDateMatchingCheckbox"].Checked = pref
+				pref = app.GetData("Lightfielder.RemoveEmptyTracksMode")
+				if pref != None:
+					# print(pref)
+					itm["RemoveEmptyTracksCheckbox"].Checked = pref
 # 				pref = app.GetData("Lightfielder.RigSectionAsClipColor")
 # 				if pref != None:
 # 					# print(pref)
@@ -1081,8 +1093,9 @@ def CreateCalibrationWindow():
 				maxCameras = GetMaxNumberOfCameras()
 
 				# Get the track count
+				removeEmptyTracksMode = itm["RemoveEmptyTracksCheckbox"].Checked
 				timelineVideoTrackCount = timeline.GetTrackCount("video")
-				if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
+				if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineVideoTrackCount <= maxCameras:
 					trackGoal = maxCameras - timelineVideoTrackCount
 					# Add the required video tracks
 					for x in range(trackGoal):
@@ -1094,7 +1107,7 @@ def CreateCalibrationWindow():
 				elif timelineVideoTrackCount == 0:
 					timeline.AddTrack("video")
 				timelineAudioTrackCount = timeline.GetTrackCount("audio")
-				if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
+				if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineAudioTrackCount <= maxCameras:
 					trackGoal = maxCameras - timelineAudioTrackCount
 					# Add the required audio tracks
 					for x in range(trackGoal):

@@ -470,6 +470,7 @@ def CreateEDLStackSwizzleWindow():
 		# Get the timeline settings
 		timelineSetting = timeline.GetSetting()
 
+		removeEmptyTracksMode = itm["RemoveEmptyTracksCheckbox"].Checked
 		clipColorMode = itm["ClipColorCheckbox"].Checked
 
 		# Deal with the Resolve Studio v19.0.3 "off by one" frame correction change for Adding clips to timeline items issue:
@@ -629,7 +630,8 @@ def CreateEDLStackSwizzleWindow():
 			# Get the track count
 			timelineVideoTrackCount = newTimeline.GetTrackCount("video")
 			trackLayout = int(itm["TrackLayoutCombo"].CurrentIndex)
-			if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
+			removeEmptyTracksMode = itm["RemoveEmptyTracksCheckbox"].Checked
+			if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineVideoTrackCount <= maxCameras:
 				trackGoal = maxCameras - timelineVideoTrackCount
 				# Add the required video tracks
 				for x in range(trackGoal):
@@ -638,7 +640,7 @@ def CreateEDLStackSwizzleWindow():
 				newTimeline.AddTrack("video")
 
 			timelineAudioTrackCount = newTimeline.GetTrackCount("audio")
-			if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
+			if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineAudioTrackCount <= maxCameras:
 				trackGoal = maxCameras - timelineAudioTrackCount
 				# Add the required audio tracks
 				for x in range(trackGoal):

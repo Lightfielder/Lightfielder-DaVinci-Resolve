@@ -134,9 +134,9 @@ def CreateEDLWindow():
 			"WindowFlags": {"Window": True, "WindowStaysOnTopHint": windowFloat},
 			"ID": "CreateEDLWin",
 			"TargetID" : "CreateEDLWin",
-			"Geometry": [500, 50, 495, 730],
-			"MinimumSize": [482, 730],
-			"FixedSize": [482, 730],
+			"Geometry": [500, 50, 615, 730],
+			"MinimumSize": [615, 730],
+			"FixedSize": [615, 730],
 			# "Spacing": 0,
 			# "Margin": 5,
 		},[
@@ -312,6 +312,13 @@ def CreateEDLWindow():
 							"Text": "Create One Timeline",
 							"ToolTip": "(WIP) Assemble a single timeline with the clips added from all takes and for all of the shot types.",
 							"Checked": False,
+						}),
+						ui.CheckBox({
+							"ID": "RemoveEmptyTracksCheckbox",
+							"Text": "Remove Empty Tracks",
+							"ToolTip": "(WIP) When a Vertical Stack is created, compact the video tracks in the timeline \nby removing any track that is missing its camera views. \n\nIf you had an array with 55 cameras, and 10 of the cameras were not set to \nrecord, you would receive a swizzled timeline created with only 45 video tracks \nand no empty video tracks.",
+							"Checked": False,
+							"Weight": 0.1,
 						}),
 						ui.CheckBox({
 							"ID": "FuzzyR3DDateMatchingCheckbox",
@@ -573,6 +580,7 @@ def CreateEDLWindow():
 				app.SetData("Lightfielder.HDRI", itm["ShotTypeHDRICheckbox"].Checked)
 				app.SetData("Lightfielder.Content", itm["ShotTypeContentCheckbox"].Checked)
 				app.SetData("Lightfielder.FuzzyR3DDateMatching", itm["FuzzyR3DDateMatchingCheckbox"].Checked)
+				app.SetData("Lightfielder.RemoveEmptyTracksMode", itm["RemoveEmptyTracksCheckbox"].Checked)
 # 				app.SetData("Lightfielder.RigSectionAsClipColor", itm["RigSectionAsClipColorCheckbox"].Checked)
 				app.SetData("Lightfielder.CSVFile", itm["FileLineTxt"].Text)
 				#print(app.GetData("Lightfielder"))
@@ -608,6 +616,10 @@ def CreateEDLWindow():
 				if pref != None:
 					# print(pref)
 					itm["FuzzyR3DDateMatchingCheckbox"].Checked = pref
+				pref = app.GetData("Lightfielder.RemoveEmptyTracksMode")
+				if pref != None:
+					# print(pref)
+					itm["RemoveEmptyTracksCheckbox"].Checked = pref
 # 				pref = app.GetData("Lightfielder.RigSectionAsClipColor")
 # 				if pref != None:
 # 					# print(pref)
@@ -1175,9 +1187,10 @@ def CreateEDLWindow():
 
 											# Get the track count
 											if timeline is not None:
+												removeEmptyTracksMode = itm["RemoveEmptyTracksCheckbox"].Checked
 												timelineVideoTrackCount = timeline.GetTrackCount("video")
 												# If the vertical track layout is active
-												if trackLayout == 0 and timelineVideoTrackCount <= maxCameras:
+												if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineVideoTrackCount <= maxCameras:
 													trackGoal = maxCameras - timelineVideoTrackCount
 													# Add the required video tracks
 													for x in range(trackGoal):
@@ -1185,7 +1198,7 @@ def CreateEDLWindow():
 												elif timelineVideoTrackCount == 0:
 													timeline.AddTrack("video")
 												timelineAudioTrackCount = timeline.GetTrackCount("audio")
-												if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
+												if (trackLayout == 0 or (trackLayout == 1 and removeEmptyTracksMode == False)) and timelineAudioTrackCount <= maxCameras:
 													trackGoal = maxCameras - timelineAudioTrackCount
 													# Add the required audio tracks
 													for x in range(trackGoal):
