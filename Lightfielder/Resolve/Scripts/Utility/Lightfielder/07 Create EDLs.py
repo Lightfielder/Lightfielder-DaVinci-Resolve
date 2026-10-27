@@ -1182,13 +1182,16 @@ def CreateEDLWindow():
 													# Add the required video tracks
 													for x in range(trackGoal):
 														timeline.AddTrack("video")
+												elif timelineVideoTrackCount == 0:
+													timeline.AddTrack("video")
 												timelineAudioTrackCount = timeline.GetTrackCount("audio")
 												if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
 													trackGoal = maxCameras - timelineAudioTrackCount
 													# Add the required audio tracks
 													for x in range(trackGoal):
 														timeline.AddTrack("audio")
-
+												elif timelineAudioTrackCount == 0:
+													timeline.AddTrack("audio")
 											#resultStr += "</table>"
 											startFrameUsed = 0
 											sequenceTenSeconds = int(10 * fps)

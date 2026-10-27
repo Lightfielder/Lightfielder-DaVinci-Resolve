@@ -1091,12 +1091,16 @@ def CreateCalibrationWindow():
 						# Rename the video tracks
 						# trackResult = timeline.SetTrackName("video", x, str(GetCameraNumber(x)))
 						# print("[Track] v" + str(x) + " Renamed To " + str(GetCameraNumber(x)) + " [Status] " + str(trackResult))
+				elif timelineVideoTrackCount == 0:
+					timeline.AddTrack("video")
 				timelineAudioTrackCount = timeline.GetTrackCount("audio")
 				if trackLayout == 0 and timelineAudioTrackCount <= maxCameras:
 					trackGoal = maxCameras - timelineAudioTrackCount
 					# Add the required audio tracks
 					for x in range(trackGoal):
 						timeline.AddTrack("audio")
+				elif timelineAudioTrackCount == 0:
+					timeline.AddTrack("audio")
 				#print("[Footage]")
 				if FolderItems is not None:
 					for folder in FolderItems:
