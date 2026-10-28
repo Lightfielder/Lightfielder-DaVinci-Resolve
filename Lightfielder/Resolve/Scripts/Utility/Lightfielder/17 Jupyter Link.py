@@ -1,5 +1,5 @@
 """
-Lightfielder 17 Jupyter Link 2026-10-26 04.32 PM (UTC -3)
+Lightfielder 17 Jupyter Link 2026-10-28 09.15 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Connects the active Resolve Studio session with the Jupyter Notebook IDE using Python.
@@ -103,9 +103,9 @@ def CreateJupyterWindow():
 			"WindowFlags": {"Window": True, "WindowStaysOnTopHint": windowFloat},
 			"ID": "JupyterWin",
 			"TargetID" : "JupyterWin",
-			"Geometry": [500, 50, 485, 566],
-			"MinimumSize": [485, 566],
-			"FixedSize": [485, 566],
+			"Geometry": [500, 50, 516, 566],
+			"MinimumSize": [516, 566],
+			"FixedSize": [516, 566],
 			# "Spacing": 0,
 			# "Margin": 5,
 		},[
