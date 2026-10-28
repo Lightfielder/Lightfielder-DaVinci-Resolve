@@ -88,8 +88,12 @@ This conversion process in CloudCompare starts with a polygon mesh that has an R
 
 ![PBR roughness Mesh](images/point-cloud-relighting-roughness.png)
 
-These per-PBR channel dense point cloud datasets can have their RGB color attributes merged and re-packaged. This allows you to support OpenPBR style interactive relighting of the dense point cloud asset. This is a process I like to call "PBR-GS".
+These per-PBR channel dense point cloud datasets can have their RGB color attributes merged and re-packaged. This allows you to support [OpenPBR](https://github.com/AcademySoftwareFoundation/OpenPBR) style PBR-metal-roughness interactive relighting of the dense point cloud asset, or PBR relit gaussian splats. This is a process I like to call "[PBR-GS](/docs/workflow-guides/physically-based-rendering-of-gaussian-splats)".
 
-This works by shuffling the per-point sample constant shaded RGB values from a PBR relighting workflow, ontop of an existing view-dependent 3DGS style gaussian splatting .ply file. 
+This works by shuffling the per-point sample constant shaded RGB values from a PBR relighting workflow, ontop of an existing view-dependent 3DGS style gaussian splatting .ply file.
 
-The core concept here is to retain the standard delit albedo texture information that comes from a"pre-trained" spherical harmonics based gaussian splatting .ply file. The extra PBR channels are merged into this dataset from a series of externally baked PBR dense point clouds. This allow you to perform the relighting operations that combine normal map relighting concepts with PBR styled roughness, metalness, and height map data. This allows for specular highlights, and HDRI driven environmental reflections that can be seen across the 3DGS model, compared to a uniform normal-map only relighting technique.
+The core concept here is to retain the standard delit albedo texture information that comes from a"pre-trained" spherical harmonics based gaussian splatting .ply file. The extra PBR channels are merged into this dataset from a series of externally baked PBR dense point clouds.
+
+This allow you to perform the relighting operations that combine normal map relighting concepts with PBR styled roughness, metalness, and height map data. This allows for specular highlights, and HDRI driven environmental reflections that can be seen across the 3DGS model, compared to a uniform normal-map only relighting technique.
+
+The Lightfielder for Houdini [PBR-GS Workflows](https://lightfielder.github.io/Lightfielder-for-Houdini/#/pbr/pbr) documentation helps explain the PBR + COPs (Houdini Copernicus) node-based image processing workflows. It's important to mask out the transparent background parts of the PBR source media. This helps avoid the transparent area outside the model from becoming a constant color in-filled volume that would otherwise be trained and rendered with a solid color.
