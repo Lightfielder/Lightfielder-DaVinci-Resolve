@@ -7,6 +7,10 @@ description: "Release notes and development history for Lightfielder for DaVinci
 
 # Lightfielder | ChangeLog
 
+## 2026-10-28
+
+- A new "`$HOME/Lightfielder/Projects/`" folder is used with Lightfielder for DaVinci Resolve's learning content. The included readme.md markdown file in this folder explains the usage concepts.
+
 ## 2026-10-27
 
 - Started testing Lightfielder compatibility with Resolve Studio v21.1.2.
