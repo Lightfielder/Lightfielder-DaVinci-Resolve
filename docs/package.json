@@ -46,9 +46,9 @@
     "node": ">=20.0"
   },
   "allowScripts": {
-    "@swc/core@1.15.43": true,
     "core-js@3.49.0": true,
     "fsevents@2.3.3": true,
-    "core-js-pure@3.49.0": true
+    "core-js-pure@3.49.0": true,
+    "@swc/core@1.16.13": true
   }
 }

@@ -132,7 +132,7 @@ const sections = [
     links: [
       { label: 'Example Projects', href: '/docs/Examples/' },
       { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
-      { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting' },
+      { label: 'Point Cloud Relighting', href: '/docs/Examples/point-cloud-relighting' },
     ],
   },
   {
@@ -232,7 +232,7 @@ export default function Home() {
           <p>
 						The goal with Lightfielder v26 is to gather feedback from the community so we can help
             shape the future of accessible, high-performance, open-source multi-view
-            pipelines. This is part of the process of taking Lightfielder from its status as an in-house tool created between 2022-2026, and spinning it out for wider public access. This will involve further refinement of the user interface and adding more flexible camera rig design support via "user defined" Python plug-ins that can be dropped into the pipeline.
+            pipelines. This is part of the process of taking Lightfielder for DaVinci Resolve from its status as an in-house tool created between 2022-2026, and spinning it out for wider public access. This will involve further refinement of the user interface and adding more flexible camera rig design support via "user defined" Python plug-ins that can be dropped into the pipeline.
           </p>
         </section>
         <div className="lf-sections-grid">
