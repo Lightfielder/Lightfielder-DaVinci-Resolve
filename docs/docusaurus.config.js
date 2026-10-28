@@ -152,6 +152,7 @@ module.exports = {
                 items: [
                   { label: 'Example Projects', to: '/docs/Examples/' },
                   { label: 'Pikachu Still Frame 50 View', to: '/docs/Examples/pikachu-still-frame-50-view' },
+                  { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting.mdx' },
                 ],
               },
             ],
@@ -229,6 +230,7 @@ module.exports = {
             items: [
               { label: 'Examples Overview', to: '/docs/Examples/' },
               { label: 'Pikachu Still Frame 50 View', to: '/docs/Examples/pikachu-still-frame-50-view' },
+              { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting' },
             ],
           },
           {
