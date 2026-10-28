@@ -58,6 +58,7 @@ This approach certainly gives an accessible and affordable route to enter volume
 Additional learning content and example project files are being prepared for Lightfielder this month.
 
 - [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK)
+- [Point Cloud Relighting 7-Zip Archive (1.21GB)](https://we.tl/t-Rz2FAL4kqhiChW9b)
 
 ## Accessing Lightfielder inside Resolve
 

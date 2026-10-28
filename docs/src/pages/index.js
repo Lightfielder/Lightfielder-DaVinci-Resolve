@@ -132,6 +132,7 @@ const sections = [
     links: [
       { label: 'Example Projects', href: '/docs/Examples/' },
       { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
+      { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting' },
     ],
   },
   {

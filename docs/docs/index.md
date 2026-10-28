@@ -66,6 +66,8 @@ This approach certainly gives an accessible and affordable route to enter volume
 Additional learning content and example project files are being prepared for Lightfielder this month.
 
 - [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK) — [example details](Examples/pikachu-still-frame-50-view.mdx)
+- [Point Cloud Relighting 7-Zip Archive (1.21GB)](https://we.tl/t-Rz2FAL4kqhiChW9b) — [example details](Examples/point-cloud-relighting.mdx)
+
 - See the [Examples section](Examples/index.mdx) for a list of the available multi-view example project files and tutorials.
 
 ## Accessing Lightfielder inside Resolve
