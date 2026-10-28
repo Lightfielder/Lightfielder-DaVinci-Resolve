@@ -32,6 +32,16 @@ If you want to delete a preset, simply remove the .json file from the presets fo
 
 The presets are saved as JSON formatted plain-text documents that can be viewed with a programmer's text editor. Each Bin folder path is entered on its own line and the path is wrapped inside a pair of quotes.
 
+### On-Disk Folder Operations
+
+#### Import External Folders Button
+
+Selects an on-disk project folder hierarchy and imports that (empty) folder structure into the Resolve Media page bins. No files are imported during this process.
+
+#### Create External Folders
+
+Export the current Resolve Media page bin folders. This hierarchy will be re-created as an on-disk folder structure.
+
 ### Custom 3DGS Bin Preset
 
 The "Bin_Splat_Postshot" preset is optimized for Gaussian Splatting workflows. It allows you to better manage your multi-view footage in Resolve, along with your [Postshot](https://www.jawset.com/) trained 3DGS output.
