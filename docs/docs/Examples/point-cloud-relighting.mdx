@@ -18,6 +18,14 @@ This dataset shows how a PBR textured mesh can be baked into a point cloud that 
 
 The CloudCompare, Autodesk Maya, and Side Houdini software packages were used to prepare the assets in this example project.
 
+## Houdini e57 Point Cloud Example Scene
+
+The resulting e57 point clouds are loaded into a Houdini scene file named "PBR-Point-Cloud-v001.hip". 
+
+The LIDAR import node in houdini allows the e57 data to be loaded so the point cloud samples are able to be reworked. A Switch node in houdini makes it easy to toggle between the PBR passes to quickly compare the RGB colored point samples.
+
+![Houdini Switch Node](images/point-cloud-relighting-houdini-e57-point-cloud-switch.gif)
+
 ## Datasets
 
 The source meshes are provided in Wavefront OBJ (.obj), and Maya ASCII (.ma) format. The PBR texture maps are stored as PNG images at 2048x2048 px resolution.
@@ -70,16 +78,18 @@ The Points Sampling on mesh tool supports the conversion of RGB texture maps ass
 
 ![points sampling on mesh](images/point-cloud-relighting-points-sampling-on-mesh.png)
 
-The results of applying a per-PBR texture pass conversion to e57 look like this:
+### Working with PBR Textured Assets
+
+CloudCompare's typical "points sampling" approach is very flexible. With a little bit of planning in advance, this technique can be adapted to support a dense point cloud baking workflow for your PBR textured meshes. The way this is done is by customizing a Wavefront OBJ's material (MTL) file so one .mtl file is generated for each of the PBR texture map "passes" that are applied to your mesh.
+
+This conversion process in CloudCompare starts with a polygon mesh that has an RBG texture map applied to the surface. The points sampling step results in an RGB colored dense point cloud that you can save to an e57 file format. If you iterate through each of per-PBR texture passes you will have a full set of individual pass based .e57s in a folder. 
 
 ![PBR baseColor Mesh](images/point-cloud-relighting-baseColor.png)
 
 ![PBR roughness Mesh](images/point-cloud-relighting-roughness.png)
 
-## Houdini e57 Point Cloud Example Scene
+These per-PBR channel dense point cloud datasets can have their RGB color attributes merged and re-packaged. This allows you to support OpenPBR style interactive relighting of the dense point cloud asset. This is a process I like to call "PBR-GS".
 
-The resulting e57 point clouds are loaded into a Houdini scene file named "PBR-Point-Cloud-v001.hip". 
+This works by shuffling the per-point sample constant shaded RGB values from a PBR relighting workflow, ontop of an existing view-dependent 3DGS style gaussian splatting .ply file. 
 
-The LIDAR import node in houdini allows the e57 data to be loaded so the point cloud samples are able to be reworked. A Switch node in houdini makes it easy to toggle between the PBR passes to quickly compare the RGB colored point samples.
-
-![Houdini Switch Node](images/point-cloud-relighting-houdini-e57-point-cloud-switch.gif)
+The core concept here is to retain the standard delit albedo texture information that comes from a"pre-trained" spherical harmonics based gaussian splatting .ply file. The extra PBR channels are merged into this dataset from a series of externally baked PBR dense point clouds. This allow you to perform the relighting operations that combine normal map relighting concepts with PBR styled roughness, metalness, and height map data. This allows for specular highlights, and HDRI driven environmental reflections that can be seen across the 3DGS model, compared to a uniform normal-map only relighting technique.
