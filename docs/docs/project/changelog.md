@@ -10,7 +10,8 @@ description: "Release notes and development history for Lightfielder for DaVinci
 ## 2026-10-27
 
 - Started testing Lightfielder compatibility with Resolve Studio v21.1.2.
-- Added a "Lightfielder/Extras/Shell Scripts/Launch Fusion Studio.bat" script that provides a DIY virtual environment like setup. 
+- Added a new shell script for macOS named "`Lightfielder/Extras/Shell Scripts/Restart Fusion Studio.command`". It helps with testing Fusion scripted tasks from a freshly restarted state.
+- Added a new bat script for Windows named "`Lightfielder/Extras/Shell Scripts/Launch Fusion Studio.bat`". It creates a new DIY virtual environment like setup for testing Fusion based tools in a fresh setup that runs in isolation from everything else.
 	- This allows you to isolate individual Fusion Studio/Fusion Render Node versions so they can run without conflicts caused by system wide OpenFX, FusionSDK, and Fuse plugin versions intermixing.
 	- The script defines custom log file paths when launching Fusion Studio and the Render Node process to make log collection and troubleshooting steps easier if there are errors. Each time the apps are launched the old logs are cleaned up automatically.
 	- **FUSION Log Files**
