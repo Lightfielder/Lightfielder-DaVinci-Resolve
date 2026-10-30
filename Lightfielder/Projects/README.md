@@ -13,7 +13,7 @@ The provided examples can act as "unit tests" if you need to validate the softwa
 
 ## Lightfielder Unit Tests
 
-The [unit tests](https://lightfielder.com/docs/usage/unit-tests) shipped with Lightfielder can be manually copied to the projects folder when you go to use them. By default the unit tests are stored without any R3D media provided to keep filesizes down.
+The [unit tests](https://lightfielder.com/docs/usage/unit-tests) shipped with Lightfielder are stored without any R3D media provided to keep filesizes down.
 
 - `$HOME/Lightfielder/Extras/Unit Tests/R3D Template for 55 Camera Array A110-Z579/`"
 - `$HOME/Lightfielder/Extras/Unit Tests/R3D Template for 50 Camera Array A1-E5/`"

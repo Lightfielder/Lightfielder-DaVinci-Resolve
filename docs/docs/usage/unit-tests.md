@@ -10,7 +10,7 @@ description: "Synthetic camera array datasets used to validate the Lightfielder 
 A collection of new "unit tests" are being developed for the Lightfielder for DaVinci Resolve repo. They allow the Lightfielder script functionality to be validate with synthetic camera array data. This avoids the need to interact with NDA covered media assets when developing and debugging the core scripts.
 
 These assets are located in the GitHub repo at:  
-`Lightfielder/Extras/Unit Tests/`
+`Lightfielder/Projects/Unit Tests/`
 
 ## What is a Symlink?
 
@@ -39,7 +39,7 @@ A new "Output" folder is created in the same folder as the .comp file. The Outpu
 ![Output](../images/Unit_Test_Create_a_Symlinked_R3D_Sequence_Output.png)
 
 
-The "`Lightfielder/Extras/Unit Tests/R3D Template for 50 Camera Array A1-E5/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
+The "`Lightfielder/Projects/Unit Tests/R3D Template for 50 Camera Array A1-E5/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
 
 ```
 clip,shot,date,description
@@ -58,7 +58,7 @@ A110_A050_0309BX_001.R3D
 J570_E050_0309BX_001.R3D
 ```
 
-The "`Lightfielder/Extras/Unit Tests/R3D Template for 50 Camera Array A110-J570/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
+The "`Lightfielder/Projects/Unit Tests/R3D Template for 50 Camera Array A110-J570/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
 
 ```
 clip,shot,date,description
@@ -80,7 +80,7 @@ A110_A050_0619BX_001.R3D
 Z579_E050_0619BX_001.R3D
 ```
 
-The "`Lightfielder/Extras/Unit Tests/Unit Tests/R3D Template for 55 Camera Array A110-Z579/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
+The "`Lightfielder/Projects/Unit Tests/R3D Template for 55 Camera Array A110-Z579/Shotlog.csv`" file is used to do the Lightfielder Toolbar validation steps in Resolve Studio:
 
 ```
 clip,shot,date,description

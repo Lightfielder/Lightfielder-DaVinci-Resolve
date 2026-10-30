@@ -7,6 +7,10 @@ description: "Release notes and development history for Lightfielder for DaVinci
 
 # Lightfielder | ChangeLog
 
+## 2026-10-29
+
+- Lightfielder v26.10.29 released as the initial golden master edition. More work continues behind the scenes but this is the baseline version of the toolset that can be used with compatible camera arrays.
+
 ## 2026-10-28
 
 - A new "`$HOME/Lightfielder/Projects/`" folder is used with Lightfielder for DaVinci Resolve's learning content. The included readme.md markdown file in this folder explains the usage concepts.
