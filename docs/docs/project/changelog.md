@@ -7,6 +7,12 @@ description: "Release notes and development history for Lightfielder for DaVinci
 
 # Lightfielder | ChangeLog
 
+- Updated the "Workspaces > Scripts > Lightfielder > Open Folder" menu entries:
+	- Show Projects Folder
+	- Show Support Scripts Folder
+	- Show Utility Scripts Folder
+	- Show Unit Tests Folder (which is now a subfolder in the "Lightfielder:/Projects/" location)
+
 ## 2026-10-29
 
 - Lightfielder v26.10.29 released as the initial golden master edition. More work continues behind the scenes but this is the baseline version of the toolset that can be used with compatible camera arrays.

@@ -1,0 +1,22 @@
+"""
+Lightfielder Show Support Scripts Folder 2026-10-30 08.54 AM (UTC -3)
+By Andrew Hazelden <andrew@andrewhazelden.com>
+
+Shows the Lightfielder "Support Scripts" folder in a new folder browsing window.
+
+"""
+
+import platform
+import sys, os
+
+# Load the Lightfielder shared utility module
+lightfielder_path = os.path.dirname(app.MapPath("Scripts:/Support/lightfielder.py"))
+if lightfielder_path not in sys.path:
+	sys.path.append(lightfielder_path)
+	# print(sys.path)
+	from lightfielder import *
+
+if __name__ == "__main__":
+	print("[Lightfielder][Open Folder][PathMap] Support Scripts Folder")
+
+	ShowFolderFromFilepath("Lightfielder:/Resolve/Scripts/Support/")
