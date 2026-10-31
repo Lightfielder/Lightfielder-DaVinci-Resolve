@@ -7,6 +7,8 @@ description: "Release notes and development history for Lightfielder for DaVinci
 
 # Lightfielder | ChangeLog
 
+## 2026-10-30
+
 - Updated the "Workspaces > Scripts > Lightfielder > Open Folder" menu entries:
 	- Show Projects Folder
 	- Show Support Scripts Folder

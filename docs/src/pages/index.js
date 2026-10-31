@@ -225,12 +225,12 @@ export default function Home() {
             Lightfielder (aka "LF") is an LGPL-licensed open-source hybrid computer-vision IDE
             and digital content creation (DCC) toolset developed by Andrew Hazelden.
             Designed to unify volumetric video content creation and XR
-            post-production. The current  Lightfielder public beta release cycle is aimed at a professional
+            post-production. The current  Lightfielder release cycle is aimed at a professional
             audience that is already working in the 3D graphics and immersive media
             sector.
-					</p>
+          </p>
           <p>
-						The goal with Lightfielder v26 is to gather feedback from the community so we can help
+            The goal with Lightfielder v26 is to gather feedback from the community so we can help
             shape the future of accessible, high-performance, open-source multi-view
             pipelines. This is part of the process of taking Lightfielder for DaVinci Resolve from its status as an in-house tool created between 2022-2026, and spinning it out for wider public access. This will involve further refinement of the user interface and adding more flexible camera rig design support via "user defined" Python plug-ins that can be dropped into the pipeline.
           </p>

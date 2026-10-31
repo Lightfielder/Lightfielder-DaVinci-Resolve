@@ -1,5 +1,5 @@
 """
-Lightfielder Python Module 2026-10-29 09.51 PM (UTC -3)
+Lightfielder Python Module 2026-10-30 08.54 AM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Lightfielder Script Usage Tip:
@@ -32,7 +32,7 @@ def LFGetVersion(label):
 	# Provide the Lightfielder version number when requested
 	# return str(label) + "26"
 	# return str(label) + "26.10"
-	return str(label) + "26.10.29"
+	return str(label) + "26.10.30"
 
 def execfile(filepath, globals = None, locals = None):
 	try:
