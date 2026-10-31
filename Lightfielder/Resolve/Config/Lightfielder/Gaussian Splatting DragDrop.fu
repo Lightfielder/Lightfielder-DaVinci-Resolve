@@ -1,0 +1,175 @@
+--[[--
+Gaussian Splatting DragDrop Addon for Resolve/Fusion
+Created By: Andrew Hazelden <andrew@andrewhazelden.com>
+Date Created: 2025-08-27
+Last Updated: 2026-10-31 12.29 PM
+
+## Overview
+
+The "Gaussian Splatting DragDrop.fu" file is a Resolve/Fusion add-on that allows you to drag and drop .ply files from your desktop folder browsing window into the Fusion nodes view area. The 3DGS asset is automatically added to the composite and is ready for use.
+
+The .fu file works by adding a new "Irrealix GaussianSplatting" OpenFX node to the active foreground Fusion page composite when a drag and drop event occurs. The PLY filepath information from the drag and drop loaded document is then added to the GaussianSplatting node's "Model 1" section.
+
+This approach saves time and effort compared to constantly futzing around with file open dialogs, and navigating to the exact deeply nested filepath you require, when you want to load a new 3DGS .ply model into the Fusion node graph/viewport.
+
+## Requirements
+
+In order to have access to the GaussianSplatting node in the Fusion page, it requires the installation of the "Irrealix Gaussian Splatting plugin" that is available here:
+
+https://aescripts.com/gaussian-splatting-for-davinci-resolve/
+
+## DragDrop Addon Installation
+
+Step 1. Copy the "Gaussian Splatting DragDrop.fu" file into the Fusion user preferences "Config" PathMap folder. You could also use the "Config" PathMap folder that exists at "Reactor:/Deploy/Config/" or "Lightfielder:/Resolve/Config/".
+
+### Fusion Studio Install Location
+
+	Windows Path:
+	%AppData%\Blackmagic Design\Fusion\Config\
+
+	Linux Path:
+	$HOME/.fusion/BlackmagicDesign/Fusion/Config\
+
+	MacOS Path:
+	$HOME/Library/Application Support/Blackmagic Design/Fusion/Config/
+
+### Resolve Studio Install Location
+
+	Windows Path:
+	%AppData%\Blackmagic Design\DaVinci Resolve\Fusion\Config\
+
+	Linux Path:
+	$HOME/.fusion/BlackmagicDesign/DaVinci Resolve/Fusion/Config/
+
+	MacOS Path:
+	$HOME/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Config/
+
+2. Relaunch Resolve Studio/Fusion Studio.
+
+3. Add the GaussianSplatting node to the comp. With the GaussianSplatting node selected in the nodes view, navigate to the inspector window. If you have a commercial license of the GaussianSplatting plugin, now is a good time to enter your registration number using the node's Register window.
+
+## YouTube Tutorials from Irrealix
+
+YouTube | Gaussian Splatting Resolve new Camera Link Button Tutorial 
+https://www.youtube.com/watch?v=ka8bO6ufGqg
+
+YouTube | Gaussian Splatting in DaVinci Resolve connect 2D layers 
+https://www.youtube.com/watch?v=CKn0H9bEO8M
+
+--]]--
+
+{
+	Event{
+		Action = 'Drag_Drop',
+		Targets = {
+			FuView = {
+				Execute = _Lua [=[
+-- Check if the file extension matches
+-- Example: isIFL = MatchExt('/Example.ply', '.ply')
+function MatchExt(file, fileType)
+	-- Get the file extension
+	local ext = string.match(tostring(file), '^.+(%..+)$')
+
+	-- Compare the results
+	if (ext ~= nil) and (fileType ~= nil) and (string.lower(ext) == string.lower(tostring(fileType))) then
+		return true
+	else
+		return false
+	end
+end
+
+
+-- Get the current comp object
+-- Example: comp = GetCompObject()
+function GetCompObject()
+	local cmp = app:GetAttrs().FUSIONH_CurrentComp
+	return cmp
+end
+
+
+-- Process a file dropped into Fusion
+-- Example: ProcessFile('/Example.ply', 1)
+function ProcessFile(file, fileNum)
+	-- comp:Print('[GaussianSplatting]['.. fileNum .. '][File Drop] ', file, '\n')
+
+	-- Check if the file extension matches
+	if MatchExt(file, '.ply') then
+		-- Accept the Drag and Drop event
+		rets.handled = true
+
+		-- Get the current comp object
+		comp = GetCompObject()
+		if not comp then
+			-- The comp pointer is undefined
+			comp:Print('[GaussianSplatting] Please open a Fusion composite before dragging in a .ply file again.')
+			return
+		end
+
+		-- Lock the comp to suppress any file dialog opening for nodes that have empty filename fields.
+		comp:Lock()
+
+		-- Add the node to the comp
+		local cameraNode = comp:AddTool('Camera3D', -32768, -32768)
+		local node = comp:AddTool('ofx.com.irrealix.GaussianSplatting', -32768, -32768)
+
+		-- Add a new undo history item
+		comp:StartUndo('Add GaussianSplatting')
+
+		-- Check for a nil on the node creation and the filename string
+		if node and file then
+			-- Add the PLY filename to the Model 1 section
+			node.Model1_model = tostring(file)
+
+			-- Expand the Model 1 collapsable section in the Inspector window
+			node.Model1 = 1
+
+			-- Expand the Camera collapsable section in the Inspector window
+			node.Camera = 1
+		else
+			comp:Print('[GaussianSplatting] Warning: Failed to update the model1 filename.')
+		end
+
+		-- Unlock the comp to restore "normal" file dialog opening operations
+		comp:Unlock()
+
+		-- Close off the undo history item block
+		comp:EndUndo(True)
+	end
+end
+
+-- Where the magic begins
+function Main()
+	-- Call other chained events and default action
+	rets = self:Default(ctx, args)
+
+	-- Debug print the args
+	-- dump(args)
+
+	-- Drop zone screen coordinates
+	mousex = args._sxpos
+	mousey = args._sypos
+
+	-- No one else handled this?
+	if not rets.handled then
+		-- Get the list of files dropped onto Fusion
+		files = args.urilist
+
+		-- Scan through each of the files
+		for i, file in ipairs(files) do
+			-- Process a .ply file dropped into Fusion
+			ProcessFile(file, i)
+		end
+	end
+
+	-- Debug print where the file was dropped onscreen in the window (using screen coordinates)
+	-- print('[Drop Zone Coords] [X] ' .. tostring(mousex) .. ' [Y] ' .. tostring(mousey) .. 'px')
+	-- print('\n')
+end
+
+-- Run the main function
+Main()
+]=],
+			},
+		},
+	},
+}
