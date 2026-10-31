@@ -98,6 +98,24 @@ const sections = [
     ],
   },
   {
+    title: 'Lightfielder for Resolve',
+    links: [
+      { label: 'GitHub Repository', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve' },
+      { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
+      { label: 'LF ChangeLog', href: '/docs/project/changelog' },
+      { label: 'LF Known Issues', href: '/docs/project/known-issues' },
+      { label: 'LF PunchList Tasks', href: '/docs/project/punch-list' },
+    ],
+  },
+  {
+    title: 'Lightfield Example Projects',
+    links: [
+      { label: 'Example Projects', href: '/docs/Examples/' },
+      { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
+      { label: 'Point Cloud Relighting', href: '/docs/Examples/point-cloud-relighting' },
+    ],
+  },
+  {
     title: 'Workflow Guides',
     links: [
       { label: 'Live Grade Video Flowchart', href: '/docs/workflow-guides/lightfielder-live-grade-flowchart' },
@@ -125,24 +143,6 @@ const sections = [
       { label: 'Reference', href: '/VonkUltra/reference' },
       { label: 'Guides', href: '/VonkUltra/guides/overview' },
       { label: 'Tutorials', href: '/VonkUltra/tutorials/video-tutorials' },
-    ],
-  },
-  {
-    title: 'Lightfield Example Projects',
-    links: [
-      { label: 'Example Projects', href: '/docs/Examples/' },
-      { label: 'Pikachu Still Frame 50 View', href: '/docs/Examples/pikachu-still-frame-50-view' },
-      { label: 'Point Cloud Relighting', href: '/docs/Examples/point-cloud-relighting' },
-    ],
-  },
-  {
-    title: 'Lightfielder for Resolve',
-    links: [
-      { label: 'GitHub Repository', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve' },
-      { label: 'GitHub Releases', href: 'https://github.com/Lightfielder/Lightfielder-DaVinci-Resolve/releases' },
-      { label: 'LF ChangeLog', href: '/docs/project/changelog' },
-      { label: 'LF Known Issues', href: '/docs/project/known-issues' },
-      { label: 'LF PunchList Tasks', href: '/docs/project/punch-list' },
     ],
   },
   {

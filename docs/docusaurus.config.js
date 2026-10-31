@@ -124,18 +124,6 @@ module.exports = {
                 ],
               },
               {
-                label: 'Workflow Guides',
-                to: '/docs/workflow-guides/',
-                items: [
-                  { label: 'Guides Overview', to: '/docs/workflow-guides/' },
-                  { label: 'Live Grade Video Flowchart', to: '/docs/workflow-guides/lightfielder-live-grade-flowchart' },
-                  { label: 'HDR Image Based Rendering', to: '/docs/workflow-guides/lightfielder-hdr-image-based-rendering' },
-                  { label: 'Volumetric Color Decision Lists', to: '/docs/workflow-guides/volumetric-color-decision-lists' },
-                  { label: 'PBR-GS Gaussian Splats', to: '/docs/workflow-guides/physically-based-rendering-of-gaussian-splats' },
-                  { label: 'The OBJ-GS Guide', to: '/docs/workflow-guides/obj-gs' },
-                ],
-              },
-              {
                 label: 'Lightfielder for Resolve',
                 to: '/docs/category/project',
                 items: [
@@ -147,12 +135,24 @@ module.exports = {
                 ],
               },
               {
-                label: 'Examples',
+                label: 'Lightfielder Examples',
                 to: '/docs/Examples/',
                 items: [
                   { label: 'Example Projects', to: '/docs/Examples/' },
                   { label: 'Pikachu Still Frame 50 View', to: '/docs/Examples/pikachu-still-frame-50-view' },
-                  { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting.mdx' },
+                  { label: 'Point Cloud Relighting', to: '/docs/Examples/point-cloud-relighting' },
+                ],
+              },
+              {
+                label: 'Workflow Guides',
+                to: '/docs/workflow-guides/',
+                items: [
+                  { label: 'Guides Overview', to: '/docs/workflow-guides/' },
+                  { label: 'Live Grade Video Flowchart', to: '/docs/workflow-guides/lightfielder-live-grade-flowchart' },
+                  { label: 'HDR Image Based Rendering', to: '/docs/workflow-guides/lightfielder-hdr-image-based-rendering' },
+                  { label: 'Volumetric Color Decision Lists', to: '/docs/workflow-guides/volumetric-color-decision-lists' },
+                  { label: 'PBR-GS Gaussian Splats', to: '/docs/workflow-guides/physically-based-rendering-of-gaussian-splats' },
+                  { label: 'The OBJ-GS Guide', to: '/docs/workflow-guides/obj-gs' },
                 ],
               },
             ],
