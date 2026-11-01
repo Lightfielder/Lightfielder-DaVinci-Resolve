@@ -6,7 +6,7 @@ description: "Lightfielder is a multi-view workflow automation toolset that stre
 slug: /
 ---
 
-# Lightfielder v26.10.29 for DaVinci Resolve
+# Lightfielder for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 

@@ -1,4 +1,4 @@
-# Lightfielder v26.10.31 for DaVinci Resolve
+# Lightfielder for DaVinci Resolve
 
 Created by: [Andrew Hazelden](mailto:andrew@andrewhazelden.com)
 
