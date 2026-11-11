@@ -14,6 +14,7 @@ Script Usage:
 - Planar Grid (A1-E5)
 - Edge 3M (A1-E5)
 - Polar (A100-Z997)
+- COLMAP (Text)
 
 3. If the "Camera Array Geometry" Polar entry is selected, then a "JSON Source File" based filepath entry text field is displayed. Use the "JSON Source File" text field to select a .json formatted Technisync configuration file. The "Load Settings" button will refresh the "Number of Cameras" value using the latest data from the Technisync JSON file.
 
@@ -891,6 +892,7 @@ def CreatePrefsWindow():
 		itm["CameraArrayGeometryCombo"].AddItem("Planar Grid (A1-E5)")
 		itm["CameraArrayGeometryCombo"].AddItem("Wedge 3M (A1-E5)")
 		itm["CameraArrayGeometryCombo"].AddItem("Polar (A110-Z977)")
+		itm["CameraArrayGeometryCombo"].AddItem("COLMAP (Text)")
 
 		# Media Format
 		itm["MediaFormatCombo"].AddItem("R3D")
@@ -1206,12 +1208,23 @@ def CreatePrefsWindow():
 				itm["JSONBrowseFileButton"].Visible = False
 				itm["JSONSourceGroup"].Visible = False
 				# itm["LoadSettingsButton"].Visible = False
+				itm["ShowJSONFilenameButton"].Text = "JSON Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an activeTechnisyncConfig.json filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc.",
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm["ShowJSONFilenameButton"].Text = "COLMAP Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an COLMAP text filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP tect file provides essential details \nfor each camera like the camera angle name, filename.",
 			else:
 				itm["ShowJSONFilenameButton"].Visible = True
 				itm["JSONCameraConfigFileLineTxt"].Visible = True
 				itm["JSONBrowseFileButton"].Visible = True
 				itm["JSONSourceGroup"].Visible = True
 				# itm["LoadSettingsButton"].Visible = True
+				itm["ShowJSONFilenameButton"].Text = "JSON Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an activeTechnisyncConfig.json filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc.",
 			dlg:RecalcLayout()
 			# itm["ProgressLabel"].Text = "  Progress: Updated \"Camera Array Geometry\" to \"" + str(itm["CameraArrayGeometryCombo"].CurrentText) + "\""
 		dlg.On.CameraArrayGeometryCombo.CurrentIndexChanged = CameraArrayGeometryComboFunc
@@ -1278,6 +1291,9 @@ def CreatePrefsWindow():
 			elif cameraArrayGeometry == 2:
 				# Polar (A110-Z977)
 				itm['NumberOfCamerasSpinner'].Value = 55
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm['NumberOfCamerasSpinner'].Value = 55
 			else:
 				itm['NumberOfCamerasSpinner'].Value = 55
 
@@ -1328,6 +1344,9 @@ def CreatePrefsWindow():
 				else:
 					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
 		dlg.On.SensorFrameRateButton.Clicked = SensorFrameRateButtonFunc
 
 		def ProjectFrameRateButtonFunc(ev):
@@ -1374,6 +1393,9 @@ def CreatePrefsWindow():
 				else:
 					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
 		dlg.On.ProjectFrameRateButton.Clicked = ProjectFrameRateButtonFunc
 
 		def LoadSettingsButtonFunc(ev):
@@ -1467,6 +1489,18 @@ def CreatePrefsWindow():
 				else:
 					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
+				itm['NumberOfCamerasSpinner'].Value = 55
+				# itm['MediaFormatCombo'].CurrentText = "Image Sequence"
+				itm['MediaFormatCombo'].CurrentText = "Still Frame"
+				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
+				itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
+				itm["SensorFrameRateCustomSpinner"].Value = 30
+				itm["ProjectFrameRateCustomSpinner"].Value = 30
+
+				itm["ProgressLabel"].Text = "  Progress: Loading Settings for a \"" + str(itm["CameraArrayGeometryCombo"].CurrentText) + "\" camera array to use the defaults"
 			else:
 				itm['NumberOfCamerasSpinner'].Value = 55
 				itm['MediaFormatCombo'].CurrentText = "R3D"

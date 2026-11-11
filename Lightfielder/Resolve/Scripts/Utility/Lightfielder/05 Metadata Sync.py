@@ -804,6 +804,7 @@ def CreateMetadataSyncWindow():
 		itm["CameraArrayGeometryCombo"].AddItem("Planar Grid (A1-E5)")
 		itm["CameraArrayGeometryCombo"].AddItem("Wedge 3M (A1-E5)")
 		itm["CameraArrayGeometryCombo"].AddItem("Polar (A110-Z977)")
+		itm["CameraArrayGeometryCombo"].AddItem("COLMAP (Text)")
 
 		# Add a header row
 		hdr = itm["Tree"].NewItem()
@@ -1158,11 +1159,22 @@ def CreateMetadataSyncWindow():
 				itm["JSONCameraConfigFileLineTxt"].Visible = False
 				itm["JSONBrowseFileButton"].Visible = False
 				itm["JSONSourceGroup"].Visible = False
+				itm["ShowJSONFilenameButton"].Text = "JSON Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an activeTechnisyncConfig.json filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc."
+			elif cameraArrayGeometry == 3:
+				# COLMAP (Text)
+				itm["ShowJSONFilenameButton"].Text = "COLMAP Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an COLMAP text filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP tect file provides essential details \nfor each camera like the camera angle name, filename."
 			else:
 				itm["ShowJSONFilenameButton"].Visible = True
 				itm["JSONCameraConfigFileLineTxt"].Visible = True
 				itm["JSONBrowseFileButton"].Visible = True
 				itm["JSONSourceGroup"].Visible = True
+				itm["ShowJSONFilenameButton"].Text = "JSON Source File"
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an activeTechnisyncConfig.json filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc."
 			dlg:RecalcLayout()
 		dlg.On.CameraArrayGeometryCombo.CurrentIndexChanged = CameraArrayGeometryComboFunc
 
@@ -1375,6 +1387,9 @@ def CreateMetadataSyncWindow():
 			elif (cameraArrayGeometry == 2) and (jsonCameraConfigFile == ""):
 				# The polar array needs a JSON camera cofig file
 				itm["ProgressLabel"].Text = "  Progress: \"JSON Source File\" text field is empty."
+			elif (cameraArrayGeometry == 3) and (jsonCameraConfigFile == ""):
+				# The colmap array needs a camera cofig file
+				itm["ProgressLabel"].Text = "  Progress: \"COLMAP Source File\" text field is empty."
 			else:
 				processResult, missingItems = ProcessShotlog(shotlogFile, addClipLevelMetadata, itm["ProgressLabel"], csvShotIDCheckedItems, csvClipIDCheckedItems, cameraArrayGeometry, cameraJSONConfigViews)
 				resultStr += str(processResult)

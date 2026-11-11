@@ -1,5 +1,10 @@
 # Lightfielder | ChangeLog
 
+## 2026-11-11
+
+- Started testing Lightfielder compatibility with Resolve Studio v21.2.
+- Adding Camera Array Geometry support for a new "COLMAP (Text)" entry. It is still a work-in-progress.
+
 ## 2026-10-31
 
 - Added a "`Lightfielder:/Resolve/Config/Lightfielder/Gaussian Splatting DragDrop.fu`" add-on that allows you to drag and drop 3DGS .ply files from your desktop folder into the Fusion page nodes view area. Usage details are present in the header text at the top of the .fu file document.

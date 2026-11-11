@@ -17,6 +17,7 @@ Tip: The help "?" button at the top right of the window can be used to quickly s
 - Planar Grid (A1-E5)
 - Edge 3M (A1-E5)
 - Polar (A100-Z997)
+- COLMAP (Text)
 
 3. If the "Camera Array Geometry" Polar entry is selected, then a "JSON Source File" based filepath entry text field is displayed. Use the "JSON Source File" text field to select a .json formatted Technisync configuration file. The "Load Settings" button will refresh the "Number of Cameras" and frame rate values using the entries in the Technisync JSON file.
 
