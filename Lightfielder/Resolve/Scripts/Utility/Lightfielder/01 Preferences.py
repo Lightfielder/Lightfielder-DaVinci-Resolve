@@ -496,7 +496,7 @@ def CreatePrefsWindow():
 					ui.Button({
 						"ID": "LoadSettingsButton",
 						"Text": "Load Settings",
-						"ToolTip": GetTooltip("Load the settings from the JSON","When the Polor camera array geometry is used, we can pull the preferences \ndirectly from the Technisync JSON configuration file."),
+						"ToolTip": GetTooltip("Load the settings from a file","When the Polor camera array geometry is used, we can pull the preferences \ndirectly from a Technisync JSON or COLMAP configuration file."),
 						"MinimumSize": [100, 32],
 						"Weight": 0.1
 					})
@@ -531,14 +531,14 @@ def CreatePrefsWindow():
 						"Flat": True,
 						"MinimumSize": [145, 32],
 						"Text": "JSON Source File",
-						"ToolTip": GetTooltip("Show the JSON file","Clicking this text label will open the base folder where the JSON file is located in a desktop folder browsing window. This requires a file \npath to be entered in the text field. Shift-clicking the text label will open the file in a JSON viewer. Command-clicking will open the file \nin a text editor."),
+						"ToolTip": GetTooltip("Show the config file","Clicking this text label will open the base folder where the JSON or COLAMP file is located in a desktop folder browsing window. This requires a file \npath to be entered in the text field. Shift-clicking the text label will open the file in a JSON or text viewer. Command-clicking will open the file \nin a text editor."),
 						"Weight": 0.01,
 					}),
 					ui.LineEdit({
 						"ID": "JSONCameraConfigFileLineTxt",
 						"Text": "",
 						"PlaceholderText": "Please enter an activeTechnisyncConfig.json filename",
-						"ToolTip": GetTooltip("Enter the location of the JSON file","The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc."),
+						"ToolTip": GetTooltip("Enter the location of the config file","The Technisync JSON or COLMAP configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc."),
 						"Weight": 0.9
 					}),
 					ui.Button({
@@ -1499,6 +1499,13 @@ def CreatePrefsWindow():
 				itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
 				itm["SensorFrameRateCustomSpinner"].Value = 30
 				itm["ProjectFrameRateCustomSpinner"].Value = 30
+				
+				# Pull the info from the COLMAP text file
+				configFile = str(app.MapPath(itm["JSONCameraConfigFileLineTxt"].Text))
+				if os.path.isfile(configFile):
+					print("[Lightfielder][COLMAP Config File]", configFile)
+				else:
+					print("[Lightfielder][COLMAP Config File Missing]", configFile)
 
 				itm["ProgressLabel"].Text = "  Progress: Loading Settings for a \"" + str(itm["CameraArrayGeometryCombo"].CurrentText) + "\" camera array to use the defaults"
 			else:
