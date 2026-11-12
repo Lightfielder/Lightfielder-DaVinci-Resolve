@@ -126,36 +126,6 @@ const sections = [
     ],
   },
   {
-    title: 'Lightfielder Ops',
-    links: [
-      { label: 'LF Ops Overview', href: '/docs/Ops/' },
-      { label: 'Install Ops', href: '/docs/Ops/installation/install-ops' },
-      { label: 'LF Viewport App', href: '/docs/Ops/viewport/' },
-      { label: 'LF Sequencer View', href: '/docs/Ops/usage/sequencer' },
-      { label: 'LF Nodes View', href: '/docs/Ops/usage/nodes' },
-    ],
-  },
-  {
-    title: 'Vonk Ultra',
-    links: [
-      { label: 'Overview', href: '/VonkUltra/' },
-      { label: 'Getting Started', href: '/VonkUltra/getting-started/introduction' },
-      { label: 'Reference', href: '/VonkUltra/reference' },
-      { label: 'Guides', href: '/VonkUltra/guides/overview' },
-      { label: 'Tutorials', href: '/VonkUltra/tutorials/video-tutorials' },
-    ],
-  },
-  {
-    title: 'Lightfielder IDE Tools',
-    links: [
-      { label: 'Notepad++ for Fusion', href: 'https://github.com/Lightfielder/NPP-for-Fusion-Studio' },
-      { label: 'BBEdit FuScript Tools for Fusion', href: 'https://github.com/AndrewHazelden/Fusion-Studio-FuScript-IDE-Tools-and-Pipeline-Scripts' },
-      { label: 'Pixar OpenUSD Syntax Highlighter', href: 'https://github.com/Lightfielder/PIXAR-USD-Syntax-Highlighter' },
-      { label: 'Swiftpedia Docs Site', href: 'https://github.com/Lightfielder/Swiftpedia' },
-      { label: 'VFXPedia Docs Site', href: 'https://lightfielder.github.io/VFXPedia/' },
-    ],
-  },
-  {
     title: 'Lightfielder Resources',
     links: [
       { label: 'Lightfielder for Houdini', href: 'https://Lightfielder.github.io/Lightfielder-for-Houdini/' },
@@ -171,8 +141,7 @@ const sections = [
       { label: 'Camera Sensor Database', href: 'https://github.com/EmberLightVFX/Camera-Sensor-Database' },
       { label: 'XR LED Panel Database', href: 'https://kartaverse.github.io/XR-LED-Panel-Database/' },
       { label: 'Nusion Comp Converter', href: 'https://github.com/Lightfielder/NusionCompConverter' },
-      { label: 'LightWave3D MCP', href: 'https://github.com/Lightfielder/lightwave-mcp' },
-      { label: 'Pixal3D MCP', href: 'https://github.com/Lightfielder/Pixal3D-MCP' },
+      { label: 'Notepad++ for Fusion', href: 'https://github.com/Lightfielder/NPP-for-Fusion-Studio' },
     ],
   },
 ];
