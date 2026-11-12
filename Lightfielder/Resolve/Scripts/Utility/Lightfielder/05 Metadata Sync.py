@@ -1143,10 +1143,10 @@ def CreateMetadataSyncWindow():
 						itm["ProgressLabel"].Text = "  Progress: Loaded JSON File: \"" + str(os.path.basename(selectedPath)) + "\""
 					else:
 						print("[Lightfielder][Preferences] This file lacks the .json file extension.")
-						itm["ProgressLabel"].Text = "  Progress: This file lacks the .json file extension. Select a JSON file."
+						itm["ProgressLabel"].Text = "  Progress: This file lacks the .json or .txt file extension. Select a file."
 				else:
-					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
-					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath. Select a JSON file."
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
+					itm["ProgressLabel"].Text = "  Progress: A JSON or text file does not exist at this filepath. Select a file."
 			# Save the prefs
 			PrefSave(dlg)
 		dlg.On.JSONBrowseFileButton.Clicked = JSONBrowseFileButtonFunc
@@ -1164,6 +1164,10 @@ def CreateMetadataSyncWindow():
 				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc."
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
+				itm["ShowJSONFilenameButton"].Visible = True
+				itm["JSONCameraConfigFileLineTxt"].Visible = True
+				itm["JSONBrowseFileButton"].Visible = True
+				itm["JSONSourceGroup"].Visible = True
 				itm["ShowJSONFilenameButton"].Text = "COLMAP Source File"
 				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter a COLMAP images.txt filename"
 				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP images.txt file provides essential details \nfor each camera like the camera angle name, filename."

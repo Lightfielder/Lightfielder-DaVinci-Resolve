@@ -1,5 +1,5 @@
 """
-Lightfielder 01 Preferences.py 2026-11-12 01.02 PM (UTC -3)
+Lightfielder 01 Preferences.py 2026-11-12 02.46 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Allows you to change Lightfielder settings for attributes like rig geometry. This makes it possible to work with volumetric footage from the different eras of the camera array design.
@@ -1198,8 +1198,8 @@ def CreatePrefsWindow():
 						print("[Lightfielder][Preferences] This file lacks a .json or .txt file extension.")
 						itm["ProgressLabel"].Text = "  Progress: This file lacks a .json or .txt file extension. Select a file."
 				else:
-					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
-					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath. Select a JSON file."
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
+					itm["ProgressLabel"].Text = "  Progress: A JSON or text File does not exist at this filepath. Select a file."
 			# Save the prefs
 			PrefSave(dlg)
 		dlg.On.JSONBrowseFileButton.Clicked = JSONBrowseFileButtonFunc
@@ -1352,8 +1352,8 @@ def CreatePrefsWindow():
 						
 					itm["ProgressLabel"].Text = "  Progress: Updated \"Sensor Frame Rate\" to " + str(itm['SensorFrameRateCombo'].CurrentText)
 				else:
-					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
-					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
+					itm["ProgressLabel"].Text = "  Progress: A JSON or text file does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
 				itm['SensorFrameRateCombo'].CurrentText = "Custom"
@@ -1402,8 +1402,8 @@ def CreatePrefsWindow():
 					
 					itm["ProgressLabel"].Text = "  Progress: Updated \"Project Frame Rate\" to " + str(itm['ProjectFrameRateCombo'].CurrentText)
 				else:
-					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
-					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
+					itm["ProgressLabel"].Text = "  Progress: A JSON or text file does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
 				itm['ProjectFrameRateCombo'].CurrentText = "Custom"
@@ -1499,8 +1499,8 @@ def CreatePrefsWindow():
 					
 					itm["ProgressLabel"].Text = "  Progress: Loaded Settings for a \"" + str(itm["CameraArrayGeometryCombo"].CurrentText) + "\" camera array to use JSON sourced data"
 				else:
-					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
-					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
+					itm["ProgressLabel"].Text = "  Progress: A JSON or text file does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
 				
