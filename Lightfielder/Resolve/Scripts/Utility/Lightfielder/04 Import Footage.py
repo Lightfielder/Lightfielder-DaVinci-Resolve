@@ -946,11 +946,13 @@ def ImportFootageWindow():
 				if os.path.isfile(app.MapPath(selectedPath)):
 					if selectedPath.endswith(".json") and not selectedPath.startswith("."):
 						itm["ProgressLabel"].Text = "  Progress: Loaded JSON File: \"" + str(os.path.basename(selectedPath)) + "\""
+					elif selectedPath.endswith(".txt") and not selectedPath.startswith("."):
+						itm["ProgressLabel"].Text = "  Progress: Loaded COLMAP File: \"" + str(os.path.basename(selectedPath)) + "\""
 					else:
-						print("[Lightfielder][Preferences] This file lacks the .json file extension.")
+						print("[Lightfielder][Preferences] This file lacks the .json or .txt file extension.")
 						itm["ProgressLabel"].Text = "  Progress: This file lacks the .json or .txt file extension. Select a file."
 				else:
-					print("[Lightfielder][Preferences] A JSON ot text file does not exist at this filepath.")
+					print("[Lightfielder][Preferences] A JSON or text file does not exist at this filepath.")
 					itm["ProgressLabel"].Text = "  Progress: A JSON or text file does not exist at this filepath. Select a file."
 			# Save the prefs
 			PrefSave(dlg)
