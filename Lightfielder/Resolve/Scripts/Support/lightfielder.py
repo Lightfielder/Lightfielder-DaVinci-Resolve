@@ -1,5 +1,5 @@
 """
-Lightfielder Python Module 2026-11-11 02.31 PM (UTC -3)
+Lightfielder Python Module 2026-11-12 01.03 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Lightfielder Script Usage Tip:
@@ -32,7 +32,7 @@ def LFGetVersion(label):
 	# Provide the Lightfielder version number when requested
 	# return str(label) + "26"
 	# return str(label) + "26.11"
-	return str(label) + "26.11.11"
+	return str(label) + "26.11.12"
 
 def execfile(filepath, globals = None, locals = None):
 	try:
@@ -1844,6 +1844,36 @@ def GetCameras():
 		"JE",
 	]
 
+def GetColmapCameraViewCount(colmapFile):
+	# Reads the number of camera views in the COLMAP text file
+	numbersOfCameras = 0
+		
+	if os.path.isfile(colmapFile):
+		print("[Lightfielder][COLMAP Config File]", colmapFile)
+
+		# Read the document line by line
+		with open(colmapFile, 'r') as file:
+			line = file.readline()
+			while line:
+				# Skip lines starting with the "#" comment symbol
+				if not line.lstrip().startswith('#'):
+					# print(line.strip())
+					# Is this an image or a feature point line?
+					# Syntax: #   IMAGE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID, NAME
+					# Syntax: #   POINTS2D[] as (X, Y, POINT3D_ID)
+					tokens = line.split()
+					if tokens and tokens[0].isdigit():
+						# This is an image line
+						numbersOfCameras = numbersOfCameras + 1
+						
+				# Read the next line in the file
+				line = file.readline()
+		
+		print("[Lightfielder][COLMAP Camera Views]", numbersOfCameras)
+	else:
+		print("[Lightfielder][COLMAP Config File Missing]", colmapFile)
+	
+	return numbersOfCameras
 
 def GetJSONConfigViews(jsonFile, displayMode):
 	# Reads the camera array JSON file and returns a list of camera view position strings like "A220"

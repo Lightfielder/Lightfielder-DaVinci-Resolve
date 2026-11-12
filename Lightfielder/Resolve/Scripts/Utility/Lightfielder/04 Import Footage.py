@@ -970,8 +970,8 @@ def ImportFootageWindow():
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
 				itm["ShowJSONFilenameButton"].Text = "COLMAP Source File"
-				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an COLMAP text filename"
-				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP tect file provides essential details \nfor each camera like the camera angle name, filename."
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter a COLMAP images.txt filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP images.txt file provides essential details \nfor each camera like the camera angle name, filename."
 			else:
 				itm["ShowJSONFilenameButton"].Visible = True
 				itm["JSONCameraConfigFileLineTxt"].Visible = True

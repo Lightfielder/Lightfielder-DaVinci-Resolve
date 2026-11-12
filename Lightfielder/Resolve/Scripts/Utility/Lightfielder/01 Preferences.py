@@ -1,5 +1,5 @@
 """
-Lightfielder 01 Preferences.py 2026-10-26 04.32 PM (UTC -3)
+Lightfielder 01 Preferences.py 2026-11-12 01.02 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Allows you to change Lightfielder settings for attributes like rig geometry. This makes it possible to work with volumetric footage from the different eras of the camera array design.
@@ -1165,15 +1165,15 @@ def CreatePrefsWindow():
 			if buttonModifier == True:
 				# shift was held down so open the OS default program for this filetype
 				 ShowInDefaultProgram(itm["JSONCameraConfigFileLineTxt"].Text)
-				 itm["ProgressLabel"].Text = "  Progress: Open the Technisync JSON file"
+				 itm["ProgressLabel"].Text = "  Progress: Open the config file"
 			elif buttonModifierControl == True:
 				# Command/Control was held down so open the programmer's text editor
 				ExternalEditor(itm["JSONCameraConfigFileLineTxt"].Text)
-				itm["ProgressLabel"].Text = "  Progress: Edit the Technisync JSON file"
+				itm["ProgressLabel"].Text = "  Progress: Edit the config file"
 			else:
 				# Label was clicked on with no modifier keys so open the containing folder in the operating system's folder browsing view
 				ShowFolderFromFilepath(itm["JSONCameraConfigFileLineTxt"].Text)
-				itm["ProgressLabel"].Text = "  Progress: Show Technisync JSON file containing folder"
+				itm["ProgressLabel"].Text = "  Progress: Show the containing folder"
 		dlg.On.ShowJSONFilenameButton.Clicked = ShowJSONFilenameButtonFunc
 
 		# Show a file browsing dialog to select the JSON file
@@ -1189,9 +1189,14 @@ def CreatePrefsWindow():
 						viewCount = GetJSONConfigViews(jsonCameraConfigFile, "views")
 						itm['NumberOfCamerasSpinner'].Value = int(viewCount)
 						itm["ProgressLabel"].Text = "  Progress: Loaded JSON File: \"" + str(os.path.basename(selectedPath)) + "\""
+					elif selectedPath.endswith(".txt") and not selectedPath.startswith("."):
+						colmapFile = str(jsonCameraConfigFile)
+						viewCount = GetColmapCameraViewCount(colmapFile)
+						itm['NumberOfCamerasSpinner'].Value = int(viewCount)
+						itm["ProgressLabel"].Text = "  Progress: Loaded COLMAP File: \"" + str(os.path.basename(selectedPath)) + "\""
 					else:
-						print("[Lightfielder][Preferences] This file lacks the .json file extension.")
-						itm["ProgressLabel"].Text = "  Progress: This file lacks the .json file extension. Select a JSON file."
+						print("[Lightfielder][Preferences] This file lacks a .json or .txt file extension.")
+						itm["ProgressLabel"].Text = "  Progress: This file lacks a .json or .txt file extension. Select a file."
 				else:
 					print("[Lightfielder][Preferences] A JSON File does not exist at this filepath.")
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath. Select a JSON file."
@@ -1213,9 +1218,14 @@ def CreatePrefsWindow():
 				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The Technisync JSON configuration file provides essential details \nfor each R3D camera like the camera angle name, frame rate, etc.",
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
+				itm["ShowJSONFilenameButton"].Visible = True
+				itm["JSONCameraConfigFileLineTxt"].Visible = True
+				itm["JSONBrowseFileButton"].Visible = True
+				itm["JSONSourceGroup"].Visible = True
+				# itm["LoadSettingsButton"].Visible = True
 				itm["ShowJSONFilenameButton"].Text = "COLMAP Source File"
-				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter an COLMAP text filename"
-				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP tect file provides essential details \nfor each camera like the camera angle name, filename.",
+				itm["JSONCameraConfigFileLineTxt"].PlaceholderText = "Please enter a COLMAP images.txt filename"
+				itm["JSONCameraConfigFileLineTxt"].ToolTip = "The COLMAP images.txt file provides essential details \nfor each camera like the camera angle name, filename.",
 			else:
 				itm["ShowJSONFilenameButton"].Visible = True
 				itm["JSONCameraConfigFileLineTxt"].Visible = True
@@ -1346,7 +1356,8 @@ def CreatePrefsWindow():
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
-				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
+				itm['SensorFrameRateCombo'].CurrentText = "Custom"
+				itm["SensorFrameRateCustomSpinner"].Value = 1
 		dlg.On.SensorFrameRateButton.Clicked = SensorFrameRateButtonFunc
 
 		def ProjectFrameRateButtonFunc(ev):
@@ -1395,7 +1406,8 @@ def CreatePrefsWindow():
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
-				itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
+				itm['ProjectFrameRateCombo'].CurrentText = "Custom"
+				itm["ProjectFrameRateCustomSpinner"].Value = 1
 		dlg.On.ProjectFrameRateButton.Clicked = ProjectFrameRateButtonFunc
 
 		def LoadSettingsButtonFunc(ev):
@@ -1491,21 +1503,28 @@ def CreatePrefsWindow():
 					itm["ProgressLabel"].Text = "  Progress: A JSON File does not exist at this filepath"
 			elif cameraArrayGeometry == 3:
 				# COLMAP (Text)
-				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
-				itm['NumberOfCamerasSpinner'].Value = 55
+				
 				# itm['MediaFormatCombo'].CurrentText = "Image Sequence"
 				itm['MediaFormatCombo'].CurrentText = "Still Frame"
-				itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
-				itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
-				itm["SensorFrameRateCustomSpinner"].Value = 30
-				itm["ProjectFrameRateCustomSpinner"].Value = 30
-				
+
+				#itm['SensorFrameRateCombo'].CurrentText = "30 FPS"
+				#itm["SensorFrameRateCustomSpinner"].Value = 30
+				#itm['ProjectFrameRateCombo'].CurrentText = "30 FPS"
+				#itm["ProjectFrameRateCustomSpinner"].Value = 30
+
+				itm['SensorFrameRateCombo'].CurrentText = "Custom"
+				itm["SensorFrameRateCustomSpinner"].Value = 1
+				itm['ProjectFrameRateCombo'].CurrentText = "Custom"
+				itm["ProjectFrameRateCustomSpinner"].Value = 1
+
 				# Pull the info from the COLMAP text file
-				configFile = str(app.MapPath(itm["JSONCameraConfigFileLineTxt"].Text))
-				if os.path.isfile(configFile):
-					print("[Lightfielder][COLMAP Config File]", configFile)
-				else:
-					print("[Lightfielder][COLMAP Config File Missing]", configFile)
+				colmapFile = str(app.MapPath(itm["JSONCameraConfigFileLineTxt"].Text))
+				viewCount = GetColmapCameraViewCount(colmapFile)
+				# Fallback to 55 views if the number of cameras is zero
+				if viewCount == 0:
+					viewCount = 55
+
+				itm['NumberOfCamerasSpinner'].Value = viewCount
 
 				itm["ProgressLabel"].Text = "  Progress: Loading Settings for a \"" + str(itm["CameraArrayGeometryCombo"].CurrentText) + "\" camera array to use the defaults"
 			else:
