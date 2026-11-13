@@ -2294,7 +2294,7 @@ def MatchClipToShot(mFile, cItems, cameraArrayGeometry):
 			dateID = row[2]
 			angle = 0
 			desc = row[3]
-			subClip = 0
+			subClip = 1
 			return shotID, clipID, dateID, angle, desc, subClip
 
 	dateID, clipID, clipViewCol, clipViewRow, subClip = SplitMediaFilename(clipFileName, cameraArrayGeometry)
