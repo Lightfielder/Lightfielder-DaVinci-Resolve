@@ -1,5 +1,5 @@
 """
-Lightfielder 04 Import Footage.py 2026-10-01 12.26 AM (UTC -3)
+Lightfielder 04 Import Footage.py 2026-11-12 07.05 PM (UTC -3)
 By Andrew Hazelden <andrew@andrewhazelden.com>
 
 Import R3D footage into the Resolve media page.
@@ -97,15 +97,21 @@ startTimer = datetime.datetime.now()
 
 def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews):
 	resultStr = ""
-	resultStr += "\n<h2>Import R3D Media to Media Pool</h2>" + "\n"
-	#print("\n[Lightfielder][Shotlog][Import R3D Media to Media Pool]")
+	resultStr += "\n<h2>Import Footage into Media Pool</h2>" + "\n"
+	#print("\n[Lightfielder][Shotlog][Import Footage into Media Pool]")
 
 	res = app.GetResolve()
 	project = GetProject()
 	mediapool = project.GetMediaPool()
 
 	resultStr += "<table border=\"0\" color=\"#CDCDCD\" bgcolor=\"#1F1F1F\" cellpadding=\"2\">\n"
-	resultStr += "<tr><td>Shot ID</td><td>Date</td><td>File</td><td>R3D Subclip</td></tr>\n"
+	
+	pref = app.GetData("Lightfielder.MediaFormat")
+	if pref != None and pref == "R3D":
+		# R3D Media
+		resultStr += "<tr><td>Shot ID</td><td>Date</td><td>File</td><td>R3D Subclip</td></tr>\n"
+	else:
+		resultStr += "<tr><td>Shot ID</td><td>Date</td><td>File</td><td>Subclip</td></tr>\n"
 
 	mpClipInfo = []
 	mpClipItems = []
@@ -136,6 +142,9 @@ def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel
 			# Planar Grid or Wedge array
 			# Convert the CCS View letter (AA-JE) into a camera number (1-50)
 			camNum = GetCameraName(angle)
+		elif cameraArrayGeometry == 3:
+			# COLMAP (text)
+			camNum = 0
 		elif cameraArrayGeometry == 2:
 			# Polar array
 			# Count the sorted list in linear order
@@ -1092,7 +1101,7 @@ def ImportFootageWindow():
 			itm = dlg.GetItems()
 			itm["ProgressLabel"].Text = "  Progress: Updated \"Fuzzy R3D Date Matching\""
 		dlg.On.FuzzyR3DDateMatchingCheckbox.Clicked = FuzzyR3DDateMatchingCheckboxFunc
-		
+
 		def AddMediaToSourcesFolderCheckboxFunc(ev):
 			print("[Lightfielder][Preferences] Updated \"Add Media To Sources Folder\"")
 			PrefSave(dlg)
@@ -1123,8 +1132,9 @@ def ImportFootageWindow():
 
 		def GoButtonFunc(ev):
 			cameraArrayGeometry = itm["CameraArrayGeometryCombo"].CurrentIndex
-			PrefSave(dlg)
+
 			# Write the preferences to disk
+			PrefSave(dlg)
 			app.SavePrefs()
 
 			ShotTypeItems = []
@@ -1158,8 +1168,10 @@ def ImportFootageWindow():
 
 			shotlogFile = str(app.MapPath(itm["FileLineTxt"].Text))
 			mediaFolder = str(app.MapPath(itm["FolderLineTxt"].Text))
+
 			jsonCameraConfigFile = str(app.MapPath(itm["JSONCameraConfigFileLineTxt"].Text))
 			cameraJSONConfigViews = GetJSONConfigViews(jsonCameraConfigFile, "records")
+
 			# Debug print the JSON list content
 			#if cameraJSONConfigViews != None:
 			#	for c in cameraJSONConfigViews:
@@ -1290,6 +1302,7 @@ def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedIt
 	mediapool = project.GetMediaPool()
 
 	progressLabel.Text = "  Progress: Locating Bins"
+
 	# Find the footage folder
 	timelinesBinName, timelinesBin = FindTimelineBin()
 	timelinesStillFramesBinName, timelinesStillFramesBin = FindTimelineStillFramesBin()
@@ -1301,7 +1314,6 @@ def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedIt
 
 	# Parse the CSV File for Shot IDs
 	progressLabel.Text = "  Progress: Import CSV"
-	# Find the foot
 	csvItems, csvResult = ImportCSV(app.MapPath(shotlogFile))
 	#print(csvItems)
 	logResultStr += str(csvResult)
@@ -1309,7 +1321,7 @@ def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedIt
 	# Debug return
 	# return logResultStr
 
-	# Import the R3D files
+	# Import the media files
 	progressLabel.Text = "  Progress: Import Media"
 	importResult = ""
 

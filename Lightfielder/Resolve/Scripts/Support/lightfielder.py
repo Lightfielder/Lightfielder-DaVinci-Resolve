@@ -1885,109 +1885,110 @@ def GetJSONConfigViews(jsonFile, displayMode):
 	cameraItems = []
 
 	# Open the JSON log file and read it line by line
-	print("[Lightfielder][JSON Config Views] [File] " + str(jsonFile) + " [Mode] " + str(displayMode))
-	try:
-		with open(jsonFile, "r") as f:
-			j = json.load(f)
-			# Format the data for terminal output
-			if displayMode == "dump":
-				# Add indentations to the json data to make it easier to read
-				print(json.dumps(j, ensure_ascii = True, indent = "\t"))
-			elif displayMode == "sensorfps":
-				# Display a short summary of the info
-				if "required_configuration" in j:
-					config = len(j["required_configuration"])
-					# print("\t[config] " + str(config))
-					if config != None:
-						try:
-							for c in j["required_configuration"]:
-								if "SENSOR_FRAME_RATE" in c:
-									fps = j["required_configuration"]["SENSOR_FRAME_RATE"]["str"]
-									# print(fps)
-									return fps
-						except StopIteration:
-							pass
-			elif displayMode == "projectfps":
-				# Display a short summary of the info
-				if "required_configuration" in j:
-					config = len(j["required_configuration"])
-					# print("\t[config] " + str(config))
-					if config != None:
-						try:
-							for c in j["required_configuration"]:
-								if "PROJECT_FRAME_RATE" in c:
-									fps = j["required_configuration"]["PROJECT_FRAME_RATE"]["str"]
-									# print(fps)
-									return fps
-						except StopIteration:
-							pass
-			elif displayMode == "views":
-				# return the number of camera views as an integer number
-				if "controlBoxes" in j:
-					controllerCount = len(j["controlBoxes"])
-					# print("\t[Controllers] " + str(controllerCount))
-					if controllerCount != None:
-						for c in j["controlBoxes"]:
-							if "ports" in c:
-								portCount = len(c["ports"])
-								# print("\t\t[Ports] ", portCount)
-								for p in c["ports"]:
-									try:
-										## A1 - J5
-										cameras = str(c["cameras"][p-1])
-
-										# AA - DE
-										cameraAlias = str(c["cameraAlias"][p-1])
-
-										# 0, 210 - 650
-										cameraPosition = str(c["cameraPosition"][p-1]).zfill(3)
-
-										# Reposition Letters A220B
-										cameraLabel = str(cameraAlias[:-1]) + str(cameraPosition)
-										if cameras != None and cameras != "--":
-											#cameraItems.append([cameras, cameraAlias, cameraPosition])
-											#cameraItems.append([cameraLabel])
-											cameraItems.append(cameraLabel)
-									except StopIteration:
-										pass
+	if jsonFile.endswith(".json") and not jsonFile.startswith("."):
+		print("[Lightfielder][JSON Config Views] [File] " + str(jsonFile) + " [Mode] " + str(displayMode))
+		try:
+			with open(jsonFile, "r") as f:
+				j = json.load(f)
+				# Format the data for terminal output
+				if displayMode == "dump":
+					# Add indentations to the json data to make it easier to read
+					print(json.dumps(j, ensure_ascii = True, indent = "\t"))
+				elif displayMode == "sensorfps":
+					# Display a short summary of the info
+					if "required_configuration" in j:
+						config = len(j["required_configuration"])
+						# print("\t[config] " + str(config))
+						if config != None:
+							try:
+								for c in j["required_configuration"]:
+									if "SENSOR_FRAME_RATE" in c:
+										fps = j["required_configuration"]["SENSOR_FRAME_RATE"]["str"]
+										# print(fps)
+										return fps
+							except StopIteration:
+								pass
+				elif displayMode == "projectfps":
+					# Display a short summary of the info
+					if "required_configuration" in j:
+						config = len(j["required_configuration"])
+						# print("\t[config] " + str(config))
+						if config != None:
+							try:
+								for c in j["required_configuration"]:
+									if "PROJECT_FRAME_RATE" in c:
+										fps = j["required_configuration"]["PROJECT_FRAME_RATE"]["str"]
+										# print(fps)
+										return fps
+							except StopIteration:
+								pass
+				elif displayMode == "views":
+					# return the number of camera views as an integer number
+					if "controlBoxes" in j:
+						controllerCount = len(j["controlBoxes"])
+						# print("\t[Controllers] " + str(controllerCount))
+						if controllerCount != None:
+							for c in j["controlBoxes"]:
+								if "ports" in c:
+									portCount = len(c["ports"])
+									# print("\t\t[Ports] ", portCount)
+									for p in c["ports"]:
+										try:
+											## A1 - J5
+											cameras = str(c["cameras"][p-1])
+	
+											# AA - DE
+											cameraAlias = str(c["cameraAlias"][p-1])
+	
+											# 0, 210 - 650
+											cameraPosition = str(c["cameraPosition"][p-1]).zfill(3)
+	
+											# Reposition Letters A220B
+											cameraLabel = str(cameraAlias[:-1]) + str(cameraPosition)
+											if cameras != None and cameras != "--":
+												#cameraItems.append([cameras, cameraAlias, cameraPosition])
+												#cameraItems.append([cameraLabel])
+												cameraItems.append(cameraLabel)
+										except StopIteration:
+											pass
+					cameraItems.sort()
+					return len(cameraItems)
+				elif displayMode == "records":
+					# Display a short summary of the info
+					if "controlBoxes" in j:
+						controllerCount = len(j["controlBoxes"])
+						# print("\t[Controllers] " + str(controllerCount))
+						if controllerCount != None:
+							for c in j["controlBoxes"]:
+								if "ports" in c:
+									portCount = len(c["ports"])
+									# print("\t\t[Ports] ", portCount)
+									for p in c["ports"]:
+										try:
+											## A1 - J5
+											cameras = str(c["cameras"][p-1])
+	
+											# AA - DE
+											cameraAlias = str(c["cameraAlias"][p-1])
+	
+											# 0, 210 - 650
+											cameraPosition = str(c["cameraPosition"][p-1]).zfill(3)
+	
+											# Reposition Letters A220B
+											cameraLabel = str(cameraAlias[:-1]) + str(cameraPosition)
+											if cameras != None and cameras != "--":
+												#cameraItems.append([cameras, cameraAlias, cameraPosition])
+												#cameraItems.append([cameraLabel])
+												cameraItems.append(cameraLabel)
+										except StopIteration:
+											pass
 				cameraItems.sort()
-				return len(cameraItems)
-			elif displayMode == "records":
-				# Display a short summary of the info
-				if "controlBoxes" in j:
-					controllerCount = len(j["controlBoxes"])
-					# print("\t[Controllers] " + str(controllerCount))
-					if controllerCount != None:
-						for c in j["controlBoxes"]:
-							if "ports" in c:
-								portCount = len(c["ports"])
-								# print("\t\t[Ports] ", portCount)
-								for p in c["ports"]:
-									try:
-										## A1 - J5
-										cameras = str(c["cameras"][p-1])
-
-										# AA - DE
-										cameraAlias = str(c["cameraAlias"][p-1])
-
-										# 0, 210 - 650
-										cameraPosition = str(c["cameraPosition"][p-1]).zfill(3)
-
-										# Reposition Letters A220B
-										cameraLabel = str(cameraAlias[:-1]) + str(cameraPosition)
-										if cameras != None and cameras != "--":
-											#cameraItems.append([cameras, cameraAlias, cameraPosition])
-											#cameraItems.append([cameraLabel])
-											cameraItems.append(cameraLabel)
-									except StopIteration:
-										pass
-			cameraItems.sort()
-			#print("[Cameras]", len(cameraItems))
-			#if cameraItems != None:
-			#	for c in cameraItems:
-			#		print("\t", c)
-	except OSError as error:
-		print("\tLightfielder][Exception][JSON Get Error]", error)
+				#print("[Cameras]", len(cameraItems))
+				#if cameraItems != None:
+				#	for c in cameraItems:
+				#		print("\t", c)
+		except OSError as error:
+			print("\tLightfielder][Exception][JSON Get Error]", error)
 
 	return cameraItems
 
