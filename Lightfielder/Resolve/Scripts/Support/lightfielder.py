@@ -1875,6 +1875,48 @@ def GetColmapCameraViewCount(colmapFile):
 	
 	return numbersOfCameras
 
+
+def GetColmapMediaFiles(colmapFile):
+	matches = []
+
+	if os.path.isfile(colmapFile):
+		print("[Lightfielder][COLMAP Config File]", colmapFile)
+
+		colmapBaseDir = os.path.dirname(os.path.dirname(os.path.dirname(colmapFile)))
+		imagesBaseDir = os.path.join(colmapBaseDir, "images")
+		print("[Lightfielder][COLMAP Images Folder]", imagesBaseDir)
+
+		# Read the document line by line
+		with open(colmapFile, 'r') as file:
+			line = file.readline()
+			while line:
+				# Skip lines starting with the "#" comment symbol
+				if not line.lstrip().startswith('#'):
+					# print(line.strip())
+					# Is this an image or a feature point line?
+					# Syntax: #   IMAGE_ID, QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID, NAME
+					# Syntax: #   POINTS2D[] as (X, Y, POINT3D_ID)
+					tokens = line.split()
+					if tokens and tokens[0].isdigit():
+
+						# Image filename (000001_0.jpg to 000001_204.jpg)
+						filename = os.path.basename(tokens[-1])
+						# print(filename)
+						
+						# Absolute image filepath
+						imagePath = os.path.join(imagesBaseDir, filename)
+						# print(imagePath)
+						if os.path.isfile(imagePath):
+							# print(imagePath)
+							matches.append(imagePath)
+
+				# Read the next line in the file
+				line = file.readline()
+	else:
+		print("[Lightfielder][COLMAP Config File Missing]", colmapFile)
+	
+	return matches
+
 def GetJSONConfigViews(jsonFile, displayMode):
 	# Reads the camera array JSON file and returns a list of camera view position strings like "A220"
 	# Note: displayMode = "dump" does a JSON log dump
@@ -2243,6 +2285,17 @@ def MatchClipToShot(mFile, cItems, cameraArrayGeometry):
 	# Debug exit point:
 	# print(clipFileName, mFile)
 	# return "", "", "", "", "", ""
+	
+	if cameraArrayGeometry == 3:
+		# COLMAP (Text)
+		for row in cItems:
+			clipID = int(float(row[0]))
+			shotID = row[1]
+			dateID = row[2]
+			angle = 0
+			desc = row[3]
+			subClip = 0
+			return shotID, clipID, dateID, angle, desc, subClip
 
 	dateID, clipID, clipViewCol, clipViewRow, subClip = SplitMediaFilename(clipFileName, cameraArrayGeometry)
 

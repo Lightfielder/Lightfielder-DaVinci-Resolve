@@ -95,7 +95,7 @@ if lightfielder_path not in sys.path:
 
 startTimer = datetime.datetime.now()
 
-def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews):
+def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews, jsonCameraConfigFile):
 	resultStr = ""
 	resultStr += "\n<h2>Import Footage into Media Pool</h2>" + "\n"
 	#print("\n[Lightfielder][Shotlog][Import Footage into Media Pool]")
@@ -105,29 +105,37 @@ def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel
 	mediapool = project.GetMediaPool()
 
 	resultStr += "<table border=\"0\" color=\"#CDCDCD\" bgcolor=\"#1F1F1F\" cellpadding=\"2\">\n"
-	
+
 	pref = app.GetData("Lightfielder.MediaFormat")
 	if pref != None and pref == "R3D":
 		# R3D Media
 		resultStr += "<tr><td>Shot ID</td><td>Date</td><td>File</td><td>R3D Subclip</td></tr>\n"
 	else:
+		# All other media formats
 		resultStr += "<tr><td>Shot ID</td><td>Date</td><td>File</td><td>Subclip</td></tr>\n"
 
 	mpClipInfo = []
 	mpClipItems = []
 	missingItems = []
-	redMediaItems = GetMediaFiles(mediaFolder)
+	redMediaItems = []
+
+	if cameraArrayGeometry == 3:
+		# COLMAP (Text)
+		redMediaItems = GetColmapMediaFiles(jsonCameraConfigFile)
+	else:
+		redMediaItems = GetMediaFiles(mediaFolder)
+
 	redMediaItemCount = len(redMediaItems)
 	counter = 0
 
 	# Debug exit point:
 	# print(redMediaItems)
-	# return mpClipItems, "Done"
+	# return mpClipItems, "Done", missingItems
 
 	for media in redMediaItems:
 		# Debug exit point:
-		# print(media, csvItems, cameraArrayGeometry)
-		# return mpClipItems, "Done"
+		print(media, csvItems, cameraArrayGeometry)
+		# return mpClipItems, "Done", missingItems
 
 		# Parse the media filename and the shotlog CSV for the clip id and shot id
 		shot, clip, date, angle, description, subClip = MatchClipToShot(media, csvItems, cameraArrayGeometry)
@@ -135,7 +143,7 @@ def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel
 
 		# Debug exit point:
 		# print(shot, clip, date, angle, description, subClip)
-		# return mpClipItems, "Done"
+		# return mpClipItems, "Done", missingItems
 
 		camNum = 99
 		if cameraArrayGeometry == 0 or cameraArrayGeometry == 1:
@@ -158,7 +166,7 @@ def ImportMedia(csvItems, mediaFolder, footageBin, footageBinName, progressLabel
 		# Create the "Shot ID" Bin
 		if shot != None and int(shot) in shotCheckedItems:
 			if clip != None and int(clip) in clipCheckedItems:
-				print(shotName, shot, clip, date, angle, description, subClip)
+				# print(shotName, shot, clip, date, angle, description, subClip)
 				# Change the active bin to "03_footage/ID_<Shot ID>/"
 
 				fShotBin = CreateFootageShotIdBin(shotName, footageBin)
@@ -1209,7 +1217,7 @@ def ImportFootageWindow():
 				# The colmap array needs a camera cofig file
 				itm["ProgressLabel"].Text = "  Progress: \"COLMAP Source File\" text field is empty."
 			else:
-				processResult, missingItems = ProcessShotlog(shotlogFile, mediaFolder, itm["ProgressLabel"], csvShotIDCheckedItems, csvClipIDCheckedItems, cameraArrayGeometry, cameraJSONConfigViews)
+				processResult, missingItems = ProcessShotlog(shotlogFile, mediaFolder, itm["ProgressLabel"], csvShotIDCheckedItems, csvClipIDCheckedItems, cameraArrayGeometry, cameraJSONConfigViews, jsonCameraConfigFile)
 
 				resultStr += str(processResult)
 				resultStr += "\n<h2>Completed Processing</h2>\n"
@@ -1287,7 +1295,7 @@ def ImportFootageWindow():
 		# Save the CSV and Footage folder pref
 		PrefSave(dlg)
 
-def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews):
+def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews, jsonCameraConfigFile):
 	# frame rate
 	fps = GetProjectFrameRate()
 	# fps = GetSensorFrameRate()
@@ -1328,7 +1336,7 @@ def ProcessShotlog(shotlogFile, shotlogMediaFolder, progressLabel, shotCheckedIt
 	# Debug return
 	# return logResultStr
 
-	clipItems, importResult, missingItems = ImportMedia(csvItems, shotlogMediaFolder, footageBin, footageBinName, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews)
+	clipItems, importResult, missingItems = ImportMedia(csvItems, shotlogMediaFolder, footageBin, footageBinName, progressLabel, shotCheckedItems, clipCheckedItems, cameraArrayGeometry, cameraJSONConfigViews, jsonCameraConfigFile)
 	logResultStr += str(importResult)
 
 	#print(logResultStr)
