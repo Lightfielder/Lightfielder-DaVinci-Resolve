@@ -37,8 +37,3 @@ There was a Resolve scripting API feature regresssion that occurs with DaVinci R
 The Frame Selection modes highlighted in red are the options that are visible at this time in Lightfielder:
 
 ![Frame Selection](../images/known_issues_frame_selection.png)
-
-
-## Lightfielder Scriptlib File
-
-Add a Fusion Studio loading guard so the `Scripts:/Lightfielder.scriptlib` file only launches in a Resolve Studio session.
