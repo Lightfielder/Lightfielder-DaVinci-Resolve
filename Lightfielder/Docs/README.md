@@ -53,7 +53,7 @@ This approach certainly gives an accessible and affordable route to enter volume
 
 ## Example Projects
 
-A huge thank you to [KonceptVR](https://www.konceptvr.com/) for covering the hosting costs for the Lightfielder project files and learning materials!
+Additional learning content is under development for Lightfielder. A huge thank you to [KonceptVR](https://www.konceptvr.com/) for covering the hosting costs for the Lightfielder project files and learning materials!
 
 - [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK)
 - [Point Cloud Relighting 7-Zip Archive (1.21 GB)](https://we.tl/t-Rz2FAL4kqhiChW9b)
