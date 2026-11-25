@@ -61,7 +61,7 @@ This approach certainly gives an accessible and affordable route to enter volume
 
 ## Example Projects
 
-Additional learning content and example project files are being prepared for Lightfielder this month.
+Additional learning content is under development for Lightfielder. A huge thank you to [KonceptVR](https://www.konceptvr.com/) for covering the hosting costs for the Lightfielder project files and learning materials!
 
 - [Pikachu Still Frame 50 View (A1-E5) ZIP Archive (300 MB)](https://we.tl/t-STJrEEaqnLC4tVGK) — [example details](Examples/pikachu-still-frame-50-view.mdx)
 - [Point Cloud Relighting 7-Zip Archive (1.21GB)](https://we.tl/t-Rz2FAL4kqhiChW9b) — [example details](Examples/point-cloud-relighting.mdx)
